@@ -69,6 +69,7 @@
         margin-right: 16px;
     }
 
+    /* 
     .div-aboutus {
         min-height: 630px;
         margin-left: 96px;
@@ -76,10 +77,10 @@
         margin-top: 90px;
         background: #F7FCFF;
         border-radius: 20px;
-    }
+    } */
 
     .first-welcome-text {
-        margin-top: 203px;
+        margin-top: 113px;
         margin-left: 73px;
         font-style: normal;
         font-weight: 400;
@@ -90,7 +91,7 @@
     }
 
     .first-gga-text {
-        margin-top: 113px;
+        margin-top: 10px;
         margin-left: 73px;
         font-style: normal;
         font-weight: 400;
@@ -98,6 +99,55 @@
         line-height: 40px;
         text-transform: uppercase;
         color: #0D0D0D;
+    }
+
+
+    .carousel {
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .carousel_track-container {
+        min-height: 630px;
+        margin-left: 96px;
+        margin-right: 96px;
+        margin-top: 90px;
+        background: #F7FCFF;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .carousel_track {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        position: relative;
+        transition: transform 250ms ease-in;
+    }
+
+    .carousel_slide {
+        position: absolute;
+        width: 100%;
+    }
+
+    .carousel_nav {
+        position: relative;
+        top: -13;
+        margin-left: 168px;
+    }
+
+    .carousel_indicator {
+        border: 0;
+        border-radius: 50%;
+        margin: 0 2px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .carousel_indicator.current-slide {
+        width: 20px;
+        border-radius: 10px;
+        background: #76C9F1;
     }
 
     @media(max-width:500px) {
@@ -146,140 +196,65 @@
                 class="header-icon" />
         </div>
     </div>
-    <div id="aboutus" onmouseenter="changeStyleHeader('aboutus-action')" class="div-aboutus">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <!-- <div class="carousel-item active">
-                    <div class="row">
-                        <p class="first-welcome-text">WELCOME TO THE</p>
-                        <p class="first-gga-text">Good Creator Academy</p>
-                    </div>
-                </div> -->
-                <div class="carousel-item active">
-                    <!-- <iframe width="100%" height="100%"
+    <div id="aboutus" onmouseenter="changeStyleHeader('aboutus-action')" class="carousel div-aboutus">
+        <div class="carousel_track-container">
+            <ul class="carousel_track">
+                <li class="carousel_slide current-slide">
+                    <p class="first-welcome-text">WELCOME TO THE</p>
+                    <p class="first-gga-text">Good Creator Academy</p>
+                </li>
+                <li class="carousel_slide">
+                    <iframe width="100%" height="630px"
                         src="https://www.youtube.com/embed/rUWxSEwctFU?autoplay=1&mute=1&enablejsapi=1" frameborder="0"
-                        allow="autoplay">
-                        -->
-                    <!-- <iframe width="0" height="0" src="https://www.youtube.com/embed/bmOKJWue4C0?autoplay=1&amp;mute=0" frameborder="0" allowfullscreen="1"></iframe> -->
-                    <iframe class="modest-vid-embed__item"
-                        src="https://player.vimeo.com/video/488076966?autoplay=1&loop=1&autopause=0&muted=1"
-                        allow="autoplay" width="640" height="360" frameborder="0" webkitallowfullscreen
-                        mozallowfullscreen allowfullscreen>
-                    </iframe>
-                </div>
-                <!--
-                <div class="carousel-item">
-                </div> -->
-            </div>
+                        allow="autoplay"></iframe>
+                </li>
+                <li class="carousel_slide">
+                    <p class="first-welcome-text">Beauty Creator</p>
+                    <p class="first-gga-text">Weekend Bootcamp</p>
+                </li>
+            </ul>
+        </div>
+        <div class="carousel_nav">
+            <button class="carousel_indicator current-slide"></button>
+            <button class="carousel_indicator"></button>
+            <button class="carousel_indicator"></button>
         </div>
     </div>
     <div id="focusareas" onmouseenter="changeStyleHeader('focusareas-action')">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <!-- <div class="carousel-item active">
+                <div class="carousel-item active">
                     <div class="row">
                         <p class="first-welcome-text">WELCOME TO THE</p>
                         <p class="first-gga-text">Good Creator Academy</p>
                     </div>
-                </div> -->
+                </div>
                 <div class="carousel-item active">
-                    <!-- <iframe width="100%" height="100%"
+                    <iframe width="100%" height="100%"
                         src="https://www.youtube.com/embed/rUWxSEwctFU?autoplay=1&mute=1&enablejsapi=1" frameborder="0"
                         allow="autoplay">
-                        -->
-                    <!-- <iframe width="0" height="0" src="https://www.youtube.com/embed/bmOKJWue4C0?autoplay=1&amp;mute=0" frameborder="0" allowfullscreen="1"></iframe> -->
+                       
+                    <iframe width="0" height="0" src="https://www.youtube.com/embed/bmOKJWue4C0?autoplay=1&amp;mute=0" frameborder="0" allowfullscreen="1"></iframe>
                     <iframe class="modest-vid-embed__item"
                         src="https://player.vimeo.com/video/488076966?autoplay=1&loop=1&autopause=0&muted=1"
                         allow="autoplay" width="640" height="360" frameborder="0" webkitallowfullscreen
                         mozallowfullscreen allowfullscreen>
                     </iframe>
                 </div>
-                <!--
+                
                 <div class="carousel-item">
-                </div> -->
+                </div>
             </div>
-        </div>
+        </div> -->
     </div>
     <div id="instructors" onmouseenter="changeStyleHeader('instructors-action')">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <!-- <div class="carousel-item active">
-                    <div class="row">
-                        <p class="first-welcome-text">WELCOME TO THE</p>
-                        <p class="first-gga-text">Good Creator Academy</p>
-                    </div>
-                </div> -->
-                <div class="carousel-item active">
-                    <!-- <iframe width="100%" height="100%"
-                        src="https://www.youtube.com/embed/rUWxSEwctFU?autoplay=1&mute=1&enablejsapi=1" frameborder="0"
-                        allow="autoplay">
-                        -->
-                    <!-- <iframe width="0" height="0" src="https://www.youtube.com/embed/bmOKJWue4C0?autoplay=1&amp;mute=0" frameborder="0" allowfullscreen="1"></iframe> -->
-                    <iframe class="modest-vid-embed__item"
-                        src="https://player.vimeo.com/video/488076966?autoplay=1&loop=1&autopause=0&muted=1"
-                        allow="autoplay" width="640" height="360" frameborder="0" webkitallowfullscreen
-                        mozallowfullscreen allowfullscreen>
-                    </iframe>
-                </div>
-                <!--
-                <div class="carousel-item">
-                </div> -->
-            </div>
-        </div>
+
     </div>
     <div id="courses" onmouseenter="changeStyleHeader('courses-action')">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <!-- <div class="carousel-item active">
-                    <div class="row">
-                        <p class="first-welcome-text">WELCOME TO THE</p>
-                        <p class="first-gga-text">Good Creator Academy</p>
-                    </div>
-                </div> -->
-                <div class="carousel-item active">
-                    <!-- <iframe width="100%" height="100%"
-                        src="https://www.youtube.com/embed/rUWxSEwctFU?autoplay=1&mute=1&enablejsapi=1" frameborder="0"
-                        allow="autoplay">
-                        -->
-                    <!-- <iframe width="0" height="0" src="https://www.youtube.com/embed/bmOKJWue4C0?autoplay=1&amp;mute=0" frameborder="0" allowfullscreen="1"></iframe> -->
-                    <iframe class="modest-vid-embed__item"
-                        src="https://player.vimeo.com/video/488076966?autoplay=1&loop=1&autopause=0&muted=1"
-                        allow="autoplay" width="640" height="360" frameborder="0" webkitallowfullscreen
-                        mozallowfullscreen allowfullscreen>
-                    </iframe>
-                </div>
-                <!--
-                <div class="carousel-item">
-                </div> -->
-            </div>
-        </div>
+
     </div>
     <div id="faqs" onmouseenter="changeStyleHeader('faqs-action')">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <!-- <div class="carousel-item active">
-                    <div class="row">
-                        <p class="first-welcome-text">WELCOME TO THE</p>
-                        <p class="first-gga-text">Good Creator Academy</p>
-                    </div>
-                </div> -->
-                <div class="carousel-item active">
-                    <!-- <iframe width="100%" height="100%"
-                        src="https://www.youtube.com/embed/rUWxSEwctFU?autoplay=1&mute=1&enablejsapi=1" frameborder="0"
-                        allow="autoplay">
-                        -->
-                    <!-- <iframe width="0" height="0" src="https://www.youtube.com/embed/bmOKJWue4C0?autoplay=1&amp;mute=0" frameborder="0" allowfullscreen="1"></iframe> -->
-                    <iframe class="modest-vid-embed__item"
-                        src="https://player.vimeo.com/video/488076966?autoplay=1&loop=1&autopause=0&muted=1"
-                        allow="autoplay" width="640" height="360" frameborder="0" webkitallowfullscreen
-                        mozallowfullscreen allowfullscreen>
-                    </iframe>
-                </div>
-                <!--
-                <div class="carousel-item">
-                </div> -->
-            </div>
-        </div>
+
     </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.2/aos.js"></script>
@@ -332,4 +307,75 @@
                 break;
         }
     }
+
+    // Top carousel
+    const track = document.querySelector(".carousel_track");
+    const slides = Array.from(track.children);
+    const dotsNav = document.querySelector(".carousel_nav");
+    const dots = Array.from(dotsNav.children);
+
+    const slidesWidth = slides[0].getBoundingClientRect().width;
+
+    // arrange the slides next to one another
+    const setSlidePosition = (slide, index) => {
+        slide.style.left = slidesWidth * index + "px";
+    };
+    slides.forEach(setSlidePosition);
+
+    // Move slide at 3 sec
+    const moveToSlide = (track, currentSlide, tragetSlide) => {
+        const amountToMove = tragetSlide.style.left;
+        track.style.transform = "translateX(-" + amountToMove + ")";
+        currentSlide.classList.remove("current-slide");
+        tragetSlide.classList.add("current-slide");
+    };
+
+    const updateDots = (currentDot, targetDot) => {
+        targetDot.classList.add("current-slide");
+        currentDot.classList.remove("current-slide");
+    };
+    let targetIndex = 0;
+    let setIntervalTime = 3000;
+    const moveSlide = () => {
+        const currentSlide = track.querySelector(".current-slide");
+        let nextSlide = currentSlide.nextElementSibling;
+        const currentDots = dotsNav.querySelector(".current-slide");
+        let nextDots = currentDots.nextElementSibling;
+        targetIndex = dots.findIndex((dot) => dot === currentDots);
+        if (targetIndex === 2) {
+            nextSlide = slides[0];
+            nextDots = dots[0];
+        }
+        moveToSlide(track, currentSlide, nextSlide);
+        updateDots(currentDots, nextDots);
+        if (targetIndex === 0) {
+            // For 10 sec video
+            setIntervalTime = 10000;
+        } else {
+            setIntervalTime = 3000;
+        }
+        console.log({ setIntervalTime, targetIndex });
+        setTimeout(moveSlide, setIntervalTime);
+    }
+    setTimeout(moveSlide, setIntervalTime);
+
+    // Move slide on dot press
+    dotsNav.addEventListener("click", (e) => {
+        const targetDot = e.target.closest("button");
+        if (!targetDot) return null;
+        const currentSlide = track.querySelector(".current-slide");
+        const currentDot = dotsNav.querySelector(".current-slide");
+        targetIndex = dots.findIndex((dot) => dot === targetDot);
+        const tragetSlide = slides[targetIndex];
+        if (targetIndex === 0) {
+            // For 10 sec video
+            setIntervalTime = 10000;
+        } else {
+            setIntervalTime = 3000;
+        }
+        console.log({ setIntervalTime, targetIndex });
+        moveToSlide(track, currentSlide, tragetSlide);
+        updateDots(currentDot, targetDot);
+    });
+
 </script>
