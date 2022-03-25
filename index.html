@@ -79,7 +79,7 @@
         border-radius: 20px;
     } */
 
-    .first-welcome-text {
+    .aboutus_welcome-text {
         margin-top: 113px;
         margin-left: 73px;
         font-style: normal;
@@ -90,7 +90,7 @@
         color: #0D0D0D;
     }
 
-    .first-gga-text {
+    .aboutus_sub_text {
         margin-top: 10px;
         margin-left: 73px;
         font-style: normal;
@@ -102,12 +102,12 @@
     }
 
 
-    .carousel {
+    .aboutus_carousel {
         position: relative;
         margin: 0 auto;
     }
 
-    .carousel_track-container {
+    .aboutus_carousel_track-container {
         min-height: 630px;
         margin-left: 96px;
         margin-right: 96px;
@@ -117,7 +117,7 @@
         overflow: hidden;
     }
 
-    .carousel_track {
+    .aboutus_carousel_track {
         padding: 0;
         margin: 0;
         list-style: none;
@@ -125,18 +125,18 @@
         transition: transform 250ms ease-in;
     }
 
-    .carousel_slide {
+    .aboutus_carousel_slide {
         position: absolute;
         width: 100%;
     }
 
-    .carousel_nav {
+    .aboutus_carousel_nav {
         position: relative;
         top: -13;
         margin-left: 168px;
     }
 
-    .carousel_indicator {
+    .aboutus_carousel_indicator {
         border: 0;
         border-radius: 50%;
         margin: 0 2px;
@@ -144,17 +144,10 @@
         height: 12px;
     }
 
-    .carousel_indicator.current-slide {
+    .aboutus_carousel_indicator.aboutus_current-slide {
         width: 20px;
         border-radius: 10px;
         background: #76C9F1;
-    }
-
-    /* Why should you join us */
-    .join-us-div {
-        margin-top: 125px;
-        margin-left: 96px;
-        margin-right: 96px;
     }
 
     .col-div {
@@ -165,6 +158,13 @@
     .row-div {
         display: flex;
         flex-direction: row;
+    }
+
+    /* Why should you join us */
+    .join-us-div {
+        margin-top: 125px;
+        margin-left: 96px;
+        margin-right: 96px;
     }
 
     .join-us-wsy-text {
@@ -243,6 +243,47 @@
         padding-left: 60px;
     }
 
+    /* Content Creation Journey - ccj  */
+    .ccj-div {
+        margin-top: 125px;
+        margin-left: 96px;
+        margin-right: 96px;
+    }
+
+    .ccj-wsy-text {
+        font-style: normal;
+        font-weight: medium;
+        font-size: 24px;
+        line-height: 26px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #0D0D0D;
+    }
+
+    .ccj-text {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 76px;
+        text-align: center;
+        text-transform: capitalize;
+        color: #0D0D0D;
+    }
+
+    .ccj-hr-div {
+        width: 80px;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        border: 8px solid #01B9F5;
+        border-radius: 40px;
+    }
+
+    .ccj-main-container {
+        margin-top: 84px;
+        height: 520px;
+    }
+
     @media(max-width:500px) {
 
         .title1,
@@ -289,14 +330,14 @@
                 class="header-icon" />
         </div>
     </div>
-    <div id="aboutus" onmouseenter="changeStyleHeader(false, 'aboutus-action')" class="carousel div-aboutus">
-        <div class="carousel_track-container">
-            <ul class="carousel_track">
-                <li class="carousel_slide current-slide">
-                    <p class="first-welcome-text">WELCOME TO THE</p>
-                    <p class="first-gga-text">Good Creator Academy</p>
+    <div id="aboutus" onmouseenter="changeStyleHeader(false, 'aboutus-action')" class="aboutus_carousel div-aboutus">
+        <div class="aboutus_carousel_track-container">
+            <ul class="aboutus_carousel_track">
+                <li class="aboutus_carousel_slide aboutus_current-slide">
+                    <p class="aboutus_welcome-text">WELCOME TO THE</p>
+                    <p class="aboutus_sub_text">Good Creator Academy</p>
                 </li>
-                <li class="carousel_slide">
+                <li class="aboutus_carousel_slide">
                     <iframe width="100%" height="630px"
                         src="https://www.youtube.com/embed/rUWxSEwctFU?autoplay=1&mute=1&enablejsapi=1" frameborder="0"
                         allow="autoplay"></iframe>
@@ -307,19 +348,20 @@
                             mozallowfullscreen allowfullscreen>
                         </iframe> -->
                 </li>
-                <li class="carousel_slide">
-                    <p class="first-welcome-text">Beauty Creator</p>
-                    <p class="first-gga-text">Weekend Bootcamp</p>
+                <li class="aboutus_carousel_slide">
+                    <p class="aboutus_welcome-text">Beauty Creator</p>
+                    <p class="aboutus_sub_text">Weekend Bootcamp</p>
                 </li>
             </ul>
         </div>
-        <div class="carousel_nav">
-            <button class="carousel_indicator current-slide"></button>
-            <button class="carousel_indicator"></button>
-            <button class="carousel_indicator"></button>
+        <div class="aboutus_carousel_nav">
+            <button class="aboutus_carousel_indicator aboutus_current-slide"></button>
+            <button class="aboutus_carousel_indicator"></button>
+            <button class="aboutus_carousel_indicator"></button>
         </div>
     </div>
     <div id="focusareas" onmouseenter="changeStyleHeader(false, 'focusareas-action')">
+        <!-- Why should you join us - join-us -->
         <div id="join-us" class="join-us-div">
             <div class="col-div">
                 <div class="join-us-wsy-text">Why Should You</div>
@@ -348,6 +390,17 @@
                             in business no matter where you are.</div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <!-- Content Creation Journey - ccj -->
+        <div id="ccj" class="ccj-div">
+            <div class="col-div">
+                <div class="ccj-wsy-text">JUMP-start your</div>
+                <div class="ccj-text">Content Creation Journey</div>
+                <div class="ccj-hr-div"></div>
+            </div>
+            <div class="row-div ccj-main-container">
+
             </div>
         </div>
     </div>
@@ -423,9 +476,9 @@
     }
 
     // Top carousel
-    const track = document.querySelector(".carousel_track");
+    const track = document.querySelector(".aboutus_carousel_track");
     const slides = Array.from(track.children);
-    const dotsNav = document.querySelector(".carousel_nav");
+    const dotsNav = document.querySelector(".aboutus_carousel_nav");
     const dots = Array.from(dotsNav.children);
 
     const slidesWidth = slides[0].getBoundingClientRect().width;
@@ -440,20 +493,20 @@
     const moveToSlide = (track, currentSlide, tragetSlide) => {
         const amountToMove = tragetSlide.style.left;
         track.style.transform = "translateX(-" + amountToMove + ")";
-        currentSlide.classList.remove("current-slide");
-        tragetSlide.classList.add("current-slide");
+        currentSlide.classList.remove("aboutus_current-slide");
+        tragetSlide.classList.add("aboutus_current-slide");
     };
 
     const updateDots = (currentDot, targetDot) => {
-        targetDot.classList.add("current-slide");
-        currentDot.classList.remove("current-slide");
+        targetDot.classList.add("aboutus_current-slide");
+        currentDot.classList.remove("aboutus_current-slide");
     };
     let targetIndex = 0;
     let setIntervalTime = 3000;
     const moveSlide = () => {
-        const currentSlide = track.querySelector(".current-slide");
+        const currentSlide = track.querySelector(".aboutus_current-slide");
         let nextSlide = currentSlide.nextElementSibling;
-        const currentDots = dotsNav.querySelector(".current-slide");
+        const currentDots = dotsNav.querySelector(".aboutus_current-slide");
         let nextDots = currentDots.nextElementSibling;
         targetIndex = dots.findIndex((dot) => dot === currentDots);
         if (targetIndex === 2) {
@@ -477,8 +530,8 @@
     dotsNav.addEventListener("click", (e) => {
         const targetDot = e.target.closest("button");
         if (!targetDot) return null;
-        const currentSlide = track.querySelector(".current-slide");
-        const currentDot = dotsNav.querySelector(".current-slide");
+        const currentSlide = track.querySelector(".aboutus_current-slide");
+        const currentDot = dotsNav.querySelector(".aboutus_current-slide");
         targetIndex = dots.findIndex((dot) => dot === targetDot);
         const tragetSlide = slides[targetIndex];
         if (targetIndex === 0) {
