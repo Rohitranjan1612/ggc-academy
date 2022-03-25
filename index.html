@@ -69,16 +69,6 @@
         margin-right: 16px;
     }
 
-    /* 
-    .div-aboutus {
-        min-height: 630px;
-        margin-left: 96px;
-        margin-right: 96px;
-        margin-top: 90px;
-        background: #F7FCFF;
-        border-radius: 20px;
-    } */
-
     .aboutus_welcome-text {
         margin-top: 113px;
         margin-left: 73px;
@@ -284,6 +274,49 @@
         height: 520px;
     }
 
+    /* instructors */
+    .instructors-div {
+        height: 868px;
+        background: #FEF9E8;
+        border-radius: 30px 0px;
+        margin-top: 120px;
+        margin-left: 96px;
+        margin-right: 96px;
+        margin-bottom: 120px;
+        padding-top: 100px;
+    }
+
+    .instructors-header {
+        font-style: normal;
+        font-weight: medium;
+        font-size: 24px;
+        line-height: 26px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #0D0D0D;
+    }
+
+    .instructors-sub-header {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 76px;
+        text-align: center;
+        text-transform: capitalize;
+        color: #0D0D0D;
+    }
+
+    .instructors-hr-div {
+        width: 80px;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        border: 8px solid #FFC400;
+        border-radius: 40px;
+    }
+
+    .instructors-main-container {}
+
     @media(max-width:500px) {
 
         .title1,
@@ -301,10 +334,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-<link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.2/aos.css" />
 <div class="bootstrap-styles">
     <div class="header fixed-top">
         <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/profilepic/6238477ebe462074af990c3f.png"
@@ -330,7 +359,7 @@
                 class="header-icon" />
         </div>
     </div>
-    <div id="aboutus" onmouseenter="changeStyleHeader(false, 'aboutus-action')" class="aboutus_carousel div-aboutus">
+    <div id="aboutus" onmouseenter="changeStyleHeader(false, 'aboutus-action')" class="aboutus_carousel">
         <div class="aboutus_carousel_track-container">
             <ul class="aboutus_carousel_track">
                 <li class="aboutus_carousel_slide aboutus_current-slide">
@@ -404,8 +433,14 @@
             </div>
         </div>
     </div>
-    <div id="instructors" onmouseenter="changeStyleHeader(false, 'instructors-action')">
-
+    <div id="instructors" onmouseenter="changeStyleHeader(false, 'instructors-action')" class="instructors-div">
+        <div class="col-div">
+            <div class="instructors-header">Learn from</div>
+            <div class="instructors-sub-header">Marquee Creators & Industry Experts</div>
+            <div class="instructors-hr-div"></div>
+        </div>
+        <div class="instructors-main-container">
+        </div>
     </div>
     <div id="courses" onmouseenter="changeStyleHeader(false, 'courses-action')">
 
@@ -414,11 +449,6 @@
 
     </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.2/aos.js"></script>
-<script>
-    AOS.init();
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script>
     function changeStyleHeader(toScroll, id) {
         switch (id) {
