@@ -28,7 +28,7 @@
         padding: 0.5rem 1rem;
         color: #0D0D0D;
         font-style: normal;
-        font-weight: 500;
+        font-weight: medium;
         font-size: 14px;
         line-height: 24px;
     }
@@ -150,6 +150,99 @@
         background: #76C9F1;
     }
 
+    /* Why should you join us */
+    .join-us-div {
+        margin-top: 125px;
+        margin-left: 96px;
+        margin-right: 96px;
+    }
+
+    .col-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row-div {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .join-us-wsy-text {
+        font-style: normal;
+        font-weight: medium;
+        font-size: 24px;
+        line-height: 26px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #0D0D0D;
+    }
+
+    .join-us-text {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 76px;
+        text-align: center;
+        text-transform: capitalize;
+        color: #0D0D0D;
+    }
+
+    .join-us-hr-div {
+        width: 80px;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        border: 8px solid #FFC400;
+        border-radius: 40px;
+    }
+
+    .join-us-main-container {
+        margin-top: 84px;
+    }
+
+    .join-us-logo {
+        width: 69px;
+        height: 66px;
+        margin-right: 40px;
+    }
+
+    .join-us-logo-2 {
+        width: 86px;
+        height: 66px;
+        margin-right: 40px;
+    }
+
+    .join-us-sub-header {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 36px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        color: #0D0D0D;
+    }
+
+    .join-us-simple-text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        color: #777777;
+    }
+
+    .div-with-border-line {
+        flex: 1;
+        border-right: 1px solid #D5D5D5;
+        padding-right: 77px;
+    }
+
+    .div-without-border-line {
+        flex: 1;
+        padding-left: 60px;
+    }
+
     @media(max-width:500px) {
 
         .title1,
@@ -178,16 +271,16 @@
         <div class="right-container">
             <ul class="nav nav-bar">
                 <li class="nav-item"> <button class="navlink-active" id="aboutus-action"
-                        onclick="changeStyleHeader('aboutus-action')">About us</button> </li>
+                        onclick="changeStyleHeader(true, 'aboutus-action')">About us</button> </li>
                 <li class="nav-item"> <button class="navlink" id="focusareas-action"
-                        onclick="changeStyleHeader('focusareas-action')">Focus Areas</button> </li>
+                        onclick="changeStyleHeader(true, 'focusareas-action')">Focus Areas</button> </li>
                 <li class="nav-item"> <button class="navlink" id="instructors-action"
-                        onclick="changeStyleHeader('instructors-action')">Instructors</button>
+                        onclick="changeStyleHeader(true, 'instructors-action')">Instructors</button>
                 </li>
                 <li class="nav-item"> <button class="navlink" id="courses-action"
-                        onclick="changeStyleHeader('courses-action')">Courses</button> </li>
+                        onclick="changeStyleHeader(true, 'courses-action')">Courses</button> </li>
                 <li class="nav-item"> <button class="navlink" id="faqs-action"
-                        onclick="changeStyleHeader('faqs-action')">FAQs</a> </li>
+                        onclick="changeStyleHeader(true, 'faqs-action')">FAQs</a> </li>
             </ul>
             <div>
                 <button class="header-enroll-now"> Enroll Now</button>
@@ -196,7 +289,7 @@
                 class="header-icon" />
         </div>
     </div>
-    <div id="aboutus" onmouseenter="changeStyleHeader('aboutus-action')" class="carousel div-aboutus">
+    <div id="aboutus" onmouseenter="changeStyleHeader(false, 'aboutus-action')" class="carousel div-aboutus">
         <div class="carousel_track-container">
             <ul class="carousel_track">
                 <li class="carousel_slide current-slide">
@@ -207,6 +300,12 @@
                     <iframe width="100%" height="630px"
                         src="https://www.youtube.com/embed/rUWxSEwctFU?autoplay=1&mute=1&enablejsapi=1" frameborder="0"
                         allow="autoplay"></iframe>
+                    <!-- <iframe width="0" height="0" src="https://www.youtube.com/embed/bmOKJWue4C0?autoplay=1&amp;mute=0" frameborder="0" allowfullscreen="1"></iframe>
+                        <iframe class="modest-vid-embed__item"
+                            src="https://player.vimeo.com/video/488076966?autoplay=1&loop=1&autopause=0&muted=1"
+                            allow="autoplay" width="640" height="360" frameborder="0" webkitallowfullscreen
+                            mozallowfullscreen allowfullscreen>
+                        </iframe> -->
                 </li>
                 <li class="carousel_slide">
                     <p class="first-welcome-text">Beauty Creator</p>
@@ -220,40 +319,45 @@
             <button class="carousel_indicator"></button>
         </div>
     </div>
-    <div id="focusareas" onmouseenter="changeStyleHeader('focusareas-action')">
-        <!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row">
-                        <p class="first-welcome-text">WELCOME TO THE</p>
-                        <p class="first-gga-text">Good Creator Academy</p>
+    <div id="focusareas" onmouseenter="changeStyleHeader(false, 'focusareas-action')">
+        <div id="join-us" class="join-us-div">
+            <div class="col-div">
+                <div class="join-us-wsy-text">Why Should You</div>
+                <div class="join-us-text">Join Us</div>
+                <div class="join-us-hr-div"></div>
+            </div>
+            <div class="row-div join-us-main-container">
+                <div class="row-div div-with-border-line ">
+                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623d6582be462074af990ff6.png"
+                        class="join-us-logo" />
+                    <div class="col-div">
+                        <div class="join-us-sub-header">Build a unique skill-set</div>
+                        <div class="join-us-simple-text">Attend courses co-created with marquee creators and
+                            best-in-industry
+                            instructors which promise to elevate your creator skills.</div>
+                    </div>
+
+                </div>
+                <div class="row-div div-without-border-line">
+                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623d65827318f9107f8aff0a.png"
+                        class="join-us-logo-2" />
+                    <div class="col-div">
+                        <div class="join-us-sub-header">learn everything, anywhere</div>
+                        <div class="join-us-simple-text">Location is no longer a barrier for your learning potential -
+                            we offer engaging live sessions and hand-on virtual workshops to give you access to the best
+                            in business no matter where you are.</div>
                     </div>
                 </div>
-                <div class="carousel-item active">
-                    <iframe width="100%" height="100%"
-                        src="https://www.youtube.com/embed/rUWxSEwctFU?autoplay=1&mute=1&enablejsapi=1" frameborder="0"
-                        allow="autoplay">
-                       
-                    <iframe width="0" height="0" src="https://www.youtube.com/embed/bmOKJWue4C0?autoplay=1&amp;mute=0" frameborder="0" allowfullscreen="1"></iframe>
-                    <iframe class="modest-vid-embed__item"
-                        src="https://player.vimeo.com/video/488076966?autoplay=1&loop=1&autopause=0&muted=1"
-                        allow="autoplay" width="640" height="360" frameborder="0" webkitallowfullscreen
-                        mozallowfullscreen allowfullscreen>
-                    </iframe>
-                </div>
-                
-                <div class="carousel-item">
-                </div>
             </div>
-        </div> -->
+        </div>
     </div>
-    <div id="instructors" onmouseenter="changeStyleHeader('instructors-action')">
+    <div id="instructors" onmouseenter="changeStyleHeader(false, 'instructors-action')">
 
     </div>
-    <div id="courses" onmouseenter="changeStyleHeader('courses-action')">
+    <div id="courses" onmouseenter="changeStyleHeader(false, 'courses-action')">
 
     </div>
-    <div id="faqs" onmouseenter="changeStyleHeader('faqs-action')">
+    <div id="faqs" onmouseenter="changeStyleHeader(false, 'faqs-action')">
 
     </div>
 </div>
@@ -263,10 +367,12 @@
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script>
-    function changeStyleHeader(id) {
+    function changeStyleHeader(toScroll, id) {
         switch (id) {
             case "aboutus-action":
-                document.getElementById('aboutus').scrollIntoView();
+                if (toScroll) {
+                    document.getElementById('aboutus').scrollIntoView();
+                }
                 document.getElementById("aboutus-action").className = 'navlink-active';
                 document.getElementById("focusareas-action").className = 'navlink';
                 document.getElementById("instructors-action").className = 'navlink';
@@ -274,7 +380,9 @@
                 document.getElementById("faqs-action").className = 'navlink';
                 break;
             case "focusareas-action":
-                document.getElementById('focusareas').scrollIntoView();
+                if (toScroll) {
+                    document.getElementById('focusareas').scrollIntoView();
+                }
                 document.getElementById("aboutus-action").className = 'navlink';
                 document.getElementById("focusareas-action").className = 'navlink-active';
                 document.getElementById("instructors-action").className = 'navlink';
@@ -282,7 +390,9 @@
                 document.getElementById("faqs-action").className = 'navlink';
                 break;
             case "instructors-action":
-                document.getElementById('instructors').scrollIntoView();
+                if (toScroll) {
+                    document.getElementById('instructors').scrollIntoView();
+                }
                 document.getElementById("aboutus-action").className = 'navlink';
                 document.getElementById("focusareas-action").className = 'navlink';
                 document.getElementById("instructors-action").className = 'navlink-active';
@@ -290,7 +400,9 @@
                 document.getElementById("faqs-action").className = 'navlink';
                 break;
             case "courses-action":
-                document.getElementById('courses').scrollIntoView();
+                if (toScroll) {
+                    document.getElementById('courses').scrollIntoView();
+                }
                 document.getElementById("aboutus-action").className = 'navlink';
                 document.getElementById("focusareas-action").className = 'navlink';
                 document.getElementById("instructors-action").className = 'navlink';
@@ -298,7 +410,9 @@
                 document.getElementById("faqs-action").className = 'navlink';
                 break;
             case "faqs-action":
-                document.getElementById('faqs').scrollIntoView();
+                if (toScroll) {
+                    document.getElementById('faqs').scrollIntoView();
+                }
                 document.getElementById("aboutus-action").className = 'navlink';
                 document.getElementById("focusareas-action").className = 'navlink';
                 document.getElementById("instructors-action").className = 'navlink';
