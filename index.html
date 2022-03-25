@@ -282,7 +282,6 @@
         margin-top: 120px;
         margin-left: 96px;
         margin-right: 96px;
-        margin-bottom: 120px;
         padding-top: 100px;
     }
 
@@ -316,6 +315,202 @@
     }
 
     .instructors-main-container {}
+
+    /* courses */
+    .courses-div {
+        margin-top: 135px;
+        margin-left: 96px;
+        margin-right: 96px;
+    }
+
+    .courses-header {
+        font-style: normal;
+        font-weight: medium;
+        font-size: 24px;
+        line-height: 26px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #0D0D0D;
+    }
+
+    .courses-sub-header {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 76px;
+        text-align: center;
+        text-transform: capitalize;
+        color: #0D0D0D;
+    }
+
+    .courses-hr-div {
+        width: 80px;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        border: 8px solid #01B9F5;
+        border-radius: 40px;
+    }
+
+    .courses-main-container {
+        height: 527px;
+        background: #F6FCFF;
+        border-radius: 30px 0px;
+        margin-top: 78px;
+    }
+
+    /* download */
+    .download-div {
+        margin-top: 142px;
+        margin-left: 96px;
+        margin-right: 96px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .download-inner-div-1 {
+        flex: 1;
+        background: #FFC400;
+        padding-left: 48px;
+        padding-right: 48px;
+        padding-top: 32px;
+        padding-bottom: 40px;
+        border-top-left-radius: 10px;
+    }
+
+    .download-inner-div-2 {
+        flex: 1;
+        background: #FCD77C;
+        padding-left: 48px;
+        border-bottom-right-radius: 10px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .download-header {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 60px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        color: #0D0D0D;
+    }
+
+    .download-sub-header {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        color: #5B5B5B;
+    }
+
+    .download-sub-inner-div-1 {
+        display: flex;
+        flex-direction: column;
+        flex: 2;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .download-sub-inner-text {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        /* or 114% */
+
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+
+        color: #000000;
+    }
+
+    .download-sub-inner-div-3 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .download-android-logo {
+        width: 100px;
+        height: 30px;
+        margin-right: 12px;
+    }
+
+    .download-ios-logo {
+        width: 100px;
+        height: 30px;
+    }
+
+    .download-sub-inner-div-2 {
+        flex: 1;
+        margin: 20px;
+        background: #FFFFFF;
+        border-bottom-right-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .download-sub-inner-text-2 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 5px 38px 6px 38px;
+        color: #000000;
+    }
+
+    .download-qrcode-logo {
+        width: 57px;
+        height: 57px;
+    }
+
+    /* faqs */
+    .faqs-div {
+        margin-top: 120px;
+        margin-left: 96px;
+        margin-right: 96px;
+    }
+
+    .faqs-header {
+        font-style: normal;
+        font-weight: medium;
+        font-size: 24px;
+        line-height: 26px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #0D0D0D;
+    }
+
+    .faqs-sub-header {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 76px;
+        text-align: center;
+        text-transform: capitalize;
+        color: #0D0D0D;
+    }
+
+    .faqs-hr-div {
+        width: 80px;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        border: 8px solid #01B9F5;
+        border-radius: 40px;
+    }
+
+    .faqs-main-container {}
 
     @media(max-width:500px) {
 
@@ -442,11 +637,49 @@
         <div class="instructors-main-container">
         </div>
     </div>
-    <div id="courses" onmouseenter="changeStyleHeader(false, 'courses-action')">
-
+    <div id="courses" onmouseenter="changeStyleHeader(false, 'courses-action')" class="courses-div">
+        <div class="col-div">
+            <div class="courses-header">Join the</div>
+            <div class="courses-sub-header">Beauty Creator Weekend Bootcamp</div>
+            <div class="courses-hr-div"></div>
+        </div>
+        <div class="courses-main-container">
+        </div>
     </div>
-    <div id="faqs" onmouseenter="changeStyleHeader(false, 'faqs-action')">
-
+    <div class="download-div">
+        <div class="download-inner-div-1">
+            <div class="download-header">
+                Take the next step
+            </div>
+            <div class="download-sub-header">
+                Lorem ipsum dummy text here because we do not have copy for the same
+            </div>
+        </div>
+        <div class="download-inner-div-2">
+            <div class="download-sub-inner-div-1">
+                <div class="download-sub-inner-text">Download on android & iOS</div>
+                <div class="download-sub-inner-div-3">
+                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623d8ac5be462074af991115.png"
+                        class="download-android-logo" />
+                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623d8ac5be462074af991114.png"
+                        class="download-ios-logo" />
+                </div>
+            </div>
+            <div class="download-sub-inner-div-2">
+                <div class="download-sub-inner-text-2">Scan Code AND Download Now</div>
+                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623d8ac57318f9107f8b0021.png"
+                    class="download-qrcode-logo" />
+            </div>
+        </div>
+    </div>
+    <div id="faqs" onmouseenter="changeStyleHeader(false, 'faqs-action')" class="faqs-div">
+        <div class="col-div">
+            <div class="faqs-header">We Are</div>
+            <div class="faqs-sub-header">Here To Help</div>
+            <div class="faqs-hr-div"></div>
+        </div>
+        <div class="faqs-main-container">
+        </div>
     </div>
 </div>
 <script>
