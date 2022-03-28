@@ -365,6 +365,58 @@
         flex: 1;
     }
 
+    .courses-sub-container-carousel {
+        position: relative;
+        margin: 0 auto;
+    }
+
+
+    .courses_carousel_track-container {
+        margin-left: 96px;
+        margin-right: 96px;
+        margin-top: 90px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .courses_carousel_track {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        position: relative;
+        transition: transform 250ms ease-in;
+    }
+
+    .courses_carousel_slide {
+        position: absolute;
+        width: 100%;
+        background: #000000;
+    }
+
+    .courses_carousel_nav {
+        position: relative;
+        margin-left: 168px;
+    }
+
+    .courses_carousel_indicator {
+        border: 0;
+        border-radius: 50%;
+        margin: 0 2px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .courses_carousel_indicator.courses_current-slide {
+        width: 20px;
+        border-radius: 10px;
+        background: #76C9F1;
+    }
+
+    .courses_img {
+        width: 500px;
+        height: 408px;
+    }
+
     .courses-sub-container-2 {
         flex: 1;
         padding-top: 58px;
@@ -711,7 +763,24 @@
         </div>
         <div class="courses-main-container">
             <div class="courses-sub-container-1">
-
+                <div class="courses-sub-container-carousel">
+                    <div class="courses_carousel_track-container">
+                        <ul class="courses_carousel_track">
+                            <li class="courses_carousel_slide courses_current-slide">
+                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623dad48be462074af991145.png"
+                                    class="courses_img" />
+                            </li>
+                            <li class="courses_carousel_slide">
+                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623dad487318f9107f8b004d.png"
+                                    class="courses_img" />
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="courses_carousel_nav">
+                        <button class="courses_carousel_indicator courses_current-slide"></button>
+                        <button class="courses_carousel_indicator"></button>
+                    </div>
+                </div>
             </div>
             <div class="courses-sub-container-2">
                 <div class="courses-sub-container-header">Beauty creator course</div>
@@ -896,4 +965,57 @@
         updateDots(currentDot, targetDot);
     });
 
+    // Courses carousel
+    const coursesTrack = document.querySelector(".courses_carousel_track");
+    const coursesSlides = Array.from(coursesTrack.children);
+    const coursesDotsNav = document.querySelector(".courses_carousel_nav");
+    const coursesDots = Array.from(coursesDotsNav.children);
+
+    const coursesSlidesWidth = coursesSlides[0].getBoundingClientRect().width;
+
+    // arrange the slides next to one another
+    const coursesSetSlidePosition = (slide, index) => {
+        slide.style.left = coursesSlidesWidth * index + "px";
+    };
+    coursesSlides.forEach(coursesSetSlidePosition);
+
+    // Move slide at 3 sec
+    const coursesMoveToSlide = (track, currentSlide, tragetSlide) => {
+        const coursesamountToMove = tragetSlide.style.left;
+        track.style.transform = "translateX(-" + coursesamountToMove + ")";
+        currentSlide.classList.remove("courses_current-slide");
+        tragetSlide.classList.add("courses_current-slide");
+    };
+
+    const coursesUpdateDots = (currentDot, targetDot) => {
+        targetDot.classList.add("courses_current-slide");
+        currentDot.classList.remove("courses_current-slide");
+    };
+    const coursesMoveSlide = () => {
+        const coursesCurrentSlide = coursesTrack.querySelector(".courses_current-slide");
+        let nextSlide = coursesCurrentSlide.nextElementSibling;
+        const coursesCurrentDots = coursesDotsNav.querySelector(".courses_current-slide");
+        let nextDots = coursesCurrentDots.nextElementSibling;
+        const targetIndex = coursesDots.findIndex((dot) => dot === coursesCurrentDots);
+        if (targetIndex === 1) {
+            nextSlide = coursesSlides[0];
+            nextDots = coursesDots[0];
+        }
+        coursesMoveToSlide(coursesTrack, coursesCurrentSlide, nextSlide);
+        coursesUpdateDots(coursesCurrentDots, nextDots);
+        console.log({ coursesTrack, coursesCurrentSlide });
+    }
+    setInterval(coursesMoveSlide, 5000);
+    // Move slide on dot press
+    coursesDotsNav.addEventListener("click", (e) => {
+        const coursesTargetDot = e.target.closest("button");
+        if (!coursesTargetDot) return null;
+        const coursesCurrentSlide = coursesTrack.querySelector(".courses_current-slide");
+        const coursesCurrentDot = coursesDotsNav.querySelector(".courses_current-slide");
+        let targetIndex = coursesDots.findIndex((dot) => dot === coursesTargetDot);
+        const coursesTragetSlide = coursesSlides[targetIndex];
+        coursesMoveToSlide(coursesTrack, coursesCurrentSlide, coursesTragetSlide);
+        coursesUpdateDots(coursesCurrentDot, coursesTargetDot);
+        console.log({ coursesTrack, coursesCurrentSlide });
+    });
 </script>
