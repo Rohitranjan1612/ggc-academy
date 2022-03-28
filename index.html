@@ -631,7 +631,69 @@
         border-radius: 40px;
     }
 
-    .faqs-main-container {}
+    .faqs-main-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 80px;
+        margin-bottom: 120px;
+    }
+
+    .faqs-li {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 32px;
+        padding-top: 32px;
+        border-bottom: 1.5px solid #E6E6E6;
+    }
+
+    .faqs-li-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .faqs-li-header {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 36px;
+        letter-spacing: 0.5px;
+        color: #000000;
+    }
+
+    .faqs-li-text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 31px;
+        color: #333333;
+        display: none;
+    }
+
+    .faqs-li-text-current {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 31px;
+        color: #333333;
+    }
+
+    .faqs-li-icon-div {
+        margin-right: 25px;
+        margin-top: 14px;
+    }
+
+    .faqs-li-icon-current {
+        width: 16px;
+        height: 10px;
+    }
+
+    .faqs-li-icon {
+        width: 16px;
+        height: 10px;
+        transform: rotate(-180deg);
+
+    }
 
     @media(max-width:500px) {
 
@@ -839,6 +901,83 @@
             <div class="faqs-hr-div"></div>
         </div>
         <div class="faqs-main-container">
+            <div class="faqs-li" id="faqs-1" onclick="handleOnClickShowFAQ(1)">
+                <div class="faqs-li-container">
+                    <div class="faqs-li-header">What is the criteria to get selected for the courses?</div>
+                    <div class="faqs-li-text-current" id="faqs-li-text-1">"There is no selection process for the
+                        courses; anyone who wants
+                        to become
+                        a content creator,
+                        at any stage of their journey, can apply. You would be required to register on your platform of
+                        choice (Instagram, Facebook, YouTube, etc.) so that we can include you in our contests,
+                        leaderboards, etc."</div>
+                </div>
+                <div class="faqs-li-icon-div">
+                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
+                        class="faqs-li-icon-current" id="faqs-li-icon-1" />
+                </div>
+            </div>
+            <div class="faqs-li" id="faqs-2" onclick="handleOnClickShowFAQ(2)">
+                <div class="faqs-li-container">
+                    <div class="faqs-li-header">Do the courses follow a particular format</div>
+                    <div class="faqs-li-text" id="faqs-li-text-2">"There is no selection process for the courses; anyone
+                        who wants to become
+                        a content creator,
+                        at any stage of their journey, can apply. You would be required to register on your platform of
+                        choice (Instagram, Facebook, YouTube, etc.) so that we can include you in our contests,
+                        leaderboards, etc."</div>
+                </div>
+                <div class="faqs-li-icon-div">
+                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
+                        class="faqs-li-icon" id="faqs-li-icon-2" />
+                </div>
+            </div>
+            <div class="faqs-li" id="faqs-3" onclick="handleOnClickShowFAQ(3)">
+                <div class="faqs-li-container">
+                    <div class="faqs-li-header">Will I get certified?</div>
+                    <div class="faqs-li-text" id="faqs-li-text-3">"There is no selection process for the courses; anyone
+                        who wants to become
+                        a content creator,
+                        at any stage of their journey, can apply. You would be required to register on your platform of
+                        choice (Instagram, Facebook, YouTube, etc.) so that we can include you in our contests,
+                        leaderboards, etc."</div>
+                </div>
+                <div class="faqs-li-icon-div">
+                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
+                        class="faqs-li-icon" id="faqs-li-icon-3" />
+                </div>
+            </div>
+            <div class="faqs-li" id="faqs-4" onclick="handleOnClickShowFAQ(4)">
+                <div class="faqs-li-container">
+                    <div class="faqs-li-header">Which makeup products should I carry for a session on beauty content
+                        creation?</div>
+                    <div class="faqs-li-text" id="faqs-li-text-4">"There is no selection process for the courses; anyone
+                        who wants to become
+                        a content creator,
+                        at any stage of their journey, can apply. You would be required to register on your platform of
+                        choice (Instagram, Facebook, YouTube, etc.) so that we can include you in our contests,
+                        leaderboards, etc."</div>
+                </div>
+                <div class="faqs-li-icon-div">
+                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
+                        class="faqs-li-icon" id="faqs-li-icon-4" />
+                </div>
+            </div>
+            <div class="faqs-li" id="faqs-5" onclick="handleOnClickShowFAQ(5)">
+                <div class="faqs-li-container">
+                    <div class="faqs-li-header">Are the courses refundable?</div>
+                    <div class="faqs-li-text" id="faqs-li-text-5">"There is no selection process for the courses; anyone
+                        who wants to become
+                        a content creator,
+                        at any stage of their journey, can apply. You would be required to register on your platform of
+                        choice (Instagram, Facebook, YouTube, etc.) so that we can include you in our contests,
+                        leaderboards, etc."</div>
+                </div>
+                <div class="faqs-li-icon-div">
+                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
+                        class="faqs-li-icon" id="faqs-li-icon-5" />
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -1021,4 +1160,20 @@
         coursesUpdateDots(coursesCurrentDot, coursesTargetDot);
         console.log({ coursesTrack, coursesCurrentSlide });
     });
+
+    // FAQs
+    function handleOnClickShowFAQ(id) {
+        document.getElementById("faqs-li-text-1").className = 'faqs-li-text';
+        document.getElementById("faqs-li-text-2").className = 'faqs-li-text';
+        document.getElementById("faqs-li-text-3").className = 'faqs-li-text';
+        document.getElementById("faqs-li-text-4").className = 'faqs-li-text';
+        document.getElementById("faqs-li-text-5").className = 'faqs-li-text';
+        document.getElementById("faqs-li-icon-1").className = 'faqs-li-icon';
+        document.getElementById("faqs-li-icon-2").className = 'faqs-li-icon';
+        document.getElementById("faqs-li-icon-3").className = 'faqs-li-icon';
+        document.getElementById("faqs-li-icon-4").className = 'faqs-li-icon';
+        document.getElementById("faqs-li-icon-5").className = 'faqs-li-icon';
+        document.getElementById(`faqs-li-text-${id}`).className = 'faqs-li-text-current';
+        document.getElementById(`faqs-li-icon-${id}`).className = 'faqs-li-icon-current';
+    }
 </script>
