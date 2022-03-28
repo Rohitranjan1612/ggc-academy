@@ -69,28 +69,101 @@
         margin-right: 16px;
     }
 
-    .aboutus_welcome-text {
+    .aboutus_div_1 {
         margin-top: 113px;
         margin-left: 73px;
+    }
+
+    .aboutus_row_div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .aboutus_video_div {
+        margin-top: 206px;
+        border-top-left-radius: 20px;
+    }
+
+    .aboutus_video {
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .aboutus_hr_div {
+        width: 80px;
+        border: 8px solid #01B9F5;
+        border-radius: 40px;
+        margin-bottom: 40px;
+    }
+
+    .aboutus_header {
         font-style: normal;
         font-weight: 400;
         font-size: 27px;
         line-height: 40px;
         text-transform: uppercase;
+
+        color: #0D0D0D
+    }
+
+    .aboutus_text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
         color: #0D0D0D;
     }
 
-    .aboutus_sub_text {
+    .aboutus_sub_header {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 76px;
+        text-transform: capitalize;
+        color: #0D0D0D;
+    }
+
+    .aboutus-logo-1 {
+        width: 217px;
+        height: 159px;
+    }
+
+    .aboutus-reverse {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-top: 87px;
+    }
+
+    .aboutus-logo-2 {
+        width: 217px;
+        height: 340px;
         margin-top: 10px;
-        margin-left: 73px;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 27px;
-        line-height: 40px;
-        text-transform: uppercase;
-        color: #0D0D0D;
+        margin-left: 10px;
     }
 
+    .aboutus-logo-3 {
+        width: 217px;
+        height: 192px;
+        margin-left: 10px;
+        border-top-left-radius: 10px;
+    }
+
+    .aboutus-logo-4 {
+        width: 217px;
+        height: 192px;
+        margin-left: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .aboutus-logo-5 {
+        width: 217px;
+        height: 320px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
 
     .aboutus_carousel {
         position: relative;
@@ -278,16 +351,16 @@
         display: block;
         height: 408px;
         /* transform: matrix(-1, 0, 0, 1, 0, 0); */
-        -webkit-transform: rotate(10deg);
+        /* -webkit-transform: rotate(10deg);
         -moz-transform: rotate(10deg);
         -o-transform: rotate(10deg);
-        transform: rotateY(20deg);
+        transform: rotateY(20deg); */
     }
 
     .content_courses_img_2 {
         width: 500px;
         height: 408px;
-        transition: transform 250ms ease-in;
+        /* transition: transform 250ms ease-in; */
 
     }
 
@@ -783,13 +856,54 @@
         <div class="aboutus_carousel_track-container">
             <ul class="aboutus_carousel_track">
                 <li class="aboutus_carousel_slide aboutus_current-slide">
-                    <p class="aboutus_welcome-text">WELCOME TO THE</p>
-                    <p class="aboutus_sub_text">Good Creator Academy</p>
+                    <div class="aboutus_row_div">
+                        <div class="aboutus_div_1">
+                            <div class="aboutus_header">WELCOME TO THE</div>
+                            <div class="aboutus_sub_header">Good Creator Academy</div>
+                            <div class="aboutus_hr_div"></div>
+                            <div class="aboutus_text">Your one-stop shop to becoming the creator of your dreams!</div>
+                            <div class="aboutus_text"><strong> Learn, Create, Collaborate</strong> - content planning,
+                                brand
+                                endorsement, shaping
+                                your identity and knowing your worth.</div>
+                        </div>
+                        <div class="row-div">
+                            <div class="aboutus-reverse">
+                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409abe462074af991277.jpeg"
+                                    class="aboutus-logo-1" />
+                            </div>
+                            <div class="aboutus-reverse">
+                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409a7318f9107f8b017b.jpeg"
+                                    class="aboutus-logo-3" />
+                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409abe462074af991275.jpeg"
+                                    class="aboutus-logo-2" />
+
+                            </div>
+                            <div class="col-div">
+                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409abe462074af991276.jpeg"
+                                    class="aboutus-logo-5" />
+                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409a7318f9107f8b017c.jpeg"
+                                    class="aboutus-logo-4" />
+
+                            </div>
+                        </div>
+                    </div>
                 </li>
                 <li class="aboutus_carousel_slide">
-                    <iframe width="100%" height="630px"
-                        src="https://www.youtube.com/embed/rUWxSEwctFU?autoplay=1&mute=1&enablejsapi=1" frameborder="0"
-                        allow="autoplay"></iframe>
+                    <div class="aboutus_row_div">
+                        <div class="aboutus_div_1">
+                            <div class="aboutus_header">Everything for creators from the</div>
+                            <div class="aboutus_sub_header">Industry Best!</div>
+                            <div class="aboutus_hr_div"></div>
+                            <div class="aboutus_text">Here is your chance to take control of your career in content
+                            </div>
+                        </div>
+                        <div class="aboutus_video_div">
+                            <iframe width="761px" height="428px" class="aboutus_video"
+                                src="https://www.youtube.com/embed/rUWxSEwctFU?autoplay=1&mute=1&enablejsapi=1"
+                                frameborder="0" allow="autoplay"></iframe>
+                        </div>
+                    </div>
                     <!-- <iframe width="0" height="0" src="https://www.youtube.com/embed/bmOKJWue4C0?autoplay=1&amp;mute=0" frameborder="0" allowfullscreen="1"></iframe>
                         <iframe class="modest-vid-embed__item"
                             src="https://player.vimeo.com/video/488076966?autoplay=1&loop=1&autopause=0&muted=1"
@@ -798,8 +912,35 @@
                         </iframe> -->
                 </li>
                 <li class="aboutus_carousel_slide">
-                    <p class="aboutus_welcome-text">Beauty Creator</p>
-                    <p class="aboutus_sub_text">Weekend Bootcamp</p>
+                    <div class="aboutus_row_div">
+                        <div class="aboutus_div_1">
+                            <div class="aboutus_header">Beauty Creator</div>
+                            <div class="aboutus_sub_header">Weekend Bootcamp</div>
+                            <div class="aboutus_hr_div"></div>
+                            <div class="aboutus_text">Can the full banner be an image?</div>
+                        </div>
+                        <div class="row-div">
+                            <div class="aboutus-reverse">
+                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241490a7318f9107f8b017e.png"
+                                    class="aboutus-logo-1" />
+                            </div>
+                            <div class="aboutus-reverse">
+                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624149237318f9107f8b017f.png"
+                                    class="aboutus-logo-3" />
+                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62414933be462074af991278.png"
+                                    class="aboutus-logo-2" />
+
+                            </div>
+                            <div class="col-div">
+                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62414944be462074af991279.png"
+                                    class="aboutus-logo-5" />
+                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62414958be462074af99127a.png"
+                                    class="aboutus-logo-4" />
+
+                            </div>
+                        </div>
+                    </div>
+
                 </li>
             </ul>
         </div>
