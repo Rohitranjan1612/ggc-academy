@@ -344,39 +344,82 @@
 
     .ccj-main-container {
         margin-top: 80px;
+        height: 520px;
     }
 
-    .content_courses_img_1 {
-        width: 500px;
-        display: block;
-        height: 408px;
-        /* transform: matrix(-1, 0, 0, 1, 0, 0); */
-        /* -webkit-transform: rotate(10deg);
-        -moz-transform: rotate(10deg);
-        -o-transform: rotate(10deg);
-        transform: rotateY(20deg); */
+    .content_flip-card-1 {
+        width: 188px;
+        margin-top: 21px;
+        perspective: 1000px;
+        z-index: 1;
     }
 
-    .content_courses_img_2 {
-        width: 500px;
-        height: 408px;
-        /* transition: transform 250ms ease-in; */
+    .content_flip-card-2 {
+        width: 230px;
+        perspective: 1000px;
+        margin-top: 21px;
+        z-index: 2;
+    }
+
+    .content_flip-card-3 {
+        width: 230px;
+        perspective: 1000px;
+        z-index: 3;
+    }
+
+    .content_flip-card-4 {
+        width: 230px;
+        perspective: 1000px;
+        margin-top: 21px;
+        z-index: 2;
+    }
+
+    .content_flip-card-5 {
+        width: 188px;
+        perspective: 1000px;
+        margin-top: 21px;
+        z-index: 1;
+    }
+
+    .content_flip-card-inner {
+        position: relative;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        transform: rotateY(20deg);
+        z-index: -1;
 
     }
 
-    .content_courses_img_3 {
-        width: 500px;
-        height: 408px;
+    .content_flip-card-inner-anti-clock {
+        position: relative;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        transform: rotateY(-20deg);
+        z-index: -1;
+
     }
 
-    .content_courses_img_4 {
-        width: 500px;
-        height: 408px;
+    .content_flip-card-front {
+        position: absolute;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        z-index: 1;
+
     }
 
-    .content_courses_img_5 {
-        width: 500px;
-        height: 408px;
+    .content_courses_img {
+        width: 416px;
+        height: 478px;
+        z-index: -1;
+    }
+
+    .content_courses_img_front {
+        width: 416px;
+        height: 520px;
+        border-radius: 30px 0px;
+        z-index: 1;
     }
 
     .content_courses_img_current {
@@ -426,7 +469,68 @@
         border-radius: 40px;
     }
 
-    .instructors-main-container {}
+    .instructors-main-container {
+        margin: 68px 68px 44px 68px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /* overflow: hidden; */
+    }
+
+    .instructors_card_div {
+        display: flex;
+        flex-direction: column;
+        margin-right: 24px;
+        background: #FFFFFF;
+        width: 344px;
+        height: 474px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+        border-radius: 30px;
+    }
+
+    .instructors_img {
+        position: absolute;
+        width: 358px;
+        height: 252px;
+        border-radius: 30px 0px;
+    }
+
+    .instructors_col_div {
+        display: flex;
+        flex-direction: column;
+        margin-top: 252px;
+        width: 344px;
+        padding: 32px;
+    }
+
+    .instructors_card_lite_text {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+
+        color: #666666;
+    }
+
+    .instructors_card_header {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+
+        color: #0D0D0D;
+    }
+
+    .instructors_card_text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        margin-top: 16px;
+        line-height: 26px;
+        color: #0D0D0D;
+    }
 
     /* courses */
     .courses-div {
@@ -900,11 +1004,14 @@
                         </div>
                         <div class="aboutus_video_div">
                             <iframe width="761px" height="428px" class="aboutus_video"
-                                src="https://www.youtube.com/embed/rUWxSEwctFU?autoplay=1&mute=1&enablejsapi=1"
+                                src="https://d23ztkijlc4ezg.cloudfront.net/static/6241776e7318f9107f8b018b.mp4"
                                 frameborder="0" allow="autoplay"></iframe>
                         </div>
                     </div>
                     <!-- <iframe width="0" height="0" src="https://www.youtube.com/embed/bmOKJWue4C0?autoplay=1&amp;mute=0" frameborder="0" allowfullscreen="1"></iframe>
+                        <iframe width="761px" height="428px" class="aboutus_video"
+                                src="https://www.youtube.com/embed/rUWxSEwctFU?autoplay=1&mute=1&enablejsapi=1"
+                                frameborder="0" allow="autoplay"></iframe>
                         <iframe class="modest-vid-embed__item"
                             src="https://player.vimeo.com/video/488076966?autoplay=1&loop=1&autopause=0&muted=1"
                             allow="autoplay" width="640" height="360" frameborder="0" webkitallowfullscreen
@@ -990,16 +1097,36 @@
                 <div class="ccj-hr-div"></div>
             </div>
             <div class="row-div ccj-main-container">
-                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412f597318f9107f8b0179.png"
-                    class="content_courses_img_1" id="content_courses_img_1" />
-                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412f597318f9107f8b0178.png"
-                    class="content_courses_img_2" id="content_courses_img_2" />
-                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412f59be462074af991272.png"
-                    class="content_courses_img_current" id="content_courses_img_3" />
-                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412f59be462074af991274.png"
-                    class="content_courses_img_4" id="content_courses_img_4" />
-                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412f59be462074af991273.png"
-                    class="content_courses_img_5" id="content_courses_img_5" />
+                <div class="content_flip-card-1">
+                    <div class="content_flip-card-inner">
+                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412f597318f9107f8b0179.png"
+                            alt="Avatar" class="content_courses_img" />
+                    </div>
+                </div>
+                <div class="content_flip-card-2">
+                    <div class="content_flip-card-inner">
+                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412f597318f9107f8b0178.png"
+                            alt="Avatar" class="content_courses_img" />
+                    </div>
+                </div>
+                <div class="content_flip-card-3">
+                    <div class="content_flip-card-fronts">
+                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412f59be462074af991272.png"
+                            alt="Avatar" class="content_courses_img_front" />
+                    </div>
+                </div>
+                <div class="content_flip-card-4">
+                    <div class="content_flip-card-inner-anti-clock">
+                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412f59be462074af991274.png"
+                            alt="Avatar" class="content_courses_img" />
+                    </div>
+                </div>
+                <div class="content_flip-card-5">
+                    <div class="content_flip-card-inner-anti-clock">
+                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412f59be462074af991273.png"
+                            alt="Avatar" class="content_courses_img" />
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -1010,6 +1137,97 @@
             <div class="instructors-hr-div"></div>
         </div>
         <div class="instructors-main-container">
+            <div class="instructors_card_div">
+                <div>
+                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829dbe462074af991295.png"
+                        class="instructors_img" />
+                </div>
+                <div class="instructors_col_div">
+                    <div class="instructors_card_lite_text">
+                        Health • Fashion
+                    </div>
+                    <div class="instructors_card_header">
+                        Saurabh Shastri
+                    </div>
+                    <div class="instructors_card_text">
+                        Lorem ipsum dolor sit amet, wtwi consectetur adipiscing elit. Nulla.
+                        lacrosta vinegi la disco.
+                    </div>
+                </div>
+            </div>
+            <div class="instructors_card_div">
+                <div>
+                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829dbe462074af991296.png"
+                        class="instructors_img" />
+                </div>
+                <div class="instructors_col_div">
+                    <div class="instructors_card_lite_text">
+                        Health • Fashion
+                    </div>
+                    <div class="instructors_card_header">
+                        Saurabh Shastri
+                    </div>
+                    <div class="instructors_card_text">
+                        Lorem ipsum dolor sit amet, wtwi consectetur adipiscing elit. Nulla.
+                        lacrosta vinegi la disco.
+                    </div>
+                </div>
+            </div>
+            <div class="instructors_card_div">
+                <div>
+                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829d7318f9107f8b019b.jpeg"
+                        class="instructors_img" />
+                </div>
+                <div class="instructors_col_div">
+                    <div class="instructors_card_lite_text">
+                        Health • Fashion
+                    </div>
+                    <div class="instructors_card_header">
+                        Saurabh Shastri
+                    </div>
+                    <div class="instructors_card_text">
+                        Lorem ipsum dolor sit amet, wtwi consectetur adipiscing elit. Nulla.
+                        lacrosta vinegi la disco.
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="instructors_card_div">
+                <div>
+                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829d7318f9107f8b0199.png"
+                        class="instructors_img" />
+                </div>
+                <div class="instructors_col_div">
+                    <div class="instructors_card_lite_text">
+                        Health • Fashion
+                    </div>
+                    <div class="instructors_card_header">
+                        Saurabh Shastri
+                    </div>
+                    <div class="instructors_card_text">
+                        Lorem ipsum dolor sit amet, wtwi consectetur adipiscing elit. Nulla.
+                        lacrosta vinegi la disco.
+                    </div>
+                </div>
+            </div>
+            <div class="instructors_card_div">
+                <div>
+                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829d7318f9107f8b019a.png"
+                        class="instructors_img" />
+                </div>
+                <div class="instructors_col_div">
+                    <div class="instructors_card_lite_text">
+                        Health • Fashion
+                    </div>
+                    <div class="instructors_card_header">
+                        Saurabh Shastri
+                    </div>
+                    <div class="instructors_card_text">
+                        Lorem ipsum dolor sit amet, wtwi consectetur adipiscing elit. Nulla.
+                        lacrosta vinegi la disco.
+                    </div>
+                </div>
+            </div> -->
+
         </div>
     </div>
     <div id="courses" onmouseenter="changeStyleHeader(false, 'courses-action')" class="courses-div">
@@ -1096,13 +1314,10 @@
             <div class="faqs-li" id="faqs-1" onclick="handleOnClickShowFAQ(1)">
                 <div class="faqs-li-container">
                     <div class="faqs-li-header">What is the criteria to get selected for the courses?</div>
-                    <div class="faqs-li-text-current" id="faqs-li-text-1">"There is no selection process for the
-                        courses; anyone who wants
-                        to become
-                        a content creator,
-                        at any stage of their journey, can apply. You would be required to register on your platform of
-                        choice (Instagram, Facebook, YouTube, etc.) so that we can include you in our contests,
-                        leaderboards, etc."</div>
+                    <div class="faqs-li-text-current" id="faqs-li-text-1">There is no selection process for the courses;
+                        anyone who wants to become a content creator, at any stage of their journey, can apply.
+                        You would be required to register on your platform of choice (Instagram, Facebook, YouTube,
+                        etc.) so that we can include you in our contests, leaderboards, etc.</div>
                 </div>
                 <div class="faqs-li-icon-div">
                     <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
@@ -1111,13 +1326,10 @@
             </div>
             <div class="faqs-li" id="faqs-2" onclick="handleOnClickShowFAQ(2)">
                 <div class="faqs-li-container">
-                    <div class="faqs-li-header">Do the courses follow a particular format</div>
-                    <div class="faqs-li-text" id="faqs-li-text-2">"There is no selection process for the courses; anyone
-                        who wants to become
-                        a content creator,
-                        at any stage of their journey, can apply. You would be required to register on your platform of
-                        choice (Instagram, Facebook, YouTube, etc.) so that we can include you in our contests,
-                        leaderboards, etc."</div>
+                    <div class="faqs-li-header">Is there a particular course format?</div>
+                    <div class="faqs-li-text" id="faqs-li-text-2">Yes, all our course sessions are live and interactive
+                        in nature. Some sessions may include separate slots for AMAs to ensure all your questions get
+                        answered.</div>
                 </div>
                 <div class="faqs-li-icon-div">
                     <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
@@ -1127,12 +1339,8 @@
             <div class="faqs-li" id="faqs-3" onclick="handleOnClickShowFAQ(3)">
                 <div class="faqs-li-container">
                     <div class="faqs-li-header">Will I get certified?</div>
-                    <div class="faqs-li-text" id="faqs-li-text-3">"There is no selection process for the courses; anyone
-                        who wants to become
-                        a content creator,
-                        at any stage of their journey, can apply. You would be required to register on your platform of
-                        choice (Instagram, Facebook, YouTube, etc.) so that we can include you in our contests,
-                        leaderboards, etc."</div>
+                    <div class="faqs-li-text" id="faqs-li-text-3">Yes, you will receive a Certificate of Completion at
+                        the end of the course from the Good Creator Academy.</div>
                 </div>
                 <div class="faqs-li-icon-div">
                     <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
@@ -1143,12 +1351,8 @@
                 <div class="faqs-li-container">
                     <div class="faqs-li-header">Which makeup products should I carry for a session on beauty content
                         creation?</div>
-                    <div class="faqs-li-text" id="faqs-li-text-4">"There is no selection process for the courses; anyone
-                        who wants to become
-                        a content creator,
-                        at any stage of their journey, can apply. You would be required to register on your platform of
-                        choice (Instagram, Facebook, YouTube, etc.) so that we can include you in our contests,
-                        leaderboards, etc."</div>
+                    <div class="faqs-li-text" id="faqs-li-text-4">Once you register, you will receive a detailed email
+                        with suggested products. </div>
                 </div>
                 <div class="faqs-li-icon-div">
                     <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
@@ -1158,12 +1362,7 @@
             <div class="faqs-li" id="faqs-5" onclick="handleOnClickShowFAQ(5)">
                 <div class="faqs-li-container">
                     <div class="faqs-li-header">Are the courses refundable?</div>
-                    <div class="faqs-li-text" id="faqs-li-text-5">"There is no selection process for the courses; anyone
-                        who wants to become
-                        a content creator,
-                        at any stage of their journey, can apply. You would be required to register on your platform of
-                        choice (Instagram, Facebook, YouTube, etc.) so that we can include you in our contests,
-                        leaderboards, etc."</div>
+                    <div class="faqs-li-text" id="faqs-li-text-5">At present, all our courses are non-refundable.</div>
                 </div>
                 <div class="faqs-li-icon-div">
                     <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
