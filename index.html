@@ -372,9 +372,10 @@
 
 
     .courses_carousel_track-container {
-        margin-left: 96px;
-        margin-right: 96px;
-        margin-top: 90px;
+        min-height: 408px;
+        margin-left: 60px;
+        margin-right: 60px;
+        margin-top: 60px;
         border-radius: 20px;
         overflow: hidden;
     }
@@ -390,12 +391,12 @@
     .courses_carousel_slide {
         position: absolute;
         width: 100%;
-        background: #000000;
     }
 
     .courses_carousel_nav {
         position: relative;
-        margin-left: 168px;
+        margin-top: 17px;
+        margin-left: 291px;
     }
 
     .courses_carousel_indicator {
@@ -415,6 +416,8 @@
     .courses_img {
         width: 500px;
         height: 408px;
+        border-top-left-radius: 40px;
+        border-bottom-right-radius: 40px;
     }
 
     .courses-sub-container-2 {
@@ -979,7 +982,7 @@
     };
     coursesSlides.forEach(coursesSetSlidePosition);
 
-    // Move slide at 3 sec
+    // Move slide at 5 sec
     const coursesMoveToSlide = (track, currentSlide, tragetSlide) => {
         const coursesamountToMove = tragetSlide.style.left;
         track.style.transform = "translateX(-" + coursesamountToMove + ")";
