@@ -270,8 +270,47 @@
     }
 
     .ccj-main-container {
-        margin-top: 84px;
-        height: 520px;
+        margin-top: 80px;
+    }
+
+    .content_courses_img_1 {
+        width: 500px;
+        display: block;
+        height: 408px;
+        /* transform: matrix(-1, 0, 0, 1, 0, 0); */
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        transform: rotateY(20deg);
+    }
+
+    .content_courses_img_2 {
+        width: 500px;
+        height: 408px;
+        transition: transform 250ms ease-in;
+
+    }
+
+    .content_courses_img_3 {
+        width: 500px;
+        height: 408px;
+    }
+
+    .content_courses_img_4 {
+        width: 500px;
+        height: 408px;
+    }
+
+    .content_courses_img_5 {
+        width: 500px;
+        height: 408px;
+    }
+
+    .content_courses_img_current {
+        width: 500px;
+        height: 408px;
+        border-top-left-radius: 40px;
+        border-bottom-right-radius: 40px;
     }
 
     /* instructors */
@@ -395,7 +434,7 @@
 
     .courses_carousel_nav {
         position: relative;
-        margin-top: 17px;
+        margin-top: 5px;
         margin-left: 291px;
     }
 
@@ -649,6 +688,7 @@
 
     .faqs-li-container {
         display: flex;
+        flex: 9;
         flex-direction: column;
     }
 
@@ -679,6 +719,9 @@
     }
 
     .faqs-li-icon-div {
+        flex: 0.4;
+        display: flex;
+        justify-content: flex-end;
         margin-right: 25px;
         margin-top: 14px;
     }
@@ -692,7 +735,6 @@
         width: 16px;
         height: 10px;
         transform: rotate(-180deg);
-
     }
 
     @media(max-width:500px) {
@@ -807,7 +849,16 @@
                 <div class="ccj-hr-div"></div>
             </div>
             <div class="row-div ccj-main-container">
-
+                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412f597318f9107f8b0179.png"
+                    class="content_courses_img_1" id="content_courses_img_1" />
+                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412f597318f9107f8b0178.png"
+                    class="content_courses_img_2" id="content_courses_img_2" />
+                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412f59be462074af991272.png"
+                    class="content_courses_img_current" id="content_courses_img_3" />
+                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412f59be462074af991274.png"
+                    class="content_courses_img_4" id="content_courses_img_4" />
+                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412f59be462074af991273.png"
+                    class="content_courses_img_5" id="content_courses_img_5" />
             </div>
         </div>
     </div>
@@ -832,11 +883,11 @@
                     <div class="courses_carousel_track-container">
                         <ul class="courses_carousel_track">
                             <li class="courses_carousel_slide courses_current-slide">
-                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623dad48be462074af991145.png"
+                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412d8e7318f9107f8b0175.png"
                                     class="courses_img" />
                             </li>
                             <li class="courses_carousel_slide">
-                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623dad487318f9107f8b004d.png"
+                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412d8ebe462074af99126e.png"
                                     class="courses_img" />
                             </li>
                         </ul>
