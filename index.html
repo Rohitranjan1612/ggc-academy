@@ -387,7 +387,6 @@
         transition: transform 0.6s;
         transform-style: preserve-3d;
         transform: rotateY(20deg);
-        z-index: -1;
 
     }
 
@@ -397,7 +396,6 @@
         transition: transform 0.6s;
         transform-style: preserve-3d;
         transform: rotateY(-20deg);
-        z-index: -1;
 
     }
 
@@ -405,21 +403,101 @@
         position: absolute;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
-        z-index: 1;
+    }
 
+    .content_flip-card-header {
+        position: absolute;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 60px;
+        text-align: center;
+        text-transform: uppercase;
+        z-index: 4;
+        bottom: 50;
+        left: 130;
+        color: #FFFFFF;
+    }
+
+    .content_flip-card-header-horizontal {
+        position: absolute;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 60px;
+        text-align: center;
+        text-transform: uppercase;
+        z-index: 4;
+        bottom: 100;
+        left: -50;
+        color: #FFFFFF;
+        transform: rotate(-90deg);
+    }
+    .content_flip-card-header-anti-horizontal{
+        position: absolute;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 60px;
+        text-align: center;
+        text-transform: uppercase;
+        z-index: 4;
+        bottom: 120;
+        left: 270;
+        color: #FFFFFF;
+        transform: rotate(90deg);
+    }
+    .content_flip-card-header-anti-horizontal-2 {
+        position: absolute;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 60px;
+        text-align: center;
+        text-transform: uppercase;
+        z-index: 4;
+        bottom: 60;
+        left: 330;
+        color: #FFFFFF;
+        transform: rotate(90deg);
+    }
+    .content_flip-card-link {
+        position: absolute;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        width: 100%;
+        text-transform: capitalize;
+        z-index: 4;
+        bottom: 24;
+        left: 124;
+        color: #FFFFFF;
+
+    }
+
+    .content_courses_vector_icon {
+        position: absolute;
+        bottom: 29;
+        left: 293;
+        width: 8;
+        height: 12;
+        z-index: 4;
+    }
+
+    .content_flip-card_hide {
+        display: none;
     }
 
     .content_courses_img {
         width: 416px;
         height: 478px;
-        z-index: -1;
     }
 
     .content_courses_img_front {
         width: 416px;
         height: 520px;
         border-radius: 30px 0px;
-        z-index: 1;
     }
 
     .content_courses_img_current {
@@ -1097,10 +1175,17 @@
                 <div class="ccj-hr-div"></div>
             </div>
             <div class="row-div ccj-main-container">
-                <div class="content_flip-card-1">
+                <div class="content_flip-card-1" onclick="handleFlipCardClick(1)">
                     <div class="content_flip-card-inner">
                         <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412f597318f9107f8b0179.png"
                             alt="Avatar" class="content_courses_img" />
+                    </div>
+                    <div class="content_flip-card-header-horizontal">Fashion</div>
+                    <div class="content_flip-card_hide" id="content_flip-card-sub-div-1">
+                        <div class="content_flip-card-header">Fashion</div>
+                        <div class="content_flip-card-link">Courses coming soon</div>
+                        <!-- <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241a6587318f9107f8b02d3.png"
+                            alt="Avatar" class="content_courses_vector_icon" /> -->
                     </div>
                 </div>
                 <div class="content_flip-card-2">
@@ -1108,11 +1193,25 @@
                         <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412f597318f9107f8b0178.png"
                             alt="Avatar" class="content_courses_img" />
                     </div>
+                    <div class="content_flip-card-header-horizontal">Luxury</div>
+                    <div class="content_flip-card_hide" id="content_flip-card-sub-div-2">
+                        <div class="content_flip-card-header">Luxury</div>
+                        <div class="content_flip-card-link">Courses coming soon</div>
+                        <!-- <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241a6587318f9107f8b02d3.png"
+                            alt="Avatar" class="content_courses_vector_icon" /> -->
+                    </div>
                 </div>
                 <div class="content_flip-card-3">
                     <div class="content_flip-card-fronts">
                         <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412f59be462074af991272.png"
                             alt="Avatar" class="content_courses_img_front" />
+                        <div class="content_flip-card_hide">Beauty</div>
+                        <div class="" id="content_flip-card-sub-div-3">
+                            <div class="content_flip-card-header">Beauty</div>
+                            <div class="content_flip-card-link">EXPLORE THE COURSE</div>
+                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241a6587318f9107f8b02d3.png"
+                                alt="Avatar" class="content_courses_vector_icon" />
+                        </div>
                     </div>
                 </div>
                 <div class="content_flip-card-4">
@@ -1120,11 +1219,25 @@
                         <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412f59be462074af991274.png"
                             alt="Avatar" class="content_courses_img" />
                     </div>
+                    <div class="content_flip-card-header-anti-horizontal-2">Food</div>
+                    <div class="content_flip-card_hide" id="content_flip-card-sub-div-4">
+                        <div class="content_flip-card-header">Food</div>
+                        <div class="content_flip-card-link">Courses coming soon</div>
+                        <!-- <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241a6587318f9107f8b02d3.png"
+                            alt="Avatar" class="content_courses_vector_icon" /> -->
+                    </div>
                 </div>
                 <div class="content_flip-card-5">
                     <div class="content_flip-card-inner-anti-clock">
                         <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412f59be462074af991273.png"
                             alt="Avatar" class="content_courses_img" />
+                    </div>
+                    <div class="content_flip-card-header-anti-horizontal">Influencer</div>
+                    <div class="content_flip-card_hide" id="content_flip-card-sub-div-5">
+                        <div class="content_flip-card-header">Influencer</div>
+                        <div class="content_flip-card-link">Courses coming soon</div>
+                        <!-- <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241a6587318f9107f8b02d3.png"
+                            alt="Avatar" class="content_courses_vector_icon" /> -->
                     </div>
                 </div>
             </div>
