@@ -992,6 +992,92 @@
         transform: rotate(-180deg);
     }
 
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-follow-us {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        background: #505050;
+    }
+
+    .footer-follow-us-text {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+
+    .footer-follow-us-img {
+        margin-right: 16px;
+    }
+
+    .footer-div-2 {
+        height: 124px;
+        background: #0D0D0D;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-row-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 586;
+    }
+
+    .footer-navlink {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        display: block;
+        border: none;
+        background: none;
+    }
+
+    .footer-row-div-2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 1244px;
+        border-top: 1px solid #646464;
+        margin-top: 20;
+        padding-top: 16;
+    }
+
+    .footer-text {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 24px;
+        /* identical to box height, or 200% */
+
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.06em;
+
+        color: #FFFFFF;
+
+        opacity: 0.56;
+    }
+
     @media(max-width:500px) {
 
         .title1,
@@ -1025,7 +1111,7 @@
                 <li class="nav-item"> <button class="navlink" id="courses-action"
                         onclick="changeStyleHeader(true, 'courses-action')">Courses</button> </li>
                 <li class="nav-item"> <button class="navlink" id="faqs-action"
-                        onclick="changeStyleHeader(true, 'faqs-action')">FAQs</a> </li>
+                        onclick="changeStyleHeader(true, 'faqs-action')">FAQs</button> </li>
             </ul>
             <div>
                 <button class="header-enroll-now"> Enroll Now</button>
@@ -1504,6 +1590,37 @@
             </div>
         </div>
     </div>
+    <div class="footer">
+        <div class="footer-follow-us">
+            <div class="footer-follow-us-text">Follow us</div>
+            <div class="row-div">
+                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/62426918be462074af99144e.png" alt=""
+                    width="24px" height="24px" class="footer-follow-us-img">
+                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/624269187318f9107f8b0371.png" alt=""
+                    width="24px" height="24px" class="footer-follow-us-img">
+                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/62426918be462074af99144f.png" alt=""
+                    width="24px" height="24px">
+            </div>
+        </div>
+        <div class="footer-div-2">
+            <div class="footer-row-div">
+                <button class="footer-navlink" id="footer-aboutus-action"
+                    onclick="changeStyleHeader(true, 'aboutus-action')">About us</button>
+                <button class="footer-navlink" id="footer-focusareas-action"
+                    onclick="changeStyleHeader(true, 'focusareas-action')">Focus Areas</button>
+                <button class="footer-navlink" id="footer-instructors-action"
+                    onclick="changeStyleHeader(true, 'instructors-action')">Instructors</button>
+                <button class="footer-navlink" id="footer-courses-action"
+                    onclick="changeStyleHeader(true, 'courses-action')">Courses</button>
+                <button class="footer-navlink" id="footer-faqs-action"
+                    onclick="changeStyleHeader(true, 'faqs-action')">FAQs</button>
+            </div>
+            <div class="footer-row-div-2">
+                <div class="footer-text">GCCAcademy@2022. All rights reserved</div>
+                <div class="footer-text">Terms & Conditions applied*</div>
+            </div>
+        </div>
+    </div>
 </div>
 <script>
     // const fullWidth = window.screen.width;
@@ -1739,7 +1856,6 @@
         document.getElementById("content_flip-card-inner-3").className = 'content_flip-card-fronts';
         document.getElementById("content_flip-card-inner-4").className = 'content_flip-card-inner-anti-clock';
         document.getElementById("content_flip-card-inner-5").className = 'content_flip-card-inner-anti-clock';
-
     }
     function handleFlipCardClick(id) {
         switch (id) {
@@ -1802,7 +1918,6 @@
                 document.getElementById("content_flip-card-sub-div-3").className = 'content_flip-card_hide';
                 document.getElementById("content_flip-card-inner-4").className = 'content_flip-card-fronts';
                 document.getElementById("content_flip-card-inner-3").className = 'content_flip-card-inner';
-
                 break;
             case 5:
                 originalRefresh();
@@ -1826,7 +1941,6 @@
                 document.getElementById("content_flip-card-inner-5").className = 'content_flip-card-fronts';
                 document.getElementById("content_flip-card-inner-4").className = 'content_flip-card-inner';
                 document.getElementById("content_flip-card-inner-3").className = 'content_flip-card-inner';
-
                 break;
 
         }
