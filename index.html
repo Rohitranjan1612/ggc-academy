@@ -4,7 +4,6 @@
         flex-direction: row;
         justify-content: space-between;
         background-color: #fff;
-        height: 90px;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
         border-radius: 8px 0px;
     }
@@ -203,7 +202,7 @@
     .aboutus_carousel_nav {
         position: relative;
         top: -13;
-        margin-left: 168px;
+        margin-left: 72px;
     }
 
     .aboutus_carousel_indicator {
@@ -565,6 +564,7 @@
         display: flex;
         flex-direction: column;
         margin-right: 24px;
+        margin-left: 5px;
         background: #FFFFFF;
         width: 344px;
         height: 474px;
@@ -572,11 +572,28 @@
         border-radius: 30px;
     }
 
-    .instructors_img {
+    .instructors_img-1 {
         position: absolute;
         width: 358px;
         height: 252px;
         border-radius: 30px 0px;
+        left: -5;
+    }
+
+    .instructors_img-2 {
+        position: absolute;
+        width: 358px;
+        height: 252px;
+        border-radius: 30px 0px;
+        left: 372;
+    }
+
+    .instructors_img-3 {
+        position: absolute;
+        width: 358px;
+        height: 252px;
+        border-radius: 30px 0px;
+        left: 745;
     }
 
     .instructors_col_div {
@@ -614,6 +631,86 @@
         margin-top: 16px;
         line-height: 26px;
         color: #0D0D0D;
+    }
+
+    .instructors-sub-container-1 {}
+
+    .instructors-sub-container-carousel {
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .instructors_carousel_track-container {
+        min-height: 566px;
+        min-width: 1132px;
+        padding: 5px;
+        overflow: hidden;
+    }
+
+    .instructors_carousel_track {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        position: relative;
+        transition: transform 250ms ease-in;
+    }
+
+    .instructors_carousel_slide {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        width: 1132px;
+    }
+
+    .instructors_carousel_nav {
+        position: relative;
+    }
+
+    .instructors_carousel_button_div {
+        position: absolute;
+        right: 60;
+        display: flex;
+        flex-direction: row;
+        border: 0;
+        margin: 0 2px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .instructors_carousel_button-1 {
+        width: 31px;
+        height: 30px;
+        border-top-left-radius: 5px;
+        border: none;
+        background: #D0D0D0;
+        padding: 8px 14px;
+    }
+
+    .instructors_carousel_button-2 {
+        width: 31px;
+        height: 30px;
+        border-bottom-right-radius: 5px;
+        border: none;
+        background: #FFC400;
+        padding: 8px 14px;
+        margin-left: 10px;
+    }
+
+    .instructors_vector_icon {
+        position: absolute;
+        right: -6;
+        top: 8;
+        width: 8;
+        height: 13;
+        transform: rotate(180deg);
+    }
+
+    .instructors_vector_icon_right {
+        position: absolute;
+        right: -45;
+        top: 8;
+        width: 8;
+        height: 13;
     }
 
     /* courses */
@@ -1346,97 +1443,138 @@
                 <div class="instructors-hr-div"></div>
             </div>
             <div class="instructors-main-container">
-                <div class="instructors_card_div">
-                    <div>
-                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829dbe462074af991295.png"
-                            class="instructors_img" />
-                    </div>
-                    <div class="instructors_col_div">
-                        <div class="instructors_card_lite_text">
-                            Health • Fashion
+                <div class="instructors-sub-container-1">
+                    <div class="instructors-sub-container-carousel">
+                        <div class="instructors_carousel_track-container">
+                            <ul class="instructors_carousel_track">
+                                <li class="instructors_carousel_slide instructors_current-slide">
+                                    <div class="instructors_card_div">
+                                        <div>
+                                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829dbe462074af991295.png"
+                                                class="instructors_img-1" />
+                                        </div>
+                                        <div class="instructors_col_div">
+                                            <div class="instructors_card_lite_text">
+                                                Health • Fashion
+                                            </div>
+                                            <div class="instructors_card_header">
+                                                Saurabh Shastri
+                                            </div>
+                                            <div class="instructors_card_text">
+                                                Lorem ipsum dolor sit amet, wtwi consectetur adipiscing elit. Nulla.
+                                                lacrosta vinegi la disco.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="instructors_card_div">
+                                        <div>
+                                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829dbe462074af991296.png"
+                                                class="instructors_img-2" />
+                                        </div>
+                                        <div class="instructors_col_div">
+                                            <div class="instructors_card_lite_text">
+                                                Health • Fashion
+                                            </div>
+                                            <div class="instructors_card_header">
+                                                Saurabh Shastri
+                                            </div>
+                                            <div class="instructors_card_text">
+                                                Lorem ipsum dolor sit amet, wtwi consectetur adipiscing elit. Nulla.
+                                                lacrosta vinegi la disco.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="instructors_card_div">
+                                        <div>
+                                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829d7318f9107f8b019b.jpeg"
+                                                class="instructors_img-3" />
+                                        </div>
+                                        <div class="instructors_col_div">
+                                            <div class="instructors_card_lite_text">
+                                                Health • Fashion
+                                            </div>
+                                            <div class="instructors_card_header">
+                                                Saurabh Shastri
+                                            </div>
+                                            <div class="instructors_card_text">
+                                                Lorem ipsum dolor sit amet, wtwi consectetur adipiscing elit. Nulla.
+                                                lacrosta vinegi la disco.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="instructors_carousel_slide">
+                                    <div class="instructors_card_div">
+                                        <div>
+                                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829d7318f9107f8b019b.jpeg"
+                                                class="instructors_img-1" />
+                                        </div>
+                                        <div class="instructors_col_div">
+                                            <div class="instructors_card_lite_text">
+                                                Health • Fashion
+                                            </div>
+                                            <div class="instructors_card_header">
+                                                Saurabh Shastri
+                                            </div>
+                                            <div class="instructors_card_text">
+                                                Lorem ipsum dolor sit amet, wtwi consectetur adipiscing elit. Nulla.
+                                                lacrosta vinegi la disco.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="instructors_card_div">
+                                        <div>
+                                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829d7318f9107f8b0199.png"
+                                                class="instructors_img-2" />
+                                        </div>
+                                        <div class="instructors_col_div">
+                                            <div class="instructors_card_lite_text">
+                                                Health • Fashion
+                                            </div>
+                                            <div class="instructors_card_header">
+                                                Saurabh Shastri
+                                            </div>
+                                            <div class="instructors_card_text">
+                                                Lorem ipsum dolor sit amet, wtwi consectetur adipiscing elit. Nulla.
+                                                lacrosta vinegi la disco.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="instructors_card_div">
+                                        <div>
+                                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829d7318f9107f8b019a.png"
+                                                class="instructors_img-3" />
+                                        </div>
+                                        <div class="instructors_col_div">
+                                            <div class="instructors_card_lite_text">
+                                                Health • Fashion
+                                            </div>
+                                            <div class="instructors_card_header">
+                                                Saurabh Shastri
+                                            </div>
+                                            <div class="instructors_card_text">
+                                                Lorem ipsum dolor sit amet, wtwi consectetur adipiscing elit. Nulla.
+                                                lacrosta vinegi la disco.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="instructors_card_header">
-                            Saurabh Shastri
-                        </div>
-                        <div class="instructors_card_text">
-                            Lorem ipsum dolor sit amet, wtwi consectetur adipiscing elit. Nulla.
-                            lacrosta vinegi la disco.
+                        <div class="instructors_carousel_button_div">
+                            <button class="instructors_carousel_button-1" id="instructors_carousel_button-1"
+                                onclick="instructorsNextPreviousButton('previous')">
+                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241a6587318f9107f8b02d3.png"
+                                    alt="Avatar" class="instructors_vector_icon" />
+                            </button>
+                            <button class="instructors_carousel_button-2" id="instructors_carousel_button-2"
+                                onclick="instructorsNextPreviousButton('next')">
+                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241a6587318f9107f8b02d3.png"
+                                    alt="Avatar" class="instructors_vector_icon_right" />
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="instructors_card_div">
-                    <div>
-                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829dbe462074af991296.png"
-                            class="instructors_img" />
-                    </div>
-                    <div class="instructors_col_div">
-                        <div class="instructors_card_lite_text">
-                            Health • Fashion
-                        </div>
-                        <div class="instructors_card_header">
-                            Saurabh Shastri
-                        </div>
-                        <div class="instructors_card_text">
-                            Lorem ipsum dolor sit amet, wtwi consectetur adipiscing elit. Nulla.
-                            lacrosta vinegi la disco.
-                        </div>
-                    </div>
-                </div>
-                <div class="instructors_card_div">
-                    <div>
-                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829d7318f9107f8b019b.jpeg"
-                            class="instructors_img" />
-                    </div>
-                    <div class="instructors_col_div">
-                        <div class="instructors_card_lite_text">
-                            Health • Fashion
-                        </div>
-                        <div class="instructors_card_header">
-                            Saurabh Shastri
-                        </div>
-                        <div class="instructors_card_text">
-                            Lorem ipsum dolor sit amet, wtwi consectetur adipiscing elit. Nulla.
-                            lacrosta vinegi la disco.
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="instructors_card_div">
-                <div>
-                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829d7318f9107f8b0199.png"
-                        class="instructors_img" />
-                </div>
-                <div class="instructors_col_div">
-                    <div class="instructors_card_lite_text">
-                        Health • Fashion
-                    </div>
-                    <div class="instructors_card_header">
-                        Saurabh Shastri
-                    </div>
-                    <div class="instructors_card_text">
-                        Lorem ipsum dolor sit amet, wtwi consectetur adipiscing elit. Nulla.
-                        lacrosta vinegi la disco.
-                    </div>
-                </div>
-            </div>
-            <div class="instructors_card_div">
-                <div>
-                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829d7318f9107f8b019a.png"
-                        class="instructors_img" />
-                </div>
-                <div class="instructors_col_div">
-                    <div class="instructors_card_lite_text">
-                        Health • Fashion
-                    </div>
-                    <div class="instructors_card_header">
-                        Saurabh Shastri
-                    </div>
-                    <div class="instructors_card_text">
-                        Lorem ipsum dolor sit amet, wtwi consectetur adipiscing elit. Nulla.
-                        lacrosta vinegi la disco.
-                    </div>
-                </div>
-            </div> -->
-
             </div>
         </div>
         <div id="courses" onmouseenter="changeStyleHeader(false, 'courses-action')" class="courses-div">
@@ -1806,6 +1944,56 @@
         coursesUpdateDots(coursesCurrentDot, coursesTargetDot);
         console.log({ coursesTrack, coursesCurrentSlide });
     });
+
+    // Instructors carousel
+    const instructorsTrack = document.querySelector(".instructors_carousel_track");
+    const instructorsSlides = Array.from(instructorsTrack.children);
+
+    const instructorsSlidesWidth = instructorsSlides[0].getBoundingClientRect().width;
+
+    // arrange the slides next to one another
+    const instructorsSetSlidePosition = (slide, index) => {
+        slide.style.left = instructorsSlidesWidth * index + "px";
+    };
+    instructorsSlides.forEach(instructorsSetSlidePosition);
+
+    // Move slide on button click
+    const instructorsMoveToSlide = (track, currentSlide, tragetSlide) => {
+        const instructorsamountToMove = tragetSlide.style.left;
+        console.log({ instructorsamountToMove, track, currentSlide, tragetSlide });
+        track.style.transform = "translateX(-" + instructorsamountToMove + ")";
+        currentSlide.classList.remove("instructors_current-slide");
+        tragetSlide.classList.add("instructors_current-slide");
+    };
+    const instructorsHideArrow = (targetIndex) => {
+        console.log({ targetIndex });
+        if (targetIndex === 0) {
+            document.getElementById('instructors_carousel_button-1').style.background = '#D0D0D0';
+            document.getElementById('instructors_carousel_button-2').style.background = '#FFC400';
+        } else if (targetIndex === instructorsSlides.length - 1) {
+            document.getElementById('instructors_carousel_button-1').style.background = '#FFC400';
+            document.getElementById('instructors_carousel_button-2').style.background = '#D0D0D0';
+        } else {
+            document.getElementById('instructors_carousel_button-1').style.background = '#FFC400';
+            document.getElementById('instructors_carousel_button-2').style.background = '#FFC400';
+        }
+    }
+    // Move slide on button press
+    function instructorsNextPreviousButton(params) {
+        const instructorsCurrentSlide = instructorsTrack.querySelector(".instructors_current-slide");
+        const instructorsNextSlide = instructorsCurrentSlide.nextElementSibling;
+        const instructorsPrevSlide = instructorsCurrentSlide.previousElementSibling;
+        const nextIndex = instructorsSlides.findIndex(slide => slide === instructorsNextSlide);
+        const prevIndex = instructorsSlides.findIndex(slide => slide === instructorsPrevSlide);
+        if (params === 'next') {
+            instructorsMoveToSlide(instructorsTrack, instructorsCurrentSlide, instructorsNextSlide);
+            instructorsHideArrow(nextIndex);
+
+        } else if (params === 'previous') {
+            instructorsMoveToSlide(instructorsTrack, instructorsCurrentSlide, instructorsPrevSlide);
+            instructorsHideArrow(prevIndex);
+        }
+    };
 
     // FAQs
     function handleOnClickShowFAQ(id) {
