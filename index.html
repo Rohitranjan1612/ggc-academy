@@ -636,6 +636,7 @@
 
     .instructors_card_text {
         font-style: normal;
+        text-align: justify;
         font-weight: 400;
         font-size: 16px;
         margin-top: 4px;
@@ -848,9 +849,11 @@
 
     .courses-sub-container-text {
         font-style: normal;
-        font-weight: 400;
+        font-weight: 700;
         font-size: 18px;
         line-height: 30px;
+        margin-top: 8px;
+        margin-bottom: 14px;
         color: #5E5D5D;
     }
 
@@ -872,6 +875,7 @@
     .courses-sub-container-li-lite {
         font-style: normal;
         font-weight: 400;
+        margin-bottom: 14px;
         font-size: 20px;
         line-height: 35px;
         color: #5E5D5D;
@@ -880,8 +884,17 @@
     .courses-sub-container-semi-bold {
         font-style: normal;
         font-weight: 600;
+        margin-bottom: 53px;
         font-size: 20px;
         line-height: 35px;
+        color: #5E5D5D;
+    }
+
+    .courses-sub-container-semi-last {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
         color: #5E5D5D;
     }
 
@@ -1003,7 +1016,7 @@
         line-height: 16px;
         text-align: center;
         text-transform: uppercase;
-        margin: 5px 38px 6px 38px;
+        margin-bottom: 10px;
         color: #000000;
     }
 
@@ -2179,16 +2192,22 @@
                     <li class="aboutus_carousel_slide">
                         <div class="aboutus_row_div_video">
                             <div class="aboutus_div_1">
-                                <div class="aboutus_header">Everything for creators from the</div>
-                                <div class="aboutus_sub_header">Industry Best!</div>
+                                <div class="aboutus_header">Everything you need to become a</div>
+                                <div class="aboutus_sub_header">better creator!</div>
                                 <div class="aboutus_hr_div"></div>
                                 <div class="aboutus_text">Here is your chance to take control of your career in content
+                                    creation
                                 </div>
                             </div>
                             <div class="aboutus_video_div">
-                                <iframe class="aboutus_video"
-                                    src="https://d23ztkijlc4ezg.cloudfront.net/static/6241776e7318f9107f8b018b.mp4"
-                                    frameborder="0" allow="autoplay"></iframe>
+                                <!-- <iframe class="aboutus_video"
+                                    src="https://d23ztkijlc4ezg.cloudfront.net/static/6241776e7318f9107f8b018b.mp4?autoplay=1&mute=1"
+                                    frameborder="0" allow="autoplay"></iframe> -->
+                                <video class="aboutus_video" autoplay="autoplay" id="aboutus_video">
+                                    <source
+                                        src="https://d23ztkijlc4ezg.cloudfront.net/static/6241776e7318f9107f8b018b.mp4"
+                                        type="video/mp4" />
+                                </video>
                             </div>
                         </div>
                         <!-- <iframe width="0" height="0" src="https://www.youtube.com/embed/bmOKJWue4C0?autoplay=1&amp;mute=0" frameborder="0" allowfullscreen="1"></iframe>
@@ -2204,10 +2223,11 @@
                     <li class="aboutus_carousel_slide">
                         <div class="aboutus_row_div">
                             <div class="aboutus_div_1">
-                                <div class="aboutus_header">Beauty Creator</div>
-                                <div class="aboutus_sub_header">Weekend Bootcamp</div>
+                                <div class="aboutus_header">The Creator Bootcamp</div>
+                                <div class="aboutus_sub_header">Beauty Edition</div>
                                 <div class="aboutus_hr_div"></div>
-                                <div class="aboutus_text">Can the full banner be an image?</div>
+                                <div class="aboutus_text">2 Beauty Instructors x 2 Day Bootcamp x 3 Viral Instagrammable
+                                    looks</div>
                             </div>
                             <div class="row-div">
                                 <div class="aboutus-reverse">
@@ -2254,9 +2274,9 @@
                             class="join-us-logo" />
                         <div class="col-div">
                             <div class="join-us-sub-header">Build a unique skill-set</div>
-                            <div class="join-us-simple-text">Attend courses co-created with marquee creators and
-                                best-in-industry
-                                instructors which promise to elevate your creator skills.</div>
+                            <div class="join-us-simple-text">Attend courses co-created with famous creators and
+                                best-in-class
+                                instructors which promise to better your creator skills.</div>
                         </div>
 
                     </div>
@@ -2267,9 +2287,7 @@
                             <div class="join-us-sub-header">learn everything, anywhere</div>
                             <div class="join-us-simple-text">Location is no longer a barrier for your learning potential
                                 -
-                                we offer engaging live sessions and hand-on virtual workshops to give you access to the
-                                best
-                                in business no matter where you are.</div>
+                                we offer engaging live sessions and hands-on virtual workshops.</div>
                         </div>
                     </div>
                 </div>
@@ -2358,7 +2376,7 @@
         <div id="instructors" onmouseenter="changeStyleHeader(false, 'instructors-action')" class="instructors-div">
             <div class="col-div">
                 <div class="instructors-header">Learn from</div>
-                <div class="instructors-sub-header">Inspiring Creators & Experts</div>
+                <div class="instructors-sub-header">Inspiring Creators & Instructors</div>
                 <div class="instructors-hr-div"></div>
             </div>
             <div class="instructors-main-container">
@@ -2456,7 +2474,7 @@
                                             </div>
                                             <div class="instructors_card_text">
                                                 Cosmopolitan India’s Beauty Influencer of the Year (Editor's Choice)
-                                                2021.
+                                                2021-2022.
                                                 Worked with multiple brands - Braun, L'Oréal and Cetaphil, etc.
                                             </div>
                                         </div>
@@ -2529,25 +2547,25 @@
                 </div>
                 <div class="courses-sub-container-2">
                     <div class="courses-sub-container-header">Beauty creator course</div>
-                    <div class="courses-sub-container-text">Beauty content creator Tarini Peshawaria and celebrity
-                        makeup
-                        artist Manjari Singh join forces in
-                        this exclusive 2-day bootcamp to prime you for your ultimate career as a beauty influencer.
+                    <div class="courses-sub-container-text">2 Beauty Instructors x 2 Day Bootcamp x 3 Viral
+                        Instagrammable looks
                     </div>
                     <div class="courses-sub-container-li">
                         <div class="courses-sub-container-li-dots"></div>
-                        <div class="courses-sub-container-li-lite">16th and 17th of April 2022</div>
+                        <div class="courses-sub-container-li-lite">Understand how to start your content creation journey
+                        </div>
                     </div>
                     <div class="courses-sub-container-li">
                         <div class="courses-sub-container-li-dots"></div>
-                        <div class="courses-sub-container-li-lite">Open to creators at any stage of their journey</div>
+                        <div class="courses-sub-container-li-lite">Master the ‘Draped Blush technique’, ‘Glitter & Gloss
+                            makeup’ looks</div>
                     </div>
                     <div class="courses-sub-container-li">
                         <div class="courses-sub-container-li-dots"></div>
-                        <div class="courses-sub-container-semi-bold">Top 3 looks created in the session will be posted
-                            on
-                            MissMalini’s Instagram handle</div>
+                        <div class="courses-sub-container-semi-bold">Get a Certification of Completion from the Good
+                            Creator Academy</div>
                     </div>
+                    <div class="courses-sub-container-semi-last">Did we get you excited?</div>
                 </div>
                 <button class="courses-view-details">View Details</button>
             </div>
@@ -2566,14 +2584,14 @@
                     <div class="download-sub-inner-text">Download on android & iOS</div>
                     <div class="download-sub-inner-div-3">
                         <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623d8ac5be462074af991115.png"
-                            class="download-android-logo" />
+                            class="download-android-logo" id="download-android-logo" />
                         <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623d8ac5be462074af991114.png"
-                            class="download-ios-logo" />
+                            class="download-ios-logo" id="download-ios-logo" />
                     </div>
                 </div>
                 <div class="download-sub-inner-div-2">
                     <div class="download-sub-inner-text-2">Scan Code AND Download Now</div>
-                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623d8ac57318f9107f8b0021.png"
+                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6243069ebe462074af991709.png"
                         class="download-qrcode-logo" />
                 </div>
             </div>
@@ -2657,11 +2675,11 @@
             <div class="footer-follow-us-text">Follow us</div>
             <div class="row-div">
                 <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/62426918be462074af99144e.png" alt=""
-                    width="24px" height="24px" class="footer-follow-us-img">
+                    width="24px" height="24px" class="footer-follow-us-img" id="footer-follow-us-fb">
                 <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/624269187318f9107f8b0371.png" alt=""
-                    width="24px" height="24px" class="footer-follow-us-img">
+                    width="24px" height="24px" class="footer-follow-us-img" id="footer-follow-us-insta">
                 <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/62426918be462074af99144f.png" alt=""
-                    width="24px" height="24px">
+                    width="24px" height="24px" id="footer-follow-us-tw">
             </div>
         </div>
         <div class="footer-div-2">
@@ -2788,6 +2806,8 @@
         if (targetIndex === 0) {
             // For 10 sec video
             setIntervalTime = 10000;
+            document.getElementById("aboutus_video").play();
+            // console.log("play");
         } else {
             setIntervalTime = 3000;
         }
@@ -2795,7 +2815,6 @@
         setTimeout(moveSlide, setIntervalTime);
     }
     setTimeout(moveSlide, setIntervalTime);
-
     // Move slide on dot press
     dotsNav.addEventListener("click", (e) => {
         const targetDot = e.target.closest("button");
@@ -2807,6 +2826,8 @@
         if (targetIndex === 0) {
             // For 10 sec video
             setIntervalTime = 10000;
+            document.getElementById("aboutus_video").play();
+            // console.log("play");
         } else {
             setIntervalTime = 3000;
         }
@@ -3057,4 +3078,17 @@
 
         }
     }
+    // links
+    document.getElementById('download-android-logo').addEventListener("click", (e) => {
+        window.open('https://play.google.com/store/apps/details?id=co.winkl.app', '_blank');
+    });
+    document.getElementById('download-ios-logo').addEventListener("click", (e) => {
+        window.open('https://apps.apple.com/in/app/the-good-creator-co/id1462743952', '_blank');
+    })
+    document.getElementById('footer-follow-us-insta').addEventListener("click", (e) => {
+        window.open('https://www.instagram.com/goodcreatoracademy/', '_blank');
+    })
+    document.getElementById('footer-follow-us-tw').addEventListener("click", (e) => {
+        window.open('https://twitter.com/GoodCreatorACAD', '_blank');
+    })
 </script>
