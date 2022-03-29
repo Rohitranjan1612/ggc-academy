@@ -15,6 +15,10 @@
         margin-left: 96px;
     }
 
+    .header-side-hide {
+        display: none;
+    }
+
     .nav-bar {
         padding-top: 18px;
         padding-right: 60px;
@@ -86,6 +90,12 @@
         justify-content: space-between;
     }
 
+    .aboutus_row_div_video {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
     .aboutus_video_div {
         margin-top: 206px;
         border-top-left-radius: 20px;
@@ -94,6 +104,8 @@
     .aboutus_video {
         border-top-left-radius: 20px;
         border-bottom-right-radius: 20px;
+        width: 761px;
+        height: 428px;
     }
 
     .aboutus_hr_div {
@@ -265,6 +277,8 @@
     }
 
     .join-us-main-container {
+        display: flex;
+        flex-direction: row;
         margin-top: 84px;
     }
 
@@ -506,13 +520,6 @@
         width: 416px;
         height: 520px;
         border-radius: 30px 0px;
-    }
-
-    .content_courses_img_current {
-        width: 500px;
-        height: 408px;
-        border-top-left-radius: 40px;
-        border-bottom-right-radius: 40px;
     }
 
     /* instructors */
@@ -1178,143 +1185,101 @@
     }
 
     @media(max-width: 1000px) {
+        .main-container {
+            width: 360px;
+        }
+
         .header {
+            height: 66px;
+        }
+
+        .header-side-hide {
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            background-color: #fff;
-            height: 90px;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
-            border-radius: 8px 0px;
         }
 
         .header-logo {
-            height: 56px;
-            margin-top: 17px;
-            margin-left: 96px;
+            height: 39px;
+            width: 56px;
+            margin-top: 13px;
+            margin-left: 0px;
         }
 
-        .nav-bar {
-            padding-top: 18px;
-            padding-right: 60px;
-            color: #0D0D0D;
-        }
-
-        .navlink {
-            display: block;
-            border: none;
-            background: none;
-            padding: 0.5rem 1rem;
-            color: #0D0D0D;
-            font-style: normal;
-            font-weight: medium;
-            font-size: 14px;
-            line-height: 24px;
-        }
-
-        .navlink-active {
-            display: block;
-            border: none;
-            background: none;
-            padding: 0.5rem 1rem;
-            color: #01B9F5;
-            font-weight: 700;
-            font-style: normal;
-            font-size: 14px;
-            line-height: 24px;
-        }
-
-        .right-container {
-            display: flex;
-            flex-direction: row;
-        }
-
-        .header-icon {
-            height: 40px;
-            margin-top: 25px;
-            margin-right: 96px;
-        }
-
-        .header-enroll-now {
-            background: #01B9F5 !important;
-            border: none;
-            width: 140px;
-            border-top-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            height: 40px;
-            color: white;
-            font-size: 14px;
-            margin-top: 25px;
+        .header-side-bar {
+            width: 15px;
+            height: 13px;
+            margin-top: 26px;
+            margin-left: 26px;
             margin-right: 16px;
         }
 
-        .main-container {
-            width: 1248px;
-            margin: 0 auto;
+        .header-nav-hide {
+            display: none;
+        }
+
+        .header-icon {
+            height: 30px;
+            width: 30px;
+            margin-top: 18px;
+            margin-right: 20px;
+        }
+
+        .header-enroll-now {
+            width: 90px;
+            height: 30px;
+            font-size: 11px;
+            margin-top: 18px;
+            margin-right: 12px;
+
+            border-top-left-radius: 5px;
+            border-bottom-right-radius: 5px;
         }
 
         /* About Us */
         .aboutus_div_1 {
-            margin-top: 113px;
-            margin-left: 73px;
+            margin-top: 20px;
+            margin-left: 16px;
         }
 
-        .aboutus_row_div {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
 
         .aboutus_video_div {
-            margin-top: 206px;
-            border-top-left-radius: 20px;
+            margin-top: 19px;
+            margin-left: 84px;
+            border-top-left-radius: 10px;
         }
 
         .aboutus_video {
-            border-top-left-radius: 20px;
-            border-bottom-right-radius: 20px;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            width: 236px;
+            height: 133px;
         }
 
         .aboutus_hr_div {
-            width: 80px;
-            border: 8px solid #01B9F5;
+            width: 40px;
+            border: 4px solid #01B9F5;
             border-radius: 40px;
-            margin-bottom: 40px;
+            margin-bottom: 10px;
         }
 
         .aboutus_header {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 27px;
-            line-height: 40px;
-            text-transform: uppercase;
-
-            color: #0D0D0D
-        }
-
-        .aboutus_text {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 30px;
-            color: #0D0D0D;
+            font-weight: 500;
+            font-size: 11px;
+            line-height: 16px;
         }
 
         .aboutus_sub_header {
+            font-size: 18px;
+            line-height: 30px;
+        }
 
-            text-overflow: ellipsis;
-            word-wrap: none;
-            font-style: normal;
-            font-weight: 800;
-            font-size: 48px;
-            line-height: 76px;
-            text-transform: capitalize;
-            color: #0D0D0D;
+        .aboutus_text {
+            font-size: 11px;
+            line-height: 16px;
         }
 
         .aboutus-logo-1 {
-            width: 217px;
-            height: 159px;
+            width: 58px;
+            height: 50px;
         }
 
         .aboutus-reverse {
@@ -1326,262 +1291,181 @@
         }
 
         .aboutus-logo-2 {
-            width: 217px;
-            height: 340px;
+            width: 58px;
+            height: 108px;
             margin-top: 10px;
-            margin-left: 10px;
+            margin-left: 2px;
         }
 
         .aboutus-logo-3 {
-            width: 217px;
-            height: 192px;
-            margin-left: 10px;
-            border-top-left-radius: 10px;
+            display: none;
         }
 
         .aboutus-logo-4 {
-            width: 217px;
-            height: 192px;
-            margin-left: 10px;
-            border-bottom-right-radius: 10px;
+            width: 58px;
+            height: 66px;
+            margin-left: 2px;
+            border-bottom-right-radius: 5px;
         }
 
         .aboutus-logo-5 {
-            width: 217px;
-            height: 320px;
-            margin-bottom: 10px;
-            margin-left: 10px;
-        }
-
-        .aboutus_carousel {
-            position: relative;
-            margin: 0 auto;
+            width: 58px;
+            height: 127px;
+            margin-bottom: 2px;
+            margin-left: 2px;
         }
 
         .aboutus_carousel_track-container {
-            min-height: 630px;
+            min-height: 260px;
             margin-top: 90px;
             background: #F7FCFF;
             border-radius: 20px;
             overflow: hidden;
         }
 
-        .aboutus_carousel_track {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            position: relative;
-            transition: transform 250ms ease-in;
-        }
-
-        .aboutus_carousel_slide {
-            position: absolute;
-            width: 100%;
+        .aboutus_row_div_video {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .aboutus_carousel_nav {
-            position: relative;
-            top: -14;
-            margin-left: 72px;
+            margin-left: 20px;
+            top: -18;
         }
 
         .aboutus_carousel_indicator {
             border: 0;
-            border-radius: 50%;
-            margin: 0 2px;
-            width: 12px;
-            height: 12px;
+            border-radius: 3px;
+            margin: 0 1px;
+            width: 4px;
+            height: 4px;
         }
 
         .aboutus_carousel_indicator.aboutus_current-slide {
-            width: 20px;
-            border-radius: 10px;
-            background: #76C9F1;
-        }
-
-        .col-div {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .row-div {
-            display: flex;
-            flex-direction: row;
+            width: 7px;
+            border-radius: 2px;
         }
 
         /* Why should you join us */
         .join-us-div {
-            margin-top: 125px;
+            margin-top: 64px;
         }
 
         .join-us-wsy-text {
-            font-style: normal;
-            font-weight: medium;
-            font-size: 24px;
-            line-height: 26px;
-            text-align: center;
-            text-transform: uppercase;
-            color: #0D0D0D;
+            font-size: 11px;
+            line-height: 16px;
         }
 
         .join-us-text {
-            font-style: normal;
-            font-weight: 800;
-            font-size: 48px;
-            line-height: 76px;
-            text-align: center;
-            text-transform: capitalize;
-            color: #0D0D0D;
+            font-size: 20px;
+            line-height: 30px;
         }
 
         .join-us-hr-div {
-            width: 80px;
-            align-items: center;
-            justify-content: center;
-            align-self: center;
-            border: 8px solid #FFC400;
-            border-radius: 40px;
+            width: 40px;
+            border: 4px solid #FFC400;
         }
 
         .join-us-main-container {
-            margin-top: 84px;
+            flex-direction: column;
+            margin-top: 42px;
         }
 
         .join-us-logo {
-            width: 69px;
-            height: 66px;
-            margin-right: 40px;
+            width: 35px;
+            height: 33px;
+            margin-right: 19px;
         }
 
         .join-us-logo-2 {
-            width: 86px;
-            height: 66px;
-            margin-right: 40px;
+            width: 43px;
+            height: 33px;
+            margin-right: 19px;
         }
 
         .join-us-sub-header {
-            font-style: normal;
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 36px;
-            display: flex;
-            align-items: center;
-            letter-spacing: 0.01em;
-            text-transform: uppercase;
-            color: #0D0D0D;
+            font-size: 14px;
+            line-height: 21px;
         }
 
         .join-us-simple-text {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 30px;
-            color: #777777;
+            font-size: 11px;
+            line-height: 18px;
         }
 
         .div-with-border-line {
-            flex: 1;
-            border-right: 1px solid #D5D5D5;
-            padding-right: 77px;
+            border-right: none;
+            border-bottom: 1px solid #D5D5D5;
+            padding-right: 0;
+            padding-bottom: 24px;
+            margin-bottom: 24px;
         }
 
         .div-without-border-line {
             flex: 1;
-            padding-left: 60px;
+            padding-left: 0;
         }
 
         /* Content Creation Journey - ccj  */
         .ccj-div {
-            margin-top: 125px;
+            margin-top: 64px;
         }
 
         .ccj-wsy-text {
-            font-style: normal;
-            font-weight: medium;
-            font-size: 24px;
-            line-height: 26px;
-            text-align: center;
-            text-transform: uppercase;
-            color: #0D0D0D;
+
+            font-size: 11px;
+            line-height: 16px;
         }
 
         .ccj-text {
-            font-style: normal;
-            font-weight: 800;
-            font-size: 48px;
-            line-height: 76px;
-            text-align: center;
-            text-transform: capitalize;
-            color: #0D0D0D;
+            font-size: 20px;
+            line-height: 30px;
         }
 
         .ccj-hr-div {
-            width: 80px;
-            align-items: center;
-            justify-content: center;
-            align-self: center;
-            border: 8px solid #01B9F5;
-            border-radius: 40px;
+            width: 40px;
+            border: 4px solid #01B9F5;
+            border-radius: 20px;
         }
 
         .ccj-main-container {
-            margin-top: 80px;
-            height: 520px;
+            margin-top: 40px;
+            height: 268px;
         }
 
         .content_flip-card-1 {
-            width: 188px;
-            margin-top: 21px;
+            width: 25px;
+            margin-top: 11px;
             perspective: 1000px;
             z-index: 1;
         }
 
         .content_flip-card-2 {
-            width: 230px;
+            width: 45px;
             perspective: 1000px;
-            margin-top: 21px;
+            margin-top: 11px;
             z-index: 2;
         }
 
         .content_flip-card-3 {
-            width: 240px;
+            width: 172px;
             perspective: 1000px;
             z-index: 6;
         }
 
         .content_flip-card-4 {
-            width: 210px;
+            width: 45px;
             perspective: 1000px;
-            margin-top: 21px;
+            margin-top: 11px;
             z-index: 2;
         }
 
         .content_flip-card-5 {
-            width: 188px;
+            width: 40px;
             perspective: 1000px;
-            margin-top: 21px;
+            margin-top: 11px;
             z-index: 1;
-        }
-
-        .content_flip-card-inner {
-            position: relative;
-            transition: transform 0.6s;
-            transform-style: preserve-3d;
-            transform: rotateY(20deg);
-
-        }
-
-        .content_flip-card-inner-anti-clock {
-            position: relative;
-            transition: transform 0.6s;
-            transform-style: preserve-3d;
-            transform: rotateY(-20deg);
-        }
-
-        .content_flip-card-front {
-            position: absolute;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
         }
 
         .content_flip-card-header {
@@ -1672,72 +1556,47 @@
         }
 
         .content_courses_img {
-            width: 416px;
-            height: 478px;
+            width: 45.1px;
+            height: 246px;
         }
 
         .content_courses_img_anti {
-            width: 368px;
-            height: 497px;
+            width: 45.1px;
+            height: 246px;
         }
 
         .content_courses_img_front {
-            width: 416px;
-            height: 520px;
+            width: 172px;
+            height: 268px;
             border-radius: 30px 0px;
-        }
-
-        .content_courses_img_current {
-            width: 500px;
-            height: 408px;
-            border-top-left-radius: 40px;
-            border-bottom-right-radius: 40px;
         }
 
         /* instructors */
         .instructors-div {
-            height: 868px;
-            background: #FEF9E8;
-            border-radius: 30px 0px;
-            margin-top: 120px;
-            padding-top: 100px;
+            height: 537px;
+            margin-top: 64px;
+            padding-top: 48px;
         }
 
         .instructors-header {
-            font-style: normal;
-            font-weight: medium;
-            font-size: 24px;
-            line-height: 26px;
-            text-align: center;
-            text-transform: uppercase;
-            color: #0D0D0D;
+            font-size: 11px;
+            line-height: 16px;
         }
 
         .instructors-sub-header {
-            font-style: normal;
-            font-weight: 800;
-            font-size: 48px;
-            line-height: 76px;
-            text-align: center;
-            text-transform: capitalize;
-            color: #0D0D0D;
+            font-size: 20px;
+            line-height: 24px;
         }
 
         .instructors-hr-div {
-            width: 80px;
-            align-items: center;
-            justify-content: center;
-            align-self: center;
-            border: 8px solid #FFC400;
-            border-radius: 40px;
+            width: 40px;
+            border: 4px solid #FFC400;
+            border-radius: 20px;
         }
 
         .instructors-main-container {
-            margin: 68px 68px 44px 68px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            /* overflow: hidden; */
+            margin: 36px 40px 36px 40px;
+            overflow: hidden;
         }
 
         .instructors_card_div {
@@ -1746,79 +1605,56 @@
             margin-right: 24px;
             margin-left: 5px;
             background: #FFFFFF;
-            width: 344px;
-            height: 474px;
+            width: 248px;
+            height: 322px;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
             border-radius: 30px;
         }
 
         .instructors_img-1 {
             position: absolute;
-            width: 358px;
-            height: 252px;
-            border-radius: 30px 0px;
-            left: -5;
+            width: 256px;
+            height: 174px;
+            left: -1;
         }
 
         .instructors_img-2 {
             position: absolute;
-            width: 358px;
-            height: 252px;
-            border-radius: 30px 0px;
-            left: 372;
+            width: 256px;
+            height: 174px;
+            left: -1;
         }
 
         .instructors_img-3 {
             position: absolute;
-            width: 358px;
-            height: 252px;
-            border-radius: 30px 0px;
-            left: 745;
+            width: 256px;
+            height: 174px;
+            left: -1;
         }
 
         .instructors_col_div {
             display: flex;
             flex-direction: column;
-            margin-top: 252px;
-            width: 344px;
-            padding: 32px;
+            margin-top: 174px;
+            padding: 20px;
+            width: 248px;
         }
 
         .instructors_card_lite_text {
-            font-style: normal;
-            font-weight: 500;
-            font-size: 12px;
-            line-height: 18px;
-            letter-spacing: 0.01em;
-            text-transform: uppercase;
-
-            color: #666666;
+            font-size: 10px;
+            line-height: 10px;
         }
 
         .instructors_card_header {
-            font-style: normal;
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 30px;
-
-            color: #0D0D0D;
+            font-size: 12px;
+            line-height: 18px;
         }
 
         .instructors_card_text {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            margin-top: 16px;
-            line-height: 26px;
-            color: #0D0D0D;
+            font-size: 11px;
+            line-height: 18px;
         }
 
-        .instructors-sub-container-1 {}
-
-        .instructors-sub-container-carousel {
-            position: relative;
-            margin: 0 auto;
-        }
 
         .instructors_carousel_track-container {
             min-height: 566px;
@@ -1895,138 +1731,83 @@
 
         /* courses */
         .courses-div {
-            margin-top: 135px;
+            margin-top: 64px;
         }
 
         .courses-header {
-            font-style: normal;
-            font-weight: medium;
-            font-size: 24px;
-            line-height: 26px;
-            text-align: center;
-            text-transform: uppercase;
-            color: #0D0D0D;
+            font-size: 11px;
+            line-height: 16px;
         }
 
         .courses-sub-header {
-            font-style: normal;
-            font-weight: 800;
-            font-size: 48px;
-            line-height: 76px;
-            text-align: center;
-            text-transform: capitalize;
-            color: #0D0D0D;
+            font-size: 20px;
+            line-height: 22px;
         }
 
         .courses-hr-div {
             width: 80px;
-            align-items: center;
-            justify-content: center;
-            align-self: center;
-            border: 8px solid #01B9F5;
-            border-radius: 40px;
+            border: 4px solid #01B9F5;
+            border-radius: 20px;
         }
 
         .courses-main-container {
-            height: 527px;
-            background: #F6FCFF;
-            border-radius: 30px 0px;
-            margin-top: 78px;
-            display: flex;
-            flex-direction: row;
-        }
-
-        .courses-sub-container-1 {
-            flex: 1;
-        }
-
-        .courses-sub-container-carousel {
-            position: relative;
-            margin: 0 auto;
+            height: 494px;
+            margin-top: 40px;
+            flex-direction: column;
         }
 
 
         .courses_carousel_track-container {
-            min-height: 408px;
-            margin-left: 60px;
-            margin-right: 60px;
-            margin-top: 60px;
-            border-radius: 20px;
-            overflow: hidden;
+            min-height: 208px;
+            margin-left: 40px;
+            margin-right: 40px;
+            margin-top: 40px;
         }
 
-        .courses_carousel_track {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            position: relative;
-            transition: transform 250ms ease-in;
-        }
-
-        .courses_carousel_slide {
-            position: absolute;
-            width: 100%;
-        }
 
         .courses_carousel_nav {
             position: relative;
-            margin-top: 5px;
-            margin-left: 291px;
+            margin-top: 0px;
+            margin-left: 153px;
         }
 
         .courses_carousel_indicator {
             border: 0;
             border-radius: 50%;
             margin: 0 2px;
-            width: 12px;
-            height: 12px;
+            width: 4px;
+            height: 4px;
         }
 
         .courses_carousel_indicator.courses_current-slide {
-            width: 20px;
+            width: 8px;
             border-radius: 10px;
             background: #76C9F1;
         }
 
         .courses_img {
-            width: 500px;
-            height: 408px;
-            border-top-left-radius: 40px;
-            border-bottom-right-radius: 40px;
+            width: 246px;
+            height: 208px;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
         }
 
         .courses-sub-container-2 {
             flex: 1;
-            padding-top: 58px;
-            padding-right: 60px;
-            padding-bottom: 60px;
-            padding-left: 10px;
+            padding-top: 32px;
+            padding-right: 20px;
+            padding-bottom: 40px;
+            padding-left: 20px;
         }
 
         .courses-sub-container-header {
-            font-style: normal;
-            font-weight: 800;
-            font-size: 30px;
-            line-height: 45px;
-            display: flex;
-            align-items: center;
-            letter-spacing: 0.01em;
-            text-transform: uppercase;
-
-            color: #0D0D0D;
+            font-size: 14px;
+            line-height: 21px;
         }
 
         .courses-sub-container-text {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 30px;
-            color: #5E5D5D;
-        }
-
-        .courses-sub-container-li {
-            display: flex;
-            flex-direction: row;
+            font-size: 11px;
+            line-height: 18px;
         }
 
         .courses-sub-container-li-dots {
@@ -2040,116 +1821,77 @@
         }
 
         .courses-sub-container-li-lite {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 35px;
-            color: #5E5D5D;
+            font-size: 11px;
+            line-height: 18px;
         }
 
         .courses-sub-container-semi-bold {
-            font-style: normal;
-            font-weight: 600;
-            font-size: 20px;
-            line-height: 35px;
-            color: #5E5D5D;
+            font-size: 11px;
+            line-height: 18px;
         }
 
         /* download */
         .download-div {
-            margin-top: 142px;
-            display: flex;
-            flex-direction: row;
+            margin-top: 64px;
+            flex-direction: column;
         }
 
         .download-inner-div-1 {
             flex: 1;
             background: #FFC400;
-            padding-left: 48px;
-            padding-right: 48px;
-            padding-top: 32px;
-            padding-bottom: 40px;
+            padding-left: 24px;
+            padding-right: 24px;
+            padding-top: 16px;
+            padding-bottom: 20px;
             border-top-left-radius: 10px;
         }
 
         .download-inner-div-2 {
-            flex: 1;
-            background: #FCD77C;
-            padding-left: 48px;
-            border-bottom-right-radius: 10px;
-            display: flex;
-            flex-direction: row;
+            padding: 8px 20px;
         }
 
         .download-header {
-            font-style: normal;
-            font-weight: 800;
-            font-size: 30px;
-            line-height: 60px;
-            display: flex;
-            align-items: center;
-            letter-spacing: 0.01em;
-            text-transform: uppercase;
-            color: #0D0D0D;
+
+            font-size: 14px;
+            line-height: 21px;
         }
 
         .download-sub-header {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 30px;
-            color: #5B5B5B;
+            font-size: 11px;
+            line-height: 18px;
         }
 
         .download-sub-inner-div-1 {
             display: flex;
-            flex-direction: column;
-            flex: 2;
-            align-items: center;
-            justify-content: center;
+            flex-direction: row;
+            flex: 1;
+            justify-content: space-between;
         }
 
         .download-sub-inner-text {
-            font-style: normal;
-            font-weight: 500;
-            font-size: 14px;
+            margin-top: 16px;
+            margin-right: 10px;
+            font-size: 11px;
             line-height: 16px;
-            /* or 114% */
-
-            text-align: center;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-
-            color: #000000;
         }
 
         .download-sub-inner-div-3 {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
+            flex: 2;
         }
 
         .download-android-logo {
-            width: 100px;
-            height: 30px;
-            margin-right: 12px;
+            width: 81px;
+            height: 24px;
+            margin-right: 8px;
         }
 
         .download-ios-logo {
-            width: 100px;
-            height: 30px;
+            width: 81px;
+            height: 24px;
         }
 
         .download-sub-inner-div-2 {
-            flex: 1;
-            margin: 20px;
-            background: #FFFFFF;
-            border-bottom-right-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            display: none;
         }
 
         .download-sub-inner-text-2 {
@@ -2170,92 +1912,62 @@
 
         /* faqs */
         .faqs-div {
-            margin-top: 120px;
+            margin-top: 64px;
         }
 
         .faqs-header {
-            font-style: normal;
-            font-weight: medium;
-            font-size: 24px;
-            line-height: 26px;
-            text-align: center;
-            text-transform: uppercase;
-            color: #0D0D0D;
+            font-size: 11px;
+            line-height: 16px;
         }
 
         .faqs-sub-header {
-            font-style: normal;
-            font-weight: 800;
-            font-size: 48px;
-            line-height: 76px;
-            text-align: center;
-            text-transform: capitalize;
-            color: #0D0D0D;
+            font-size: 20px;
+            line-height: 30px;
         }
 
         .faqs-hr-div {
-            width: 80px;
-            align-items: center;
-            justify-content: center;
-            align-self: center;
-            border: 8px solid #01B9F5;
-            border-radius: 40px;
+            width: 40px;
+            border: 4px solid #01B9F5;
+            border-radius: 20px;
         }
 
         .faqs-main-container {
-            display: flex;
-            flex-direction: column;
-            margin-top: 80px;
-            margin-bottom: 120px;
+            margin-top: 40px;
+            margin-bottom: 60px;
         }
 
         .faqs-li {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            padding-bottom: 32px;
-            padding-top: 32px;
-            border-bottom: 1.5px solid #E6E6E6;
+            padding-bottom: 24px;
+            padding-top: 24px;
         }
 
         .faqs-li-container {
             display: flex;
-            flex: 9;
+            flex: 8;
             flex-direction: column;
         }
 
         .faqs-li-header {
-            font-style: normal;
-            font-weight: 600;
-            font-size: 20px;
-            line-height: 36px;
-            letter-spacing: 0.5px;
-            color: #000000;
+
+            font-size: 11px;
+            line-height: 18px;
         }
 
         .faqs-li-text {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 31px;
-            color: #333333;
-            display: none;
+
+            font-size: 11px;
+            line-height: 18px;
         }
 
         .faqs-li-text-current {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 31px;
-            color: #333333;
+            font-size: 11px;
+            line-height: 18px;
         }
 
         .faqs-li-icon-div {
-            flex: 0.4;
-            display: flex;
-            justify-content: flex-end;
+            flex: 2;
             margin-right: 25px;
-            margin-top: 14px;
+            margin-top: 4px;
         }
 
         .faqs-li-icon-current {
@@ -2269,10 +1981,9 @@
             transform: rotate(-180deg);
         }
 
+        /* footer */
         .footer {
-            display: flex;
-            flex-direction: column;
-            min-width: 1248px;
+            min-width: 360px;
         }
 
         .footer-follow-us {
@@ -2364,22 +2075,30 @@
     crossorigin="anonymous"></script>
 <div class="bootstrap-styles">
     <div class="header fixed-top">
-        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/profilepic/6238477ebe462074af990c3f.png"
-            class="header-logo" />
+        <div class="row-div">
+            <div class="header-side-hide">
+                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6242b9d3be462074af9914fa.png"
+                    class="header-side-bar">
+            </div>
+            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/profilepic/6238477ebe462074af990c3f.png"
+                class="header-logo" />
+        </div>
         <div class="right-container">
-            <ul class="nav nav-bar">
-                <li class="nav-item"> <button class="navlink-active" id="aboutus-action"
-                        onclick="changeStyleHeader(true, 'aboutus-action')">About us</button> </li>
-                <li class="nav-item"> <button class="navlink" id="focusareas-action"
-                        onclick="changeStyleHeader(true, 'focusareas-action')">Focus Areas</button> </li>
-                <li class="nav-item"> <button class="navlink" id="instructors-action"
-                        onclick="changeStyleHeader(true, 'instructors-action')">Instructors</button>
-                </li>
-                <li class="nav-item"> <button class="navlink" id="courses-action"
-                        onclick="changeStyleHeader(true, 'courses-action')">Courses</button> </li>
-                <li class="nav-item"> <button class="navlink" id="faqs-action"
-                        onclick="changeStyleHeader(true, 'faqs-action')">FAQs</button> </li>
-            </ul>
+            <div class="header-nav-hide">
+                <ul class="nav nav-bar">
+                    <li class="nav-item"> <button class="navlink-active" id="aboutus-action"
+                            onclick="changeStyleHeader(true, 'aboutus-action')">About us</button> </li>
+                    <li class="nav-item"> <button class="navlink" id="focusareas-action"
+                            onclick="changeStyleHeader(true, 'focusareas-action')">Focus Areas</button> </li>
+                    <li class="nav-item"> <button class="navlink" id="instructors-action"
+                            onclick="changeStyleHeader(true, 'instructors-action')">Instructors</button>
+                    </li>
+                    <li class="nav-item"> <button class="navlink" id="courses-action"
+                            onclick="changeStyleHeader(true, 'courses-action')">Courses</button> </li>
+                    <li class="nav-item"> <button class="navlink" id="faqs-action"
+                            onclick="changeStyleHeader(true, 'faqs-action')">FAQs</button> </li>
+                </ul>
+            </div>
             <div>
                 <button class="header-enroll-now"> Enroll Now</button>
             </div>
@@ -2428,7 +2147,7 @@
                         </div>
                     </li>
                     <li class="aboutus_carousel_slide">
-                        <div class="aboutus_row_div">
+                        <div class="aboutus_row_div_video">
                             <div class="aboutus_div_1">
                                 <div class="aboutus_header">Everything for creators from the</div>
                                 <div class="aboutus_sub_header">Industry Best!</div>
@@ -2437,7 +2156,7 @@
                                 </div>
                             </div>
                             <div class="aboutus_video_div">
-                                <iframe width="761px" height="428px" class="aboutus_video"
+                                <iframe class="aboutus_video"
                                     src="https://d23ztkijlc4ezg.cloudfront.net/static/6241776e7318f9107f8b018b.mp4"
                                     frameborder="0" allow="autoplay"></iframe>
                             </div>
@@ -2499,7 +2218,7 @@
                     <div class="join-us-text">Join Us</div>
                     <div class="join-us-hr-div"></div>
                 </div>
-                <div class="row-div join-us-main-container">
+                <div class="join-us-main-container">
                     <div class="row-div div-with-border-line ">
                         <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623d6582be462074af990ff6.png"
                             class="join-us-logo" />
@@ -2617,7 +2336,7 @@
                     <div class="instructors-sub-container-carousel">
                         <div class="instructors_carousel_track-container">
                             <ul class="instructors_carousel_track">
-                                <li class="instructors_carousel_slide instructors_current-slide">
+                                <!-- <li class="instructors_carousel_slide instructors_current-slide">
                                     <div class="instructors_card_div">
                                         <div>
                                             <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829dbe462074af991295.png"
@@ -2672,7 +2391,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </li>
+                                </li> -->
                                 <li class="instructors_carousel_slide">
                                     <div class="instructors_card_div">
                                         <div>
