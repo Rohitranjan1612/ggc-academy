@@ -365,7 +365,7 @@
     }
 
     .content_flip-card-3 {
-        width: 230px;
+        width: 416px;
         perspective: 1000px;
         z-index: 3;
     }
@@ -386,7 +386,6 @@
 
     .content_flip-card-inner {
         position: relative;
-        text-align: center;
         transition: transform 0.6s;
         transform-style: preserve-3d;
         transform: rotateY(20deg);
@@ -395,11 +394,9 @@
 
     .content_flip-card-inner-anti-clock {
         position: relative;
-        text-align: center;
         transition: transform 0.6s;
         transform-style: preserve-3d;
-        transform: rotateY(-20deg);
-
+        transform: rotateY(160deg);
     }
 
     .content_flip-card-front {
@@ -446,8 +443,8 @@
         text-align: center;
         text-transform: uppercase;
         z-index: 4;
-        bottom: 120;
-        left: 270;
+        bottom: 145;
+        left: 20;
         color: #FFFFFF;
         transform: rotate(90deg);
     }
@@ -461,8 +458,8 @@
         text-align: center;
         text-transform: uppercase;
         z-index: 4;
-        bottom: 60;
-        left: 330;
+        bottom: 75;
+        left: 135;
         color: #FFFFFF;
         transform: rotate(90deg);
     }
@@ -1697,5 +1694,10 @@
         document.getElementById("faqs-li-icon-5").className = 'faqs-li-icon';
         document.getElementById(`faqs-li-text-${id}`).className = 'faqs-li-text-current';
         document.getElementById(`faqs-li-icon-${id}`).className = 'faqs-li-icon-current';
+    }
+
+    // Content Creation Journey - ccj
+    function handleOnClickCard(params) {
+
     }
 </script>
