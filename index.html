@@ -5,12 +5,14 @@
     <title>About Us</title>
     <style>
         .header {
+            position: sticky;
+            z-index: 10;
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
             background-color: #fff;
             height: 90px;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+            top: 0;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08) !important;
             border-radius: 8px 0px;
         }
 
@@ -18,13 +20,23 @@
             height: 56px;
             margin-top: 17px;
             margin-left: 96px;
+            margin-bottom: 17px;
         }
 
         .header-side-hide {
             display: none;
         }
 
+        .header-row-div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }
+
         .nav-bar {
+            display: flex;
+            flex-direction: row;
             padding-top: 22px;
             padding-right: 60px;
             color: #0D0D0D;
@@ -83,10 +95,29 @@
             margin: 0 auto;
         }
 
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .sticky+.main-container {
+            padding-top: 102px;
+        }
+
         /* About Us */
+        .aboutus-div {
+            min-height: 630px;
+            background: #F7FCFF;
+            border-radius: 20px;
+            width: 1248px;
+            margin: 0 auto;
+        }
+
         .aboutus_div_1 {
             margin-top: 113px;
             margin-left: 73px;
+            flex: 1;
         }
 
         .aboutus_row_div {
@@ -200,9 +231,6 @@
 
         .aboutus_carousel_track-container {
             min-height: 630px;
-            margin-top: 90px;
-            background: #F7FCFF;
-            border-radius: 20px;
             overflow: hidden;
         }
 
@@ -220,8 +248,9 @@
         }
 
         .aboutus_carousel_nav {
-            position: relative;
-            top: -14;
+            position: absolute;
+            top: 0;
+            margin-top: 605px;
             margin-left: 72px;
         }
 
@@ -250,6 +279,11 @@
         }
 
         /* Why should you join us */
+        .focusareas-div {
+            width: 1248px;
+            margin: auto;
+        }
+
         .join-us-div {
             margin-top: 125px;
         }
@@ -530,12 +564,17 @@
         }
 
         /* instructors */
+        .margin-top {
+            margin-top: 120px;
+        }
+
         .instructors-div {
             height: 868px;
             background: #FEF9E8;
             border-radius: 30px 0px;
-            margin-top: 120px;
             padding-top: 100px;
+            width: 1248px;
+            margin: auto;
         }
 
         .instructors-header {
@@ -582,7 +621,7 @@
             margin-left: 5px;
             background: #FFFFFF;
             width: 344px;
-            height: 474px;
+            height: 494px;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
             border-radius: 30px;
         }
@@ -731,7 +770,8 @@
 
         /* courses */
         .courses-div {
-            margin-top: 135px;
+            width: 1248px;
+            margin: auto;
         }
 
         .courses-header {
@@ -919,9 +959,10 @@
 
         /* download */
         .download-div {
-            margin-top: 142px;
             display: flex;
             flex-direction: row;
+            width: 1248px;
+            margin: auto;
         }
 
         .download-inner-div-1 {
@@ -1032,7 +1073,8 @@
 
         /* faqs */
         .faqs-div {
-            margin-top: 120px;
+            width: 1248px;
+            margin: auto;
         }
 
         .faqs-header {
@@ -1175,7 +1217,19 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            width: 586;
+            width: 1244px;
+        }
+
+        .footer-email {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 24px;
+
+            display: flex;
+            align-items: center;
+
+            color: #FFFFFF;
         }
 
         .footer-navlink {
@@ -1184,7 +1238,6 @@
             font-size: 14px;
             line-height: 24px;
             display: flex;
-            align-items: center;
             text-transform: uppercase;
             color: #FFFFFF;
             display: block;
@@ -2133,101 +2186,103 @@
         crossorigin="anonymous"></script>
 </head>
 
-<body class="bootstrap-styles">
-    <div class="header fixed-top">
-        <div class="row-div">
+<body>
+    <div class="header" id="header">
+        <div class="header-row-div">
             <div class="header-side-hide">
                 <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6242b9d3be462074af9914fa.png"
                     class="header-side-bar">
             </div>
             <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/profilepic/6238477ebe462074af990c3f.png"
                 class="header-logo" />
-        </div>
-        <div class="right-container">
-            <div class="header-nav-hide">
-                <ul class="nav nav-bar">
-                    <li class="nav-item"> <button class="navlink-active" id="aboutus-action"
-                            onclick="changeStyleHeader(true, 'aboutus-action')">About us</button> </li>
-                    <li class="nav-item"> <button class="navlink" id="focusareas-action"
-                            onclick="changeStyleHeader(true, 'focusareas-action')">Focus Areas</button> </li>
-                    <li class="nav-item"> <button class="navlink" id="instructors-action"
+            <div class="right-container">
+                <div class="header-nav-hide">
+                    <div class="nav-bar">
+                        <button class="navlink-active" id="aboutus-action"
+                            onclick="changeStyleHeader(true, 'aboutus-action')">About us</button>
+                        <button class="navlink" id="focusareas-action"
+                            onclick="changeStyleHeader(true, 'focusareas-action')">Focus Areas</button>
+                        <button class="navlink" id="instructors-action"
                             onclick="changeStyleHeader(true, 'instructors-action')">Instructors</button>
-                    </li>
-                    <li class="nav-item"> <button class="navlink" id="courses-action"
-                            onclick="changeStyleHeader(true, 'courses-action')">Courses</button> </li>
-                    <li class="nav-item"> <button class="navlink" id="faqs-action"
-                            onclick="changeStyleHeader(true, 'faqs-action')">FAQs</button> </li>
-                </ul>
+
+                        <button class="navlink" id="courses-action"
+                            onclick="changeStyleHeader(true, 'courses-action')">Courses</button>
+                        <button class="navlink" id="faqs-action"
+                            onclick="changeStyleHeader(true, 'faqs-action')">FAQs</button>
+                    </div>
+                </div>
+                <div>
+                    <button class="header-enroll-now"> Enroll Now</button>
+                </div>
+                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623989ccbe462074af990c7a.png"
+                    class="header-icon" />
             </div>
-            <div>
-                <button class="header-enroll-now"> Enroll Now</button>
-            </div>
-            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623989ccbe462074af990c7a.png"
-                class="header-icon" />
         </div>
     </div>
     <div class="main-container" id="main-container">
-        <div id="aboutus" onmouseenter="changeStyleHeader(false, 'aboutus-action')" class="aboutus_carousel">
-            <div class="aboutus_carousel_track-container">
-                <ul class="aboutus_carousel_track">
-                    <li class="aboutus_carousel_slide aboutus_current-slide">
-                        <div class="aboutus_row_div">
-                            <div class="aboutus_div_1">
-                                <div class="aboutus_header">WELCOME TO THE</div>
-                                <div class="aboutus_sub_header">Good Creator Academy</div>
-                                <div class="aboutus_hr_div"></div>
-                                <div class="aboutus_text">Your one-stop shop to becoming the creator of your dreams!
+        <div class="aboutus-div">
+            <div id="aboutus" onmouseenter="changeStyleHeader(false, 'aboutus-action')" class="aboutus_carousel">
+                <div class="aboutus_carousel_track-container">
+                    <ul class="aboutus_carousel_track">
+                        <li class="aboutus_carousel_slide aboutus_current-slide">
+                            <div class="aboutus_row_div">
+                                <div class="aboutus_div_1">
+                                    <div class="aboutus_header">WELCOME TO THE</div>
+                                    <div class="aboutus_sub_header">Good Creator Academy</div>
+                                    <div class="aboutus_hr_div"></div>
+                                    <div class="aboutus_text">Your one-stop shop to becoming the creator of your dreams!
+                                    </div>
+                                    <div class="aboutus_text"><strong> Learn, Create, Collaborate</strong> - content
+                                        planning,
+                                        brand
+                                        endorsement, shaping
+                                        your identity and knowing your worth.</div>
                                 </div>
-                                <div class="aboutus_text"><strong> Learn, Create, Collaborate</strong> - content
-                                    planning,
-                                    brand
-                                    endorsement, shaping
-                                    your identity and knowing your worth.</div>
-                            </div>
-                            <div class="row-div">
-                                <div class="aboutus-reverse">
-                                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409abe462074af991277.jpeg"
-                                        class="aboutus-logo-1" />
-                                </div>
-                                <div class="aboutus-reverse">
-                                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409a7318f9107f8b017b.jpeg"
-                                        class="aboutus-logo-3" />
-                                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409abe462074af991275.jpeg"
-                                        class="aboutus-logo-2" />
+                                <div class="row-div">
+                                    <div class="aboutus-reverse">
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409abe462074af991277.jpeg"
+                                            class="aboutus-logo-1" />
+                                    </div>
+                                    <div class="aboutus-reverse">
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409a7318f9107f8b017b.jpeg"
+                                            class="aboutus-logo-3" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409abe462074af991275.jpeg"
+                                            class="aboutus-logo-2" />
 
-                                </div>
-                                <div class="col-div">
-                                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409abe462074af991276.jpeg"
-                                        class="aboutus-logo-5" />
-                                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409a7318f9107f8b017c.jpeg"
-                                        class="aboutus-logo-4" />
+                                    </div>
+                                    <div class="col-div">
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409abe462074af991276.jpeg"
+                                            class="aboutus-logo-5" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409a7318f9107f8b017c.jpeg"
+                                            class="aboutus-logo-4" />
 
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="aboutus_carousel_slide">
-                        <div class="aboutus_row_div_video">
-                            <div class="aboutus_div_1">
-                                <div class="aboutus_header">Everything you need to become a</div>
-                                <div class="aboutus_sub_header">better creator!</div>
-                                <div class="aboutus_hr_div"></div>
-                                <div class="aboutus_text">Here is your chance to take control of your career in content
-                                    creation
+                        </li>
+                        <li class="aboutus_carousel_slide">
+                            <div class="aboutus_row_div_video">
+                                <div class="aboutus_div_1">
+                                    <div class="aboutus_header">Everything you need to become a</div>
+                                    <div class="aboutus_sub_header">better creator!</div>
+                                    <div class="aboutus_hr_div"></div>
+                                    <div class="aboutus_text">Here is your chance to take control of your career in
+                                        content
+                                        creation
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="aboutus_video_div">
-                                <!-- <iframe class="aboutus_video"
+                                <div class="aboutus_video_div">
+                                    <!-- <iframe class="aboutus_video"
                                     src="https://d23ztkijlc4ezg.cloudfront.net/static/6241776e7318f9107f8b018b.mp4?autoplay=1&mute=1"
                                     frameborder="0" allow="autoplay"></iframe> -->
-                                <video class="aboutus_video" autoplay="autoplay" id="aboutus_video">
-                                    <source
-                                        src="https://d23ztkijlc4ezg.cloudfront.net/static/6241776e7318f9107f8b018b.mp4"
-                                        type="video/mp4" />
-                                </video>
+                                    <video class="aboutus_video" autoplay="autoplay" id="aboutus_video">
+                                        <source
+                                            src="https://d23ztkijlc4ezg.cloudfront.net/static/6241776e7318f9107f8b018b.mp4"
+                                            type="video/mp4" />
+                                    </video>
+                                </div>
                             </div>
-                        </div>
-                        <!-- <iframe width="0" height="0" src="https://www.youtube.com/embed/bmOKJWue4C0?autoplay=1&amp;mute=0" frameborder="0" allowfullscreen="1"></iframe>
+                            <!-- <iframe width="0" height="0" src="https://www.youtube.com/embed/bmOKJWue4C0?autoplay=1&amp;mute=0" frameborder="0" allowfullscreen="1"></iframe>
                         <iframe width="761px" height="428px" class="aboutus_video"
                                 src="https://www.youtube.com/embed/rUWxSEwctFU?autoplay=1&mute=1&enablejsapi=1"
                                 frameborder="0" allow="autoplay"></iframe>
@@ -2236,48 +2291,50 @@
                             allow="autoplay" width="640" height="360" frameborder="0" webkitallowfullscreen
                             mozallowfullscreen allowfullscreen>
                         </iframe> -->
-                    </li>
-                    <li class="aboutus_carousel_slide">
-                        <div class="aboutus_row_div">
-                            <div class="aboutus_div_1">
-                                <div class="aboutus_header">The Creator Bootcamp</div>
-                                <div class="aboutus_sub_header">Beauty Edition</div>
-                                <div class="aboutus_hr_div"></div>
-                                <div class="aboutus_text">2 Beauty Instructors x 2 Day Bootcamp x 3 Viral Instagrammable
-                                    looks</div>
+                        </li>
+                        <li class="aboutus_carousel_slide">
+                            <div class="aboutus_row_div">
+                                <div class="aboutus_div_1">
+                                    <div class="aboutus_header">The Creator Bootcamp</div>
+                                    <div class="aboutus_sub_header">Beauty Edition</div>
+                                    <div class="aboutus_hr_div"></div>
+                                    <div class="aboutus_text">2 Beauty Instructors x 2 Day Bootcamp x 3 Viral
+                                        Instagrammable
+                                        looks</div>
+                                </div>
+                                <div class="row-div">
+                                    <div class="aboutus-reverse">
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241490a7318f9107f8b017e.png"
+                                            class="aboutus-logo-1" />
+                                    </div>
+                                    <div class="aboutus-reverse">
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624149237318f9107f8b017f.png"
+                                            class="aboutus-logo-3" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62414933be462074af991278.png"
+                                            class="aboutus-logo-2" />
+
+                                    </div>
+                                    <div class="col-div">
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62414944be462074af991279.png"
+                                            class="aboutus-logo-5" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62414958be462074af99127a.png"
+                                            class="aboutus-logo-4" />
+
+                                    </div>
+                                </div>
                             </div>
-                            <div class="row-div">
-                                <div class="aboutus-reverse">
-                                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241490a7318f9107f8b017e.png"
-                                        class="aboutus-logo-1" />
-                                </div>
-                                <div class="aboutus-reverse">
-                                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624149237318f9107f8b017f.png"
-                                        class="aboutus-logo-3" />
-                                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62414933be462074af991278.png"
-                                        class="aboutus-logo-2" />
 
-                                </div>
-                                <div class="col-div">
-                                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62414944be462074af991279.png"
-                                        class="aboutus-logo-5" />
-                                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62414958be462074af99127a.png"
-                                        class="aboutus-logo-4" />
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </li>
-                </ul>
-            </div>
-            <div class="aboutus_carousel_nav">
-                <button class="aboutus_carousel_indicator aboutus_current-slide"></button>
-                <button class="aboutus_carousel_indicator"></button>
-                <button class="aboutus_carousel_indicator"></button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="aboutus_carousel_nav">
+                    <button class="aboutus_carousel_indicator aboutus_current-slide"></button>
+                    <button class="aboutus_carousel_indicator"></button>
+                    <button class="aboutus_carousel_indicator"></button>
+                </div>
             </div>
         </div>
-        <div id="focusareas" onmouseenter="changeStyleHeader(false, 'focusareas-action')">
+        <div id="focusareas" onmouseenter="changeStyleHeader(false, 'focusareas-action')" class="focusareas-div">
             <!-- Why should you join us - join-us -->
             <div id="join-us" class="join-us-div">
                 <div class="col-div">
@@ -2310,7 +2367,7 @@
                 </div>
             </div>
             <!-- Content Creation Journey - ccj -->
-            <div id="ccj" class="ccj-div">
+            <!-- <div id="ccj" class="ccj-div">
                 <div class="col-div">
                     <div class="ccj-wsy-text">Start your content creation journey</div>
                     <div class="ccj-text">Explore our courses</div>
@@ -2327,8 +2384,6 @@
                         <div class="content_flip-card_hide" id="content_flip-card-sub-div-1">
                             <div class="content_flip-card-header">Fashion</div>
                             <div class="content_flip-card-link">Courses coming soon</div>
-                            <!-- <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241a6587318f9107f8b02d3.png"
-                            alt="Avatar" class="content_courses_vector_icon" /> -->
                         </div>
                     </div>
                     <div class="content_flip-card-2" id="content_flip-card-2" onclick="handleFlipCardClick(2)">
@@ -2341,8 +2396,6 @@
                         <div class="content_flip-card_hide" id="content_flip-card-sub-div-2">
                             <div class="content_flip-card-header">Luxury</div>
                             <div class="content_flip-card-link">Courses coming soon</div>
-                            <!-- <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241a6587318f9107f8b02d3.png"
-                            alt="Avatar" class="content_courses_vector_icon" /> -->
                         </div>
                     </div>
                     <div class="content_flip-card-3" id="content_flip-card-3" onclick="handleFlipCardClick(3)">
@@ -2368,8 +2421,6 @@
                         <div class="content_flip-card_hide" id="content_flip-card-sub-div-4">
                             <div class="content_flip-card-header">Food</div>
                             <div class="content_flip-card-link">Courses coming soon</div>
-                            <!-- <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241a6587318f9107f8b02d3.png"
-                            alt="Avatar" class="content_courses_vector_icon" /> -->
                         </div>
                     </div>
                     <div class="content_flip-card-5" id="content_flip-card-5" onclick="handleFlipCardClick(5)">
@@ -2383,25 +2434,24 @@
                         <div class="content_flip-card_hide" id="content_flip-card-sub-div-5">
                             <div class="content_flip-card-header">Influencer</div>
                             <div class="content_flip-card-link">Courses coming soon</div>
-                            <!-- <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241a6587318f9107f8b02d3.png"
-                            alt="Avatar" class="content_courses_vector_icon" /> -->
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
-        <div id="instructors" onmouseenter="changeStyleHeader(false, 'instructors-action')" class="instructors-div">
-            <div class="col-div">
-                <div class="instructors-header">Learn from</div>
-                <div class="instructors-sub-header">Inspiring Creators & Instructors</div>
-                <div class="instructors-hr-div"></div>
-            </div>
-            <div class="instructors-main-container">
-                <div class="instructors-sub-container-1">
-                    <div class="instructors-sub-container-carousel">
-                        <div class="instructors_carousel_track-container">
-                            <ul class="instructors_carousel_track">
-                                <!-- <li class="instructors_carousel_slide instructors_current-slide">
+        <div class="margin-top">
+            <div id="instructors" onmouseenter="changeStyleHeader(false, 'instructors-action')" class="instructors-div">
+                <div class="col-div">
+                    <div class="instructors-header">Learn from</div>
+                    <div class="instructors-sub-header">Inspiring Creators & Instructors</div>
+                    <div class="instructors-hr-div"></div>
+                </div>
+                <div class="instructors-main-container">
+                    <div class="instructors-sub-container-1">
+                        <div class="instructors-sub-container-carousel">
+                            <div class="instructors_carousel_track-container">
+                                <ul class="instructors_carousel_track">
+                                    <!-- <li class="instructors_carousel_slide instructors_current-slide">
                                     <div class="instructors_card_div">
                                         <div>
                                             <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829dbe462074af991295.png"
@@ -2457,69 +2507,71 @@
                                         </div>
                                     </div>
                                 </li> -->
-                                <li class="instructors_carousel_slide">
-                                    <div class="instructors_card_div">
-                                        <div>
-                                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829d7318f9107f8b019a.png"
-                                                class="instructors_img-1" />
-                                        </div>
-                                        <div class="instructors_col_div">
-                                            <div class="instructors_card_lite_text">
-                                                Entertainment • Business
+                                    <li class="instructors_carousel_slide">
+                                        <div class="instructors_card_div">
+                                            <div>
+                                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829d7318f9107f8b019a.png"
+                                                    class="instructors_img-1" />
                                             </div>
-                                            <div class="instructors_card_header">
-                                                Malini Agarwal
-                                            </div>
-                                            <div class="instructors_card_text">
-                                                Founder & Creative Director MissMalini Entertainment, Girl Tribe &
-                                                Co-Founder of Good Creator Co.
-                                                Indian's First Celebrity Blogger.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="instructors_card_div">
-                                        <div>
-                                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829d7318f9107f8b019b.jpeg"
-                                                class="instructors_img-2" />
-                                        </div>
-                                        <div class="instructors_col_div">
-                                            <div class="instructors_card_lite_text">
-                                                Beauty • Content
-                                            </div>
-                                            <div class="instructors_card_header">
-                                                Tarini Peshawaria
-                                            </div>
-                                            <div class="instructors_card_text">
-                                                Cosmopolitan India's Beauty Influencer of the Year (Editor's Choice)
-                                                2021-2022.
-                                                Worked with multiple brands - Braun, L'Oréal and Cetaphil, etc.
+                                            <div class="instructors_col_div">
+                                                <div class="instructors_card_lite_text">
+                                                    Entertainment • Business
+                                                </div>
+                                                <div class="instructors_card_header">
+                                                    Malini Agarwal
+                                                </div>
+                                                <div class="instructors_card_text">
+                                                    Founder & Creative Director MissMalini Entertainment, Girl Tribe &
+                                                    Co-Founder of Good Creator Co.
+                                                    Indian's First Celebrity Blogger.
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="instructors_card_div">
-                                        <div>
-                                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829d7318f9107f8b0199.png"
-                                                class="instructors_img-3" />
+                                        <div class="instructors_card_div">
+                                            <div>
+                                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829d7318f9107f8b019b.jpeg"
+                                                    class="instructors_img-2" />
+                                            </div>
+                                            <div class="instructors_col_div">
+                                                <div class="instructors_card_lite_text">
+                                                    Beauty • Content
+                                                </div>
+                                                <div class="instructors_card_header">
+                                                    Tarini Peshawaria
+                                                </div>
+                                                <div class="instructors_card_text">
+                                                    Cosmopolitan India's Beauty Influencer of the Year (Editor's Choice)
+                                                    2021-2022.
+                                                    Worked with multiple brands - Braun, L'Oréal and Cetaphil, etc.
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="instructors_col_div">
-                                            <div class="instructors_card_lite_text">
-                                                Makeup • Hair
+                                        <div class="instructors_card_div">
+                                            <div>
+                                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829d7318f9107f8b0199.png"
+                                                    class="instructors_img-3" />
                                             </div>
-                                            <div class="instructors_card_header">
-                                                Manjari Singh
-                                            </div>
-                                            <div class="instructors_card_text">
-                                                Award-winning celebrity markeup artist and hair stylist from The London
-                                                School of Makeup.
-                                                Worked with Gauri Khan, Yami Gautam, Huma Qureshi, Rakul Preet Singh,
-                                                amongst others.
+                                            <div class="instructors_col_div">
+                                                <div class="instructors_card_lite_text">
+                                                    Makeup • Hair
+                                                </div>
+                                                <div class="instructors_card_header">
+                                                    Manjari Singh
+                                                </div>
+                                                <div class="instructors_card_text">
+                                                    Award-winning celebrity markeup artist and hair stylist from The
+                                                    London
+                                                    School of Makeup.
+                                                    Worked with Gauri Khan, Yami Gautam, Huma Qureshi, Rakul Preet
+                                                    Singh,
+                                                    amongst others.
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- <div class="instructors_carousel_button_div">
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- <div class="instructors_carousel_button_div">
                             <button class="instructors_carousel_button-1" id="instructors_carousel_button-1"
                                 onclick="instructorsNextPreviousButton('previous')">
                                 <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241a6587318f9107f8b02d3.png"
@@ -2531,157 +2583,171 @@
                                     alt="Avatar" class="instructors_vector_icon_right" />
                             </button>
                         </div> -->
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="courses" onmouseenter="changeStyleHeader(false, 'courses-action')" class="courses-div">
-            <div class="col-div">
-                <div class="courses-header">Join the</div>
-                <div class="courses-sub-header">The Creator Bootcamp - Beauty Edition</div>
-                <div class="courses-hr-div"></div>
-            </div>
-            <div class="courses-main-container">
-                <div class="courses-sub-container-1">
-                    <div class="courses-sub-container-carousel">
-                        <div class="courses_carousel_track-container">
-                            <ul class="courses_carousel_track">
-                                <li class="courses_carousel_slide courses_current-slide">
-                                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412d8ebe462074af99126e.png"
-                                        class="courses_img" />
-                                </li>
-                                <li class="courses_carousel_slide">
-                                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412d8e7318f9107f8b0175.png"
-                                        class="courses_img" />
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="courses_carousel_nav">
-                            <button class="courses_carousel_indicator courses_current-slide"></button>
-                            <button class="courses_carousel_indicator"></button>
-                        </div>
-                    </div>
+        <div class="margin-top">
+            <div id="courses" onmouseenter="changeStyleHeader(false, 'courses-action')" class="courses-div">
+                <div class="col-div">
+                    <div class="courses-header">Join the</div>
+                    <div class="courses-sub-header">The Creator Bootcamp - Beauty Edition</div>
+                    <div class="courses-hr-div"></div>
                 </div>
-                <div class="courses-sub-container-2">
-                    <div class="courses-sub-container-header">Beauty creator course</div>
-                    <div class="courses-sub-container-text">2 Beauty Instructors x 2 Day Bootcamp x 3 Viral
-                        Instagrammable looks
-                    </div>
-                    <div class="courses-sub-container-li">
-                        <div class="courses-sub-container-li-dots"></div>
-                        <div class="courses-sub-container-li-lite">Understand how to start your content creation journey
+                <div class="courses-main-container">
+                    <div class="courses-sub-container-1">
+                        <div class="courses-sub-container-carousel">
+                            <div class="courses_carousel_track-container">
+                                <ul class="courses_carousel_track">
+                                    <li class="courses_carousel_slide courses_current-slide">
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412d8ebe462074af99126e.png"
+                                            class="courses_img" />
+                                    </li>
+                                    <li class="courses_carousel_slide">
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412d8e7318f9107f8b0175.png"
+                                            class="courses_img" />
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="courses_carousel_nav">
+                                <button class="courses_carousel_indicator courses_current-slide"></button>
+                                <button class="courses_carousel_indicator"></button>
+                            </div>
                         </div>
                     </div>
-                    <div class="courses-sub-container-li">
-                        <div class="courses-sub-container-li-dots"></div>
-                        <div class="courses-sub-container-li-lite">Master the 'Draped Blush technique', 'Glitter & Gloss
-                            makeup' looks</div>
+                    <div class="courses-sub-container-2">
+                        <div class="courses-sub-container-header">Beauty creator course</div>
+                        <div class="courses-sub-container-text">2 Beauty Instructors x 2 Day Bootcamp x 3 Viral
+                            Instagrammable looks
+                        </div>
+                        <div class="courses-sub-container-li">
+                            <div class="courses-sub-container-li-dots"></div>
+                            <div class="courses-sub-container-li-lite">Understand how to start your content creation
+                                journey
+                            </div>
+                        </div>
+                        <div class="courses-sub-container-li">
+                            <div class="courses-sub-container-li-dots"></div>
+                            <div class="courses-sub-container-li-lite">Master the 'Draped Blush technique', 'Glitter &
+                                Gloss
+                                makeup' looks</div>
+                        </div>
+                        <div class="courses-sub-container-li">
+                            <div class="courses-sub-container-li-dots"></div>
+                            <div class="courses-sub-container-semi-bold">Get a Certification of Completion from the Good
+                                Creator Academy</div>
+                        </div>
+                        <div class="courses-sub-container-semi-last">Did we get you excited?</div>
                     </div>
-                    <div class="courses-sub-container-li">
-                        <div class="courses-sub-container-li-dots"></div>
-                        <div class="courses-sub-container-semi-bold">Get a Certification of Completion from the Good
-                            Creator Academy</div>
-                    </div>
-                    <div class="courses-sub-container-semi-last">Did we get you excited?</div>
-                </div>
-                <button class="courses-view-details">View Details</button>
-            </div>
-        </div>
-        <div class="download-div">
-            <div class="download-inner-div-1">
-                <div class="download-header">
-                    Accelerate Your Growth
-                </div>
-                <div class="download-sub-header">
-                    Get started on The Good Creator Co. app today
-                </div>
-            </div>
-            <div class="download-inner-div-2">
-                <div class="download-sub-inner-div-1">
-                    <div class="download-sub-inner-text">Download on android & iOS</div>
-                    <div class="download-sub-inner-div-3">
-                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623d8ac5be462074af991115.png"
-                            class="download-android-logo" id="download-android-logo" />
-                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623d8ac5be462074af991114.png"
-                            class="download-ios-logo" id="download-ios-logo" />
-                    </div>
-                </div>
-                <div class="download-sub-inner-div-2">
-                    <div class="download-sub-inner-text-2">Scan Code AND Download Now</div>
-                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6243069ebe462074af991709.png"
-                        class="download-qrcode-logo" />
+                    <button class="courses-view-details">View Details</button>
                 </div>
             </div>
         </div>
-        <div id="faqs" onmouseenter="changeStyleHeader(false, 'faqs-action')" class="faqs-div">
-            <div class="col-div">
-                <div class="faqs-header">We Are</div>
-                <div class="faqs-sub-header">Here To Help</div>
-                <div class="faqs-hr-div"></div>
-            </div>
-            <div class="faqs-main-container">
-                <div class="faqs-li" id="faqs-1" onclick="handleOnClickShowFAQ(1)">
-                    <div class="faqs-li-container">
-                        <div class="faqs-li-header">What is the criteria to get selected for the courses?</div>
-                        <div class="faqs-li-text-current" id="faqs-li-text-1">There is no selection process for the
-                            courses;
-                            anyone who wants to become a content creator, at any stage of their journey, can apply.
-                            You would be required to register on your platform of choice (Instagram, Facebook, YouTube,
-                            etc.) so that we can include you in our contests, leaderboards, etc.</div>
+        <div class="margin-top">
+            <div class="download-div">
+                <div class="download-inner-div-1">
+                    <div class="download-header">
+                        Accelerate Your Growth
                     </div>
-                    <div class="faqs-li-icon-div">
-                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
-                            class="faqs-li-icon-current" id="faqs-li-icon-1" />
+                    <div class="download-sub-header">
+                        Get started on The Good Creator Co. app today
                     </div>
                 </div>
-                <div class="faqs-li" id="faqs-2" onclick="handleOnClickShowFAQ(2)">
-                    <div class="faqs-li-container">
-                        <div class="faqs-li-header">Is there a particular course format?</div>
-                        <div class="faqs-li-text" id="faqs-li-text-2">Yes, all our course sessions are live and
-                            interactive
-                            in nature. Some sessions may include separate slots for AMAs to ensure all your questions
-                            get
-                            answered.</div>
-                    </div>
-                    <div class="faqs-li-icon-div">
-                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
-                            class="faqs-li-icon" id="faqs-li-icon-2" />
-                    </div>
-                </div>
-                <div class="faqs-li" id="faqs-3" onclick="handleOnClickShowFAQ(3)">
-                    <div class="faqs-li-container">
-                        <div class="faqs-li-header">Will I get certified?</div>
-                        <div class="faqs-li-text" id="faqs-li-text-3">Yes, you will receive a Certificate of Completion
-                            at
-                            the end of the course from the Good Creator Academy.</div>
-                    </div>
-                    <div class="faqs-li-icon-div">
-                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
-                            class="faqs-li-icon" id="faqs-li-icon-3" />
-                    </div>
-                </div>
-                <div class="faqs-li" id="faqs-4" onclick="handleOnClickShowFAQ(4)">
-                    <div class="faqs-li-container">
-                        <div class="faqs-li-header">Which makeup products should I carry for a session on beauty content
-                            creation?</div>
-                        <div class="faqs-li-text" id="faqs-li-text-4">Once you register, you will receive a detailed
-                            email
-                            with suggested products. </div>
-                    </div>
-                    <div class="faqs-li-icon-div">
-                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
-                            class="faqs-li-icon" id="faqs-li-icon-4" />
-                    </div>
-                </div>
-                <div class="faqs-li" id="faqs-5" onclick="handleOnClickShowFAQ(5)">
-                    <div class="faqs-li-container">
-                        <div class="faqs-li-header">Are the courses refundable?</div>
-                        <div class="faqs-li-text" id="faqs-li-text-5">At present, all our courses are non-refundable.
+                <div class="download-inner-div-2">
+                    <div class="download-sub-inner-div-1">
+                        <div class="download-sub-inner-text">Download on android & iOS</div>
+                        <div class="download-sub-inner-div-3">
+                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623d8ac5be462074af991115.png"
+                                class="download-android-logo" id="download-android-logo" />
+                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623d8ac5be462074af991114.png"
+                                class="download-ios-logo" id="download-ios-logo" />
                         </div>
                     </div>
-                    <div class="faqs-li-icon-div">
-                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
-                            class="faqs-li-icon" id="faqs-li-icon-5" />
+                    <div class="download-sub-inner-div-2">
+                        <div class="download-sub-inner-text-2">Scan Code AND Download Now</div>
+                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6243069ebe462074af991709.png"
+                            class="download-qrcode-logo" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="margin-top">
+            <div id="faqs" onmouseenter="changeStyleHeader(false, 'faqs-action')" class="faqs-div">
+                <div class="col-div">
+                    <div class="faqs-header">We Are</div>
+                    <div class="faqs-sub-header">Here To Help</div>
+                    <div class="faqs-hr-div"></div>
+                </div>
+                <div class="faqs-main-container">
+                    <div class="faqs-li" id="faqs-1" onclick="handleOnClickShowFAQ(1)">
+                        <div class="faqs-li-container">
+                            <div class="faqs-li-header">What is the criteria to get selected for the courses?</div>
+                            <div class="faqs-li-text-current" id="faqs-li-text-1">There is no selection process for the
+                                courses;
+                                anyone who wants to become a content creator, at any stage of their journey, can apply.
+                                You would be required to register on your platform of choice (Instagram, Facebook,
+                                YouTube,
+                                etc.) so that we can include you in our contests, leaderboards, etc.</div>
+                        </div>
+                        <div class="faqs-li-icon-div">
+                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
+                                class="faqs-li-icon-current" id="faqs-li-icon-1" />
+                        </div>
+                    </div>
+                    <div class="faqs-li" id="faqs-2" onclick="handleOnClickShowFAQ(2)">
+                        <div class="faqs-li-container">
+                            <div class="faqs-li-header">Is there a particular course format?</div>
+                            <div class="faqs-li-text" id="faqs-li-text-2">Yes, all our course sessions are live and
+                                interactive
+                                in nature. Some sessions may include separate slots for AMAs to ensure all your
+                                questions
+                                get
+                                answered.</div>
+                        </div>
+                        <div class="faqs-li-icon-div">
+                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
+                                class="faqs-li-icon" id="faqs-li-icon-2" />
+                        </div>
+                    </div>
+                    <div class="faqs-li" id="faqs-3" onclick="handleOnClickShowFAQ(3)">
+                        <div class="faqs-li-container">
+                            <div class="faqs-li-header">Will I get certified?</div>
+                            <div class="faqs-li-text" id="faqs-li-text-3">Yes, you will receive a Certificate of
+                                Completion
+                                at
+                                the end of the course from the Good Creator Academy.</div>
+                        </div>
+                        <div class="faqs-li-icon-div">
+                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
+                                class="faqs-li-icon" id="faqs-li-icon-3" />
+                        </div>
+                    </div>
+                    <div class="faqs-li" id="faqs-4" onclick="handleOnClickShowFAQ(4)">
+                        <div class="faqs-li-container">
+                            <div class="faqs-li-header">Which makeup products should I carry for a session on beauty
+                                content
+                                creation?</div>
+                            <div class="faqs-li-text" id="faqs-li-text-4">Once you register, you will receive a detailed
+                                email
+                                with suggested products. </div>
+                        </div>
+                        <div class="faqs-li-icon-div">
+                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
+                                class="faqs-li-icon" id="faqs-li-icon-4" />
+                        </div>
+                    </div>
+                    <div class="faqs-li" id="faqs-5" onclick="handleOnClickShowFAQ(5)">
+                        <div class="faqs-li-container">
+                            <div class="faqs-li-header">Are the courses refundable?</div>
+                            <div class="faqs-li-text" id="faqs-li-text-5">At present, all our courses are
+                                non-refundable.
+                            </div>
+                        </div>
+                        <div class="faqs-li-icon-div">
+                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
+                                class="faqs-li-icon" id="faqs-li-icon-5" />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2700,17 +2766,20 @@
             </div>
         </div>
         <div class="footer-div-2">
-            <div class="footer-row-div">
-                <button class="footer-navlink" id="footer-aboutus-action"
-                    onclick="changeStyleHeader(true, 'aboutus-action')">About us</button>
-                <button class="footer-navlink" id="footer-focusareas-action"
-                    onclick="changeStyleHeader(true, 'focusareas-action')">Focus Areas</button>
-                <button class="footer-navlink" id="footer-instructors-action"
-                    onclick="changeStyleHeader(true, 'instructors-action')">Instructors</button>
-                <button class="footer-navlink" id="footer-courses-action"
-                    onclick="changeStyleHeader(true, 'courses-action')">Courses</button>
-                <button class="footer-navlink" id="footer-faqs-action"
-                    onclick="changeStyleHeader(true, 'faqs-action')">FAQs</button>
+            <div class="footer-row-div" id="footer-row-div">
+                <div class="row-div">
+                    <button class="footer-navlink" id="footer-aboutus-action"
+                        onclick="changeStyleHeader(true, 'aboutus-action')">About us</button>
+                    <button class="footer-navlink" id="footer-focusareas-action"
+                        onclick="changeStyleHeader(true, 'focusareas-action')">Focus Areas</button>
+                    <button class="footer-navlink" id="footer-instructors-action"
+                        onclick="changeStyleHeader(true, 'instructors-action')">Instructors</button>
+                    <button class="footer-navlink" id="footer-courses-action"
+                        onclick="changeStyleHeader(true, 'courses-action')">Courses</button>
+                    <button class="footer-navlink" id="footer-faqs-action"
+                        onclick="changeStyleHeader(true, 'faqs-action')">FAQs</button>
+                </div>
+                <div class="footer-email"> team@goodcreatoracademy.com</div>
             </div>
             <div class="footer-row-div-2">
                 <div class="footer-text">GCCAcademy@2022. All rights reserved</div>
@@ -2724,7 +2793,9 @@
     // document.getElementById("main-container").style.width = 1440 ;
     // document.getElementById("main-container").style.marginLeft = fullWidth && fullWidth > 1440 ? (fullWidth - 1440) / 2 : 96;
     // // document.getElementById("main-container").style.marginRight = fullWidth && fullWidth > 1440 ? (fullWidth - 1440) / 2 : 96;
-    // console.log({ fullWidth });
+    document.getElementById("header").style.width = `${fullWidth}px`;
+    document.getElementById("footer-row-div").style.width = `${fullWidth}px`;
+
     if (fullWidth === 360 || fullWidth < 360) {
         document.getElementById("main-container").style.marginLeft = 20;
         document.getElementById("main-container").style.marginRight = 20;

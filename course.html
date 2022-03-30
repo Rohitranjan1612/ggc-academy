@@ -584,6 +584,8 @@
             height: 57px;
         }
 
+        /* Know you better  */
+
         .kwb-div {
             margin-top: 120px;
             width: 1248px;
@@ -675,8 +677,7 @@
             color: #6C6C6C;
         }
 
-        .kwb-action_current {
-            margin-top: 51px;
+        .kwb-action-current {
             width: 140px;
             height: 40px;
             margin-right: 20px;
@@ -1420,28 +1421,29 @@
             </div>
             <div class="kwb-label">What kind of course would you like to attend?</div>
             <div>
-                <button class="kwb-action" id="kwb-action">Beauty</button>
-                <button class="kwb-action" id="kwb-action">Fashion</button>
+                <button class="kwb-action" id="kwb-action-beauty">Beauty</button>
+                <button class="kwb-action" id="kwb-action-fashion">Fashion</button>
 
-                <button class="kwb-action" id="kwb-action">Luxury</button>
-                <button class="kwb-action" id="kwb-action">Food</button>
-                <button class="kwb-action" id="kwb-action">Influencer</button>
+                <button class="kwb-action" id="kwb-action-luxury">Luxury</button>
+                <button class="kwb-action" id="kwb-action-food">Food</button>
+                <button class="kwb-action" id="kwb-action-influencer">Influencer</button>
 
             </div>
             <div class="kwb-label">Do you want us to send you updates?</div>
             <div>
-                <button class="kwb-action" id="kwb-action">Yes</button>
-                <button class="kwb-action" id="kwb-action">No</button>
+                <button class="kwb-action" id="kwb-action-yes">Yes</button>
+                <button class="kwb-action" id="kwb-action-no">No</button>
 
             </div>
             <div class="kwb-row-div">
                 <div class="col-div">
                     <div class="kwb-label">Where can we write to you?</div>
-                    <input type="text" placeholder="Enter email address" id="kwb_input_email" class="kwb_input_email">
+                    <input type="email" placeholder="Enter email address" id="kwb_input_email" class="kwb_input_email">
                 </div>
                 <div class="col-div">
                     <div class="kwb-label"> Where can we reach you?</div>
-                    <input type="number" placeholder="Enter phone number" id="kwb_input_phone" class="kwb_input_phone">
+                    <input type="text" placeholder="Enter phone number" id="kwb_input_phone" class="kwb_input_phone"
+                    pattern="[a-zA-Z0-9]{6}" required maxlength="10">
                 </div>
             </div>
             <button class="kwb-action-submit" id="kwb-action-submit">Submit</button>
@@ -1676,11 +1678,43 @@
     })
     document.getElementById('footer-follow-us-tw').addEventListener("click", (e) => {
         window.open('https://twitter.com/GoodCreatorACAD', '_blank');
-    })
+    });
 
     document.getElementById('course-tagline-action').addEventListener("click", (e) => {
         window.open('https://twitter.com/GoodCreatorACAD', '_blank');
     })
+
+    // Know you better
+    const kwbActionBeauty = document.getElementById('kwb-action-beauty');
+    const kwbActionFashion = document.getElementById('kwb-action-fashion');
+    const kwbActionLuxury = document.getElementById('kwb-action-luxury');
+    const kwbActionFood = document.getElementById('kwb-action-food');
+    const kwbActionInfluencer = document.getElementById('kwb-action-influencer');
+    const kwbActionYes = document.getElementById('kwb-action-yes');
+    const kwbActionNo = document.getElementById('kwb-action-no');
+    kwbActionBeauty.addEventListener("click", (e) => {
+        kwbActionBeauty.className = 'kwb-action-current';
+    });
+    kwbActionFashion.addEventListener("click", (e) => {
+        kwbActionFashion.className = 'kwb-action-current';
+    });
+    kwbActionLuxury.addEventListener("click", (e) => {
+        kwbActionLuxury.className = 'kwb-action-current';
+    });
+    kwbActionFood.addEventListener("click", (e) => {
+        kwbActionFood.className = 'kwb-action-current';
+    });
+    kwbActionInfluencer.addEventListener("click", (e) => {
+        kwbActionInfluencer.className = 'kwb-action-current';
+    });
+    kwbActionYes.addEventListener("click", (e) => {
+        kwbActionYes.className = 'kwb-action-current';
+        kwbActionNo.className = 'kwb-action';
+    });
+    kwbActionNo.addEventListener("click", (e) => {
+        kwbActionNo.className = 'kwb-action-current';
+        kwbActionYes.className = 'kwb-action';
+    });
 </script>
 
 </html>
