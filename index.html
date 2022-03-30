@@ -1218,9 +1218,9 @@
             opacity: 0.56;
         }
 
-        @media(max-width: 400px) {
+        @media(max-width: 1000px) {
             .main-container {
-                width: 390px;
+                width: 360px;
             }
 
             .header {
@@ -2724,7 +2724,11 @@
     // document.getElementById("main-container").style.width = 1440 ;
     // document.getElementById("main-container").style.marginLeft = fullWidth && fullWidth > 1440 ? (fullWidth - 1440) / 2 : 96;
     // // document.getElementById("main-container").style.marginRight = fullWidth && fullWidth > 1440 ? (fullWidth - 1440) / 2 : 96;
-    console.log({ fullWidth });
+    // console.log({ fullWidth });
+    if (fullWidth === 360 || fullWidth < 360) {
+        document.getElementById("main-container").style.marginLeft = 20;
+        document.getElementById("main-container").style.marginRight = 20;
+    }
     function changeStyleHeader(toScroll, id) {
         switch (id) {
             case "aboutus-action":

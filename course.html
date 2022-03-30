@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About Us</title>
+    <style>
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: #fff;
+            height: 90px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+            border-radius: 8px 0px;
+        }
+
+        .header-logo {
+            height: 56px;
+            margin-top: 17px;
+            margin-left: 96px;
+        }
+
+        .header-side-hide {
+            display: none;
+        }
+
+        .nav-bar {
+            padding-top: 22px;
+            padding-right: 60px;
+            color: #0D0D0D;
+        }
+
+        .navlink {
+            display: block;
+            border: none;
+            background: none;
+            padding: 0.5rem 1rem;
+            color: #0D0D0D;
+            font-style: normal;
+            font-weight: medium;
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        .navlink-active {
+            display: block;
+            border: none;
+            background: none;
+            padding: 0.5rem 1rem;
+            color: #01B9F5;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        .right-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .header-icon {
+            height: 40px;
+            margin-top: 25px;
+            margin-right: 96px;
+        }
+
+        .header-enroll-now {
+            background: #01B9F5 !important;
+            border: none;
+            width: 140px;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            height: 40px;
+            color: white;
+            font-size: 14px;
+            margin-top: 25px;
+            margin-right: 16px;
+        }
+
+        .main-container {
+            width: 1248px;
+            margin: 0 auto;
+        }
+
+        .col-div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .row-div {
+            display: flex;
+            flex-direction: row;
+        }
+
+
+        /* download */
+        .download-div {
+            margin-top: 142px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .download-inner-div-1 {
+            flex: 1;
+            background: #FFC400;
+            padding-left: 48px;
+            padding-right: 48px;
+            padding-top: 32px;
+            padding-bottom: 40px;
+            border-top-left-radius: 10px;
+        }
+
+        .download-inner-div-2 {
+            flex: 1;
+            background: #FCD77C;
+            padding-left: 48px;
+            border-bottom-right-radius: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .download-header {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 60px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+            color: #0D0D0D;
+        }
+
+        .download-sub-header {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            color: #5B5B5B;
+        }
+
+        .download-sub-inner-div-1 {
+            display: flex;
+            flex-direction: column;
+            flex: 2;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .download-sub-inner-text {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            /* or 114% */
+
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+
+            color: #000000;
+        }
+
+        .download-sub-inner-div-3 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .download-android-logo {
+            width: 100px;
+            height: 30px;
+            margin-right: 12px;
+        }
+
+        .download-ios-logo {
+            width: 100px;
+            height: 30px;
+        }
+
+        .download-sub-inner-div-2 {
+            flex: 1;
+            margin: 20px;
+            background: #FFFFFF;
+            border-bottom-right-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .download-sub-inner-text-2 {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            color: #000000;
+        }
+
+        .download-qrcode-logo {
+            width: 57px;
+            height: 57px;
+        }
+
+        /* faqs */
+        .faqs-div {
+            margin-top: 120px;
+        }
+
+        .faqs-header {
+            font-style: normal;
+            font-weight: medium;
+            font-size: 24px;
+            line-height: 26px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #0D0D0D;
+        }
+
+        .faqs-sub-header {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 48px;
+            line-height: 76px;
+            text-align: center;
+            text-transform: capitalize;
+            color: #0D0D0D;
+        }
+
+        .faqs-hr-div {
+            width: 80px;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            border: 8px solid #01B9F5;
+            border-radius: 40px;
+        }
+
+        .faqs-main-container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 80px;
+            margin-bottom: 120px;
+        }
+
+        .faqs-li {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-bottom: 32px;
+            padding-top: 32px;
+            border-bottom: 1.5px solid #E6E6E6;
+        }
+
+        .faqs-li-container {
+            display: flex;
+            flex: 9;
+            flex-direction: column;
+        }
+
+        .faqs-li-header {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 36px;
+            letter-spacing: 0.5px;
+            color: #000000;
+        }
+
+        .faqs-li-text {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 31px;
+            color: #333333;
+            display: none;
+        }
+
+        .faqs-li-text-current {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 31px;
+            color: #333333;
+        }
+
+        .faqs-li-icon-div {
+            flex: 0.4;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 25px;
+            margin-top: 14px;
+        }
+
+        .faqs-li-icon-current {
+            width: 16px;
+            height: 10px;
+        }
+
+        .faqs-li-icon {
+            width: 16px;
+            height: 10px;
+            transform: rotate(-180deg);
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            min-width: 1248px;
+        }
+
+        .footer-follow-us {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 80px;
+            background: #505050;
+        }
+
+        .footer-follow-us-text {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+
+        .footer-follow-us-img {
+            margin-right: 16px;
+        }
+
+        .footer-div-2 {
+            height: 124px;
+            background: #0D0D0D;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-row-div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 586;
+        }
+
+        .footer-navlink {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            display: block;
+            border: none;
+            background: none;
+        }
+
+        .footer-row-div-2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 1244px;
+            border-top: 1px solid #646464;
+            margin-top: 20;
+            padding-top: 16;
+        }
+
+        .footer-text {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 24px;
+            /* identical to box height, or 200% */
+
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.06em;
+
+            color: #FFFFFF;
+
+            opacity: 0.56;
+        }
+
+        @media(max-width: 1000px) {
+            .main-container {
+                width: 360px;
+            }
+
+            .header {
+                height: 66px;
+            }
+
+            .header-side-hide {
+                display: flex;
+            }
+
+            .header-logo {
+                height: 39px;
+                width: 56px;
+                margin-top: 13px;
+                margin-left: 0px;
+            }
+
+            .header-side-bar {
+                width: 15px;
+                height: 13px;
+                margin-top: 26px;
+                margin-left: 26px;
+                margin-right: 16px;
+            }
+
+            .header-nav-hide {
+                display: none;
+            }
+
+            .header-icon {
+                height: 30px;
+                width: 30px;
+                margin-top: 18px;
+                margin-right: 20px;
+            }
+
+            .header-enroll-now {
+                width: 90px;
+                height: 30px;
+                font-size: 11px;
+                margin-top: 18px;
+                margin-right: 12px;
+
+                border-top-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+
+          
+            /* download */
+            .download-div {
+                margin-top: 64px;
+                flex-direction: column;
+            }
+
+            .download-inner-div-1 {
+                flex: 1;
+                background: #FFC400;
+                padding-left: 24px;
+                padding-right: 24px;
+                padding-top: 16px;
+                padding-bottom: 20px;
+                border-top-left-radius: 10px;
+            }
+
+            .download-inner-div-2 {
+                padding: 8px 20px;
+            }
+
+            .download-header {
+
+                font-size: 14px;
+                line-height: 21px;
+            }
+
+            .download-sub-header {
+                font-size: 11px;
+                line-height: 18px;
+            }
+
+            .download-sub-inner-div-1 {
+                display: flex;
+                flex-direction: row;
+                flex: 1;
+                justify-content: space-between;
+            }
+
+            .download-sub-inner-text {
+                margin-top: 16px;
+                margin-right: 10px;
+                font-size: 11px;
+                line-height: 16px;
+            }
+
+            .download-sub-inner-div-3 {
+                flex: 2;
+            }
+
+            .download-android-logo {
+                width: 81px;
+                height: 24px;
+                margin-right: 8px;
+            }
+
+            .download-ios-logo {
+                width: 81px;
+                height: 24px;
+            }
+
+            .download-sub-inner-div-2 {
+                display: none;
+            }
+
+            .download-sub-inner-text-2 {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 16px;
+                text-align: center;
+                text-transform: uppercase;
+                margin: 5px 38px 6px 38px;
+                color: #000000;
+            }
+
+            .download-qrcode-logo {
+                width: 57px;
+                height: 57px;
+            }
+
+            /* faqs */
+            .faqs-div {
+                margin-top: 64px;
+            }
+
+            .faqs-header {
+                font-size: 11px;
+                line-height: 16px;
+            }
+
+            .faqs-sub-header {
+                font-size: 20px;
+                line-height: 30px;
+            }
+
+            .faqs-hr-div {
+                width: 40px;
+                border: 4px solid #01B9F5;
+                border-radius: 20px;
+            }
+
+            .faqs-main-container {
+                margin-top: 40px;
+                margin-bottom: 60px;
+            }
+
+            .faqs-li {
+                padding-bottom: 24px;
+                padding-top: 24px;
+            }
+
+            .faqs-li-container {
+                display: flex;
+                flex: 8;
+                flex-direction: column;
+            }
+
+            .faqs-li-header {
+
+                font-size: 11px;
+                line-height: 18px;
+            }
+
+            .faqs-li-text {
+
+                font-size: 11px;
+                line-height: 18px;
+            }
+
+            .faqs-li-text-current {
+                font-size: 11px;
+                line-height: 18px;
+            }
+
+            .faqs-li-icon-div {
+                flex: 2;
+                margin-right: 25px;
+                margin-top: 4px;
+            }
+
+            .faqs-li-icon-current {
+                width: 16px;
+                height: 10px;
+            }
+
+            .faqs-li-icon {
+                width: 16px;
+                height: 10px;
+                transform: rotate(-180deg);
+            }
+
+            /* footer */
+            .footer {
+                min-width: 360px;
+            }
+
+            .footer-follow-us {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 80px;
+                background: #505050;
+            }
+
+            .footer-follow-us-text {
+                font-style: normal;
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 24px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                text-transform: uppercase;
+                color: #FFFFFF;
+            }
+
+            .footer-follow-us-img {
+                margin-right: 16px;
+            }
+
+            .footer-div-2 {
+                height: 124px;
+                background: #0D0D0D;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .footer-row-div {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 586;
+            }
+
+            .footer-navlink {
+                font-style: normal;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 24px;
+                display: flex;
+                align-items: center;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                display: block;
+                border: none;
+                background: none;
+            }
+
+            .footer-row-div-2 {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 300px;
+                border-top: 1px solid #646464;
+                margin-top: 20;
+                padding-top: 16;
+            }
+
+            .footer-text {
+                font-style: normal;
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 24px;
+                /* identical to box height, or 200% */
+
+                display: flex;
+                align-items: center;
+                letter-spacing: 0.06em;
+
+                color: #FFFFFF;
+
+                opacity: 0.56;
+            }
+        }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="bootstrap-styles">
+    <div class="header fixed-top">
+        <div class="row-div">
+            <div class="header-side-hide">
+                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6242b9d3be462074af9914fa.png"
+                    class="header-side-bar">
+            </div>
+            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/profilepic/6238477ebe462074af990c3f.png"
+                class="header-logo" />
+        </div>
+        <div class="right-container">
+            <div class="header-nav-hide">
+                <ul class="nav nav-bar">
+                    <li class="nav-item"> <button class="navlink-active" id="aboutus-action"
+                            onclick="changeStyleHeader(true, 'aboutus-action')">About us</button> </li>
+                    <li class="nav-item"> <button class="navlink" id="focusareas-action"
+                            onclick="changeStyleHeader(true, 'focusareas-action')">Focus Areas</button> </li>
+                    <li class="nav-item"> <button class="navlink" id="instructors-action"
+                            onclick="changeStyleHeader(true, 'instructors-action')">Instructors</button>
+                    </li>
+                    <li class="nav-item"> <button class="navlink" id="courses-action"
+                            onclick="changeStyleHeader(true, 'courses-action')">Courses</button> </li>
+                    <li class="nav-item"> <button class="navlink" id="faqs-action"
+                            onclick="changeStyleHeader(true, 'faqs-action')">FAQs</button> </li>
+                </ul>
+            </div>
+            <div>
+                <button class="header-enroll-now"> Enroll Now</button>
+            </div>
+            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623989ccbe462074af990c7a.png"
+                class="header-icon" />
+        </div>
+    </div>
+    <div class="main-container" id="main-container">
+
+
+        <div class="download-div">
+            <div class="download-inner-div-1">
+                <div class="download-header">
+                    Accelerate Your Growth
+                </div>
+                <div class="download-sub-header">
+                    Get started on The Good Creator Co. app today
+                </div>
+            </div>
+            <div class="download-inner-div-2">
+                <div class="download-sub-inner-div-1">
+                    <div class="download-sub-inner-text">Download on android & iOS</div>
+                    <div class="download-sub-inner-div-3">
+                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623d8ac5be462074af991115.png"
+                            class="download-android-logo" id="download-android-logo" />
+                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623d8ac5be462074af991114.png"
+                            class="download-ios-logo" id="download-ios-logo" />
+                    </div>
+                </div>
+                <div class="download-sub-inner-div-2">
+                    <div class="download-sub-inner-text-2">Scan Code AND Download Now</div>
+                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6243069ebe462074af991709.png"
+                        class="download-qrcode-logo" />
+                </div>
+            </div>
+        </div>
+        <div id="faqs" onmouseenter="changeStyleHeader(false, 'faqs-action')" class="faqs-div">
+            <div class="col-div">
+                <div class="faqs-header">We Are</div>
+                <div class="faqs-sub-header">Here To Help</div>
+                <div class="faqs-hr-div"></div>
+            </div>
+            <div class="faqs-main-container">
+                <div class="faqs-li" id="faqs-1" onclick="handleOnClickShowFAQ(1)">
+                    <div class="faqs-li-container">
+                        <div class="faqs-li-header">What is the criteria to get selected for the courses?</div>
+                        <div class="faqs-li-text-current" id="faqs-li-text-1">There is no selection process for the
+                            courses;
+                            anyone who wants to become a content creator, at any stage of their journey, can apply.
+                            You would be required to register on your platform of choice (Instagram, Facebook, YouTube,
+                            etc.) so that we can include you in our contests, leaderboards, etc.</div>
+                    </div>
+                    <div class="faqs-li-icon-div">
+                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
+                            class="faqs-li-icon-current" id="faqs-li-icon-1" />
+                    </div>
+                </div>
+                <div class="faqs-li" id="faqs-2" onclick="handleOnClickShowFAQ(2)">
+                    <div class="faqs-li-container">
+                        <div class="faqs-li-header">Is there a particular course format?</div>
+                        <div class="faqs-li-text" id="faqs-li-text-2">Yes, all our course sessions are live and
+                            interactive
+                            in nature. Some sessions may include separate slots for AMAs to ensure all your questions
+                            get
+                            answered.</div>
+                    </div>
+                    <div class="faqs-li-icon-div">
+                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
+                            class="faqs-li-icon" id="faqs-li-icon-2" />
+                    </div>
+                </div>
+                <div class="faqs-li" id="faqs-3" onclick="handleOnClickShowFAQ(3)">
+                    <div class="faqs-li-container">
+                        <div class="faqs-li-header">Will I get certified?</div>
+                        <div class="faqs-li-text" id="faqs-li-text-3">Yes, you will receive a Certificate of Completion
+                            at
+                            the end of the course from the Good Creator Academy.</div>
+                    </div>
+                    <div class="faqs-li-icon-div">
+                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
+                            class="faqs-li-icon" id="faqs-li-icon-3" />
+                    </div>
+                </div>
+                <div class="faqs-li" id="faqs-4" onclick="handleOnClickShowFAQ(4)">
+                    <div class="faqs-li-container">
+                        <div class="faqs-li-header">Which makeup products should I carry for a session on beauty content
+                            creation?</div>
+                        <div class="faqs-li-text" id="faqs-li-text-4">Once you register, you will receive a detailed
+                            email
+                            with suggested products. </div>
+                    </div>
+                    <div class="faqs-li-icon-div">
+                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
+                            class="faqs-li-icon" id="faqs-li-icon-4" />
+                    </div>
+                </div>
+                <div class="faqs-li" id="faqs-5" onclick="handleOnClickShowFAQ(5)">
+                    <div class="faqs-li-container">
+                        <div class="faqs-li-header">Are the courses refundable?</div>
+                        <div class="faqs-li-text" id="faqs-li-text-5">At present, all our courses are non-refundable.
+                        </div>
+                    </div>
+                    <div class="faqs-li-icon-div">
+                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
+                            class="faqs-li-icon" id="faqs-li-icon-5" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-follow-us">
+            <div class="footer-follow-us-text">Follow us</div>
+            <div class="row-div">
+                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/62426918be462074af99144e.png" alt=""
+                    width="24px" height="24px" class="footer-follow-us-img" id="footer-follow-us-fb">
+                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/624269187318f9107f8b0371.png" alt=""
+                    width="24px" height="24px" class="footer-follow-us-img" id="footer-follow-us-insta">
+                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/62426918be462074af99144f.png" alt=""
+                    width="24px" height="24px" id="footer-follow-us-tw">
+            </div>
+        </div>
+        <div class="footer-div-2">
+            <div class="footer-row-div">
+                <button class="footer-navlink" id="footer-aboutus-action"
+                    onclick="changeStyleHeader(true, 'aboutus-action')">About us</button>
+                <button class="footer-navlink" id="footer-focusareas-action"
+                    onclick="changeStyleHeader(true, 'focusareas-action')">Focus Areas</button>
+                <button class="footer-navlink" id="footer-instructors-action"
+                    onclick="changeStyleHeader(true, 'instructors-action')">Instructors</button>
+                <button class="footer-navlink" id="footer-courses-action"
+                    onclick="changeStyleHeader(true, 'courses-action')">Courses</button>
+                <button class="footer-navlink" id="footer-faqs-action"
+                    onclick="changeStyleHeader(true, 'faqs-action')">FAQs</button>
+            </div>
+            <div class="footer-row-div-2">
+                <div class="footer-text">GCCAcademy@2022. All rights reserved</div>
+                <div class="footer-text">Terms & Conditions applied*</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const fullWidth = window.screen.width;
+    // document.getElementById("main-container").style.width = 1440 ;
+    // document.getElementById("main-container").style.marginLeft = fullWidth && fullWidth > 1440 ? (fullWidth - 1440) / 2 : 96;
+    // // document.getElementById("main-container").style.marginRight = fullWidth && fullWidth > 1440 ? (fullWidth - 1440) / 2 : 96;
+    // console.log({ fullWidth });
+    if (fullWidth === 360 || fullWidth < 360) {
+        document.getElementById("main-container").style.marginLeft = 20;
+        document.getElementById("main-container").style.marginRight = 20;
+    }
+    function changeStyleHeader(toScroll, id) {
+        switch (id) {
+            case "aboutus-action":
+                if (toScroll) {
+                    document.getElementById('aboutus').scrollIntoView();
+                }
+                document.getElementById("aboutus-action").className = 'navlink-active';
+                document.getElementById("focusareas-action").className = 'navlink';
+                document.getElementById("instructors-action").className = 'navlink';
+                document.getElementById("courses-action").className = 'navlink';
+                document.getElementById("faqs-action").className = 'navlink';
+                break;
+            case "focusareas-action":
+                if (toScroll) {
+                    document.getElementById('focusareas').scrollIntoView();
+                }
+                document.getElementById("aboutus-action").className = 'navlink';
+                document.getElementById("focusareas-action").className = 'navlink-active';
+                document.getElementById("instructors-action").className = 'navlink';
+                document.getElementById("courses-action").className = 'navlink';
+                document.getElementById("faqs-action").className = 'navlink';
+                break;
+            case "instructors-action":
+                if (toScroll) {
+                    document.getElementById('instructors').scrollIntoView();
+                }
+                document.getElementById("aboutus-action").className = 'navlink';
+                document.getElementById("focusareas-action").className = 'navlink';
+                document.getElementById("instructors-action").className = 'navlink-active';
+                document.getElementById("courses-action").className = 'navlink';
+                document.getElementById("faqs-action").className = 'navlink';
+                break;
+            case "courses-action":
+                if (toScroll) {
+                    document.getElementById('courses').scrollIntoView();
+                }
+                document.getElementById("aboutus-action").className = 'navlink';
+                document.getElementById("focusareas-action").className = 'navlink';
+                document.getElementById("instructors-action").className = 'navlink';
+                document.getElementById("courses-action").className = 'navlink-active';
+                document.getElementById("faqs-action").className = 'navlink';
+                break;
+            case "faqs-action":
+                if (toScroll) {
+                    document.getElementById('faqs').scrollIntoView();
+                }
+                document.getElementById("aboutus-action").className = 'navlink';
+                document.getElementById("focusareas-action").className = 'navlink';
+                document.getElementById("instructors-action").className = 'navlink';
+                document.getElementById("courses-action").className = 'navlink';
+                document.getElementById("faqs-action").className = 'navlink-active';
+                break;
+        }
+    }
+
+    // FAQs
+    function handleOnClickShowFAQ(id) {
+        document.getElementById("faqs-li-text-1").className = 'faqs-li-text';
+        document.getElementById("faqs-li-text-2").className = 'faqs-li-text';
+        document.getElementById("faqs-li-text-3").className = 'faqs-li-text';
+        document.getElementById("faqs-li-text-4").className = 'faqs-li-text';
+        document.getElementById("faqs-li-text-5").className = 'faqs-li-text';
+        document.getElementById("faqs-li-icon-1").className = 'faqs-li-icon';
+        document.getElementById("faqs-li-icon-2").className = 'faqs-li-icon';
+        document.getElementById("faqs-li-icon-3").className = 'faqs-li-icon';
+        document.getElementById("faqs-li-icon-4").className = 'faqs-li-icon';
+        document.getElementById("faqs-li-icon-5").className = 'faqs-li-icon';
+        document.getElementById(`faqs-li-text-${id}`).className = 'faqs-li-text-current';
+        document.getElementById(`faqs-li-icon-${id}`).className = 'faqs-li-icon-current';
+    }
+
+    // links
+    document.getElementById('download-android-logo').addEventListener("click", (e) => {
+        window.open('https://play.google.com/store/apps/details?id=co.winkl.app', '_blank');
+    });
+    document.getElementById('download-ios-logo').addEventListener("click", (e) => {
+        window.open('https://apps.apple.com/in/app/the-good-creator-co/id1462743952', '_blank');
+    })
+    document.getElementById('footer-follow-us-insta').addEventListener("click", (e) => {
+        window.open('https://www.instagram.com/goodcreatoracademy/', '_blank');
+    })
+    document.getElementById('footer-follow-us-tw').addEventListener("click", (e) => {
+        window.open('https://twitter.com/GoodCreatorACAD', '_blank');
+    })
+</script>
+
+</html>
