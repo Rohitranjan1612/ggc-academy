@@ -2559,7 +2559,7 @@
                                                     Manjari Singh
                                                 </div>
                                                 <div class="instructors_card_text">
-                                                    Award-winning celebrity markeup artist and hair stylist from The
+                                                    Award-winning celebrity makeup artist and hair stylist from The
                                                     London
                                                     School of Makeup.
                                                     Worked with Gauri Khan, Yami Gautam, Huma Qureshi, Rakul Preet
@@ -2770,20 +2770,15 @@
                 <div class="row-div">
                     <button class="footer-navlink" id="footer-aboutus-action"
                         onclick="changeStyleHeader(true, 'aboutus-action')">About us</button>
-                    <button class="footer-navlink" id="footer-focusareas-action"
-                        onclick="changeStyleHeader(true, 'focusareas-action')">Focus Areas</button>
-                    <button class="footer-navlink" id="footer-instructors-action"
-                        onclick="changeStyleHeader(true, 'instructors-action')">Instructors</button>
-                    <button class="footer-navlink" id="footer-courses-action"
-                        onclick="changeStyleHeader(true, 'courses-action')">Courses</button>
-                    <button class="footer-navlink" id="footer-faqs-action"
-                        onclick="changeStyleHeader(true, 'faqs-action')">FAQs</button>
+                    <button type="submit" class="footer-navlink" id="footer-terms-condition-action">Terms &
+                        Conditions</button>
+                    <button class="footer-navlink" id="footer-privacy-policy-action">Privacy Policy</button>
+                    <button class="footer-navlink" id="footer-refund-policy-action">Refund Policy</button>
+                    <button class="footer-navlink" id="footer-contact-us-action">Contact Us</button>
                 </div>
-                <div class="footer-email"> team@goodcreatoracademy.com</div>
             </div>
             <div class="footer-row-div-2">
                 <div class="footer-text">GCCAcademy@2022. All rights reserved</div>
-                <div class="footer-text">Terms & Conditions applied*</div>
             </div>
         </div>
     </div>
@@ -2794,7 +2789,7 @@
     // document.getElementById("main-container").style.marginLeft = fullWidth && fullWidth > 1440 ? (fullWidth - 1440) / 2 : 96;
     // // document.getElementById("main-container").style.marginRight = fullWidth && fullWidth > 1440 ? (fullWidth - 1440) / 2 : 96;
     document.getElementById("header").style.width = `${fullWidth}px`;
-    document.getElementById("footer-row-div").style.width = `${fullWidth}px`;
+    // document.getElementById("footer-row-div").style.width = `${fullWidth}px`;
 
     if (fullWidth === 360 || fullWidth < 360) {
         document.getElementById("main-container").style.marginLeft = 20;
@@ -3182,6 +3177,18 @@
     })
     document.getElementById('footer-follow-us-tw').addEventListener("click", (e) => {
         window.open('https://twitter.com/GoodCreatorACAD', '_blank');
+    })
+    document.getElementById('footer-terms-condition-action').addEventListener("click", (e) => {
+        window.open('https://www.goodcreatoracademy.com/termsofuse', '_self');
+    })
+    document.getElementById('footer-privacy-policy-action').addEventListener("click", (e) => {
+        window.open('https://www.goodcreatoracademy.com/privacypolicy', '_self');
+    })
+    document.getElementById('footer-refund-policy-action').addEventListener("click", (e) => {
+        window.open('https://www.goodcreatoracademy.com/refundpolicy', '_self');
+    })
+    document.getElementById('footer-contact-us-action').addEventListener("click", (e) => {
+        window.open('https://www.goodcreatoracademy.com/contactus', '_self');
     })
 </script>
 
