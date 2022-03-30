@@ -584,6 +584,134 @@
             height: 57px;
         }
 
+        .kwb-div {
+            margin-top: 120px;
+            width: 1248px;
+            border-radius: 30px 0px;
+            padding: 100px 60px;
+            background: #F6FCFF;
+        }
+
+        .kwb-wsy-text {
+            font-style: normal;
+            font-weight: medium;
+            font-size: 24px;
+            line-height: 26px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #0D0D0D;
+        }
+
+        .kwb-text {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 48px;
+            line-height: 76px;
+            text-align: center;
+            text-transform: capitalize;
+            color: #0D0D0D;
+        }
+
+        .kwb-hr-div {
+            width: 80px;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            border: 8px solid #01B9F5;
+            border-radius: 40px;
+        }
+
+        .kwb-label {
+            font-style: normal;
+            margin-bottom: 24px;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 36px;
+            letter-spacing: 0.5px;
+            color: #000000;
+        }
+
+        .kwb-action {
+            width: 140px;
+            height: 40px;
+            margin-right: 20px;
+            margin-bottom: 60px;
+            background: #FFFFFF !important;
+            border: none;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            font-size: 14px;
+            border: 0.5px solid #929292;
+            box-sizing: border-box;
+        }
+
+        .kwb_input_email {
+            border: none;
+            border-bottom: 1px solid #525252;
+            background: none;
+            width: 545px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            /* identical to box height, or 167% */
+
+
+            color: #6C6C6C;
+        }
+
+        .kwb_input_phone {
+            border: none;
+            border-bottom: 1px solid #525252;
+            background: none;
+            width: 545px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            /* identical to box height, or 167% */
+
+
+            color: #6C6C6C;
+        }
+
+        .kwb-action_current {
+            margin-top: 51px;
+            width: 140px;
+            height: 40px;
+            margin-right: 20px;
+            margin-bottom: 60px;
+            background: #01B9F5 !important;
+            border: none;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            color: white;
+            font-size: 14px;
+        }
+
+        .kwb-action-submit {
+            position: absolute;
+            border: none;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            font-size: 14px;
+            box-sizing: border-box;
+
+            width: 101px;
+            height: 40px;
+            margin-top: 80px;
+            margin-left: 987px;
+            color: #A0A0A0;
+            background: #FFFFFF;
+            border: 1px solid #A0A0A0;
+        }
+
+        .kwb-row-div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
         /* faqs */
         .faqs-div {
             margin-top: 120px;
@@ -1105,6 +1233,7 @@
     </div>
     <div class="main-container" id="main-container">
         <!-- Course tagline -->
+        <!-- {{TAGLINE}} -->
         <div class="course-tagline-div">
             <div class="row-div">
                 <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6244062cbe462074af99174c.png"
@@ -1184,6 +1313,7 @@
             </div>
         </div>
         <!-- Description -->
+        <!-- {{DESCRIPTION}} -->
         <div id="description" class="description-div">
             <!-- Course -->
             <div class="col-div">
@@ -1280,6 +1410,41 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <!-- Know you better -->
+        <div class="kwb-div">
+            <div class="col-div">
+                <div class="kwb-wsy-text">Help us</div>
+                <div class="kwb-text">Know you better</div>
+                <div class="kwb-hr-div"></div>
+            </div>
+            <div class="kwb-label">What kind of course would you like to attend?</div>
+            <div>
+                <button class="kwb-action" id="kwb-action">Beauty</button>
+                <button class="kwb-action" id="kwb-action">Fashion</button>
+
+                <button class="kwb-action" id="kwb-action">Luxury</button>
+                <button class="kwb-action" id="kwb-action">Food</button>
+                <button class="kwb-action" id="kwb-action">Influencer</button>
+
+            </div>
+            <div class="kwb-label">Do you want us to send you updates?</div>
+            <div>
+                <button class="kwb-action" id="kwb-action">Yes</button>
+                <button class="kwb-action" id="kwb-action">No</button>
+
+            </div>
+            <div class="kwb-row-div">
+                <div class="col-div">
+                    <div class="kwb-label">Where can we write to you?</div>
+                    <input type="text" placeholder="Enter email address" id="kwb_input_email" class="kwb_input_email">
+                </div>
+                <div class="col-div">
+                    <div class="kwb-label"> Where can we reach you?</div>
+                    <input type="number" placeholder="Enter phone number" id="kwb_input_phone" class="kwb_input_phone">
+                </div>
+            </div>
+            <button class="kwb-action-submit" id="kwb-action-submit">Submit</button>
         </div>
         <div class="download-div">
             <div class="download-inner-div-1">
