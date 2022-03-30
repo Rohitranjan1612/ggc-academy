@@ -1,1314 +1,160 @@
-<style>
-    .header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        background-color: #fff;
-        height: 90px;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
-        border-radius: 8px 0px;
-    }
-
-    .header-logo {
-        height: 56px;
-        margin-top: 17px;
-        margin-left: 96px;
-    }
-
-    .header-side-hide {
-        display: none;
-    }
-
-    .nav-bar {
-        padding-top: 22px;
-        padding-right: 60px;
-        color: #0D0D0D;
-    }
-
-    .navlink {
-        display: block;
-        border: none;
-        background: none;
-        padding: 0.5rem 1rem;
-        color: #0D0D0D;
-        font-style: normal;
-        font-weight: medium;
-        font-size: 14px;
-        line-height: 24px;
-    }
-
-    .navlink-active {
-        display: block;
-        border: none;
-        background: none;
-        padding: 0.5rem 1rem;
-        color: #01B9F5;
-        font-weight: 700;
-        font-style: normal;
-        font-size: 14px;
-        line-height: 24px;
-    }
-
-    .right-container {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .header-icon {
-        height: 40px;
-        margin-top: 25px;
-        margin-right: 96px;
-    }
-
-    .header-enroll-now {
-        background: #01B9F5 !important;
-        border: none;
-        width: 140px;
-        border-top-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-        height: 40px;
-        color: white;
-        font-size: 14px;
-        margin-top: 25px;
-        margin-right: 16px;
-    }
-
-    .main-container {
-        width: 1248px;
-        margin: 0 auto;
-    }
-
-    /* About Us */
-    .aboutus_div_1 {
-        margin-top: 113px;
-        margin-left: 73px;
-    }
-
-    .aboutus_row_div {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .aboutus_row_div_video {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .aboutus_video_div {
-        margin-top: 206px;
-        border-top-left-radius: 20px;
-    }
-
-    .aboutus_video {
-        border-top-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-        width: 761px;
-        height: 428px;
-    }
-
-    .aboutus_hr_div {
-        width: 80px;
-        border: 8px solid #01B9F5;
-        margin-top: 113px;
-        border-radius: 40px;
-        margin-bottom: 40px;
-    }
-
-    .aboutus_header {
-        font-style: normal;
-        position: absolute;
-        font-weight: 400;
-        font-size: 27px;
-        line-height: 40px;
-        text-transform: uppercase;
-
-        color: #0D0D0D
-    }
-
-    .aboutus_text {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 30px;
-        color: #0D0D0D;
-    }
-
-    .aboutus_sub_header {
-        position: absolute;
-        font-style: normal;
-        font-weight: 800;
-        margin-top: 33px;
-        /* margin-bottom: 12px; */
-        font-size: 48px;
-        line-height: 76px;
-        text-transform: capitalize;
-        color: #0D0D0D;
-    }
-
-    .aboutus-logo-1 {
-        width: 217px;
-        height: 159px;
-    }
-
-    .aboutus-reverse {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-end;
-        margin-top: 87px;
-    }
-
-    .aboutus-logo-2 {
-        width: 217px;
-        height: 340px;
-        margin-top: 10px;
-        margin-left: 10px;
-    }
-
-    .aboutus-logo-3 {
-        width: 217px;
-        height: 192px;
-        margin-left: 10px;
-        border-top-left-radius: 10px;
-    }
-
-    .aboutus-logo-4 {
-        width: 217px;
-        height: 192px;
-        margin-left: 10px;
-        border-bottom-right-radius: 10px;
-    }
-
-    .aboutus-logo-5 {
-        width: 217px;
-        height: 320px;
-        margin-bottom: 10px;
-        margin-left: 10px;
-    }
-
-    .aboutus_carousel {
-        position: relative;
-        margin: 0 auto;
-    }
-
-    .aboutus_carousel_track-container {
-        min-height: 630px;
-        margin-top: 90px;
-        background: #F7FCFF;
-        border-radius: 20px;
-        overflow: hidden;
-    }
-
-    .aboutus_carousel_track {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        position: relative;
-        transition: transform 250ms ease-in;
-    }
-
-    .aboutus_carousel_slide {
-        position: absolute;
-        width: 100%;
-    }
-
-    .aboutus_carousel_nav {
-        position: relative;
-        top: -14;
-        margin-left: 72px;
-    }
-
-    .aboutus_carousel_indicator {
-        border: 0;
-        border-radius: 50%;
-        margin: 0 2px;
-        width: 12px;
-        height: 12px;
-    }
-
-    .aboutus_carousel_indicator.aboutus_current-slide {
-        width: 20px;
-        border-radius: 10px;
-        background: #76C9F1;
-    }
-
-    .col-div {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .row-div {
-        display: flex;
-        flex-direction: row;
-    }
-
-    /* Why should you join us */
-    .join-us-div {
-        margin-top: 125px;
-    }
-
-    .join-us-wsy-text {
-        font-style: normal;
-        font-weight: medium;
-        font-size: 24px;
-        line-height: 26px;
-        text-align: center;
-        text-transform: uppercase;
-        color: #0D0D0D;
-    }
-
-    .join-us-text {
-        font-style: normal;
-        font-weight: 800;
-        font-size: 48px;
-        line-height: 76px;
-        text-align: center;
-        text-transform: capitalize;
-        color: #0D0D0D;
-    }
-
-    .join-us-hr-div {
-        width: 80px;
-        align-items: center;
-        justify-content: center;
-        align-self: center;
-        border: 8px solid #FFC400;
-        border-radius: 40px;
-    }
-
-    .join-us-main-container {
-        display: flex;
-        flex-direction: row;
-        margin-top: 84px;
-    }
-
-    .join-us-logo {
-        width: 69px;
-        height: 66px;
-        margin-right: 40px;
-    }
-
-    .join-us-logo-2 {
-        width: 86px;
-        height: 66px;
-        margin-right: 40px;
-    }
-
-    .join-us-sub-header {
-        font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 36px;
-        display: flex;
-        align-items: center;
-        letter-spacing: 0.01em;
-        text-transform: uppercase;
-        color: #0D0D0D;
-    }
-
-    .join-us-simple-text {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 30px;
-        color: #777777;
-    }
-
-    .div-with-border-line {
-        flex: 1;
-        border-right: 1px solid #D5D5D5;
-        padding-right: 77px;
-    }
-
-    .div-without-border-line {
-        flex: 1;
-        padding-left: 60px;
-    }
-
-    /* Content Creation Journey - ccj  */
-    .ccj-div {
-        margin-top: 125px;
-    }
-
-    .ccj-wsy-text {
-        font-style: normal;
-        font-weight: medium;
-        font-size: 24px;
-        line-height: 26px;
-        text-align: center;
-        text-transform: uppercase;
-        color: #0D0D0D;
-    }
-
-    .ccj-text {
-        font-style: normal;
-        font-weight: 800;
-        font-size: 48px;
-        line-height: 76px;
-        text-align: center;
-        text-transform: capitalize;
-        color: #0D0D0D;
-    }
-
-    .ccj-hr-div {
-        width: 80px;
-        align-items: center;
-        justify-content: center;
-        align-self: center;
-        border: 8px solid #01B9F5;
-        border-radius: 40px;
-    }
-
-    .ccj-main-container {
-        margin-top: 80px;
-        height: 520px;
-    }
-
-    .content_flip-card-1 {
-        width: 188px;
-        margin-top: 21px;
-        perspective: 1000px;
-        z-index: 1;
-    }
-
-    .content_flip-card-2 {
-        width: 230px;
-        perspective: 1000px;
-        margin-top: 21px;
-        z-index: 2;
-    }
-
-    .content_flip-card-3 {
-        width: 240px;
-        perspective: 1000px;
-        z-index: 6;
-    }
-
-    .content_flip-card-4 {
-        width: 210px;
-        perspective: 1000px;
-        margin-top: 21px;
-        z-index: 2;
-    }
-
-    .content_flip-card-5 {
-        width: 188px;
-        perspective: 1000px;
-        margin-top: 21px;
-        z-index: 1;
-    }
-
-    .content_flip-card-inner {
-        position: relative;
-        transition: transform 0.6s;
-        transform-style: preserve-3d;
-        transform: rotateY(20deg);
-
-    }
-
-    .content_flip-card-inner-anti-clock {
-        position: relative;
-        transition: transform 0.6s;
-        transform-style: preserve-3d;
-        transform: rotateY(-20deg);
-    }
-
-    .content_flip-card-front {
-        position: absolute;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-    }
-
-    .content_flip-card-header {
-        position: absolute;
-        font-style: normal;
-        font-weight: 800;
-        font-size: 40px;
-        line-height: 60px;
-        text-align: center;
-        text-transform: uppercase;
-        z-index: 7;
-        bottom: 50;
-        left: 130;
-        color: #FFFFFF;
-    }
-
-    .content_flip-card-header-horizontal {
-        position: absolute;
-        font-style: normal;
-        font-weight: 800;
-        font-size: 40px;
-        line-height: 60px;
-        text-align: center;
-        text-transform: uppercase;
-        z-index: 7;
-        bottom: 100;
-        left: -50;
-        color: #FFFFFF;
-        transform: rotate(-90deg);
-    }
-
-    .content_flip-card-header-anti-horizontal {
-        position: absolute;
-        font-style: normal;
-        font-weight: 800;
-        font-size: 40px;
-        line-height: 60px;
-        text-align: center;
-        text-transform: uppercase;
-        z-index: 7;
-        bottom: 110;
-        left: 210;
-        color: #FFFFFF;
-        transform: rotate(90deg);
-    }
-
-    .content_flip-card-header-anti-horizontal-2 {
-        position: absolute;
-        font-style: normal;
-        font-weight: 800;
-        font-size: 40px;
-        line-height: 60px;
-        text-align: center;
-        text-transform: uppercase;
-        z-index: 7;
-        bottom: 50;
-        left: 280;
-        color: #FFFFFF;
-        transform: rotate(90deg);
-    }
-
-    .content_flip-card-link {
-        position: absolute;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 21px;
-        width: 100%;
-        text-transform: capitalize;
-        z-index: 7;
-        bottom: 24;
-        left: 124;
-        color: #FFFFFF;
-
-    }
-
-    .content_courses_vector_icon {
-        position: absolute;
-        bottom: 29;
-        left: 293;
-        width: 8;
-        height: 12;
-        z-index: 7;
-    }
-
-    .content_flip-card_hide {
-        display: none;
-    }
-
-    .content_courses_img {
-        width: 416px;
-        height: 478px;
-    }
-
-    .content_courses_img_anti {
-        width: 368px;
-        height: 497px;
-    }
-
-    .content_courses_img_front {
-        width: 416px;
-        height: 520px;
-        border-radius: 30px 0px;
-    }
-
-    /* instructors */
-    .instructors-div {
-        height: 868px;
-        background: #FEF9E8;
-        border-radius: 30px 0px;
-        margin-top: 120px;
-        padding-top: 100px;
-    }
-
-    .instructors-header {
-        font-style: normal;
-        font-weight: medium;
-        font-size: 24px;
-        line-height: 26px;
-        text-align: center;
-        text-transform: uppercase;
-        color: #0D0D0D;
-    }
-
-    .instructors-sub-header {
-        font-style: normal;
-        font-weight: 800;
-        font-size: 48px;
-        line-height: 76px;
-        text-align: center;
-        text-transform: capitalize;
-        color: #0D0D0D;
-    }
-
-    .instructors-hr-div {
-        width: 80px;
-        align-items: center;
-        justify-content: center;
-        align-self: center;
-        border: 8px solid #FFC400;
-        border-radius: 40px;
-    }
-
-    .instructors-main-container {
-        margin: 68px 68px 44px 68px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        /* overflow: hidden; */
-    }
-
-    .instructors_card_div {
-        display: flex;
-        flex-direction: column;
-        margin-right: 24px;
-        margin-left: 5px;
-        background: #FFFFFF;
-        width: 344px;
-        height: 474px;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
-        border-radius: 30px;
-    }
-
-    .instructors_img-1 {
-        position: absolute;
-        width: 358px;
-        height: 252px;
-        border-radius: 30px 0px;
-        left: -5;
-    }
-
-    .instructors_img-2 {
-        position: absolute;
-        width: 358px;
-        height: 252px;
-        border-radius: 30px 0px;
-        left: 372;
-    }
-
-    .instructors_img-3 {
-        position: absolute;
-        width: 358px;
-        height: 252px;
-        border-radius: 30px 0px;
-        left: 745;
-    }
-
-    .instructors_col_div {
-        display: flex;
-        flex-direction: column;
-        margin-top: 242px;
-        width: 344px;
-        padding: 32px;
-    }
-
-    .instructors_card_lite_text {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 18px;
-        letter-spacing: 0.01em;
-        text-transform: uppercase;
-
-        color: #666666;
-    }
-
-    .instructors_card_header {
-        font-style: normal;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 30px;
-
-        color: #0D0D0D;
-    }
-
-    .instructors_card_text {
-        font-style: normal;
-        text-align: justify;
-        font-weight: 400;
-        font-size: 16px;
-        margin-top: 4px;
-        line-height: 26px;
-        color: #0D0D0D;
-    }
-
-    .instructors-sub-container-1 {}
-
-    .instructors-sub-container-carousel {
-        position: relative;
-        margin: 0 auto;
-    }
-
-    .instructors_carousel_track-container {
-        min-height: 566px;
-        min-width: 1132px;
-        padding: 5px;
-        overflow: hidden;
-    }
-
-    .instructors_carousel_track {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        position: relative;
-        transition: transform 250ms ease-in;
-    }
-
-    .instructors_carousel_slide {
-        position: absolute;
-        display: flex;
-        flex-direction: row;
-        width: 1132px;
-    }
-
-    .instructors_carousel_nav {
-        position: relative;
-    }
-
-    .instructors_carousel_button_div {
-        position: absolute;
-        right: 60;
-        display: flex;
-        flex-direction: row;
-        border: 0;
-        margin: 0 2px;
-        width: 12px;
-        height: 12px;
-    }
-
-    .instructors_carousel_button-1 {
-        width: 31px;
-        height: 30px;
-        border-top-left-radius: 5px;
-        border: none;
-        background: #D0D0D0;
-        padding: 8px 14px;
-    }
-
-    .instructors_carousel_button-2 {
-        width: 31px;
-        height: 30px;
-        border-bottom-right-radius: 5px;
-        border: none;
-        background: #FFC400;
-        padding: 8px 14px;
-        margin-left: 10px;
-    }
-
-    .instructors_vector_icon {
-        position: absolute;
-        right: -6;
-        top: 8;
-        width: 8;
-        height: 13;
-        transform: rotate(180deg);
-    }
-
-    .instructors_vector_icon_right {
-        position: absolute;
-        right: -45;
-        top: 8;
-        width: 8;
-        height: 13;
-    }
-
-    /* courses */
-    .courses-div {
-        margin-top: 135px;
-    }
-
-    .courses-header {
-        font-style: normal;
-        font-weight: medium;
-        font-size: 24px;
-        line-height: 26px;
-        text-align: center;
-        text-transform: uppercase;
-        color: #0D0D0D;
-    }
-
-    .courses-sub-header {
-        font-style: normal;
-        font-weight: 800;
-        font-size: 48px;
-        line-height: 76px;
-        text-align: center;
-        text-transform: capitalize;
-        color: #0D0D0D;
-    }
-
-    .courses-hr-div {
-        width: 80px;
-        align-items: center;
-        justify-content: center;
-        align-self: center;
-        border: 8px solid #01B9F5;
-        border-radius: 40px;
-    }
-
-    .courses-main-container {
-        height: 527px;
-        background: #F6FCFF;
-        border-radius: 30px 0px;
-        margin-top: 78px;
-        display: flex;
-        flex-direction: row;
-    }
-
-    .courses-sub-container-1 {
-        flex: 1;
-    }
-
-    .courses-sub-container-carousel {
-        position: relative;
-        margin: 0 auto;
-    }
-
-
-    .courses_carousel_track-container {
-        min-height: 408px;
-        margin-left: 60px;
-        margin-right: 60px;
-        margin-top: 60px;
-        border-radius: 20px;
-        overflow: hidden;
-    }
-
-    .courses_carousel_track {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        position: relative;
-        transition: transform 250ms ease-in;
-    }
-
-    .courses_carousel_slide {
-        position: absolute;
-        width: 100%;
-    }
-
-    .courses_carousel_nav {
-        position: relative;
-        margin-top: 5px;
-        margin-left: 291px;
-    }
-
-    .courses_carousel_indicator {
-        border: 0;
-        border-radius: 50%;
-        margin: 0 2px;
-        width: 12px;
-        height: 12px;
-    }
-
-    .courses_carousel_indicator.courses_current-slide {
-        width: 20px;
-        border-radius: 10px;
-        background: #76C9F1;
-    }
-
-    .courses_img {
-        width: 500px;
-        height: 408px;
-        border-top-left-radius: 40px;
-        border-bottom-right-radius: 40px;
-    }
-
-    .courses-sub-container-2 {
-        flex: 1;
-        padding-top: 58px;
-        padding-right: 60px;
-        padding-bottom: 60px;
-        padding-left: 10px;
-    }
-
-    .courses-sub-container-header {
-        font-style: normal;
-        font-weight: 800;
-        font-size: 30px;
-        line-height: 45px;
-        display: flex;
-        align-items: center;
-        letter-spacing: 0.01em;
-        text-transform: uppercase;
-
-        color: #0D0D0D;
-    }
-
-    .courses-sub-container-text {
-        font-style: normal;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 30px;
-        margin-top: 8px;
-        margin-bottom: 14px;
-        color: #5E5D5D;
-    }
-
-    .courses-sub-container-li {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .courses-sub-container-li-dots {
-        border: 0;
-        border-radius: 50%;
-        width: 10px;
-        height: 10px;
-        background: #D8D8D8;
-        margin-top: 14px;
-        margin-right: 18px;
-    }
-
-    .courses-sub-container-li-lite {
-        font-style: normal;
-        font-weight: 400;
-        margin-bottom: 14px;
-        font-size: 20px;
-        line-height: 35px;
-        color: #5E5D5D;
-    }
-
-    .courses-sub-container-semi-bold {
-        font-style: normal;
-        font-weight: 600;
-        margin-bottom: 53px;
-        font-size: 20px;
-        line-height: 35px;
-        color: #5E5D5D;
-    }
-
-    .courses-sub-container-semi-last {
-        font-style: normal;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 30px;
-        color: #5E5D5D;
-    }
-
-    .courses-view-details {
-        position: absolute;
-        background: #01B9F5 !important;
-        border: none;
-        width: 140px;
-        border-top-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-        height: 40px;
-        color: white;
-        font-size: 14px;
-        margin-top: 509px;
-        margin-left: 636px;
-    }
-
-    /* download */
-    .download-div {
-        margin-top: 142px;
-        display: flex;
-        flex-direction: row;
-    }
-
-    .download-inner-div-1 {
-        flex: 1;
-        background: #FFC400;
-        padding-left: 48px;
-        padding-right: 48px;
-        padding-top: 32px;
-        padding-bottom: 40px;
-        border-top-left-radius: 10px;
-    }
-
-    .download-inner-div-2 {
-        flex: 1;
-        background: #FCD77C;
-        padding-left: 48px;
-        border-bottom-right-radius: 10px;
-        display: flex;
-        flex-direction: row;
-    }
-
-    .download-header {
-        font-style: normal;
-        font-weight: 800;
-        font-size: 30px;
-        line-height: 60px;
-        display: flex;
-        align-items: center;
-        letter-spacing: 0.01em;
-        text-transform: uppercase;
-        color: #0D0D0D;
-    }
-
-    .download-sub-header {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 30px;
-        color: #5B5B5B;
-    }
-
-    .download-sub-inner-div-1 {
-        display: flex;
-        flex-direction: column;
-        flex: 2;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .download-sub-inner-text {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 16px;
-        /* or 114% */
-
-        text-align: center;
-        text-transform: uppercase;
-        margin-bottom: 20px;
-
-        color: #000000;
-    }
-
-    .download-sub-inner-div-3 {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .download-android-logo {
-        width: 100px;
-        height: 30px;
-        margin-right: 12px;
-    }
-
-    .download-ios-logo {
-        width: 100px;
-        height: 30px;
-    }
-
-    .download-sub-inner-div-2 {
-        flex: 1;
-        margin: 20px;
-        background: #FFFFFF;
-        border-bottom-right-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .download-sub-inner-text-2 {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 16px;
-        text-align: center;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-        color: #000000;
-    }
-
-    .download-qrcode-logo {
-        width: 57px;
-        height: 57px;
-    }
-
-    /* faqs */
-    .faqs-div {
-        margin-top: 120px;
-    }
-
-    .faqs-header {
-        font-style: normal;
-        font-weight: medium;
-        font-size: 24px;
-        line-height: 26px;
-        text-align: center;
-        text-transform: uppercase;
-        color: #0D0D0D;
-    }
-
-    .faqs-sub-header {
-        font-style: normal;
-        font-weight: 800;
-        font-size: 48px;
-        line-height: 76px;
-        text-align: center;
-        text-transform: capitalize;
-        color: #0D0D0D;
-    }
-
-    .faqs-hr-div {
-        width: 80px;
-        align-items: center;
-        justify-content: center;
-        align-self: center;
-        border: 8px solid #01B9F5;
-        border-radius: 40px;
-    }
-
-    .faqs-main-container {
-        display: flex;
-        flex-direction: column;
-        margin-top: 80px;
-        margin-bottom: 120px;
-    }
-
-    .faqs-li {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding-bottom: 32px;
-        padding-top: 32px;
-        border-bottom: 1.5px solid #E6E6E6;
-    }
-
-    .faqs-li-container {
-        display: flex;
-        flex: 9;
-        flex-direction: column;
-    }
-
-    .faqs-li-header {
-        font-style: normal;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 36px;
-        letter-spacing: 0.5px;
-        color: #000000;
-    }
-
-    .faqs-li-text {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 31px;
-        color: #333333;
-        display: none;
-    }
-
-    .faqs-li-text-current {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 31px;
-        color: #333333;
-    }
-
-    .faqs-li-icon-div {
-        flex: 0.4;
-        display: flex;
-        justify-content: flex-end;
-        margin-right: 25px;
-        margin-top: 14px;
-    }
-
-    .faqs-li-icon-current {
-        width: 16px;
-        height: 10px;
-    }
-
-    .faqs-li-icon {
-        width: 16px;
-        height: 10px;
-        transform: rotate(-180deg);
-    }
-
-    .footer {
-        display: flex;
-        flex-direction: column;
-        min-width: 1248px;
-    }
-
-    .footer-follow-us {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 80px;
-        background: #505050;
-    }
-
-    .footer-follow-us-text {
-        font-style: normal;
-        font-weight: 300;
-        font-size: 12px;
-        line-height: 24px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        text-transform: uppercase;
-        color: #FFFFFF;
-    }
-
-    .footer-follow-us-img {
-        margin-right: 16px;
-    }
-
-    .footer-div-2 {
-        height: 124px;
-        background: #0D0D0D;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .footer-row-div {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 586;
-    }
-
-    .footer-navlink {
-        font-style: normal;
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 24px;
-        display: flex;
-        align-items: center;
-        text-transform: uppercase;
-        color: #FFFFFF;
-        display: block;
-        border: none;
-        background: none;
-    }
-
-    .footer-row-div-2 {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 1244px;
-        border-top: 1px solid #646464;
-        margin-top: 20;
-        padding-top: 16;
-    }
-
-    .footer-text {
-        font-style: normal;
-        font-weight: 300;
-        font-size: 12px;
-        line-height: 24px;
-        /* identical to box height, or 200% */
-
-        display: flex;
-        align-items: center;
-        letter-spacing: 0.06em;
-
-        color: #FFFFFF;
-
-        opacity: 0.56;
-    }
-
-    @media(max-width: 1000px) {
-        .main-container {
-            width: 360px;
-        }
-
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About Us</title>
+    <style>
         .header {
-            height: 66px;
-        }
-
-        .header-side-hide {
             display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: #fff;
+            height: 90px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+            border-radius: 8px 0px;
         }
 
         .header-logo {
-            height: 39px;
-            width: 56px;
-            margin-top: 13px;
-            margin-left: 0px;
+            height: 56px;
+            margin-top: 17px;
+            margin-left: 96px;
         }
 
-        .header-side-bar {
-            width: 15px;
-            height: 13px;
-            margin-top: 26px;
-            margin-left: 26px;
-            margin-right: 16px;
-        }
-
-        .header-nav-hide {
+        .header-side-hide {
             display: none;
         }
 
+        .nav-bar {
+            padding-top: 22px;
+            padding-right: 60px;
+            color: #0D0D0D;
+        }
+
+        .navlink {
+            display: block;
+            border: none;
+            background: none;
+            padding: 0.5rem 1rem;
+            color: #0D0D0D;
+            font-style: normal;
+            font-weight: medium;
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        .navlink-active {
+            display: block;
+            border: none;
+            background: none;
+            padding: 0.5rem 1rem;
+            color: #01B9F5;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        .right-container {
+            display: flex;
+            flex-direction: row;
+        }
+
         .header-icon {
-            height: 30px;
-            width: 30px;
-            margin-top: 18px;
-            margin-right: 20px;
+            height: 40px;
+            margin-top: 25px;
+            margin-right: 96px;
         }
 
         .header-enroll-now {
-            width: 90px;
-            height: 30px;
-            font-size: 11px;
-            margin-top: 18px;
-            margin-right: 12px;
+            background: #01B9F5 !important;
+            border: none;
+            width: 140px;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            height: 40px;
+            color: white;
+            font-size: 14px;
+            margin-top: 25px;
+            margin-right: 16px;
+        }
 
-            border-top-left-radius: 5px;
-            border-bottom-right-radius: 5px;
+        .main-container {
+            width: 1248px;
+            margin: 0 auto;
         }
 
         /* About Us */
         .aboutus_div_1 {
-            margin-top: 20px;
-            margin-left: 16px;
+            margin-top: 113px;
+            margin-left: 73px;
         }
 
+        .aboutus_row_div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .aboutus_row_div_video {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
 
         .aboutus_video_div {
-            margin-top: 19px;
-            margin-left: 84px;
-            border-top-left-radius: 10px;
+            margin-top: 206px;
+            border-top-left-radius: 20px;
         }
 
         .aboutus_video {
-            border-top-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            width: 236px;
-            height: 133px;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            width: 761px;
+            height: 428px;
         }
 
         .aboutus_hr_div {
-            width: 40px;
-            border: 4px solid #01B9F5;
+            width: 80px;
+            border: 8px solid #01B9F5;
+            margin-top: 113px;
             border-radius: 40px;
-            margin-bottom: 10px;
+            margin-bottom: 40px;
         }
 
         .aboutus_header {
-            font-weight: 500;
-            font-size: 11px;
-            line-height: 16px;
-        }
+            font-style: normal;
+            position: absolute;
+            font-weight: 400;
+            font-size: 27px;
+            line-height: 40px;
+            text-transform: uppercase;
 
-        .aboutus_sub_header {
-            font-size: 18px;
-            line-height: 30px;
+            color: #0D0D0D
         }
 
         .aboutus_text {
-            font-size: 11px;
-            line-height: 16px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            color: #0D0D0D;
+        }
+
+        .aboutus_sub_header {
+            position: absolute;
+            font-style: normal;
+            font-weight: 800;
+            margin-top: 33px;
+            /* margin-bottom: 12px; */
+            font-size: 48px;
+            line-height: 76px;
+            text-transform: capitalize;
+            color: #0D0D0D;
         }
 
         .aboutus-logo-1 {
-            width: 58px;
-            height: 50px;
+            width: 217px;
+            height: 159px;
         }
 
         .aboutus-reverse {
@@ -1320,181 +166,264 @@
         }
 
         .aboutus-logo-2 {
-            width: 58px;
-            height: 108px;
+            width: 217px;
+            height: 340px;
             margin-top: 10px;
-            margin-left: 2px;
+            margin-left: 10px;
         }
 
         .aboutus-logo-3 {
-            display: none;
+            width: 217px;
+            height: 192px;
+            margin-left: 10px;
+            border-top-left-radius: 10px;
         }
 
         .aboutus-logo-4 {
-            width: 58px;
-            height: 66px;
-            margin-left: 2px;
-            border-bottom-right-radius: 5px;
+            width: 217px;
+            height: 192px;
+            margin-left: 10px;
+            border-bottom-right-radius: 10px;
         }
 
         .aboutus-logo-5 {
-            width: 58px;
-            height: 127px;
-            margin-bottom: 2px;
-            margin-left: 2px;
+            width: 217px;
+            height: 320px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+
+        .aboutus_carousel {
+            position: relative;
+            margin: 0 auto;
         }
 
         .aboutus_carousel_track-container {
-            min-height: 260px;
+            min-height: 630px;
             margin-top: 90px;
             background: #F7FCFF;
             border-radius: 20px;
             overflow: hidden;
         }
 
-        .aboutus_row_div_video {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+        .aboutus_carousel_track {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            position: relative;
+            transition: transform 250ms ease-in;
+        }
+
+        .aboutus_carousel_slide {
+            position: absolute;
+            width: 100%;
         }
 
         .aboutus_carousel_nav {
-            margin-left: 20px;
-            top: -18;
+            position: relative;
+            top: -14;
+            margin-left: 72px;
         }
 
         .aboutus_carousel_indicator {
             border: 0;
-            border-radius: 3px;
-            margin: 0 1px;
-            width: 4px;
-            height: 4px;
+            border-radius: 50%;
+            margin: 0 2px;
+            width: 12px;
+            height: 12px;
         }
 
         .aboutus_carousel_indicator.aboutus_current-slide {
-            width: 7px;
-            border-radius: 2px;
+            width: 20px;
+            border-radius: 10px;
+            background: #76C9F1;
+        }
+
+        .col-div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .row-div {
+            display: flex;
+            flex-direction: row;
         }
 
         /* Why should you join us */
         .join-us-div {
-            margin-top: 64px;
+            margin-top: 125px;
         }
 
         .join-us-wsy-text {
-            font-size: 11px;
-            line-height: 16px;
+            font-style: normal;
+            font-weight: medium;
+            font-size: 24px;
+            line-height: 26px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #0D0D0D;
         }
 
         .join-us-text {
-            font-size: 20px;
-            line-height: 30px;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 48px;
+            line-height: 76px;
+            text-align: center;
+            text-transform: capitalize;
+            color: #0D0D0D;
         }
 
         .join-us-hr-div {
-            width: 40px;
-            border: 4px solid #FFC400;
+            width: 80px;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            border: 8px solid #FFC400;
+            border-radius: 40px;
         }
 
         .join-us-main-container {
-            flex-direction: column;
-            margin-top: 42px;
+            display: flex;
+            flex-direction: row;
+            margin-top: 84px;
         }
 
         .join-us-logo {
-            width: 35px;
-            height: 33px;
-            margin-right: 19px;
+            width: 69px;
+            height: 66px;
+            margin-right: 40px;
         }
 
         .join-us-logo-2 {
-            width: 43px;
-            height: 33px;
-            margin-right: 19px;
+            width: 86px;
+            height: 66px;
+            margin-right: 40px;
         }
 
         .join-us-sub-header {
-            font-size: 14px;
-            line-height: 21px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 36px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+            color: #0D0D0D;
         }
 
         .join-us-simple-text {
-            font-size: 11px;
-            line-height: 18px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            color: #777777;
         }
 
         .div-with-border-line {
-            border-right: none;
-            border-bottom: 1px solid #D5D5D5;
-            padding-right: 0;
-            padding-bottom: 24px;
-            margin-bottom: 24px;
+            flex: 1;
+            border-right: 1px solid #D5D5D5;
+            padding-right: 77px;
         }
 
         .div-without-border-line {
             flex: 1;
-            padding-left: 0;
+            padding-left: 60px;
         }
 
         /* Content Creation Journey - ccj  */
         .ccj-div {
-            margin-top: 64px;
+            margin-top: 125px;
         }
 
         .ccj-wsy-text {
-
-            font-size: 11px;
-            line-height: 16px;
+            font-style: normal;
+            font-weight: medium;
+            font-size: 24px;
+            line-height: 26px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #0D0D0D;
         }
 
         .ccj-text {
-            font-size: 20px;
-            line-height: 30px;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 48px;
+            line-height: 76px;
+            text-align: center;
+            text-transform: capitalize;
+            color: #0D0D0D;
         }
 
         .ccj-hr-div {
-            width: 40px;
-            border: 4px solid #01B9F5;
-            border-radius: 20px;
+            width: 80px;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            border: 8px solid #01B9F5;
+            border-radius: 40px;
         }
 
         .ccj-main-container {
-            margin-top: 40px;
-            height: 268px;
+            margin-top: 80px;
+            height: 520px;
         }
 
         .content_flip-card-1 {
-            width: 25px;
-            margin-top: 11px;
+            width: 188px;
+            margin-top: 21px;
             perspective: 1000px;
             z-index: 1;
         }
 
         .content_flip-card-2 {
-            width: 45px;
+            width: 230px;
             perspective: 1000px;
-            margin-top: 11px;
+            margin-top: 21px;
             z-index: 2;
         }
 
         .content_flip-card-3 {
-            width: 172px;
+            width: 240px;
             perspective: 1000px;
             z-index: 6;
         }
 
         .content_flip-card-4 {
-            width: 45px;
+            width: 210px;
             perspective: 1000px;
-            margin-top: 11px;
+            margin-top: 21px;
             z-index: 2;
         }
 
         .content_flip-card-5 {
-            width: 40px;
+            width: 188px;
             perspective: 1000px;
-            margin-top: 11px;
+            margin-top: 21px;
             z-index: 1;
+        }
+
+        .content_flip-card-inner {
+            position: relative;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            transform: rotateY(20deg);
+
+        }
+
+        .content_flip-card-inner-anti-clock {
+            position: relative;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            transform: rotateY(-20deg);
+        }
+
+        .content_flip-card-front {
+            position: absolute;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
         }
 
         .content_flip-card-header {
@@ -1585,47 +514,65 @@
         }
 
         .content_courses_img {
-            width: 45.1px;
-            height: 246px;
+            width: 416px;
+            height: 478px;
         }
 
         .content_courses_img_anti {
-            width: 45.1px;
-            height: 246px;
+            width: 368px;
+            height: 497px;
         }
 
         .content_courses_img_front {
-            width: 172px;
-            height: 268px;
+            width: 416px;
+            height: 520px;
             border-radius: 30px 0px;
         }
 
         /* instructors */
         .instructors-div {
-            height: 537px;
-            margin-top: 64px;
-            padding-top: 48px;
+            height: 868px;
+            background: #FEF9E8;
+            border-radius: 30px 0px;
+            margin-top: 120px;
+            padding-top: 100px;
         }
 
         .instructors-header {
-            font-size: 11px;
-            line-height: 16px;
+            font-style: normal;
+            font-weight: medium;
+            font-size: 24px;
+            line-height: 26px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #0D0D0D;
         }
 
         .instructors-sub-header {
-            font-size: 20px;
-            line-height: 24px;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 48px;
+            line-height: 76px;
+            text-align: center;
+            text-transform: capitalize;
+            color: #0D0D0D;
         }
 
         .instructors-hr-div {
-            width: 40px;
-            border: 4px solid #FFC400;
-            border-radius: 20px;
+            width: 80px;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            border: 8px solid #FFC400;
+            border-radius: 40px;
         }
 
         .instructors-main-container {
-            margin: 36px 40px 36px 40px;
-            overflow: hidden;
+            margin: 68px 68px 44px 68px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            /* overflow: hidden; */
         }
 
         .instructors_card_div {
@@ -1634,56 +581,80 @@
             margin-right: 24px;
             margin-left: 5px;
             background: #FFFFFF;
-            width: 248px;
-            height: 322px;
+            width: 344px;
+            height: 474px;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
             border-radius: 30px;
         }
 
         .instructors_img-1 {
             position: absolute;
-            width: 256px;
-            height: 174px;
-            left: -1;
+            width: 358px;
+            height: 252px;
+            border-radius: 30px 0px;
+            left: -5;
         }
 
         .instructors_img-2 {
             position: absolute;
-            width: 256px;
-            height: 174px;
-            left: -1;
+            width: 358px;
+            height: 252px;
+            border-radius: 30px 0px;
+            left: 372;
         }
 
         .instructors_img-3 {
             position: absolute;
-            width: 256px;
-            height: 174px;
-            left: -1;
+            width: 358px;
+            height: 252px;
+            border-radius: 30px 0px;
+            left: 745;
         }
 
         .instructors_col_div {
             display: flex;
             flex-direction: column;
-            margin-top: 174px;
-            padding: 20px;
-            width: 248px;
+            margin-top: 242px;
+            width: 344px;
+            padding: 32px;
         }
 
         .instructors_card_lite_text {
-            font-size: 10px;
-            line-height: 10px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+
+            color: #666666;
         }
 
         .instructors_card_header {
-            font-size: 12px;
-            line-height: 18px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 30px;
+
+            color: #0D0D0D;
         }
 
         .instructors_card_text {
-            font-size: 11px;
-            line-height: 18px;
+            font-style: normal;
+            text-align: justify;
+            font-weight: 400;
+            font-size: 16px;
+            margin-top: 4px;
+            line-height: 26px;
+            color: #0D0D0D;
         }
 
+        .instructors-sub-container-1 {}
+
+        .instructors-sub-container-carousel {
+            position: relative;
+            margin: 0 auto;
+        }
 
         .instructors_carousel_track-container {
             min-height: 566px;
@@ -1760,83 +731,140 @@
 
         /* courses */
         .courses-div {
-            margin-top: 64px;
+            margin-top: 135px;
         }
 
         .courses-header {
-            font-size: 11px;
-            line-height: 16px;
+            font-style: normal;
+            font-weight: medium;
+            font-size: 24px;
+            line-height: 26px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #0D0D0D;
         }
 
         .courses-sub-header {
-            font-size: 20px;
-            line-height: 22px;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 48px;
+            line-height: 76px;
+            text-align: center;
+            text-transform: capitalize;
+            color: #0D0D0D;
         }
 
         .courses-hr-div {
             width: 80px;
-            border: 4px solid #01B9F5;
-            border-radius: 20px;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            border: 8px solid #01B9F5;
+            border-radius: 40px;
         }
 
         .courses-main-container {
-            height: 494px;
-            margin-top: 40px;
-            flex-direction: column;
+            height: 527px;
+            background: #F6FCFF;
+            border-radius: 30px 0px;
+            margin-top: 78px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .courses-sub-container-1 {
+            flex: 1;
+        }
+
+        .courses-sub-container-carousel {
+            position: relative;
+            margin: 0 auto;
         }
 
 
         .courses_carousel_track-container {
-            min-height: 208px;
-            margin-left: 40px;
-            margin-right: 40px;
-            margin-top: 40px;
+            min-height: 408px;
+            margin-left: 60px;
+            margin-right: 60px;
+            margin-top: 60px;
+            border-radius: 20px;
+            overflow: hidden;
         }
 
+        .courses_carousel_track {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            position: relative;
+            transition: transform 250ms ease-in;
+        }
+
+        .courses_carousel_slide {
+            position: absolute;
+            width: 100%;
+        }
 
         .courses_carousel_nav {
             position: relative;
-            margin-top: 0px;
-            margin-left: 153px;
+            margin-top: 5px;
+            margin-left: 291px;
         }
 
         .courses_carousel_indicator {
             border: 0;
             border-radius: 50%;
             margin: 0 2px;
-            width: 4px;
-            height: 4px;
+            width: 12px;
+            height: 12px;
         }
 
         .courses_carousel_indicator.courses_current-slide {
-            width: 8px;
+            width: 20px;
             border-radius: 10px;
             background: #76C9F1;
         }
 
         .courses_img {
-            width: 246px;
-            height: 208px;
-            border-top-left-radius: 20px;
-            border-bottom-right-radius: 20px;
+            width: 500px;
+            height: 408px;
+            border-top-left-radius: 40px;
+            border-bottom-right-radius: 40px;
         }
 
         .courses-sub-container-2 {
             flex: 1;
-            padding-top: 32px;
-            padding-right: 20px;
-            padding-bottom: 40px;
-            padding-left: 20px;
+            padding-top: 58px;
+            padding-right: 60px;
+            padding-bottom: 60px;
+            padding-left: 10px;
         }
 
         .courses-sub-container-header {
-            font-size: 14px;
-            line-height: 21px;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 45px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+
+            color: #0D0D0D;
         }
 
         .courses-sub-container-text {
-            font-size: 11px;
-            line-height: 18px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 30px;
+            margin-top: 8px;
+            margin-bottom: 14px;
+            color: #5E5D5D;
+        }
+
+        .courses-sub-container-li {
+            display: flex;
+            flex-direction: row;
         }
 
         .courses-sub-container-li-dots {
@@ -1850,164 +878,29 @@
         }
 
         .courses-sub-container-li-lite {
-            font-size: 11px;
-            line-height: 18px;
+            font-style: normal;
+            font-weight: 400;
+            margin-bottom: 14px;
+            font-size: 20px;
+            line-height: 35px;
+            color: #5E5D5D;
         }
 
         .courses-sub-container-semi-bold {
-            font-size: 11px;
-            line-height: 18px;
-        }
-
-        /* download */
-        .download-div {
-            margin-top: 64px;
-            flex-direction: column;
-        }
-
-        .download-inner-div-1 {
-            flex: 1;
-            background: #FFC400;
-            padding-left: 24px;
-            padding-right: 24px;
-            padding-top: 16px;
-            padding-bottom: 20px;
-            border-top-left-radius: 10px;
-        }
-
-        .download-inner-div-2 {
-            padding: 8px 20px;
-        }
-
-        .download-header {
-
-            font-size: 14px;
-            line-height: 21px;
-        }
-
-        .download-sub-header {
-            font-size: 11px;
-            line-height: 18px;
-        }
-
-        .download-sub-inner-div-1 {
-            display: flex;
-            flex-direction: row;
-            flex: 1;
-            justify-content: space-between;
-        }
-
-        .download-sub-inner-text {
-            margin-top: 16px;
-            margin-right: 10px;
-            font-size: 11px;
-            line-height: 16px;
-        }
-
-        .download-sub-inner-div-3 {
-            flex: 2;
-        }
-
-        .download-android-logo {
-            width: 81px;
-            height: 24px;
-            margin-right: 8px;
-        }
-
-        .download-ios-logo {
-            width: 81px;
-            height: 24px;
-        }
-
-        .download-sub-inner-div-2 {
-            display: none;
-        }
-
-        .download-sub-inner-text-2 {
             font-style: normal;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 16px;
-            text-align: center;
-            text-transform: uppercase;
-            margin: 5px 38px 6px 38px;
-            color: #000000;
+            font-weight: 600;
+            margin-bottom: 53px;
+            font-size: 20px;
+            line-height: 35px;
+            color: #5E5D5D;
         }
 
-        .download-qrcode-logo {
-            width: 57px;
-            height: 57px;
-        }
-
-        /* faqs */
-        .faqs-div {
-            margin-top: 64px;
-        }
-
-        .faqs-header {
-            font-size: 11px;
-            line-height: 16px;
-        }
-
-        .faqs-sub-header {
+        .courses-sub-container-semi-last {
+            font-style: normal;
+            font-weight: 700;
             font-size: 20px;
             line-height: 30px;
-        }
-
-        .faqs-hr-div {
-            width: 40px;
-            border: 4px solid #01B9F5;
-            border-radius: 20px;
-        }
-
-        .faqs-main-container {
-            margin-top: 40px;
-            margin-bottom: 60px;
-        }
-
-        .faqs-li {
-            padding-bottom: 24px;
-            padding-top: 24px;
-        }
-
-        .faqs-li-container {
-            display: flex;
-            flex: 8;
-            flex-direction: column;
-        }
-
-        .faqs-li-header {
-
-            font-size: 11px;
-            line-height: 18px;
-        }
-
-        .faqs-li-text {
-
-            font-size: 11px;
-            line-height: 18px;
-        }
-
-        .faqs-li-text-current {
-            font-size: 11px;
-            line-height: 18px;
-        }
-
-        .faqs-li-icon-div {
-            flex: 2;
-            margin-right: 25px;
-            margin-top: 4px;
-        }
-
-        .faqs-li-icon-current {
-            width: 16px;
-            height: 10px;
-        }
-
-        .faqs-li-icon {
-            width: 16px;
-            height: 10px;
-            transform: rotate(-180deg);
+            color: #5E5D5D;
         }
 
         .courses-view-details {
@@ -2024,9 +917,224 @@
             margin-left: 636px;
         }
 
-        /* footer */
+        /* download */
+        .download-div {
+            margin-top: 142px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .download-inner-div-1 {
+            flex: 1;
+            background: #FFC400;
+            padding-left: 48px;
+            padding-right: 48px;
+            padding-top: 32px;
+            padding-bottom: 40px;
+            border-top-left-radius: 10px;
+        }
+
+        .download-inner-div-2 {
+            flex: 1;
+            background: #FCD77C;
+            padding-left: 48px;
+            border-bottom-right-radius: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .download-header {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 60px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+            color: #0D0D0D;
+        }
+
+        .download-sub-header {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            color: #5B5B5B;
+        }
+
+        .download-sub-inner-div-1 {
+            display: flex;
+            flex-direction: column;
+            flex: 2;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .download-sub-inner-text {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            /* or 114% */
+
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+
+            color: #000000;
+        }
+
+        .download-sub-inner-div-3 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .download-android-logo {
+            width: 100px;
+            height: 30px;
+            margin-right: 12px;
+        }
+
+        .download-ios-logo {
+            width: 100px;
+            height: 30px;
+        }
+
+        .download-sub-inner-div-2 {
+            flex: 1;
+            margin: 20px;
+            background: #FFFFFF;
+            border-bottom-right-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .download-sub-inner-text-2 {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            color: #000000;
+        }
+
+        .download-qrcode-logo {
+            width: 57px;
+            height: 57px;
+        }
+
+        /* faqs */
+        .faqs-div {
+            margin-top: 120px;
+        }
+
+        .faqs-header {
+            font-style: normal;
+            font-weight: medium;
+            font-size: 24px;
+            line-height: 26px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #0D0D0D;
+        }
+
+        .faqs-sub-header {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 48px;
+            line-height: 76px;
+            text-align: center;
+            text-transform: capitalize;
+            color: #0D0D0D;
+        }
+
+        .faqs-hr-div {
+            width: 80px;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            border: 8px solid #01B9F5;
+            border-radius: 40px;
+        }
+
+        .faqs-main-container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 80px;
+            margin-bottom: 120px;
+        }
+
+        .faqs-li {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-bottom: 32px;
+            padding-top: 32px;
+            border-bottom: 1.5px solid #E6E6E6;
+        }
+
+        .faqs-li-container {
+            display: flex;
+            flex: 9;
+            flex-direction: column;
+        }
+
+        .faqs-li-header {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 36px;
+            letter-spacing: 0.5px;
+            color: #000000;
+        }
+
+        .faqs-li-text {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 31px;
+            color: #333333;
+            display: none;
+        }
+
+        .faqs-li-text-current {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 31px;
+            color: #333333;
+        }
+
+        .faqs-li-icon-div {
+            flex: 0.4;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 25px;
+            margin-top: 14px;
+        }
+
+        .faqs-li-icon-current {
+            width: 16px;
+            height: 10px;
+        }
+
+        .faqs-li-icon {
+            width: 16px;
+            height: 10px;
+            transform: rotate(-180deg);
+        }
+
         .footer {
-            min-width: 360px;
+            display: flex;
+            flex-direction: column;
+            min-width: 1248px;
         }
 
         .footer-follow-us {
@@ -2109,14 +1217,923 @@
 
             opacity: 0.56;
         }
-    }
-</style>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
-<div class="bootstrap-styles">
+
+        @media(max-width: 400px) {
+            .main-container {
+                width: 390px;
+            }
+
+            .header {
+                height: 66px;
+            }
+
+            .header-side-hide {
+                display: flex;
+            }
+
+            .header-logo {
+                height: 39px;
+                width: 56px;
+                margin-top: 13px;
+                margin-left: 0px;
+            }
+
+            .header-side-bar {
+                width: 15px;
+                height: 13px;
+                margin-top: 26px;
+                margin-left: 26px;
+                margin-right: 16px;
+            }
+
+            .header-nav-hide {
+                display: none;
+            }
+
+            .header-icon {
+                height: 30px;
+                width: 30px;
+                margin-top: 18px;
+                margin-right: 20px;
+            }
+
+            .header-enroll-now {
+                width: 90px;
+                height: 30px;
+                font-size: 11px;
+                margin-top: 18px;
+                margin-right: 12px;
+
+                border-top-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+
+            /* About Us */
+            .aboutus_div_1 {
+                margin-top: 20px;
+                margin-left: 16px;
+            }
+
+
+            .aboutus_video_div {
+                margin-top: 19px;
+                margin-left: 84px;
+                border-top-left-radius: 10px;
+            }
+
+            .aboutus_video {
+                border-top-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                width: 236px;
+                height: 133px;
+            }
+
+            .aboutus_hr_div {
+                width: 40px;
+                border: 4px solid #01B9F5;
+                border-radius: 40px;
+                margin-bottom: 10px;
+            }
+
+            .aboutus_header {
+                font-weight: 500;
+                font-size: 11px;
+                line-height: 16px;
+            }
+
+            .aboutus_sub_header {
+                font-size: 18px;
+                line-height: 30px;
+            }
+
+            .aboutus_text {
+                font-size: 11px;
+                line-height: 16px;
+            }
+
+            .aboutus-logo-1 {
+                width: 58px;
+                height: 50px;
+            }
+
+            .aboutus-reverse {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-end;
+                margin-top: 87px;
+            }
+
+            .aboutus-logo-2 {
+                width: 58px;
+                height: 108px;
+                margin-top: 10px;
+                margin-left: 2px;
+            }
+
+            .aboutus-logo-3 {
+                display: none;
+            }
+
+            .aboutus-logo-4 {
+                width: 58px;
+                height: 66px;
+                margin-left: 2px;
+                border-bottom-right-radius: 5px;
+            }
+
+            .aboutus-logo-5 {
+                width: 58px;
+                height: 127px;
+                margin-bottom: 2px;
+                margin-left: 2px;
+            }
+
+            .aboutus_carousel_track-container {
+                min-height: 260px;
+                margin-top: 90px;
+                background: #F7FCFF;
+                border-radius: 20px;
+                overflow: hidden;
+            }
+
+            .aboutus_row_div_video {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .aboutus_carousel_nav {
+                margin-left: 20px;
+                top: -18;
+            }
+
+            .aboutus_carousel_indicator {
+                border: 0;
+                border-radius: 3px;
+                margin: 0 1px;
+                width: 4px;
+                height: 4px;
+            }
+
+            .aboutus_carousel_indicator.aboutus_current-slide {
+                width: 7px;
+                border-radius: 2px;
+            }
+
+            /* Why should you join us */
+            .join-us-div {
+                margin-top: 64px;
+            }
+
+            .join-us-wsy-text {
+                font-size: 11px;
+                line-height: 16px;
+            }
+
+            .join-us-text {
+                font-size: 20px;
+                line-height: 30px;
+            }
+
+            .join-us-hr-div {
+                width: 40px;
+                border: 4px solid #FFC400;
+            }
+
+            .join-us-main-container {
+                flex-direction: column;
+                margin-top: 42px;
+            }
+
+            .join-us-logo {
+                width: 35px;
+                height: 33px;
+                margin-right: 19px;
+            }
+
+            .join-us-logo-2 {
+                width: 43px;
+                height: 33px;
+                margin-right: 19px;
+            }
+
+            .join-us-sub-header {
+                font-size: 14px;
+                line-height: 21px;
+            }
+
+            .join-us-simple-text {
+                font-size: 11px;
+                line-height: 18px;
+            }
+
+            .div-with-border-line {
+                border-right: none;
+                border-bottom: 1px solid #D5D5D5;
+                padding-right: 0;
+                padding-bottom: 24px;
+                margin-bottom: 24px;
+            }
+
+            .div-without-border-line {
+                flex: 1;
+                padding-left: 0;
+            }
+
+            /* Content Creation Journey - ccj  */
+            .ccj-div {
+                margin-top: 64px;
+            }
+
+            .ccj-wsy-text {
+
+                font-size: 11px;
+                line-height: 16px;
+            }
+
+            .ccj-text {
+                font-size: 20px;
+                line-height: 30px;
+            }
+
+            .ccj-hr-div {
+                width: 40px;
+                border: 4px solid #01B9F5;
+                border-radius: 20px;
+            }
+
+            .ccj-main-container {
+                margin-top: 40px;
+                height: 268px;
+            }
+
+            .content_flip-card-1 {
+                width: 25px;
+                margin-top: 11px;
+                perspective: 1000px;
+                z-index: 1;
+            }
+
+            .content_flip-card-2 {
+                width: 45px;
+                perspective: 1000px;
+                margin-top: 11px;
+                z-index: 2;
+            }
+
+            .content_flip-card-3 {
+                width: 172px;
+                perspective: 1000px;
+                z-index: 6;
+            }
+
+            .content_flip-card-4 {
+                width: 45px;
+                perspective: 1000px;
+                margin-top: 11px;
+                z-index: 2;
+            }
+
+            .content_flip-card-5 {
+                width: 40px;
+                perspective: 1000px;
+                margin-top: 11px;
+                z-index: 1;
+            }
+
+            .content_flip-card-header {
+                position: absolute;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 40px;
+                line-height: 60px;
+                text-align: center;
+                text-transform: uppercase;
+                z-index: 7;
+                bottom: 50;
+                left: 130;
+                color: #FFFFFF;
+            }
+
+            .content_flip-card-header-horizontal {
+                position: absolute;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 40px;
+                line-height: 60px;
+                text-align: center;
+                text-transform: uppercase;
+                z-index: 7;
+                bottom: 100;
+                left: -50;
+                color: #FFFFFF;
+                transform: rotate(-90deg);
+            }
+
+            .content_flip-card-header-anti-horizontal {
+                position: absolute;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 40px;
+                line-height: 60px;
+                text-align: center;
+                text-transform: uppercase;
+                z-index: 7;
+                bottom: 110;
+                left: 210;
+                color: #FFFFFF;
+                transform: rotate(90deg);
+            }
+
+            .content_flip-card-header-anti-horizontal-2 {
+                position: absolute;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 40px;
+                line-height: 60px;
+                text-align: center;
+                text-transform: uppercase;
+                z-index: 7;
+                bottom: 50;
+                left: 280;
+                color: #FFFFFF;
+                transform: rotate(90deg);
+            }
+
+            .content_flip-card-link {
+                position: absolute;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 21px;
+                width: 100%;
+                text-transform: capitalize;
+                z-index: 7;
+                bottom: 24;
+                left: 124;
+                color: #FFFFFF;
+
+            }
+
+            .content_courses_vector_icon {
+                position: absolute;
+                bottom: 29;
+                left: 293;
+                width: 8;
+                height: 12;
+                z-index: 7;
+            }
+
+            .content_flip-card_hide {
+                display: none;
+            }
+
+            .content_courses_img {
+                width: 45.1px;
+                height: 246px;
+            }
+
+            .content_courses_img_anti {
+                width: 45.1px;
+                height: 246px;
+            }
+
+            .content_courses_img_front {
+                width: 172px;
+                height: 268px;
+                border-radius: 30px 0px;
+            }
+
+            /* instructors */
+            .instructors-div {
+                height: 537px;
+                margin-top: 64px;
+                padding-top: 48px;
+            }
+
+            .instructors-header {
+                font-size: 11px;
+                line-height: 16px;
+            }
+
+            .instructors-sub-header {
+                font-size: 20px;
+                line-height: 24px;
+            }
+
+            .instructors-hr-div {
+                width: 40px;
+                border: 4px solid #FFC400;
+                border-radius: 20px;
+            }
+
+            .instructors-main-container {
+                margin: 36px 40px 36px 40px;
+                overflow: hidden;
+            }
+
+            .instructors_card_div {
+                display: flex;
+                flex-direction: column;
+                margin-right: 24px;
+                margin-left: 5px;
+                background: #FFFFFF;
+                width: 248px;
+                height: 322px;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+                border-radius: 30px;
+            }
+
+            .instructors_img-1 {
+                position: absolute;
+                width: 256px;
+                height: 174px;
+                left: -1;
+            }
+
+            .instructors_img-2 {
+                position: absolute;
+                width: 256px;
+                height: 174px;
+                left: -1;
+            }
+
+            .instructors_img-3 {
+                position: absolute;
+                width: 256px;
+                height: 174px;
+                left: -1;
+            }
+
+            .instructors_col_div {
+                display: flex;
+                flex-direction: column;
+                margin-top: 174px;
+                padding: 20px;
+                width: 248px;
+            }
+
+            .instructors_card_lite_text {
+                font-size: 10px;
+                line-height: 10px;
+            }
+
+            .instructors_card_header {
+                font-size: 12px;
+                line-height: 18px;
+            }
+
+            .instructors_card_text {
+                font-size: 11px;
+                line-height: 18px;
+            }
+
+
+            .instructors_carousel_track-container {
+                min-height: 566px;
+                min-width: 1132px;
+                padding: 5px;
+                overflow: hidden;
+            }
+
+            .instructors_carousel_track {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                position: relative;
+                transition: transform 250ms ease-in;
+            }
+
+            .instructors_carousel_slide {
+                position: absolute;
+                display: flex;
+                flex-direction: row;
+                width: 1132px;
+            }
+
+            .instructors_carousel_nav {
+                position: relative;
+            }
+
+            .instructors_carousel_button_div {
+                position: absolute;
+                right: 60;
+                display: flex;
+                flex-direction: row;
+                border: 0;
+                margin: 0 2px;
+                width: 12px;
+                height: 12px;
+            }
+
+            .instructors_carousel_button-1 {
+                width: 31px;
+                height: 30px;
+                border-top-left-radius: 5px;
+                border: none;
+                background: #D0D0D0;
+                padding: 8px 14px;
+            }
+
+            .instructors_carousel_button-2 {
+                width: 31px;
+                height: 30px;
+                border-bottom-right-radius: 5px;
+                border: none;
+                background: #FFC400;
+                padding: 8px 14px;
+                margin-left: 10px;
+            }
+
+            .instructors_vector_icon {
+                position: absolute;
+                right: -6;
+                top: 8;
+                width: 8;
+                height: 13;
+                transform: rotate(180deg);
+            }
+
+            .instructors_vector_icon_right {
+                position: absolute;
+                right: -45;
+                top: 8;
+                width: 8;
+                height: 13;
+            }
+
+            /* courses */
+            .courses-div {
+                margin-top: 64px;
+            }
+
+            .courses-header {
+                font-size: 11px;
+                line-height: 16px;
+            }
+
+            .courses-sub-header {
+                font-size: 20px;
+                line-height: 22px;
+            }
+
+            .courses-hr-div {
+                width: 80px;
+                border: 4px solid #01B9F5;
+                border-radius: 20px;
+            }
+
+            .courses-main-container {
+                height: 575px;
+                margin-top: 40px;
+                flex-direction: column;
+            }
+
+
+            .courses_carousel_track-container {
+                min-height: 208px;
+                margin-left: 40px;
+                margin-right: 40px;
+                margin-top: 40px;
+            }
+
+
+            .courses_carousel_nav {
+                position: relative;
+                margin-top: 0px;
+                margin-left: 153px;
+            }
+
+            .courses_carousel_indicator {
+                border: 0;
+                border-radius: 50%;
+                margin: 0 2px;
+                width: 4px;
+                height: 4px;
+            }
+
+            .courses_carousel_indicator.courses_current-slide {
+                width: 8px;
+                border-radius: 10px;
+                background: #76C9F1;
+            }
+
+            .courses_img {
+                width: 246px;
+                height: 208px;
+                border-top-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
+
+            .courses-sub-container-2 {
+                flex: 1;
+                padding-top: 32px;
+                padding-right: 20px;
+                padding-bottom: 40px;
+                padding-left: 20px;
+            }
+
+            .courses-sub-container-header {
+                font-size: 14px;
+                line-height: 21px;
+            }
+
+            .courses-sub-container-text {
+                font-size: 11px;
+                line-height: 18px;
+            }
+
+            .courses-sub-container-li-dots {
+                border: 0;
+                border-radius: 50%;
+                width: 10px;
+                height: 10px;
+                background: #D8D8D8;
+                margin-top: 14px;
+                margin-right: 18px;
+            }
+
+            .courses-sub-container-li-lite {
+                font-size: 11px;
+                line-height: 18px;
+            }
+
+            .courses-sub-container-semi-bold {
+                margin-bottom: 20px;
+                font-size: 11px;
+                line-height: 18px;
+            }
+
+            .courses-sub-container-semi-last {
+                text-align: center;
+                font-size: 11px;
+                line-height: 14px;
+            }
+
+            .courses-view-details {
+                position: absolute;
+                background: #01B9F5 !important;
+                border: none;
+                width: 140px;
+                border-top-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+
+                width: 110px;
+                height: 30px;
+                font-size: 11px;
+                margin-top: 560px;
+                margin-left: 125px;
+            }
+
+            /* download */
+            .download-div {
+                margin-top: 64px;
+                flex-direction: column;
+            }
+
+            .download-inner-div-1 {
+                flex: 1;
+                background: #FFC400;
+                padding-left: 24px;
+                padding-right: 24px;
+                padding-top: 16px;
+                padding-bottom: 20px;
+                border-top-left-radius: 10px;
+            }
+
+            .download-inner-div-2 {
+                padding: 8px 20px;
+            }
+
+            .download-header {
+
+                font-size: 14px;
+                line-height: 21px;
+            }
+
+            .download-sub-header {
+                font-size: 11px;
+                line-height: 18px;
+            }
+
+            .download-sub-inner-div-1 {
+                display: flex;
+                flex-direction: row;
+                flex: 1;
+                justify-content: space-between;
+            }
+
+            .download-sub-inner-text {
+                margin-top: 16px;
+                margin-right: 10px;
+                font-size: 11px;
+                line-height: 16px;
+            }
+
+            .download-sub-inner-div-3 {
+                flex: 2;
+            }
+
+            .download-android-logo {
+                width: 81px;
+                height: 24px;
+                margin-right: 8px;
+            }
+
+            .download-ios-logo {
+                width: 81px;
+                height: 24px;
+            }
+
+            .download-sub-inner-div-2 {
+                display: none;
+            }
+
+            .download-sub-inner-text-2 {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 16px;
+                text-align: center;
+                text-transform: uppercase;
+                margin: 5px 38px 6px 38px;
+                color: #000000;
+            }
+
+            .download-qrcode-logo {
+                width: 57px;
+                height: 57px;
+            }
+
+            /* faqs */
+            .faqs-div {
+                margin-top: 64px;
+            }
+
+            .faqs-header {
+                font-size: 11px;
+                line-height: 16px;
+            }
+
+            .faqs-sub-header {
+                font-size: 20px;
+                line-height: 30px;
+            }
+
+            .faqs-hr-div {
+                width: 40px;
+                border: 4px solid #01B9F5;
+                border-radius: 20px;
+            }
+
+            .faqs-main-container {
+                margin-top: 40px;
+                margin-bottom: 60px;
+            }
+
+            .faqs-li {
+                padding-bottom: 24px;
+                padding-top: 24px;
+            }
+
+            .faqs-li-container {
+                display: flex;
+                flex: 8;
+                flex-direction: column;
+            }
+
+            .faqs-li-header {
+
+                font-size: 11px;
+                line-height: 18px;
+            }
+
+            .faqs-li-text {
+
+                font-size: 11px;
+                line-height: 18px;
+            }
+
+            .faqs-li-text-current {
+                font-size: 11px;
+                line-height: 18px;
+            }
+
+            .faqs-li-icon-div {
+                flex: 2;
+                margin-right: 25px;
+                margin-top: 4px;
+            }
+
+            .faqs-li-icon-current {
+                width: 16px;
+                height: 10px;
+            }
+
+            .faqs-li-icon {
+                width: 16px;
+                height: 10px;
+                transform: rotate(-180deg);
+            }
+
+            /* footer */
+            .footer {
+                min-width: 360px;
+            }
+
+            .footer-follow-us {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 80px;
+                background: #505050;
+            }
+
+            .footer-follow-us-text {
+                font-style: normal;
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 24px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                text-transform: uppercase;
+                color: #FFFFFF;
+            }
+
+            .footer-follow-us-img {
+                margin-right: 16px;
+            }
+
+            .footer-div-2 {
+                height: 124px;
+                background: #0D0D0D;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .footer-row-div {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 586;
+            }
+
+            .footer-navlink {
+                font-style: normal;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 24px;
+                display: flex;
+                align-items: center;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                display: block;
+                border: none;
+                background: none;
+            }
+
+            .footer-row-div-2 {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 300px;
+                border-top: 1px solid #646464;
+                margin-top: 20;
+                padding-top: 16;
+            }
+
+            .footer-text {
+                font-style: normal;
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 24px;
+                /* identical to box height, or 200% */
+
+                display: flex;
+                align-items: center;
+                letter-spacing: 0.06em;
+
+                color: #FFFFFF;
+
+                opacity: 0.56;
+            }
+        }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="bootstrap-styles">
     <div class="header fixed-top">
         <div class="row-div">
             <div class="header-side-hide">
@@ -2701,13 +2718,13 @@
             </div>
         </div>
     </div>
-</div>
+</body>
 <script>
-    // const fullWidth = window.screen.width;
+    const fullWidth = window.screen.width;
     // document.getElementById("main-container").style.width = 1440 ;
     // document.getElementById("main-container").style.marginLeft = fullWidth && fullWidth > 1440 ? (fullWidth - 1440) / 2 : 96;
     // // document.getElementById("main-container").style.marginRight = fullWidth && fullWidth > 1440 ? (fullWidth - 1440) / 2 : 96;
-    // console.log({ scdcd: fullWidth && fullWidth > 1440 ? (fullWidth - 1440) / 2 : 96, fullWidth });
+    console.log({ fullWidth });
     function changeStyleHeader(toScroll, id) {
         switch (id) {
             case "aboutus-action":
@@ -3092,3 +3109,5 @@
         window.open('https://twitter.com/GoodCreatorACAD', '_blank');
     })
 </script>
+
+</html>
