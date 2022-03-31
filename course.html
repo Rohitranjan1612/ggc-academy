@@ -328,6 +328,7 @@
         }
 
         .description-hr-div {
+            height: 0px;
             width: 80px;
             align-items: center;
             justify-content: center;
@@ -613,6 +614,7 @@
         }
 
         .kwb-hr-div {
+            height: 0px;
             width: 80px;
             align-items: center;
             justify-content: center;
@@ -737,6 +739,7 @@
         }
 
         .faqs-hr-div {
+            height: 0px;
             width: 80px;
             align-items: center;
             justify-content: center;
@@ -1316,7 +1319,6 @@
     <!-- {{DESCRIPTION}} -->
     <div id="description" class="description-div">
         <div class="main-container" id="main-container">
-            <!-- Course -->
             <div class="col-div">
                 <div class="description-wsy-text">Course</div>
                 <div class="description-text">Details</div>
@@ -1679,12 +1681,12 @@
     document.getElementById('download-ios-logo').addEventListener("click", (e) => {
         window.open('https://apps.apple.com/in/app/the-good-creator-co/id1462743952', '_blank');
     })
-    document.getElementById('footer-follow-us-insta').addEventListener("click", (e) => {
-        window.open('https://www.instagram.com/goodcreatoracademy/', '_blank');
-    })
-    document.getElementById('footer-follow-us-tw').addEventListener("click", (e) => {
-        window.open('https://twitter.com/GoodCreatorACAD', '_blank');
-    });
+    // document.getElementById('footer-follow-us-insta').addEventListener("click", (e) => {
+    //     window.open('https://www.instagram.com/goodcreatoracademy/', '_blank');
+    // })
+    // document.getElementById('footer-follow-us-tw').addEventListener("click", (e) => {
+    //     window.open('https://twitter.com/GoodCreatorACAD', '_blank');
+    // });
 
     document.getElementById('course-tagline-action').addEventListener("click", (e) => {
         window.open('https://twitter.com/GoodCreatorACAD', '_blank');
@@ -1699,6 +1701,7 @@
     const kwbActionYes = document.getElementById('kwb-action-yes');
     const kwbActionNo = document.getElementById('kwb-action-no');
     kwbActionBeauty.addEventListener("click", (e) => {
+        console.log({kwbActionBeauty}, 'kwbActionBeauty');
         kwbActionBeauty.className = 'kwb-action-current';
     });
     kwbActionFashion.addEventListener("click", (e) => {
