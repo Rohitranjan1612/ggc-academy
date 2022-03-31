@@ -1926,11 +1926,13 @@
     }
     // On submit
     kwbActionSubmit.addEventListener("click", (e) => {
-        payload.course = courses;
+        payload.course = courses.toString();
+        onSubmitKwb();
 
     });
     function onSubmitKwb() {
         var request = new XMLHttpRequest();
+        try {
         request.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 alert(this.responseText);
@@ -1938,7 +1940,10 @@
         };
         request.open("POST", "https://dmrbuqlwaxaetnhwusae.supabase.co/rest/v1/form_submissions", true);
         request.setRequestHeader("Content-type", "application/json");
-        request.send("Your JSON Data Here");
+        request.setRequestHeader("apikey", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRtcmJ1cWx3YXhhZXRuaHd1c2FlIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY0ODQ0NTM4MCwiZXhwIjoxOTY0MDIxMzgwfQ.bmcOX6Vvm9D8cUOsDcNYbsa0-wuVGXIIDke85kFwK74");
+        request.send(JSON.stringify(payload));
+        } catch (error) {
+        }
     }
     function linkFooter(params) {
         switch (params) {
