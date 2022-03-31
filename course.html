@@ -95,10 +95,9 @@
 
         /* Course tagline */
         .course-tagline-div {
-            width: 1248px;
             background: #F6FCFF;
             border-radius: 30px 0px;
-            margin-top: 156px;
+            margin-top: 66px;
         }
 
         .course-tagline-courseimg {
@@ -200,7 +199,7 @@
             position: absolute;
             width: 80.23px;
             height: 0px;
-            top: 558px;
+            top: 468px;
 
             border: 1.5px solid #000000;
             transform: rotate(-10.05deg);
@@ -588,7 +587,6 @@
 
         .kwb-div {
             margin-top: 120px;
-            width: 1248px;
             border-radius: 30px 0px;
             padding: 100px 60px;
             background: #F6FCFF;
@@ -1200,7 +1198,7 @@
 </head>
 
 <body class="bootstrap-styles">
-    <div class="header fixed-top">
+    <!-- <div class="header fixed-top">
         <div class="row-div">
             <div class="header-side-hide">
                 <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6242b9d3be462074af9914fa.png"
@@ -1231,10 +1229,10 @@
             <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623989ccbe462074af990c7a.png"
                 class="header-icon" />
         </div>
-    </div>
+    </div> -->
+    <!-- Course tagline -->
+    <!-- {{TAGLINE}} -->
     <div class="main-container" id="main-container">
-        <!-- Course tagline -->
-        <!-- {{TAGLINE}} -->
         <div class="course-tagline-div">
             <div class="row-div">
                 <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6244062cbe462074af99174c.png"
@@ -1313,9 +1311,11 @@
                 </div>
             </div>
         </div>
-        <!-- Description -->
-        <!-- {{DESCRIPTION}} -->
-        <div id="description" class="description-div">
+    </div>
+    <!-- Description -->
+    <!-- {{DESCRIPTION}} -->
+    <div id="description" class="description-div">
+        <div class="main-container" id="main-container">
             <!-- Course -->
             <div class="col-div">
                 <div class="description-wsy-text">Course</div>
@@ -1412,7 +1412,9 @@
                 </div>
             </div>
         </div>
-        <!-- Know you better -->
+    </div>
+    <!-- Know you better -->
+    <div class="main-container" id="main-container">
         <div class="kwb-div">
             <div class="col-div">
                 <div class="kwb-wsy-text">Help us</div>
@@ -1443,11 +1445,13 @@
                 <div class="col-div">
                     <div class="kwb-label"> Where can we reach you?</div>
                     <input type="text" placeholder="Enter phone number" id="kwb_input_phone" class="kwb_input_phone"
-                    pattern="[a-zA-Z0-9]{6}" required maxlength="10">
+                        pattern="[a-zA-Z0-9]{6}" required maxlength="10">
                 </div>
             </div>
             <button class="kwb-action-submit" id="kwb-action-submit">Submit</button>
         </div>
+    </div>
+    <div class="main-container" id="main-container">
         <div class="download-div">
             <div class="download-inner-div-1">
                 <div class="download-header">
@@ -1474,7 +1478,9 @@
                 </div>
             </div>
         </div>
-        <div id="faqs" onmouseenter="changeStyleHeader(false, 'faqs-action')" class="faqs-div">
+    </div>
+    <div id="faqs" onmouseenter="changeStyleHeader(false, 'faqs-action')" class="faqs-div">
+        <div class="main-container" id="main-container">
             <div class="col-div">
                 <div class="faqs-header">We Are</div>
                 <div class="faqs-sub-header">Here To Help</div>
@@ -1553,7 +1559,7 @@
             </div>
         </div>
     </div>
-    <div class="footer">
+    <!-- <div class="footer">
         <div class="footer-follow-us">
             <div class="footer-follow-us-text">Follow us</div>
             <div class="row-div">
@@ -1583,7 +1589,7 @@
                 <div class="footer-text">Terms & Conditions applied*</div>
             </div>
         </div>
-    </div>
+    </div> -->
 </body>
 <script>
     const fullWidth = window.screen.width;
