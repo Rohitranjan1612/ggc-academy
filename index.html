@@ -5,7 +5,6 @@
     <title>About Us</title>
     <style>
         .header {
-            position: sticky;
             z-index: 10;
             display: flex;
             flex-direction: row;
@@ -111,7 +110,7 @@
             background: #F7FCFF;
             border-radius: 20px;
             width: 1248px;
-            margin: 0 auto;
+            margin: 5px auto;
         }
 
         .aboutus_div_1 {
@@ -1284,9 +1283,9 @@
                 width: 360px;
             }
 
-            .header {
+            /* .header {
                 height: 66px;
-            }
+            } */
 
             .header-side-hide {
                 display: flex;
@@ -2225,12 +2224,12 @@
 
 <body>
     <div class="header" id="header">
-        <div class="header-row-div">
+        <!-- <div class="header-row-div">
             <div class="row-div">
-                <!-- <div class="header-side-hide">
+                <div class="header-side-hide">
                     <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6242b9d3be462074af9914fa.png"
                         class="header-side-bar">
-                </div> -->
+                </div>
                 <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/profilepic/6238477ebe462074af990c3f.png"
                     class="header-logo" />
             </div>
@@ -2256,7 +2255,7 @@
                 <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623989ccbe462074af990c7a.png"
                     class="header-icon" />
             </div>
-        </div>
+        </div> -->
     </div>
     <div class="main-container" id="main-container">
         <div class="aboutus-div">
@@ -2988,51 +2987,51 @@
                 if (toScroll) {
                     document.getElementById('aboutus').scrollIntoView();
                 }
-                document.getElementById("aboutus-action").className = 'navlink-active';
-                document.getElementById("focusareas-action").className = 'navlink';
-                document.getElementById("instructors-action").className = 'navlink';
-                document.getElementById("courses-action").className = 'navlink';
-                document.getElementById("faqs-action").className = 'navlink';
+                // document.getElementById("aboutus-action").className = 'navlink-active';
+                // document.getElementById("focusareas-action").className = 'navlink';
+                // document.getElementById("instructors-action").className = 'navlink';
+                // document.getElementById("courses-action").className = 'navlink';
+                // document.getElementById("faqs-action").className = 'navlink';
                 break;
             case "focusareas-action":
                 if (toScroll) {
                     document.getElementById('focusareas').scrollIntoView();
                 }
-                document.getElementById("aboutus-action").className = 'navlink';
-                document.getElementById("focusareas-action").className = 'navlink-active';
-                document.getElementById("instructors-action").className = 'navlink';
-                document.getElementById("courses-action").className = 'navlink';
-                document.getElementById("faqs-action").className = 'navlink';
+                // document.getElementById("aboutus-action").className = 'navlink';
+                // document.getElementById("focusareas-action").className = 'navlink-active';
+                // document.getElementById("instructors-action").className = 'navlink';
+                // document.getElementById("courses-action").className = 'navlink';
+                // document.getElementById("faqs-action").className = 'navlink';
                 break;
             case "instructors-action":
                 if (toScroll) {
                     document.getElementById('instructors').scrollIntoView();
                 }
-                document.getElementById("aboutus-action").className = 'navlink';
-                document.getElementById("focusareas-action").className = 'navlink';
-                document.getElementById("instructors-action").className = 'navlink-active';
-                document.getElementById("courses-action").className = 'navlink';
-                document.getElementById("faqs-action").className = 'navlink';
+                // document.getElementById("aboutus-action").className = 'navlink';
+                // document.getElementById("focusareas-action").className = 'navlink';
+                // document.getElementById("instructors-action").className = 'navlink-active';
+                // document.getElementById("courses-action").className = 'navlink';
+                // document.getElementById("faqs-action").className = 'navlink';
                 break;
             case "courses-action":
                 if (toScroll) {
                     document.getElementById('courses').scrollIntoView();
                 }
-                document.getElementById("aboutus-action").className = 'navlink';
-                document.getElementById("focusareas-action").className = 'navlink';
-                document.getElementById("instructors-action").className = 'navlink';
-                document.getElementById("courses-action").className = 'navlink-active';
-                document.getElementById("faqs-action").className = 'navlink';
+                // document.getElementById("aboutus-action").className = 'navlink';
+                // document.getElementById("focusareas-action").className = 'navlink';
+                // document.getElementById("instructors-action").className = 'navlink';
+                // document.getElementById("courses-action").className = 'navlink-active';
+                // document.getElementById("faqs-action").className = 'navlink';
                 break;
             case "faqs-action":
                 if (toScroll) {
                     document.getElementById('faqs').scrollIntoView();
                 }
-                document.getElementById("aboutus-action").className = 'navlink';
-                document.getElementById("focusareas-action").className = 'navlink';
-                document.getElementById("instructors-action").className = 'navlink';
-                document.getElementById("courses-action").className = 'navlink';
-                document.getElementById("faqs-action").className = 'navlink-active';
+                // document.getElementById("aboutus-action").className = 'navlink';
+                // document.getElementById("focusareas-action").className = 'navlink';
+                // document.getElementById("instructors-action").className = 'navlink';
+                // document.getElementById("courses-action").className = 'navlink';
+                // document.getElementById("faqs-action").className = 'navlink-active';
                 break;
         }
     }
@@ -3359,9 +3358,9 @@
     document.getElementById('download-ios-logo').addEventListener("click", (e) => {
         window.open('https://apps.apple.com/in/app/the-good-creator-co/id1462743952', '_blank');
     });
-    document.getElementById('header-enroll-now').addEventListener("click", (e) => {
-        window.open('https://www.goodcreatoracademy.com/s/store/courses/description/The-Creator-Bootcamp-Beauty-Edition', '_self');
-    });
+    // document.getElementById('header-enroll-now').addEventListener("click", (e) => {
+    //     window.open('https://www.goodcreatoracademy.com/s/store/courses/description/The-Creator-Bootcamp-Beauty-Edition', '_self');
+    // });
     document.getElementById('courses-view-details').addEventListener("click", (e) => {
         window.open('https://www.goodcreatoracademy.com/s/store/courses/description/The-Creator-Bootcamp-Beauty-Edition', '_self');
     });

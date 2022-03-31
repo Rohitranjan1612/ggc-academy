@@ -4,6 +4,17 @@
 <head>
     <title>Course Details</title>
     <style>
+        .header {
+            z-index: 10;
+            display: flex;
+            flex-direction: row;
+            background-color: #fff;
+            height: 90px;
+            top: 0;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08) !important;
+            border-radius: 8px 0px;
+        }
+
         .main-container {
             width: 1248px;
             margin: 0 auto;
@@ -1580,12 +1591,13 @@
             <div class="kwb-row-div">
                 <div class="col-div">
                     <div class="kwb-label">Where can we write to you?</div>
-                    <input type="email" placeholder="Enter email address" id="kwb_input_email" class="kwb_input_email">
+                    <input type="email" placeholder="Enter email address" id="kwb_input_email" class="kwb_input_email"
+                        onchange="onChangeEvent('email')">
                 </div>
                 <div class="col-div">
                     <div class="kwb-label"> Where can we reach you?</div>
-                    <input type="text" placeholder="Enter phone number" id="kwb_input_phone" class="kwb_input_phone"
-                        pattern="[a-zA-Z0-9]{6}" required maxlength="10">
+                    <input type="number" placeholder="Enter phone number" id="kwb_input_phone" class="kwb_input_phone"
+                        required maxlength="10" onchange="onChangeEvent('phone')">
                 </div>
             </div>
             <button class="kwb-action-submit" id="kwb-action-submit">Submit</button>
@@ -1838,29 +1850,96 @@
     const kwbActionInfluencer = document.getElementById('kwb-action-influencer');
     const kwbActionYes = document.getElementById('kwb-action-yes');
     const kwbActionNo = document.getElementById('kwb-action-no');
+    const kwbActionSubmit = document.getElementById('kwb-action-submit');
+    const payload = {
+        "email": "",
+        "name": "",
+        "namespace": "academy-v0",
+        "course": "",
+        "updates": true,
+        "phone": ""
+    };
+    let courses = [];
     kwbActionBeauty.addEventListener("click", (e) => {
-        kwbActionBeauty.className = 'kwb-action-current';
+        if (courses && courses.find((f) => f === "beauty")) {
+            kwbActionBeauty.className = 'kwb-action';
+            courses = courses.filter(e => e !== "beauty");
+            console.log({ courses });
+        } else {
+            kwbActionBeauty.className = 'kwb-action-current';
+            courses.push("beauty");
+        }
     });
     kwbActionFashion.addEventListener("click", (e) => {
-        kwbActionFashion.className = 'kwb-action-current';
+        if (courses && courses.find((f) => f === "fashion")) {
+            kwbActionFashion.className = 'kwb-action';
+            courses = courses.filter(e => e !== "fashion");
+            console.log({ courses });
+        } else {
+            kwbActionFashion.className = 'kwb-action-current';
+            courses.push("fashion");
+        }
     });
     kwbActionLuxury.addEventListener("click", (e) => {
-        kwbActionLuxury.className = 'kwb-action-current';
+        if (courses && courses.find((f) => f === "luxury")) {
+            kwbActionLuxury.className = 'kwb-action';
+            courses = courses.filter(e => e !== "luxury");
+            console.log({ courses });
+        } else {
+            kwbActionLuxury.className = 'kwb-action-current';
+            courses.push("luxury");
+        }
     });
     kwbActionFood.addEventListener("click", (e) => {
-        kwbActionFood.className = 'kwb-action-current';
+        if (courses && courses.find((f) => f === "food")) {
+            kwbActionFood.className = 'kwb-action';
+            courses = courses.filter(e => e !== "food");
+            console.log({ courses });
+        } else {
+            kwbActionFood.className = 'kwb-action-current';
+            courses.push("food");
+        }
     });
     kwbActionInfluencer.addEventListener("click", (e) => {
-        kwbActionInfluencer.className = 'kwb-action-current';
+        if (courses && courses.find((f) => f === "influencer")) {
+            kwbActionInfluencer.className = 'kwb-action';
+            courses = courses.filter(e => e !== "influencer");
+            console.log({ courses });
+        } else {
+            kwbActionInfluencer.className = 'kwb-action-current';
+            courses.push("influencer");
+        }
     });
     kwbActionYes.addEventListener("click", (e) => {
         kwbActionYes.className = 'kwb-action-current';
         kwbActionNo.className = 'kwb-action';
+        payload.updates = true;
     });
     kwbActionNo.addEventListener("click", (e) => {
         kwbActionNo.className = 'kwb-action-current';
         kwbActionYes.className = 'kwb-action';
+        payload.updates = false;
     });
+    function onChangeEvent(id) {
+        payload[id] = document.getElementById(`kwb_input_${id}`).value;
+        console.log({ payload });
+    }
+    // On submit
+    kwbActionSubmit.addEventListener("click", (e) => {
+        payload.course = courses;
+
+    });
+    function onSubmitKwb() {
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                alert(this.responseText);
+            }
+        };
+        request.open("POST", "https://dmrbuqlwaxaetnhwusae.supabase.co/rest/v1/form_submissions", true);
+        request.setRequestHeader("Content-type", "application/json");
+        request.send("Your JSON Data Here");
+    }
     function linkFooter(params) {
         switch (params) {
             case 'footer-follow-us-fb':
