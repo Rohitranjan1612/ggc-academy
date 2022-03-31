@@ -1279,6 +1279,29 @@
             opacity: 0.56;
         }
 
+        .menu-wrapper {
+            position: absolute;
+            height: 10066px;
+            width: 360px;
+
+            background-color: black;
+            z-index: 7;
+            overflow-x: hidden;
+            text-align: left;
+            margin-left: -12px;
+        }
+
+        .menu-div {
+            position: absolute;
+            width: 360px;
+            height: 100%;
+            max-width: 90%;
+            /* background-color: white; */
+            transition: left 0.4s ease-in-out;
+            overflow: auto;
+            -webkit-overflow-scrolling: scroll;
+        }
+
         @media(max-width: 1000px) {
             .main-container {
                 width: 360px;
@@ -1287,6 +1310,34 @@
             .header {
                 height: 66px;
             }
+
+            .navlink-active {
+                color: #0D0D0D;
+            }
+
+            .menu-wrapper {
+                position: absolute;
+                height: 10066px;
+                width: 360px;
+
+                background-color: black;
+                z-index: 7;
+                overflow-x: hidden;
+                text-align: left;
+                margin-left: -12px;
+            }
+
+            .menu-div {
+                position: absolute;
+                width: 360px;
+                height: 100%;
+                max-width: 90%;
+                /* background-color: white; */
+                transition: left 0.4s ease-in-out;
+                overflow: auto;
+                -webkit-overflow-scrolling: scroll;
+            }
+
 
             .header-side-hide {
                 display: flex;
@@ -2224,13 +2275,30 @@
 </head>
 
 <body>
+    <div id="menu-wrapper" className="menu-wrapper">
+        <!-- <button>
+            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6242b9d3be462074af9914fa.png" />
+        </button> -->
+        <div className="menu-div">
+            <button class="navlink" id="aboutus-action" onclick="changeStyleHeader(true, 'aboutus-action')">About
+                us</button>
+            <button class="navlink" id="focusareas-action" onclick="changeStyleHeader(true, 'focusareas-action')">Focus
+                Areas</button>
+            <button class="navlink" id="instructors-action"
+                onclick="changeStyleHeader(true, 'instructors-action')">Instructors</button>
+
+            <button class="navlink" id="courses-action"
+                onclick="changeStyleHeader(true, 'courses-action')">Courses</button>
+            <button class="navlink" id="faqs-action" onclick="changeStyleHeader(true, 'faqs-action')">FAQs</button>
+        </div>
+    </div>
     <div class="header" id="header">
         <div class="header-row-div">
             <div class="row-div">
-                <!-- <div class="header-side-hide">
+                <div class="header-side-hide">
                     <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6242b9d3be462074af9914fa.png"
                         class="header-side-bar">
-                </div> -->
+                </div>
                 <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/profilepic/6238477ebe462074af990c3f.png"
                     class="header-logo" />
             </div>
@@ -2251,7 +2319,7 @@
                     </div>
                 </div>
                 <div>
-                    <button class="header-enroll-now" id="header-enroll-now"> Enroll Now</button>
+                    <button class="header-enroll-now"> Enroll Now</button>
                 </div>
                 <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623989ccbe462074af990c7a.png"
                     class="header-icon" />
@@ -2316,7 +2384,7 @@
                                     frameborder="0" allow="autoplay"></iframe> -->
                                     <video class="aboutus_video" autoplay="autoplay" id="aboutus_video">
                                         <source
-                                            src="https://d23ztkijlc4ezg.cloudfront.net/static/6245371abe462074af991853.mp4"
+                                            src="https://d23ztkijlc4ezg.cloudfront.net/static/6241776e7318f9107f8b018b.mp4"
                                             type="video/mp4" />
                                     </video>
                                 </div>
@@ -2823,7 +2891,7 @@
                         </div>
                         <div class="courses-sub-container-semi-last">Did we get you excited?</div>
                     </div>
-                    <button class="courses-view-details" id="courses-view-details">View Details</button>
+                    <button class="courses-view-details">View Details</button>
                 </div>
             </div>
         </div>
@@ -2941,28 +3009,22 @@
             <div class="footer-follow-us-text">Follow us</div>
             <div class="row-div">
                 <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/62426918be462074af99144e.png" alt=""
-                    width="24px" height="24px" class="footer-follow-us-img" id="footer-follow-us-fb"
-                    onclick="linkFooter('footer-follow-us-fb')">
+                    width="24px" height="24px" class="footer-follow-us-img" id="footer-follow-us-fb">
                 <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/624269187318f9107f8b0371.png" alt=""
-                    width="24px" height="24px" class="footer-follow-us-img" id="footer-follow-us-insta"
-                    onclick="linkFooter('footer-follow-us-insta')">
+                    width="24px" height="24px" class="footer-follow-us-img" id="footer-follow-us-insta">
                 <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/62426918be462074af99144f.png" alt=""
-                    width="24px" height="24px" id="footer-follow-us-tw" onclick="linkFooter('footer-follow-us-tw')">
+                    width="24px" height="24px" id="footer-follow-us-tw">
             </div>
         </div>
         <div class="footer-div-2">
             <div class="footer-row-div" id="footer-row-div">
                 <button class="footer-navlink" id="footer-aboutus-action"
                     onclick="changeStyleHeader(true, 'aboutus-action')">About us</button>
-                <button type="submit" class="footer-navlink" id="footer-terms-condition-action"
-                    onclick="linkFooter('footer-terms-condition-action')">Terms &
+                <button type="submit" class="footer-navlink" id="footer-terms-condition-action">Terms &
                     Conditions</button>
-                <button class="footer-navlink" id="footer-privacy-policy-action"
-                    onclick="linkFooter('footer-privacy-policy-action')">Privacy Policy</button>
-                <button class="footer-navlink" id="footer-refund-policy-action"
-                    onclick="linkFooter('footer-refund-policy-action')">Refund Policy</button>
-                <button class="footer-navlink" id="footer-contact-us-action"
-                    onclick="linkFooter('footer-contact-us-action')">Contact Us</button>
+                <button class="footer-navlink" id="footer-privacy-policy-action">Privacy Policy</button>
+                <button class="footer-navlink" id="footer-refund-policy-action">Refund Policy</button>
+                <button class="footer-navlink" id="footer-contact-us-action">Contact Us</button>
             </div>
             <div class="footer-row-div-2">
                 <div class="footer-text">GCCAcademy@2022. All rights reserved</div>
@@ -3358,40 +3420,26 @@
     });
     document.getElementById('download-ios-logo').addEventListener("click", (e) => {
         window.open('https://apps.apple.com/in/app/the-good-creator-co/id1462743952', '_blank');
-    });
-    document.getElementById('header-enroll-now').addEventListener("click", (e) => {
-        window.open('https://www.goodcreatoracademy.com/s/store/courses/description/The-Creator-Bootcamp-Beauty-Edition', '_self');
-    });
-    document.getElementById('courses-view-details').addEventListener("click", (e) => {
-        window.open('https://www.goodcreatoracademy.com/s/store/courses/description/The-Creator-Bootcamp-Beauty-Edition', '_self');
-    });
+    })
     // footer
-
-    function linkFooter(params) {
-        switch (params) {
-            case 'footer-follow-us-fb':
-                window.open('https://www.facebook.com/GoodCreatorAcademy/', '_blank');
-                break;
-            case 'footer-contact-us-action':
-                window.open('https://www.goodcreatoracademy.com/contactus', '_self');
-                break;
-            case 'footer-refund-policy-action':
-                window.open('https://www.goodcreatoracademy.com/refundpolicy', '_self');
-                break;
-            case 'footer-privacy-policy-action':
-                window.open('https://www.goodcreatoracademy.com/privacypolicy', '_self');
-                break;
-            case 'footer-terms-condition-action':
-                window.open('https://www.goodcreatoracademy.com/termsofuse', '_self');
-                break;
-            case 'footer-follow-us-tw':
-                window.open('https://twitter.com/GoodCreatorACAD', '_blank');
-                break;
-            case 'footer-follow-us-insta':
-                window.open('https://www.instagram.com/goodcreatoracademy/', '_blank');
-                break;
-        }
-    }
+    document.getElementById('footer-follow-us-insta').addEventListener("click", (e) => {
+        window.open('https://www.instagram.com/goodcreatoracademy/', '_blank');
+    })
+    document.getElementById('footer-follow-us-tw').addEventListener("click", (e) => {
+        window.open('https://twitter.com/GoodCreatorACAD', '_blank');
+    })
+    document.getElementById('footer-terms-condition-action').addEventListener("click", (e) => {
+        window.open('https://www.goodcreatoracademy.com/termsofuse', '_self');
+    })
+    document.getElementById('footer-privacy-policy-action').addEventListener("click", (e) => {
+        window.open('https://www.goodcreatoracademy.com/privacypolicy', '_self');
+    })
+    document.getElementById('footer-refund-policy-action').addEventListener("click", (e) => {
+        window.open('https://www.goodcreatoracademy.com/refundpolicy', '_self');
+    })
+    document.getElementById('footer-contact-us-action').addEventListener("click", (e) => {
+        window.open('https://www.goodcreatoracademy.com/contactus', '_self');
+    })
 </script>
 
 </html>
