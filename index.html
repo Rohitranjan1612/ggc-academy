@@ -623,6 +623,10 @@
             /* overflow: hidden; */
         }
 
+        .instructors-main-container-mobile {
+            display: none;
+        }
+
         .instructors_card_div {
             display: flex;
             flex-direction: column;
@@ -733,7 +737,7 @@
         .instructors_carousel_button_div {
             position: absolute;
             right: 60;
-            display: flex;
+            display: none;
             flex-direction: row;
             border: 0;
             margin: 0 2px;
@@ -761,20 +765,14 @@
         }
 
         .instructors_vector_icon {
-            position: absolute;
-            right: -6;
-            top: 8;
-            width: 8;
-            height: 13;
+            width: 8px;
+            height: 13px;
             transform: rotate(180deg);
         }
 
         .instructors_vector_icon_right {
-            position: absolute;
-            right: -45;
-            top: 8;
-            width: 8;
-            height: 13;
+            width: 8px;
+            height: 13px;
         }
 
         /* courses */
@@ -1708,6 +1706,15 @@
             .instructors-main-container {
                 margin: 36px 40px 36px 40px;
                 overflow: hidden;
+                display: none;
+            }
+
+            .instructors-main-container-mobile {
+                margin: 36px 40px 36px 40px;
+                overflow: hidden;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
             }
 
             .instructors_card_div {
@@ -1717,7 +1724,7 @@
                 margin-left: 5px;
                 background: #FFFFFF;
                 width: 248px;
-                height: 322px;
+                height: 342px;
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
                 border-radius: 30px;
             }
@@ -1769,7 +1776,7 @@
 
 
             .instructors_carousel_track-container {
-                min-height: 566px;
+                min-height: 385px;
                 min-width: 1132px;
                 padding: 5px;
                 overflow: hidden;
@@ -1795,41 +1802,46 @@
             }
 
             .instructors_carousel_button_div {
-                position: absolute;
-                right: 60;
+                position: relative;
                 display: flex;
                 flex-direction: row;
                 border: 0;
-                margin: 0 2px;
-                width: 12px;
-                height: 12px;
+                margin: 0 83px;
+                width: 30px;
+                height: 30px;
             }
 
             .instructors_carousel_button-1 {
-                width: 31px;
+                width: 30px;
                 height: 30px;
                 border-top-left-radius: 5px;
                 border: none;
+                padding-top: 8px;
+                padding-left: 8px;
+                padding-right: 18px;
+                padding-bottom: 6px;
                 background: #D0D0D0;
-                padding: 8px 14px;
             }
 
             .instructors_carousel_button-2 {
-                width: 31px;
+                width: 30px;
                 height: 30px;
                 border-bottom-right-radius: 5px;
                 border: none;
+                padding-top: 8px;
+                padding-left: 10px;
+                padding-right: 14px;
+                padding-bottom: 6px;
                 background: #FFC400;
-                padding: 8px 14px;
                 margin-left: 10px;
             }
 
             .instructors_vector_icon {
                 position: absolute;
-                right: -6;
+                left: 2;
                 top: 8;
-                width: 8;
-                height: 13;
+                width: 8px;
+                height: 13px;
                 transform: rotate(180deg);
             }
 
@@ -1837,8 +1849,8 @@
                 position: absolute;
                 right: -45;
                 top: 8;
-                width: 8;
-                height: 13;
+                width: 8px;
+                height: 13px;
             }
 
             /* courses */
@@ -2472,6 +2484,150 @@
                     <div class="instructors-header">Learn from</div>
                     <div class="instructors-sub-header">Inspiring Creators & Instructors</div>
                     <div class="instructors-hr-div"></div>
+                </div>
+                <div class="instructors-main-container-mobile">
+                    <div class="instructors-sub-container-1">
+                        <div class="instructors-sub-container-carousel">
+                            <div class="instructors_carousel_track-container">
+                                <ul class="instructors_carousel_track">
+                                    <!-- <li class="instructors_carousel_slide instructors_current-slide">
+                                    <div class="instructors_card_div">
+                                        <div>
+                                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829dbe462074af991295.png"
+                                                class="instructors_img-1" />
+                                        </div>
+                                        <div class="instructors_col_div">
+                                            <div class="instructors_card_lite_text">
+                                                Health • Fashion
+                                            </div>
+                                            <div class="instructors_card_header">
+                                                Saurabh Shastri
+                                            </div>
+                                            <div class="instructors_card_text">
+                                                Lorem ipsum dolor sit amet, wtwi consectetur adipiscing elit. Nulla.
+                                                lacrosta vinegi la disco.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="instructors_card_div">
+                                        <div>
+                                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829dbe462074af991296.png"
+                                                class="instructors_img-2" />
+                                        </div>
+                                        <div class="instructors_col_div">
+                                            <div class="instructors_card_lite_text">
+                                                Health • Fashion
+                                            </div>
+                                            <div class="instructors_card_header">
+                                                Saurabh Shastri
+                                            </div>
+                                            <div class="instructors_card_text">
+                                                Lorem ipsum dolor sit amet, wtwi consectetur adipiscing elit. Nulla.
+                                                lacrosta vinegi la disco.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="instructors_card_div">
+                                        <div>
+                                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829d7318f9107f8b019b.jpeg"
+                                                class="instructors_img-3" />
+                                        </div>
+                                        <div class="instructors_col_div">
+                                            <div class="instructors_card_lite_text">
+                                                Health • Fashion
+                                            </div>
+                                            <div class="instructors_card_header">
+                                                Saurabh Shastri
+                                            </div>
+                                            <div class="instructors_card_text">
+                                                Lorem ipsum dolor sit amet, wtwi consectetur adipiscing elit. Nulla.
+                                                lacrosta vinegi la disco.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li> -->
+                                    <li class="instructors_carousel_slide instructors_current-slide">
+                                        <div class="instructors_card_div">
+                                            <div>
+                                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829d7318f9107f8b019a.png"
+                                                    class="instructors_img-1" />
+                                            </div>
+                                            <div class="instructors_col_div">
+                                                <div class="instructors_card_lite_text">
+                                                    Entertainment • Business
+                                                </div>
+                                                <div class="instructors_card_header">
+                                                    Malini Agarwal
+                                                </div>
+                                                <div class="instructors_card_text">
+                                                    Founder & Creative Director MissMalini Entertainment, Girl Tribe &
+                                                    Co-Founder of Good Creator Co.
+                                                    Indian's First Celebrity Blogger.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="instructors_carousel_slide">
+                                        <div class="instructors_card_div">
+                                            <div>
+                                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829d7318f9107f8b019b.jpeg"
+                                                    class="instructors_img-2" />
+                                            </div>
+                                            <div class="instructors_col_div">
+                                                <div class="instructors_card_lite_text">
+                                                    Beauty • Content
+                                                </div>
+                                                <div class="instructors_card_header">
+                                                    Tarini Peshawaria
+                                                </div>
+                                                <div class="instructors_card_text">
+                                                    Cosmopolitan India's Beauty Influencer of the Year (Editor's Choice)
+                                                    2021-2022.
+                                                    Worked with multiple brands - Braun, L'Oréal and Cetaphil, etc.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="instructors_carousel_slide">
+                                        <div class="instructors_card_div">
+                                            <div>
+                                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829d7318f9107f8b0199.png"
+                                                    class="instructors_img-3" />
+                                            </div>
+                                            <div class="instructors_col_div">
+                                                <div class="instructors_card_lite_text">
+                                                    Makeup • Hair
+                                                </div>
+                                                <div class="instructors_card_header">
+                                                    Manjari Singh
+                                                </div>
+                                                <div class="instructors_card_text">
+                                                    Award-winning celebrity makeup artist and hair stylist from The
+                                                    London
+                                                    School of Makeup.
+                                                    Worked with Gauri Khan, Yami Gautam, Huma Qureshi, Rakul Preet
+                                                    Singh,
+                                                    amongst others.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="instructors_carousel_button_div">
+                                <div class="instructors_carousel_button-1" id="instructors_carousel_button-1"
+                                    onclick="instructorsNextPreviousButton('previous')">
+                                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241a6587318f9107f8b02d3.png"
+                                        alt="Avatar" class="instructors_vector_icon" />
+                                </div>
+                                <div class="instructors_carousel_button-2" id="instructors_carousel_button-2"
+                                    onclick="instructorsNextPreviousButton('next')">
+                                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241a6587318f9107f8b02d3.png"
+                                        alt="Avatar" class="instructors_vector_icon_right" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="instructors-main-container">
                     <div class="instructors-sub-container-1">
