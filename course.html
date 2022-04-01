@@ -144,15 +144,14 @@
         .course-tagline-cut-price {
             position: absolute;
             width: 80.23px;
-            height: 0px;
+            height: 1.5px !important;
             top: 468px;
-
-            border: 1.5px solid #000000;
+            background-color: #000000;
+            border: none;
             transform: rotate(-10.05deg);
         }
 
         .course-tagline-price {
-            font-family: 'Indian Rupee';
             font-style: normal;
             font-weight: 400;
             font-size: 20px;
@@ -164,10 +163,9 @@
 
         .course-tagline-off-price {
             margin-top: 55px;
-            font-family: 'Indian Rupee';
             font-style: normal;
             font-weight: 400;
-            font-size: 30px;
+            font-size: 25px;
             line-height: 30px;
             color: #000000;
             margin-right: 48px;
@@ -360,7 +358,6 @@
             font-size: 24px;
             line-height: 42px;
             letter-spacing: 0.01em;
-            text-transform: uppercase;
             color: #0D0D0D;
         }
 
@@ -379,7 +376,7 @@
             font-weight: 600;
             font-size: 20px;
             line-height: 35px;
-
+            margin-top: 10px;
             color: #5E5D5D;
         }
 
@@ -399,7 +396,7 @@
         }
 
         .description-course-sub-container-semi-bold {
-            margin-top: 42px;
+            margin-top: 20px;
             font-style: normal;
             font-weight: 600;
             font-size: 20px;
@@ -659,6 +656,23 @@
             border: 1px solid #A0A0A0;
         }
 
+        .kwb-action-submit-current {
+            position: absolute;
+            border: none;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            font-size: 14px;
+            box-sizing: border-box;
+
+            width: 101px;
+            height: 40px;
+            margin-top: 80px;
+            margin-left: 987px;
+            color: white;
+            background: #01B9F5;
+            border: none;
+        }
+
         .kwb-row-div {
             display: flex;
             flex-direction: row;
@@ -876,7 +890,7 @@
             }
 
             .course-tagline-off-price {
-                font-size: 24px;
+                font-size: 21px;
             }
 
             .course-tagline-action {
@@ -1020,9 +1034,9 @@
             .description-course-session-text {
                 font-style: normal;
                 font-weight: 600;
-                font-size: 20px;
-                line-height: 35px;
-
+                font-size: 12px;
+                margin-top: 10px;
+                line-height: 18px;
                 color: #5E5D5D;
             }
 
@@ -1034,10 +1048,11 @@
             .description-course-sub-container-li-dots {
                 border: 0;
                 border-radius: 50%;
-                width: 10px;
-                height: 10px;
+                height: 6px;
+                width: 6px;
+
                 background: #979797;
-                margin-top: 10px;
+                margin-top: 6px;
                 margin-right: 18px;
             }
 
@@ -1046,27 +1061,27 @@
             }
 
             .description-course-sub-container-semi-bold {
-                margin-top: 42px;
+                margin-top: 20px;
                 font-style: normal;
                 font-weight: 600;
-                font-size: 20px;
-                line-height: 35px;
+                font-size: 12px;
+                line-height: 18px;
                 color: #5E5D5D;
             }
 
             .description-course-sub-container-semi-bold-2 {
                 font-style: normal;
                 font-weight: 600;
-                font-size: 20px;
-                line-height: 35px;
+                font-size: 12px;
+                line-height: 18px;
                 color: #5E5D5D;
             }
 
             .description-course-sub-container-li-lite {
                 font-style: normal;
                 font-weight: 400;
-                font-size: 18px;
-                line-height: 30px;
+                font-size: 11px;
+                line-height: 18px;
                 color: #777777;
             }
 
@@ -1182,6 +1197,8 @@
             .kwb-label {
                 font-size: 11px;
                 line-height: 18px;
+                margin-bottom: 7px;
+                margin-top: 10px;
             }
 
             .kwb-action {
@@ -1199,7 +1216,7 @@
                 width: 281px;
                 font-style: normal;
                 font-weight: 400;
-                font-size: 18px;
+                font-size: 11px;
                 line-height: 30px;
                 /* identical to box height, or 167% */
 
@@ -1214,7 +1231,7 @@
                 width: 281px;
                 font-style: normal;
                 font-weight: 400;
-                font-size: 18px;
+                font-size: 11px;
                 line-height: 30px;
                 /* identical to box height, or 167% */
 
@@ -1245,6 +1262,20 @@
                 color: #A0A0A0;
                 background: #FFFFFF;
                 border: 1px solid #A0A0A0;
+            }
+
+            .kwb-action-submit-current {
+                position: absolute;
+                border: none;
+                border-top-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                font-size: 14px;
+                box-sizing: border-box;
+
+                width: 84px;
+                height: 30px;
+                margin-top: 30px;
+                margin-left: 90px;
             }
 
             .kwb-row-div {
@@ -1386,10 +1417,10 @@
                             <div class="course-tagline-off-price">₹ 7,999/-</div>
 
                         </div>
-                        <button class="course-tagline-action buyBtn" id="course-tagline-action">let’s start</button>
+                        <button class="course-tagline-action buyBtn" id="course-tagline-action">Let’s Start</button>
                     </div>
                     <div class="course-tagline-bonus-text">Bonus -Top 3 looks get the chance to feature on </div>
-                    <div class="course-tagline-text-link">MissMalini's Instagram page!!</div>
+                    <div class="course-tagline-text-link" id="miss-malini-link">MissMalini's Instagram page!!</div>
                 </div>
             </div>
             <div class="course-tagline-sub-header">Course Instructors</div>
@@ -1767,8 +1798,11 @@
     });
     document.getElementById('download-ios-logo').addEventListener("click", (e) => {
         window.open('https://apps.apple.com/in/app/the-good-creator-co/id1462743952', '_blank');
-    })
+    });
 
+    document.getElementById('miss-malini-link').addEventListener("click", (e) => {
+        window.open('https://www.instagram.com/maliniagarwal/', '_blank');
+    });
     // Know you better
     const kwbActionBeauty = document.getElementById('kwb-action-beauty');
     const kwbActionFashion = document.getElementById('kwb-action-fashion');
@@ -1783,7 +1817,7 @@
         "name": "",
         "namespace": "academy-v0",
         "course": "",
-        "updates": true,
+        "updates": null,
         "phone": ""
     };
     let courses = [];
@@ -1796,6 +1830,7 @@
             kwbActionBeauty.className = 'kwb-action-current';
             courses.push("beauty");
         }
+        changeSubmitColor();
     });
     kwbActionFashion.addEventListener("click", (e) => {
         if (courses && courses.find((f) => f === "fashion")) {
@@ -1806,6 +1841,7 @@
             kwbActionFashion.className = 'kwb-action-current';
             courses.push("fashion");
         }
+        changeSubmitColor();
     });
     kwbActionLuxury.addEventListener("click", (e) => {
         if (courses && courses.find((f) => f === "luxury")) {
@@ -1816,6 +1852,7 @@
             kwbActionLuxury.className = 'kwb-action-current';
             courses.push("luxury");
         }
+        changeSubmitColor();
     });
     kwbActionFood.addEventListener("click", (e) => {
         if (courses && courses.find((f) => f === "food")) {
@@ -1826,6 +1863,7 @@
             kwbActionFood.className = 'kwb-action-current';
             courses.push("food");
         }
+        changeSubmitColor();
     });
     kwbActionInfluencer.addEventListener("click", (e) => {
         if (courses && courses.find((f) => f === "influencer")) {
@@ -1836,26 +1874,40 @@
             kwbActionInfluencer.className = 'kwb-action-current';
             courses.push("influencer");
         }
+        changeSubmitColor();
     });
     kwbActionYes.addEventListener("click", (e) => {
         kwbActionYes.className = 'kwb-action-current';
         kwbActionNo.className = 'kwb-action';
         payload.updates = true;
+        changeSubmitColor();
     });
     kwbActionNo.addEventListener("click", (e) => {
         kwbActionNo.className = 'kwb-action-current';
         kwbActionYes.className = 'kwb-action';
         payload.updates = false;
+        changeSubmitColor();
     });
     function onChangeEvent(id) {
         payload[id] = document.getElementById(`kwb_input_${id}`).value;
-        console.log({ payload });
+        changeSubmitColor();
+    }
+    function changeSubmitColor() {
+        const re =
+            /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        if (payload && payload.email && payload.email.match(re) && payload.phone && payload.phone.length === 10 && (payload.updates || payload.updates === false) && courses && courses.length) {
+            kwbActionSubmit.className = "kwb-action-submit-current"
+        } else {
+            kwbActionSubmit.className = "kwb-action-submit"
+
+        }
     }
     // On submit
     kwbActionSubmit.addEventListener("click", (e) => {
-        payload.course = courses.toString();
-        onSubmitKwb();
-
+        if (payload && payload.email && payload.phone && payload.updates !== null) {
+            payload.course = courses.toString();
+            onSubmitKwb();
+        }
     });
     function onSubmitKwb() {
         var request = new XMLHttpRequest();

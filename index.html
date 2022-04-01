@@ -153,6 +153,7 @@
             left: 455px;
             width: 54px;
             height: 52px;
+            padding: 0px;
             border-radius: 50%;
             z-index: 1;
         }
@@ -356,14 +357,14 @@
         }
 
         .join-us-logo {
-            width: 69px;
             height: 66px;
+            width: 91px;
             margin-right: 40px;
         }
 
         .join-us-logo-2 {
-            width: 86px;
-            height: 66px;
+            width: 80px;
+            height: 60px;
             margin-right: 40px;
         }
 
@@ -435,6 +436,13 @@
         .ccj-main-container {
             margin-top: 80px;
             height: 520px;
+        }
+
+        .no-button-property {
+            border: none;
+            background: none;
+            margin: none;
+            padding: none;
         }
 
         .content_flip-card-1 {
@@ -717,7 +725,6 @@
 
         .instructors_card_text {
             font-style: normal;
-            text-align: justify;
             font-weight: 400;
             font-size: 16px;
             margin-top: 4px;
@@ -963,7 +970,7 @@
         .courses-sub-container-semi-bold {
             font-style: normal;
             font-weight: 600;
-            margin-bottom: 53px;
+            margin-bottom: 43px;
             font-size: 20px;
             line-height: 35px;
             color: #5E5D5D;
@@ -1274,6 +1281,20 @@
             text-transform: uppercase;
             color: #FFFFFF;
             border: none;
+            border-right: 1px solid #646464;
+            margin-bottom: 10px;
+            background: none;
+        }
+
+        .footer-navlink-last {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 24px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            border: none;
+            margin-bottom: 10px;
             background: none;
         }
 
@@ -1303,9 +1324,25 @@
             opacity: 0.56;
         }
 
+        .mobile_view {
+            display: none;
+        }
+
+        .desktop_view {
+            display: block;
+        }
+
+        .ccj_img {
+            margin-top: 80px;
+        }
+
         @media(max-width: 1000px) {
             .main-container {
                 width: 360px;
+            }
+
+            .ccj_img {
+                margin-top: 42px;
             }
 
             .aboutus_no_properties {
@@ -1314,6 +1351,9 @@
                 width: 20px;
                 height: 20px;
                 border-radius: 50%;
+                margin-top: 35px;
+                padding: 0px;
+                left: 75px;
             }
 
             .aboutus-play-pause-button {
@@ -1433,6 +1473,14 @@
                 margin-top: 87px;
             }
 
+            .mobile_view {
+                display: block
+            }
+
+            .desktop_view {
+                display: none;
+            }
+
             .aboutus-logo-2 {
                 width: 58px;
                 height: 108px;
@@ -1515,14 +1563,14 @@
             }
 
             .join-us-logo {
-                width: 35px;
-                height: 33px;
+                width: 50px;
+                height: 32.64px;
                 margin-right: 19px;
             }
 
             .join-us-logo-2 {
-                width: 43px;
-                height: 33px;
+                width: 40px;
+                height: 30px;
                 margin-right: 19px;
             }
 
@@ -1804,6 +1852,7 @@
             .instructors_card_header {
                 font-size: 12px;
                 line-height: 18px;
+                margin-top: 5px;
             }
 
             .instructors_card_text {
@@ -2210,20 +2259,34 @@
             .footer-row-div {
                 display: flex;
                 flex-direction: row;
-                justify-content: space-between;
                 width: 300px;
                 flex-wrap: wrap;
+                justify-content: center;
             }
 
             .footer-navlink {
                 font-style: normal;
                 font-weight: 300;
-                font-size: 14px;
+                font-size: 11px;
                 line-height: 24px;
                 text-transform: uppercase;
                 color: #FFFFFF;
                 border: none;
                 background: none;
+                border-right: 1px solid #646464;
+                margin-bottom: 5px;
+            }
+
+            .footer-navlink-last {
+                font-style: normal;
+                font-weight: 300;
+                font-size: 11px;
+                line-height: 24px;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                border: none;
+                background: none;
+                margin-bottom: 5px;
             }
 
             .footer-row-div-2 {
@@ -2308,32 +2371,40 @@
                                     <div class="aboutus_header">WELCOME TO THE</div>
                                     <div class="aboutus_sub_header">Good Creator Academy</div>
                                     <div class="aboutus_hr_div"></div>
-                                    <div class="aboutus_text">Your one-stop shop to becoming the creator of your dreams!
+                                    <div class="aboutus_text">The creator’s learning platform.
                                     </div>
                                     <div class="aboutus_text"><strong> Learn, Create, Collaborate</strong> - content
                                         planning,
                                         brand
-                                        endorsement, shaping
+                                        endorsements, shaping
                                         your identity and knowing your worth.</div>
                                 </div>
                                 <div class="aboutus-row-div">
                                     <div class="aboutus-reverse">
                                         <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409abe462074af991277.jpeg"
-                                            class="aboutus-logo-1" />
+                                            class="aboutus-logo-1 desktop_view" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409abe462074af991277.jpeg"
+                                            class="aboutus-logo-1 mobile_view" />
                                     </div>
                                     <div class="aboutus-reverse">
                                         <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409a7318f9107f8b017b.jpeg"
-                                            class="aboutus-logo-3" />
+                                            class="aboutus-logo-3 desktop_view" />
                                         <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409abe462074af991275.jpeg"
-                                            class="aboutus-logo-2" />
-
+                                            class="aboutus-logo-2 desktop_view" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409a7318f9107f8b017b.jpeg"
+                                            class="aboutus-logo-3 mobile_view" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6246a68dbe462074af991a21.png"
+                                            class="aboutus-logo-2 mobile_view" />
                                     </div>
                                     <div class="col-div">
                                         <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409abe462074af991276.jpeg"
-                                            class="aboutus-logo-5" />
+                                            class="aboutus-logo-5 desktop_view" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6246a41c7318f9107f8b092a.png"
+                                            class="aboutus-logo-5 mobile_view" />
                                         <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409a7318f9107f8b017c.jpeg"
-                                            class="aboutus-logo-4" />
-
+                                            class="aboutus-logo-4 desktop_view" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6246a6ad7318f9107f8b092c.png"
+                                            class="aboutus-logo-4 mobile_view" />
                                     </div>
                                 </div>
                             </div>
@@ -2392,21 +2463,30 @@
                                 <div class="aboutus-row-div">
                                     <div class="aboutus-reverse">
                                         <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241490a7318f9107f8b017e.png"
-                                            class="aboutus-logo-1" />
+                                            class="aboutus-logo-1 desktop_view" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6246ab0dbe462074af991a22.png"
+                                            class="aboutus-logo-1 mobile_view" />
                                     </div>
                                     <div class="aboutus-reverse">
-                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624149237318f9107f8b017f.png"
-                                            class="aboutus-logo-3" />
                                         <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62414933be462074af991278.png"
-                                            class="aboutus-logo-2" />
+                                            class="aboutus-logo-3 desktop_view" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624149237318f9107f8b017f.png"
+                                            class="aboutus-logo-2 desktop_view" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624149237318f9107f8b017f.png"
+                                            class="aboutus-logo-3 mobile_view" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6246ab0dbe462074af991a23.png"
+                                            class="aboutus-logo-2 mobile_view" />
 
                                     </div>
                                     <div class="col-div">
                                         <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62414944be462074af991279.png"
-                                            class="aboutus-logo-5" />
+                                            class="aboutus-logo-5 desktop_view" />
                                         <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62414958be462074af99127a.png"
-                                            class="aboutus-logo-4" />
-
+                                            class="aboutus-logo-4 desktop_view" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6246ab0d7318f9107f8b092d.png"
+                                            class="aboutus-logo-5 mobile_view" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6246ab0d7318f9107f8b092e.png"
+                                            class="aboutus-logo-4 mobile_view" />
                                     </div>
                                 </div>
                             </div>
@@ -2437,7 +2517,7 @@
                             <div class="join-us-sub-header">Build a unique skill-set</div>
                             <div class="join-us-simple-text">Attend courses co-created with famous creators and
                                 best-in-class
-                                instructors which promise to better your creator skills.</div>
+                                instructors which promise to better your skills.</div>
                         </div>
 
                     </div>
@@ -2454,13 +2534,19 @@
                 </div>
             </div>
             <!-- Content Creation Journey - ccj -->
-            <!-- <div id="ccj" class="ccj-div">
+            <div id="ccj" class="ccj-div">
                 <div class="col-div">
                     <div class="ccj-wsy-text">Start your content creation journey</div>
                     <div class="ccj-text">Explore our courses</div>
                     <div class="ccj-hr-div"></div>
                 </div>
-                <div class="row-div ccj-main-container">
+                <button class="no-button-property" id="ccj_explore_courses">
+                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-1200/banners/6246df717318f9107f8b0933.png"
+                        alt="" width="1248" height="520" class="ccj_img desktop_view">
+                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-500/static/6246d5037318f9107f8b0930.png" alt=""
+                        width="320" height="268" class="ccj_img mobile_view">
+                </button>
+                <!-- <div class="row-div ccj-main-container">
                     <div class="content_flip-card-1" id="content_flip-card-1" onclick="handleFlipCardClick(1)">
                         <div class="content_flip-card-inner" id="content_flip-card-inner-1">
                             <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412f597318f9107f8b0179.png"
@@ -2523,8 +2609,8 @@
                             <div class="content_flip-card-link">Courses coming soon</div>
                         </div>
                     </div>
-                </div>
-            </div> -->
+                </div> -->
+            </div>
         </div>
         <div class="margin-top">
             <div id="instructors" onmouseenter="changeStyleHeader(false, 'instructors-action')" class="instructors-div">
@@ -2822,7 +2908,7 @@
         <div class="margin-top">
             <div id="courses" onmouseenter="changeStyleHeader(false, 'courses-action')" class="courses-div">
                 <div class="col-div">
-                    <div class="courses-header">Join the</div>
+                    <div class="courses-header">Join our first course!</div>
                     <div class="courses-sub-header">The Creator Bootcamp - Beauty Edition</div>
                     <div class="courses-hr-div"></div>
                 </div>
@@ -2848,7 +2934,7 @@
                         </div>
                     </div>
                     <div class="courses-sub-container-2">
-                        <div class="courses-sub-container-header">Beauty creator course</div>
+                        <div class="courses-sub-container-header">Creator Bootcamp - Beauty Edition</div>
                         <div class="courses-sub-container-text">2 Beauty Instructors x 2 Day Bootcamp x 3 Viral
                             Instagrammable looks
                         </div>
@@ -2860,16 +2946,15 @@
                         </div>
                         <div class="courses-sub-container-li">
                             <div class="courses-sub-container-li-dots"></div>
-                            <div class="courses-sub-container-li-lite">Master the 'Draped Blush technique', 'Glitter &
-                                Gloss
-                                makeup' looks</div>
+                            <div class="courses-sub-container-li-lite">Master the ‘Draped Blush’ technique and ‘Glitter
+                                & Gloss’ makeup</div>
                         </div>
                         <div class="courses-sub-container-li">
                             <div class="courses-sub-container-li-dots"></div>
-                            <div class="courses-sub-container-semi-bold">Get a Certification of Completion from the Good
+                            <div class="courses-sub-container-li-lite">Get a certification of completion from the Good
                                 Creator Academy</div>
                         </div>
-                        <div class="courses-sub-container-semi-last">Did we get you excited?</div>
+                        <div class="courses-sub-container-semi-last">Join us on the 16th and 17th of April!</div>
                     </div>
                     <button class="courses-view-details" id="courses-view-details">View Details</button>
                 </div>
@@ -3003,13 +3088,12 @@
                 <button class="footer-navlink" id="footer-aboutus-action"
                     onclick="changeStyleHeader(true, 'aboutus-action')">About us</button>
                 <button type="submit" class="footer-navlink" id="footer-terms-condition-action"
-                    onclick="linkFooter('footer-terms-condition-action')">Terms &
-                    Conditions</button>
+                    onclick="linkFooter('footer-terms-condition-action')">Terms of Use</button>
                 <button class="footer-navlink" id="footer-privacy-policy-action"
                     onclick="linkFooter('footer-privacy-policy-action')">Privacy Policy</button>
                 <button class="footer-navlink" id="footer-refund-policy-action"
                     onclick="linkFooter('footer-refund-policy-action')">Refund Policy</button>
-                <button class="footer-navlink" id="footer-contact-us-action"
+                <button class="footer-navlink-last" id="footer-contact-us-action"
                     onclick="linkFooter('footer-contact-us-action')">Contact Us</button>
             </div>
             <div class="footer-row-div-2">
@@ -3455,9 +3539,9 @@
     document.getElementById('download-ios-logo').addEventListener("click", (e) => {
         window.open('https://apps.apple.com/in/app/the-good-creator-co/id1462743952', '_blank');
     });
-    // document.getElementById('header-enroll-now').addEventListener("click", (e) => {
-    //     window.open('https://www.goodcreatoracademy.com/s/store/courses/description/The-Creator-Bootcamp-Beauty-Edition', '_self');
-    // });
+    document.getElementById('ccj_explore_courses').addEventListener("click", (e) => {
+        window.open('https://www.goodcreatoracademy.com/s/store/courses/description/The-Creator-Bootcamp-Beauty-Edition', '_self');
+    });
     document.getElementById('courses-view-details').addEventListener("click", (e) => {
         window.open('https://www.goodcreatoracademy.com/s/store/courses/description/The-Creator-Bootcamp-Beauty-Edition', '_self');
     });
