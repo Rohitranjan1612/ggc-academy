@@ -92,6 +92,7 @@
             content: none !important;
             display: none !important;
         }
+
         .main-container {
             width: 1248px;
             margin: 0 auto;
@@ -142,6 +143,27 @@
         .aboutus_video_div {
             margin-top: 206px;
             border-top-left-radius: 20px;
+        }
+
+        .aboutus_no_properties {
+            position: absolute;
+            border: none;
+            background: none;
+            margin-top: 181px;
+            left: 455px;
+            width: 54px;
+            height: 52px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .aboutus_no_properties_hide {
+            display: none;
+        }
+
+        .aboutus-play-pause-button {
+            width: 52px;
+            height: 52px;
         }
 
         .aboutus_video {
@@ -1286,6 +1308,19 @@
                 width: 360px;
             }
 
+            .aboutus_no_properties {
+                border: none;
+                background: none;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+            }
+
+            .aboutus-play-pause-button {
+                width: 20px;
+                height: 20px;
+            }
+
             /* .header {
                 height: 66px;
             } */
@@ -2302,7 +2337,8 @@
                             </div>
                         </li>
                         <li class="aboutus_carousel_slide">
-                            <div class="aboutus_row_div_video">
+                            <div class="aboutus_row_div_video" onmouseover="showPlayPauseButton()"
+                                onmouseleave="hidePlayPauseButton()">
                                 <div class="aboutus_div_1">
                                     <div class="aboutus_header">Everything you need to become a</div>
                                     <div class="aboutus_sub_header">better creator!</div>
@@ -2316,6 +2352,14 @@
                                     <!-- <iframe class="aboutus_video"
                                     src="https://d23ztkijlc4ezg.cloudfront.net/static/6241776e7318f9107f8b018b.mp4?autoplay=1&mute=1"
                                     frameborder="0" allow="autoplay"></iframe> -->
+                                    <button class="aboutus_no_properties_hide" id="aboutus-pause-button">
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/62463cd5be462074af991a1e.png"
+                                            alt="" class="aboutus-play-pause-button">
+                                    </button>
+                                    <button class="aboutus_no_properties_hide" id="aboutus-play-button">
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/62463f4ebe462074af991a1f.png"
+                                            alt="" class="aboutus-play-pause-button">
+                                    </button>
                                     <video class="aboutus_video" autoplay="autoplay" id="aboutus_video">
                                         <source
                                             src="https://d23ztkijlc4ezg.cloudfront.net/static/6245371abe462074af991853.mp4"
@@ -3046,6 +3090,8 @@
     const dots = Array.from(dotsNav.children);
 
     const slidesWidth = slides[0].getBoundingClientRect().width;
+    const aboutusPlayButton = document.getElementById("aboutus-play-button");
+    const aboutusPauseButton = document.getElementById("aboutus-pause-button");
 
     // arrange the slides next to one another
     const setSlidePosition = (slide, index) => {
@@ -3067,6 +3113,21 @@
     };
     let targetIndex = 0;
     let setIntervalTime = 3000;
+    let aboutusVideoPlaying = 0;
+    function playAboutusVideo() {
+        document.getElementById("aboutus_video").play().then(_ => {
+            // Autoplay started!
+            aboutusVideoPlaying = 1;
+            aboutusPlayButton.className = 'aboutus_no_properties_hide';
+        }).catch(error => {
+            // Autoplay was prevented.
+            // Show a "Play" button so that user can start playback.
+            aboutusVideoPlaying = 0;
+            aboutusPlayButton.className = 'aboutus_no_properties';
+            console.log({ error });
+        });
+
+    }
     const moveSlide = () => {
         const currentSlide = track.querySelector(".aboutus_current-slide");
         let nextSlide = currentSlide.nextElementSibling;
@@ -3082,7 +3143,7 @@
         if (targetIndex === 0) {
             // For 10 sec video
             setIntervalTime = 10000;
-            document.getElementById("aboutus_video").play();
+            playAboutusVideo()
             // console.log("play");
         } else {
             setIntervalTime = 3000;
@@ -3102,7 +3163,7 @@
         if (targetIndex === 0) {
             // For 10 sec video
             setIntervalTime = 10000;
-            document.getElementById("aboutus_video").play();
+            playAboutusVideo()
             // console.log("play");
         } else {
             setIntervalTime = 3000;
@@ -3111,7 +3172,38 @@
         moveToSlide(track, currentSlide, tragetSlide);
         updateDots(currentDot, targetDot);
     });
+    // About Us Video
+    function showPlayPauseButton() {
+        if (aboutusVideoPlaying) {
+            aboutusPauseButton.className = 'aboutus_no_properties';
+        } else {
+            aboutusPlayButton.className = 'aboutus_no_properties';
+        }
+    }
+    function hidePlayPauseButton() {
+        aboutusPauseButton.className = 'aboutus_no_properties_hide';
+    }
+    aboutusPauseButton.addEventListener("click", (e) => {
+        document.getElementById("aboutus_video").pause();
+        aboutusVideoPlaying = 0;
+        aboutusPlayButton.className = 'aboutus_no_properties';
+        aboutusPauseButton.className = 'aboutus_no_properties_hide';
 
+    });
+    aboutusPlayButton.addEventListener("click", (e) => {
+        document.getElementById("aboutus_video").play().then(_ => {
+            // Autoplay started!
+            aboutusVideoPlaying = 1;
+            aboutusPauseButton.className = 'aboutus_no_properties';
+            aboutusPlayButton.className = 'aboutus_no_properties_hide';
+        }).catch(error => {
+            // Autoplay was prevented.
+            // Show a "Play" button so that user can start playback.
+            aboutusVideoPlaying = 0;
+            aboutusPlayButton.className = 'aboutus_no_properties';
+            console.log({ error });
+        });
+    });
     // Courses carousel
     const coursesTrack = document.querySelector(".courses_carousel_track");
     const coursesSlides = Array.from(coursesTrack.children);
