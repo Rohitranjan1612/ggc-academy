@@ -519,6 +519,20 @@
             color: #FFFFFF;
         }
 
+        .content_flip-card-header-last {
+            position: absolute;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 60px;
+            text-align: center;
+            text-transform: uppercase;
+            z-index: 7;
+            bottom: 50px;
+            left: 90px;
+            color: #FFFFFF;
+        }
+
         .content_flip-card-header-horizontal {
             position: absolute;
             font-style: normal;
@@ -578,6 +592,7 @@
             color: #FFFFFF;
 
         }
+
         .content_flip-card-link-explore {
             position: absolute;
             font-style: normal;
@@ -591,6 +606,7 @@
             left: 86px;
             color: #FFFFFF;
         }
+
         .content_courses_vector_icon {
             position: absolute;
             bottom: 29px;
@@ -1679,27 +1695,41 @@
                 position: absolute;
                 font-style: normal;
                 font-weight: 800;
-                font-size: 40px;
-                line-height: 60px;
+                font-size: 13px;
+                line-height: 20px;
                 text-align: center;
                 text-transform: uppercase;
                 z-index: 7;
-                bottom: 50;
-                left: 130;
+                bottom: 26px;
+                left: 57px;
+                color: #FFFFFF;
+            }
+
+            .content_flip-card-header-last {
+                position: absolute;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 13px;
+                line-height: 20px;
+                text-align: center;
+                text-transform: uppercase;
+                z-index: 7;
+                bottom: 26px;
+                left: 40px;
                 color: #FFFFFF;
             }
 
             .content_flip-card-header-horizontal {
                 position: absolute;
                 font-style: normal;
-                font-weight: 800;
-                font-size: 40px;
-                line-height: 60px;
+                font-weight: 700;
+                font-size: 11px;
+                line-height: 16px;
                 text-align: center;
                 text-transform: uppercase;
                 z-index: 7;
-                bottom: 100;
-                left: -50;
+                bottom: 38px;
+                left: -10px;
                 color: #FFFFFF;
                 transform: rotate(-90deg);
             }
@@ -1708,13 +1738,13 @@
                 position: absolute;
                 font-style: normal;
                 font-weight: 800;
-                font-size: 40px;
-                line-height: 60px;
+                font-size: 11px;
+                line-height: 16px;
                 text-align: center;
                 text-transform: uppercase;
                 z-index: 7;
-                bottom: 110;
-                left: 210;
+                bottom: 48px;
+                left: -8px;
                 color: #FFFFFF;
                 transform: rotate(90deg);
             }
@@ -1723,13 +1753,13 @@
                 position: absolute;
                 font-style: normal;
                 font-weight: 800;
-                font-size: 40px;
-                line-height: 60px;
+                font-size: 11px;
+                line-height: 16px;
                 text-align: center;
                 text-transform: uppercase;
                 z-index: 7;
-                bottom: 50;
-                left: 280;
+                bottom: 30px;
+                left: 15px;
                 color: #FFFFFF;
                 transform: rotate(90deg);
             }
@@ -1738,24 +1768,38 @@
                 position: absolute;
                 font-style: normal;
                 font-weight: 500;
-                font-size: 14px;
-                line-height: 21px;
+                font-size: 8px;
+                line-height: 12px;
                 width: 100%;
                 text-transform: capitalize;
                 z-index: 7;
-                bottom: 24;
-                left: 124;
+                bottom: 14px;
+                left: 38px;
                 color: #FFFFFF;
 
             }
 
             .content_courses_vector_icon {
                 position: absolute;
-                bottom: 29;
-                left: 293;
-                width: 8;
-                height: 12;
+                bottom: 18px;
+                left: 137px;
+                width: 3px;
+                height: 5px;
                 z-index: 7;
+            }
+
+            .content_flip-card-link-explore {
+                position: absolute;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 8px;
+                line-height: 12px;
+                width: 100%;
+                text-transform: capitalize;
+                z-index: 7;
+                bottom: 14px;
+                left: 0px;
+                color: #FFFFFF;
             }
 
             .content_flip-card_hide {
@@ -2375,7 +2419,6 @@
                 <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623989ccbe462074af990c7a.png"
                     class="header-icon" />
             </div> -->
-    </div>
     </div>
     <div class="main-container" id="main-container">
         <div class="aboutus-div">
@@ -3469,17 +3512,17 @@
                 originalRefresh();
                 document.getElementById("content_flip-card-1").className = 'content_flip-card-3';
                 document.getElementById("content_flip-card-2").style.zIndex = 4;
-                document.getElementById("content_flip-card-2").style.width = 225;
-                document.getElementById("content_flip-card-3").style.width = 188;
-                document.getElementById("content_flip-card-3").style.marginTop = 21;
+                document.getElementById("content_flip-card-2").style.width = '225px';
+                document.getElementById("content_flip-card-3").style.width = '188px';
+                document.getElementById("content_flip-card-3").style.marginTop = ' 21px';
                 document.getElementById("content_flip-card-3").style.zIndex = 3;
                 document.getElementById("content_flip-card-header-horizontal-1").className = 'content_flip-card_hide';
                 document.getElementById("content_flip-card-header-horizontal-2").className = 'content_flip-card-header-anti-horizontal';
                 document.getElementById("content_flip-card-header-horizontal-3").className = 'content_flip-card-header-anti-horizontal';
-                document.getElementById("content_flip-card-header-horizontal-2").style.left = 310;
-                document.getElementById("content_flip-card-header-horizontal-3").style.left = 300;
-                document.getElementById("content_flip-card-header-horizontal-2").style.bottom = 80;
-                document.getElementById("content_flip-card-header-horizontal-3").style.bottom = 80;
+                document.getElementById("content_flip-card-header-horizontal-2").style.left = '310px';
+                document.getElementById("content_flip-card-header-horizontal-3").style.left = '300px';
+                document.getElementById("content_flip-card-header-horizontal-2").style.bottom = '80px';
+                document.getElementById("content_flip-card-header-horizontal-3").style.bottom = '80px';
                 document.getElementById("content_courses_img-1").className = 'content_courses_img_front';
                 document.getElementById("content_courses_img-3").className = 'content_courses_img';
                 document.getElementById("content_flip-card-sub-div-1").className = '';
@@ -3491,13 +3534,13 @@
             case 2:
                 originalRefresh();
                 document.getElementById("content_flip-card-2").className = 'content_flip-card-3';
-                document.getElementById("content_flip-card-3").style.width = 230;
-                document.getElementById("content_flip-card-3").style.marginTop = 21;
+                document.getElementById("content_flip-card-3").style.width = '230px';
+                document.getElementById("content_flip-card-3").style.marginTop = '21px';
                 document.getElementById("content_flip-card-3").style.zIndex = 3;
                 document.getElementById("content_flip-card-header-horizontal-2").className = 'content_flip-card_hide';
                 document.getElementById("content_flip-card-header-horizontal-3").className = 'content_flip-card-header-anti-horizontal';
-                document.getElementById("content_flip-card-header-horizontal-3").style.left = 300;
-                document.getElementById("content_flip-card-header-horizontal-3").style.bottom = 80;
+                document.getElementById("content_flip-card-header-horizontal-3").style.left = '300px';
+                document.getElementById("content_flip-card-header-horizontal-3").style.bottom = '80px';
                 document.getElementById("content_courses_img-2").className = 'content_courses_img_front';
                 document.getElementById("content_courses_img-3").className = 'content_courses_img';
                 document.getElementById("content_flip-card-sub-div-2").className = '';
@@ -3511,13 +3554,13 @@
             case 4:
                 originalRefresh();
                 document.getElementById("content_flip-card-4").className = 'content_flip-card-3';
-                document.getElementById("content_flip-card-3").style.width = 210;
-                document.getElementById("content_flip-card-3").style.marginTop = 21;
+                document.getElementById("content_flip-card-3").style.width = '210px';
+                document.getElementById("content_flip-card-3").style.marginTop = '21px';
                 document.getElementById("content_flip-card-3").style.zIndex = 3;
                 document.getElementById("content_flip-card-header-horizontal-4").className = 'content_flip-card_hide';
                 document.getElementById("content_flip-card-header-horizontal-3").className = 'content_flip-card-header-anti-horizontal';
-                document.getElementById("content_flip-card-header-horizontal-3").style.left = -40;
-                document.getElementById("content_flip-card-header-horizontal-3").style.bottom = 80;
+                document.getElementById("content_flip-card-header-horizontal-3").style.left = '-40px';
+                document.getElementById("content_flip-card-header-horizontal-3").style.bottom = '80px';
                 document.getElementById("content_courses_img-4").className = 'content_courses_img_front';
                 document.getElementById("content_courses_img-3").className = 'content_courses_img';
                 document.getElementById("content_flip-card-sub-div-4").className = '';
@@ -3529,17 +3572,17 @@
                 originalRefresh();
                 document.getElementById("content_flip-card-5").className = 'content_flip-card-3';
                 document.getElementById("content_flip-card-4").style.zIndex = 4;
-                document.getElementById("content_flip-card-4").style.width = 225;
-                document.getElementById("content_flip-card-3").style.width = 188;
-                document.getElementById("content_flip-card-3").style.marginTop = 21;
+                document.getElementById("content_flip-card-4").style.width = '225px';
+                document.getElementById("content_flip-card-3").style.width = '188px';
+                document.getElementById("content_flip-card-3").style.marginTop = '21px';
                 document.getElementById("content_flip-card-3").style.zIndex = 3;
                 document.getElementById("content_flip-card-header-horizontal-5").className = 'content_flip-card_hide';
                 document.getElementById("content_flip-card-header-horizontal-4").className = 'content_flip-card-header-anti-horizontal';
                 document.getElementById("content_flip-card-header-horizontal-3").className = 'content_flip-card-header-anti-horizontal';
-                document.getElementById("content_flip-card-header-horizontal-4").style.left = -20;
-                document.getElementById("content_flip-card-header-horizontal-3").style.left = -40;
-                document.getElementById("content_flip-card-header-horizontal-4").style.bottom = 50;
-                document.getElementById("content_flip-card-header-horizontal-3").style.bottom = 80;
+                document.getElementById("content_flip-card-header-horizontal-4").style.left = '-20px';
+                document.getElementById("content_flip-card-header-horizontal-3").style.left = '-40px';
+                document.getElementById("content_flip-card-header-horizontal-4").style.bottom = '50px';
+                document.getElementById("content_flip-card-header-horizontal-3").style.bottom = '80px';
                 document.getElementById("content_courses_img-5").className = 'content_courses_img_front';
                 document.getElementById("content_courses_img-3").className = 'content_courses_img';
                 document.getElementById("content_flip-card-sub-div-5").className = '';
