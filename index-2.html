@@ -5,89 +5,89 @@
     <title>About Us</title>
     <style>
         /*.header {
-            z-index: 10;
-            display: flex;
-            flex-direction: row;
-            background-color: #fff;
-            height: 90px;
-            top: 0;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08) !important;
-            border-radius: 8px 0px;
-        }
+        z-index: 10;
+        display: flex;
+        flex-direction: row;
+        background-color: #fff;
+        height: 90px;
+        top: 0;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08) !important;
+        border-radius: 8px 0px;
+    }
 
-         .header-logo {
-            height: 56px;
-            margin-top: 17px;
-            margin-left: 96px;
-            margin-bottom: 17px;
-        }
+     .header-logo {
+        height: 56px;
+        margin-top: 17px;
+        margin-left: 96px;
+        margin-bottom: 17px;
+    }
 
-        .header-side-hide {
-            display: none;
-        }
+    .header-side-hide {
+        display: none;
+    }
 
-        .header-row-div {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            width: 100%;
-        }
+    .header-row-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
 
-        .nav-bar {
-            display: flex;
-            flex-direction: row;
-            padding-top: 22px;
-            padding-right: 60px;
-            color: #0D0D0D;
-        }
+    .nav-bar {
+        display: flex;
+        flex-direction: row;
+        padding-top: 22px;
+        padding-right: 60px;
+        color: #0D0D0D;
+    }
 
-        .navlink {
-            display: block;
-            border: none;
-            background: none;
-            padding: 0.5rem 1rem;
-            color: #0D0D0D;
-            font-style: normal;
-            font-weight: medium;
-            font-size: 14px;
-            line-height: 24px;
-        }
+    .navlink {
+        display: block;
+        border: none;
+        background: none;
+        padding: 0.5rem 1rem;
+        color: #0D0D0D;
+        font-style: normal;
+        font-weight: medium;
+        font-size: 14px;
+        line-height: 24px;
+    }
 
-        .navlink-active {
-            display: block;
-            border: none;
-            background: none;
-            padding: 0.5rem 1rem;
-            color: #01B9F5;
-            font-weight: 700;
-            font-style: normal;
-            font-size: 14px;
-            line-height: 24px;
-        }
+    .navlink-active {
+        display: block;
+        border: none;
+        background: none;
+        padding: 0.5rem 1rem;
+        color: #01B9F5;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 24px;
+    }
 
-        .right-container {
-            display: flex;
-            flex-direction: row;
-        }
+    .right-container {
+        display: flex;
+        flex-direction: row;
+    }
 
-        .header-icon {
-            height: 40px;
-            margin-top: 25px;
-            margin-right: 96px;
-        }
+    .header-icon {
+        height: 40px;
+        margin-top: 25px;
+        margin-right: 96px;
+    }
 
-        .header-enroll-now {
-            background: #01B9F5 !important;
-            border: none;
-            width: 140px;
-            border-top-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            height: 40px;
-            color: white;
-            font-size: 14px;
-            margin-top: 25px;
-            margin-right: 16px;
-        } */
+    .header-enroll-now {
+        background: #01B9F5 !important;
+        border: none;
+        width: 140px;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        height: 40px;
+        color: white;
+        font-size: 14px;
+        margin-top: 25px;
+        margin-right: 16px;
+    } */
         .dropdown-toggle::after {
             content: none !important;
             display: none !important;
@@ -484,7 +484,7 @@
             transition: transform 0.6s;
             transform-style: preserve-3d;
             transform: rotateY(20deg);
-
+            width: max-content;
         }
 
         .content_flip-card-inner-anti-clock {
@@ -492,12 +492,17 @@
             transition: transform 0.6s;
             transform-style: preserve-3d;
             transform: rotateY(-20deg);
+            width: max-content;
         }
 
         .content_flip-card-front {
             position: absolute;
             -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
+        }
+
+        .content_flip-card-fronts {
+            width: max-content;
         }
 
         .content_flip-card-header {
@@ -509,8 +514,8 @@
             text-align: center;
             text-transform: uppercase;
             z-index: 7;
-            bottom: 50;
-            left: 130;
+            bottom: 50px;
+            left: 130px;
             color: #FFFFFF;
         }
 
@@ -523,8 +528,8 @@
             text-align: center;
             text-transform: uppercase;
             z-index: 7;
-            bottom: 100;
-            left: -50;
+            bottom: 100px;
+            left: -50px;
             color: #FFFFFF;
             transform: rotate(-90deg);
         }
@@ -538,8 +543,8 @@
             text-align: center;
             text-transform: uppercase;
             z-index: 7;
-            bottom: 110;
-            left: 210;
+            bottom: 110px;
+            left: 210px;
             color: #FFFFFF;
             transform: rotate(90deg);
         }
@@ -553,8 +558,8 @@
             text-align: center;
             text-transform: uppercase;
             z-index: 7;
-            bottom: 50;
-            left: 280;
+            bottom: 50px;
+            left: 280px;
             color: #FFFFFF;
             transform: rotate(90deg);
         }
@@ -568,19 +573,19 @@
             width: 100%;
             text-transform: capitalize;
             z-index: 7;
-            bottom: 24;
-            left: 124;
+            bottom: 24px;
+            left: 124px;
             color: #FFFFFF;
 
         }
 
         .content_courses_vector_icon {
             position: absolute;
-            bottom: 29;
-            left: 293;
-            width: 8;
-            height: 12;
-            z-index: 7;
+            bottom: 29px;
+            left: 293px;
+            width: 8px;
+            height: 12px;
+            z-index: 7px;
         }
 
         .content_flip-card_hide {
@@ -1362,48 +1367,48 @@
             }
 
             /* .header {
-                height: 66px;
-            } */
+            height: 66px;
+        } */
             /* 
-            .header-side-hide {
-                display: flex;
-            }
+        .header-side-hide {
+            display: flex;
+        }
 
-            .header-logo {
-                height: 39px;
-                width: 56px;
-                margin-top: 13px;
-                margin-left: 20px;
-            }
+        .header-logo {
+            height: 39px;
+            width: 56px;
+            margin-top: 13px;
+            margin-left: 20px;
+        }
 
-            .header-side-bar {
-                width: 15px;
-                height: 13px;
-                margin-top: 26px;
-                margin-left: 26px;
-            }
+        .header-side-bar {
+            width: 15px;
+            height: 13px;
+            margin-top: 26px;
+            margin-left: 26px;
+        }
 
-            .header-nav-hide {
-                display: none;
-            }
+        .header-nav-hide {
+            display: none;
+        }
 
-            .header-icon {
-                height: 30px;
-                width: 30px;
-                margin-top: 18px;
-                margin-right: 20px;
-            }
+        .header-icon {
+            height: 30px;
+            width: 30px;
+            margin-top: 18px;
+            margin-right: 20px;
+        }
 
-            .header-enroll-now {
-                width: 90px;
-                height: 30px;
-                font-size: 11px;
-                margin-top: 18px;
-                margin-right: 12px;
+        .header-enroll-now {
+            width: 90px;
+            height: 30px;
+            font-size: 11px;
+            margin-top: 18px;
+            margin-right: 12px;
 
-                border-top-left-radius: 5px;
-                border-bottom-right-radius: 5px;
-            } */
+            border-top-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        } */
 
             /* About Us */
             .aboutus-div {
@@ -2540,13 +2545,13 @@
                     <div class="ccj-text">Explore our courses</div>
                     <div class="ccj-hr-div"></div>
                 </div>
-                <button class="no-button-property" id="ccj_explore_courses">
-                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-1200/banners/6246df717318f9107f8b0933.png"
-                        alt="" width="1248" height="520" class="ccj_img desktop_view">
-                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-500/static/6246d5037318f9107f8b0930.png" alt=""
-                        width="320" height="268" class="ccj_img mobile_view">
-                </button>
-                <!-- <div class="row-div ccj-main-container">
+                <!-- <button class="no-button-property" id="ccj_explore_courses">
+                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-1200/banners/6246df717318f9107f8b0933.png"
+                    alt="" width="1248" height="520" class="ccj_img desktop_view">
+                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-500/static/6246d5037318f9107f8b0930.png" alt=""
+                    width="320" height="268" class="ccj_img mobile_view">
+            </button> -->
+                <div class="row-div ccj-main-container">
                     <div class="content_flip-card-1" id="content_flip-card-1" onclick="handleFlipCardClick(1)">
                         <div class="content_flip-card-inner" id="content_flip-card-inner-1">
                             <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412f597318f9107f8b0179.png"
@@ -2576,7 +2581,7 @@
                             <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412f59be462074af991272.png"
                                 alt="Avatar" class="content_courses_img_front" id="content_courses_img-3" />
                             <div class="content_flip-card_hide" id="content_flip-card-header-horizontal-3">Beauty</div>
-                            <div class="" id="content_flip-card-sub-div-3">
+                            <div id="content_flip-card-sub-div-3">
                                 <div class="content_flip-card-header">Beauty</div>
                                 <div class="content_flip-card-link">EXPLORE THE COURSE</div>
                                 <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241a6587318f9107f8b02d3.png"
@@ -2609,7 +2614,7 @@
                             <div class="content_flip-card-link">Courses coming soon</div>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
         <div class="margin-top">
