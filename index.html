@@ -623,11 +623,13 @@
         .content_courses_img {
             width: 416px;
             height: 478px;
+            border-radius: 30px 0px;
         }
 
         .content_courses_img_anti {
             width: 368px;
             height: 497px;
+            border-radius: 0px 30px;
         }
 
         .content_courses_img_front {
@@ -1658,35 +1660,35 @@
             }
 
             .content_flip-card-1 {
-                width: 25px;
+                width: 30px;
                 margin-top: 11px;
-                perspective: 1000px;
+                perspective: 500px;
                 z-index: 1;
             }
 
             .content_flip-card-2 {
                 width: 45px;
-                perspective: 1000px;
+                perspective: 500px;
                 margin-top: 11px;
                 z-index: 2;
             }
 
             .content_flip-card-3 {
-                width: 172px;
-                perspective: 1000px;
+                width: 70px;
+                perspective: 500px;
                 z-index: 6;
             }
 
             .content_flip-card-4 {
-                width: 45px;
-                perspective: 1000px;
+                width: 33px;
+                perspective: 500px;
                 margin-top: 11px;
                 z-index: 2;
             }
 
             .content_flip-card-5 {
-                width: 40px;
-                perspective: 1000px;
+                width: 0px;
+                perspective: 500px;
                 margin-top: 11px;
                 z-index: 1;
             }
@@ -1809,17 +1811,35 @@
             .content_courses_img {
                 width: 172px;
                 height: 246px;
+                border-radius: 12px 0px;
             }
 
             .content_courses_img_anti {
                 width: 172px;
                 height: 246px;
+                border-radius: 0px 12px;
+            }
+
+            .content_flip-card-inner {
+                position: relative;
+                transition: transform 0.6s;
+                transform-style: preserve-3d;
+                transform: rotateY(50deg);
+                width: max-content;
+            }
+
+            .content_flip-card-inner-anti-clock {
+                position: relative;
+                transition: transform 0.6s;
+                transform-style: preserve-3d;
+                transform: rotateY(-50deg);
+                width: max-content;
             }
 
             .content_courses_img_front {
                 width: 172px;
                 height: 268px;
-                border-radius: 30px 0px;
+                border-radius: 12px 0px;
             }
 
             /* instructors */
@@ -2609,20 +2629,20 @@
                 <div class="row-div ccj-main-container">
                     <div class="content_flip-card-1" id="content_flip-card-1" onclick="handleFlipCardClick(1)">
                         <div class="content_flip-card-inner" id="content_flip-card-inner-1">
-                            <div class="desktop_view">
+                            <!-- <div class="desktop_view">
                                 <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412f597318f9107f8b0179.png"
                                     alt="Avatar" class="content_courses_img" id="content_courses_img-1" />
+                            </div> -->
+                            <!-- <div class="mobile_view"> -->
+                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-200/banners/626bc9e2be462074af9950f3.png"
+                                alt="Avatar" class="content_courses_img" id="content_courses_img-1" />
+                            <!-- </div> -->
+                            <div class="content_flip-card-header-horizontal" id="content_flip-card-header-horizontal-1">
+                                Fashion</div>
+                            <div class="content_flip-card_hide" id="content_flip-card-sub-div-1">
+                                <div class="content_flip-card-header">Fashion</div>
+                                <div class="content_flip-card-link">Courses coming soon</div>
                             </div>
-                            <div class="mobile_view">
-                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-200/banners/626bc9e2be462074af9950f3.png"
-                                    alt="Avatar" class="content_courses_img" id="content_courses_img-1" />
-                            </div>
-                        </div>
-                        <div class="content_flip-card-header-horizontal" id="content_flip-card-header-horizontal-1">
-                            Fashion</div>
-                        <div class="content_flip-card_hide" id="content_flip-card-sub-div-1">
-                            <div class="content_flip-card-header">Fashion</div>
-                            <div class="content_flip-card-link">Courses coming soon</div>
                         </div>
                     </div>
                     <div class="content_flip-card-2" id="content_flip-card-2" onclick="handleFlipCardClick(2)">
@@ -2635,12 +2655,12 @@
                                 <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-200/banners/626bc9e27318f9107f8b422c.png"
                                     alt="Avatar" class="content_courses_img" id="content_courses_img-2" />
                             </div>
-                        </div>
-                        <div class="content_flip-card-header-horizontal" id="content_flip-card-header-horizontal-2">
-                            Luxury</div>
-                        <div class="content_flip-card_hide" id="content_flip-card-sub-div-2">
-                            <div class="content_flip-card-header">Luxury</div>
-                            <div class="content_flip-card-link">Courses coming soon</div>
+                            <div class="content_flip-card-header-horizontal" id="content_flip-card-header-horizontal-2">
+                                Luxury</div>
+                            <div class="content_flip-card_hide" id="content_flip-card-sub-div-2">
+                                <div class="content_flip-card-header">Luxury</div>
+                                <div class="content_flip-card-link">Courses coming soon</div>
+                            </div>
                         </div>
                     </div>
                     <div class="content_flip-card-3" id="content_flip-card-3" onclick="handleFlipCardClick(3)">
@@ -2653,7 +2673,6 @@
                                 <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-200/banners/626bc9e27318f9107f8b422d.png"
                                     alt="Avatar" class="content_courses_img_front" id="content_courses_img-3" />
                             </div>
-
                             <div class="content_flip-card_hide" id="content_flip-card-header-horizontal-3">Beauty</div>
                             <div id="content_flip-card-sub-div-3">
                                 <div class="content_flip-card-header">Beauty</div>
@@ -2675,13 +2694,13 @@
                                 <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-200/banners/626bc9e2be462074af9950f5.png"
                                     alt="Avatar" class="content_courses_img_anti" id="content_courses_img-4" />
                             </div>
-                        </div>
-                        <div class="content_flip-card-header-anti-horizontal-2"
-                            id="content_flip-card-header-horizontal-4">
-                            Food</div>
-                        <div class="content_flip-card_hide" id="content_flip-card-sub-div-4">
-                            <div class="content_flip-card-header">Food</div>
-                            <div class="content_flip-card-link">Courses coming soon</div>
+                            <div class="content_flip-card-header-anti-horizontal-2"
+                                id="content_flip-card-header-horizontal-4">
+                                Food</div>
+                            <div class="content_flip-card_hide" id="content_flip-card-sub-div-4">
+                                <div class="content_flip-card-header">Food</div>
+                                <div class="content_flip-card-link">Courses coming soon</div>
+                            </div>
                         </div>
                     </div>
                     <div class="content_flip-card-5" id="content_flip-card-5" onclick="handleFlipCardClick(5)">
@@ -2694,13 +2713,13 @@
                                 <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-200/banners/626bc9e2be462074af9950f4.png"
                                     alt="Avatar" class="content_courses_img_anti" id="content_courses_img-5" />
                             </div>
-                        </div>
-                        <div class="content_flip-card-header-anti-horizontal"
-                            id="content_flip-card-header-horizontal-5">
-                            Influencer</div>
-                        <div class="content_flip-card_hide" id="content_flip-card-sub-div-5">
-                            <div class="content_flip-card-header">Influencer</div>
-                            <div class="content_flip-card-link">Courses coming soon</div>
+                            <div class="content_flip-card-header-anti-horizontal"
+                                id="content_flip-card-header-horizontal-5">
+                                Influencer</div>
+                            <div class="content_flip-card_hide" id="content_flip-card-sub-div-5">
+                                <div class="content_flip-card-header">Influencer</div>
+                                <div class="content_flip-card-link">Courses coming soon</div>
+                            </div>
                         </div>
                     </div>
                 </div>

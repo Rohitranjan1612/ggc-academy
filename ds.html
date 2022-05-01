@@ -1,337 +1,3690 @@
 <!DOCTYPE html>
-<!-- === Coding by CodingLab | www.codinglabweb.com === -->
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About Us</title>
+    <style>
+        /*.header {
+            z-index: 10;
+            display: flex;
+            flex-direction: row;
+            background-color: #fff;
+            height: 90px;
+            top: 0;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08) !important;
+            border-radius: 8px 0px;
+        }
 
-    <!-- ===== Link Swiper's CSS ===== -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+         .header-logo {
+            height: 56px;
+            margin-top: 17px;
+            margin-left: 96px;
+            margin-bottom: 17px;
+        }
 
-    <!-- ===== Fontawesome CDN Link ===== -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
-        
-    <!-- ===== CSS ===== -->
-    <link rel="stylesheet" href="cd.css">
-    
-    <!--<title>Card with Sliding Feature</title>-->
+        .header-side-hide {
+            display: none;
+        }
+
+        .header-row-div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .nav-bar {
+            display: flex;
+            flex-direction: row;
+            padding-top: 22px;
+            padding-right: 60px;
+            color: #0D0D0D;
+        }
+
+        .navlink {
+            display: block;
+            border: none;
+            background: none;
+            padding: 0.5rem 1rem;
+            color: #0D0D0D;
+            font-style: normal;
+            font-weight: medium;
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        .navlink-active {
+            display: block;
+            border: none;
+            background: none;
+            padding: 0.5rem 1rem;
+            color: #01B9F5;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        .right-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .header-icon {
+            height: 40px;
+            margin-top: 25px;
+            margin-right: 96px;
+        }
+
+        .header-enroll-now {
+            background: #01B9F5 !important;
+            border: none;
+            width: 140px;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            height: 40px;
+            color: white;
+            font-size: 14px;
+            margin-top: 25px;
+            margin-right: 16px;
+        } */
+        .dropdown-toggle::after {
+            content: none !important;
+            display: none !important;
+        }
+
+        .main-container {
+            width: 1248px;
+            margin: 0 auto;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .sticky+.main-container {
+            padding-top: 102px;
+        }
+
+        /* About Us */
+        .aboutus-div {
+            min-height: 630px;
+            background: #F7FCFF;
+            border-radius: 20px;
+            width: 1248px;
+            margin: 5px auto;
+        }
+
+        .aboutus_div_1 {
+            margin-top: 113px;
+            margin-left: 73px;
+            flex: 1;
+        }
+
+        .aboutus_row_div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .aboutus-row-div {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .aboutus_row_div_video {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .aboutus_video_div {
+            margin-top: 206px;
+            border-top-left-radius: 20px;
+        }
+
+        .aboutus_no_properties {
+            position: absolute;
+            border: none;
+            background: none;
+            margin-top: 181px;
+            left: 455px;
+            width: 54px;
+            height: 52px;
+            padding: 0px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .aboutus_no_properties_hide {
+            display: none;
+        }
+
+        .aboutus-play-pause-button {
+            width: 52px;
+            height: 52px;
+        }
+
+        .aboutus_video {
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            width: 761px;
+            height: 428px;
+        }
+
+        .aboutus_hr_div {
+            width: 80px;
+            border: 8px solid #01B9F5;
+            margin-top: 113px;
+            border-radius: 40px;
+            margin-bottom: 40px;
+        }
+
+        .aboutus_header {
+            font-style: normal;
+            position: absolute;
+            font-weight: 400;
+            font-size: 27px;
+            line-height: 40px;
+            text-transform: uppercase;
+
+            color: #0D0D0D
+        }
+
+        .aboutus_text {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            color: #0D0D0D;
+        }
+
+        .aboutus_sub_header {
+            position: absolute;
+            font-style: normal;
+            font-weight: 800;
+            margin-top: 33px;
+            /* margin-bottom: 12px; */
+            font-size: 48px;
+            line-height: 76px;
+            text-transform: capitalize;
+            color: #0D0D0D;
+        }
+
+        .aboutus-logo-1 {
+            width: 217px;
+            height: 159px;
+        }
+
+        .aboutus-reverse {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            margin-top: 87px;
+        }
+
+        .aboutus-logo-2 {
+            width: 217px;
+            height: 340px;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        .aboutus-logo-3 {
+            width: 217px;
+            height: 192px;
+            margin-left: 10px;
+            border-top-left-radius: 10px;
+        }
+
+        .aboutus-logo-4 {
+            width: 217px;
+            height: 192px;
+            margin-left: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .aboutus-logo-5 {
+            width: 217px;
+            height: 320px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+
+        .aboutus_carousel {
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .aboutus_carousel_track-container {
+            min-height: 630px;
+            overflow: hidden;
+        }
+
+        .aboutus_carousel_track {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            position: relative;
+            transition: transform 250ms ease-in;
+        }
+
+        .aboutus_carousel_slide {
+            position: absolute;
+            width: 100%;
+        }
+
+        .aboutus_carousel_nav {
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            top: 0;
+            margin-top: 625px;
+            margin-left: 72px;
+        }
+
+        .aboutus_carousel_indicator {
+            border: 0;
+            border-radius: 50%;
+            margin: 0 2px;
+            width: 12px;
+            background: #E3E3E3;
+            height: 12px;
+        }
+
+        .aboutus_carousel_indicator.aboutus_current-slide {
+            width: 20px;
+            border-radius: 10px;
+            background: #76C9F1;
+        }
+
+        .col-div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .row-div {
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* Why should you join us */
+        .focusareas-div {
+            width: 1248px;
+            margin: auto;
+        }
+
+        .join-us-div {
+            margin-top: 125px;
+        }
+
+        .join-us-wsy-text {
+            font-style: normal;
+            font-weight: medium;
+            font-size: 24px;
+            line-height: 26px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #0D0D0D;
+        }
+
+        .join-us-text {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 48px;
+            line-height: 76px;
+            text-align: center;
+            text-transform: capitalize;
+            color: #0D0D0D;
+        }
+
+        .join-us-hr-div {
+            width: 80px;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            border: 8px solid #FFC400;
+            border-radius: 40px;
+        }
+
+        .join-us-main-container {
+            display: flex;
+            flex-direction: row;
+            margin-top: 84px;
+        }
+
+        .join-us-logo {
+            height: 66px;
+            width: 91px;
+            margin-right: 40px;
+        }
+
+        .join-us-logo-2 {
+            width: 80px;
+            height: 60px;
+            margin-right: 40px;
+        }
+
+        .join-us-sub-header {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 36px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+            color: #0D0D0D;
+        }
+
+        .join-us-simple-text {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            color: #777777;
+        }
+
+        .div-with-border-line {
+            flex: 1;
+            border-right: 1px solid #D5D5D5;
+            padding-right: 77px;
+        }
+
+        .div-without-border-line {
+            flex: 1;
+            padding-left: 60px;
+        }
+
+        /* Content Creation Journey - ccj  */
+        .ccj-div {
+            margin-top: 125px;
+        }
+
+        .ccj-wsy-text {
+            font-style: normal;
+            font-weight: medium;
+            font-size: 24px;
+            line-height: 26px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #0D0D0D;
+        }
+
+        .ccj-text {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 48px;
+            line-height: 76px;
+            text-align: center;
+            text-transform: capitalize;
+            color: #0D0D0D;
+        }
+
+        .ccj-hr-div {
+            width: 80px;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            border: 8px solid #01B9F5;
+            border-radius: 40px;
+        }
+
+        .ccj-main-container {
+            margin-top: 80px;
+            height: 520px;
+        }
+
+        .no-button-property {
+            border: none;
+            background: none;
+            margin: none;
+            padding: none;
+        }
+
+        .content_flip-card-1 {
+            width: 188px;
+            margin-top: 21px;
+            perspective: 1000px;
+            z-index: 1;
+        }
+
+        .content_flip-card-2 {
+            width: 230px;
+            perspective: 1000px;
+            margin-top: 21px;
+            z-index: 2;
+        }
+
+        .content_flip-card-3 {
+            width: 240px;
+            perspective: 1000px;
+            z-index: 6;
+        }
+
+        .content_flip-card-4 {
+            width: 210px;
+            perspective: 1000px;
+            margin-top: 21px;
+            z-index: 2;
+        }
+
+        .content_flip-card-5 {
+            width: 188px;
+            perspective: 1000px;
+            margin-top: 21px;
+            z-index: 1;
+        }
+
+        .content_flip-card-inner {
+            position: relative;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            transform: rotateY(20deg);
+            width: max-content;
+        }
+
+        .content_flip-card-inner-anti-clock {
+            position: relative;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            transform: rotateY(-20deg);
+            width: max-content;
+        }
+
+        .content_flip-card-front {
+            position: absolute;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .content_flip-card-fronts {
+            width: max-content;
+        }
+
+        .content_flip-card-header {
+            position: absolute;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 60px;
+            text-align: center;
+            text-transform: uppercase;
+            z-index: 7;
+            bottom: 50px;
+            left: 130px;
+            color: #FFFFFF;
+        }
+
+        .content_flip-card-header-last {
+            position: absolute;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 60px;
+            text-align: center;
+            text-transform: uppercase;
+            z-index: 7;
+            bottom: 50px;
+            left: 90px;
+            color: #FFFFFF;
+        }
+
+        .content_flip-card-header-horizontal {
+            position: absolute;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 60px;
+            text-align: center;
+            text-transform: uppercase;
+            z-index: 7;
+            bottom: 100px;
+            left: -50px;
+            color: #FFFFFF;
+            transform: rotate(-90deg);
+        }
+
+        .content_flip-card-header-anti-horizontal {
+            position: absolute;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 60px;
+            text-align: center;
+            text-transform: uppercase;
+            z-index: 7;
+            bottom: 110px;
+            left: 210px;
+            color: #FFFFFF;
+            transform: rotate(90deg);
+        }
+
+        .content_flip-card-header-anti-horizontal-2 {
+            position: absolute;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 60px;
+            text-align: center;
+            text-transform: uppercase;
+            z-index: 7;
+            bottom: 50px;
+            left: 280px;
+            color: #FFFFFF;
+            transform: rotate(90deg);
+        }
+
+        .content_flip-card-link {
+            position: absolute;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+            width: 100%;
+            text-transform: capitalize;
+            z-index: 7;
+            bottom: 24px;
+            left: 124px;
+            color: #FFFFFF;
+
+        }
+
+        .content_flip-card-link-explore {
+            position: absolute;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+            width: 100%;
+            text-transform: capitalize;
+            z-index: 7;
+            bottom: 24px;
+            left: 86px;
+            color: #FFFFFF;
+        }
+
+        .content_courses_vector_icon {
+            position: absolute;
+            bottom: 29px;
+            left: 293px;
+            width: 8px;
+            height: 12px;
+            z-index: 7px;
+        }
+
+        .content_flip-card_hide {
+            display: none;
+        }
+
+        .content_courses_img {
+            width: 416px;
+            height: 478px;
+            border-radius: 30px 0px;
+        }
+
+        .content_courses_img_anti {
+            width: 368px;
+            height: 497px;
+            border-radius: 0px 30px;
+        }
+
+        .content_courses_img_front {
+            width: 416px;
+            height: 520px;
+            border-radius: 30px 0px;
+        }
+
+        /* instructors */
+        .margin-top {
+            margin-top: 120px;
+        }
+
+        .instructors-div {
+            height: 868px;
+            background: #FEF9E8;
+            border-radius: 30px 0px;
+            padding-top: 100px;
+            width: 1248px;
+            margin: auto;
+        }
+
+        .instructors-header {
+            font-style: normal;
+            font-weight: medium;
+            font-size: 24px;
+            line-height: 26px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #0D0D0D;
+        }
+
+        .instructors-sub-header {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 48px;
+            line-height: 76px;
+            text-align: center;
+            text-transform: capitalize;
+            color: #0D0D0D;
+            margin: 0px 24px;
+        }
+
+        .instructors-hr-div {
+            width: 80px;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            border: 8px solid #FFC400;
+            border-radius: 40px;
+        }
+
+        .instructors-main-container {
+            margin: 68px 68px 44px 68px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            /* overflow: hidden; */
+        }
+
+        .instructors-main-container-mobile {
+            display: none;
+        }
+
+        .instructors_card_div {
+            display: flex;
+            flex-direction: column;
+            margin-right: 24px;
+            margin-left: 5px;
+            background: #FFFFFF;
+            width: 344px;
+            height: 494px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+            border-radius: 30px;
+        }
+
+        .instructors_img-1 {
+            position: absolute;
+            width: 358px;
+            height: 252px;
+            border-radius: 30px 0px;
+            left: -5;
+        }
+
+        .instructors_img-2 {
+            position: absolute;
+            width: 358px;
+            height: 252px;
+            border-radius: 30px 0px;
+            left: 372;
+        }
+
+        .instructors_img-3 {
+            position: absolute;
+            width: 358px;
+            height: 252px;
+            border-radius: 30px 0px;
+            left: 745;
+        }
+
+        .instructors_col_div {
+            display: flex;
+            flex-direction: column;
+            margin-top: 242px;
+            width: 344px;
+            padding: 32px;
+        }
+
+        .instructors_card_lite_text {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+
+            color: #666666;
+        }
+
+        .instructors_card_header {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 30px;
+
+            color: #0D0D0D;
+        }
+
+        .instructors_card_text {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            margin-top: 4px;
+            line-height: 26px;
+            color: #0D0D0D;
+        }
+
+        .instructors-sub-container-1 {}
+
+        .instructors-sub-container-carousel {
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .instructors_carousel_track-container {
+            min-height: 566px;
+            min-width: 1132px;
+            padding: 5px;
+            overflow: hidden;
+        }
+
+        .instructors_carousel_track {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            position: relative;
+            transition: transform 250ms ease-in;
+        }
+
+        .instructors_carousel_slide {
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            width: 1132px;
+        }
+
+        .instructors_carousel_nav {
+            position: relative;
+        }
+
+        .instructors_carousel_button_div {
+            position: absolute;
+            right: 60;
+            display: none;
+            flex-direction: row;
+            border: 0;
+            margin: 0 2px;
+            width: 12px;
+            height: 12px;
+        }
+
+        .instructors_carousel_button-1 {
+            width: 31px;
+            height: 30px;
+            border-top-left-radius: 5px;
+            border: none;
+            background: #D0D0D0;
+            padding: 8px 14px;
+        }
+
+        .instructors_carousel_button-2 {
+            width: 31px;
+            height: 30px;
+            border-bottom-right-radius: 5px;
+            border: none;
+            background: #FFC400;
+            padding: 8px 14px;
+            margin-left: 10px;
+        }
+
+        .instructors_vector_icon {
+            width: 8px;
+            height: 13px;
+            transform: rotate(180deg);
+        }
+
+        .instructors_vector_icon_right {
+            width: 8px;
+            height: 13px;
+        }
+
+        /* courses */
+        .courses-div {
+            width: 1248px;
+            margin: auto;
+        }
+
+        .courses-header {
+            font-style: normal;
+            font-weight: medium;
+            font-size: 24px;
+            line-height: 26px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #0D0D0D;
+        }
+
+        .courses-sub-header {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 48px;
+            line-height: 76px;
+            text-align: center;
+            text-transform: capitalize;
+            color: #0D0D0D;
+        }
+
+        .courses-hr-div {
+            width: 80px;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            border: 8px solid #01B9F5;
+            border-radius: 40px;
+        }
+
+        .courses-main-container {
+            height: 527px;
+            background: #F6FCFF;
+            border-radius: 30px 0px;
+            margin-top: 78px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .courses-sub-container-1 {
+            flex: 1;
+        }
+
+        .courses-sub-container-carousel {
+            position: relative;
+            margin: 0 auto;
+        }
+
+
+        .courses_carousel_track-container {
+            min-height: 408px;
+            margin-left: 60px;
+            margin-right: 60px;
+            margin-top: 60px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .courses_carousel_track {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            position: relative;
+            transition: transform 250ms ease-in;
+        }
+
+        .courses_carousel_slide {
+            position: absolute;
+            width: 100%;
+        }
+
+        .courses_carousel_nav {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            margin-top: 5px;
+            margin-left: 291px;
+        }
+
+        .courses_carousel_indicator {
+            border: 0;
+            border-radius: 50%;
+            margin: 0 2px;
+            width: 12px;
+            background: #E3E3E3;
+            height: 12px;
+        }
+
+        .courses_carousel_indicator.courses_current-slide {
+            width: 20px;
+            border-radius: 10px;
+            background: #76C9F1;
+        }
+
+        .courses_img {
+            width: 500px;
+            height: 408px;
+            border-top-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+
+        .courses-sub-container-2 {
+            flex: 1;
+            padding-top: 58px;
+            padding-right: 60px;
+            padding-bottom: 60px;
+            padding-left: 10px;
+        }
+
+        .courses-sub-container-header {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 45px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+
+            color: #0D0D0D;
+        }
+
+        .courses-sub-container-text {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 30px;
+            margin-top: 8px;
+            margin-bottom: 14px;
+            color: #5E5D5D;
+        }
+
+        .courses-sub-container-li {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .courses-sub-container-li-dots {
+            border: 0;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            background: #D8D8D8;
+            margin-top: 14px;
+            margin-right: 18px;
+        }
+
+        .courses-sub-container-li-lite {
+            font-style: normal;
+            font-weight: 400;
+            margin-bottom: 14px;
+            font-size: 20px;
+            line-height: 35px;
+            color: #5E5D5D;
+        }
+
+        .courses-sub-container-semi-bold {
+            font-style: normal;
+            font-weight: 600;
+            margin-bottom: 43px;
+            font-size: 20px;
+            line-height: 35px;
+            color: #5E5D5D;
+        }
+
+        .courses-sub-container-semi-last {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 30px;
+            color: #5E5D5D;
+        }
+
+        .courses-view-details {
+            position: absolute;
+            background: #01B9F5 !important;
+            border: none;
+            width: 140px;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            height: 40px;
+            color: white;
+            font-size: 14px;
+            margin-top: 509px;
+            margin-left: 636px;
+        }
+
+        /* download */
+        .download-div {
+            display: flex;
+            flex-direction: row;
+            width: 1248px;
+            margin: auto;
+        }
+
+        .download-inner-div-1 {
+            flex: 1;
+            background: #FFC400;
+            padding-left: 48px;
+            padding-right: 48px;
+            padding-top: 32px;
+            padding-bottom: 40px;
+            border-top-left-radius: 10px;
+        }
+
+        .download-inner-div-2 {
+            flex: 1;
+            background: #FCD77C;
+            padding-left: 48px;
+            border-bottom-right-radius: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .download-header {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 60px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+            color: #0D0D0D;
+        }
+
+        .download-sub-header {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            color: #5B5B5B;
+        }
+
+        .download-sub-inner-div-1 {
+            display: flex;
+            flex-direction: column;
+            flex: 2;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .download-sub-inner-text {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            /* or 114% */
+
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+
+            color: #000000;
+        }
+
+        .download-sub-inner-div-3 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .download-android-logo {
+            width: 100px;
+            height: 30px;
+            margin-right: 12px;
+        }
+
+        .download-ios-logo {
+            width: 100px;
+            height: 30px;
+        }
+
+        .download-sub-inner-div-2 {
+            flex: 1;
+            margin: 20px;
+            background: #FFFFFF;
+            border-bottom-right-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .download-sub-inner-text-2 {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            color: #000000;
+        }
+
+        .download-qrcode-logo {
+            width: 57px;
+            height: 57px;
+        }
+
+        /* faqs */
+        .faqs-div {
+            width: 1248px;
+            margin: auto;
+        }
+
+        .faqs-header {
+            font-style: normal;
+            font-weight: medium;
+            font-size: 24px;
+            line-height: 26px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #0D0D0D;
+        }
+
+        .faqs-sub-header {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 48px;
+            line-height: 76px;
+            text-align: center;
+            text-transform: capitalize;
+            color: #0D0D0D;
+        }
+
+        .faqs-hr-div {
+            width: 80px;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            border: 8px solid #01B9F5;
+            border-radius: 40px;
+        }
+
+        .faqs-main-container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 80px;
+            margin-bottom: 120px;
+        }
+
+        .faqs-li {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-bottom: 32px;
+            padding-top: 32px;
+            border-bottom: 1.5px solid #E6E6E6;
+        }
+
+        .faqs-li-container {
+            display: flex;
+            flex: 9;
+            flex-direction: column;
+        }
+
+        .faqs-li-header {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 36px;
+            letter-spacing: 0.5px;
+            color: #000000;
+        }
+
+        .faqs-li-text {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 31px;
+            color: #333333;
+            display: none;
+        }
+
+        .faqs-li-text-current {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 31px;
+            color: #333333;
+        }
+
+        .faqs-li-icon-div {
+            flex: 0.4;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 25px;
+            margin-top: 14px;
+        }
+
+        .faqs-li-icon-current {
+            width: 16px;
+            height: 10px;
+        }
+
+        .faqs-li-icon {
+            width: 16px;
+            height: 10px;
+            transform: rotate(-180deg);
+        }
+
+        /* footer */
+        .footer {
+            display: flex;
+            flex-direction: column;
+            min-width: 1248px;
+        }
+
+        .footer-follow-us {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 80px;
+            background: #505050;
+        }
+
+        .footer-follow-us-text {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+
+        .footer-follow-us-img {
+            margin-right: 16px;
+        }
+
+        .footer-div-2 {
+            min-height: 124px;
+            background: #0D0D0D;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-row-div {
+            display: flex;
+            flex-direction: row;
+            width: 1244px;
+        }
+
+        .footer-email {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 24px;
+
+            display: flex;
+            align-items: center;
+
+            color: #FFFFFF;
+        }
+
+        .footer-navlink {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 24px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            border: none;
+            border-right: 1px solid #646464;
+            margin-bottom: 10px;
+            background: none;
+        }
+
+        .footer-navlink-last {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 24px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            border: none;
+            margin-bottom: 10px;
+            background: none;
+        }
+
+        .footer-row-div-2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 1244px;
+            border-top: 1px solid #646464;
+            margin-top: 20;
+            padding-top: 16;
+        }
+
+        .footer-text {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 24px;
+            /* identical to box height, or 200% */
+
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.06em;
+
+            color: #FFFFFF;
+
+            opacity: 0.56;
+        }
+
+        .mobile_view {
+            display: none;
+        }
+
+        .desktop_view {
+            display: block;
+        }
+
+        .ccj_img {
+            margin-top: 80px;
+        }
+
+        @media(max-width: 1000px) {
+            .main-container {
+                width: 360px;
+            }
+
+            .ccj_img {
+                margin-top: 42px;
+            }
+
+            .aboutus_no_properties {
+                border: none;
+                background: none;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                margin-top: 35px;
+                padding: 0px;
+                left: 75px;
+            }
+
+            .aboutus-play-pause-button {
+                width: 20px;
+                height: 20px;
+            }
+
+            /* .header {
+                height: 66px;
+            } */
+            /* 
+            .header-side-hide {
+                display: flex;
+            }
+
+            .header-logo {
+                height: 39px;
+                width: 56px;
+                margin-top: 13px;
+                margin-left: 20px;
+            }
+
+            .header-side-bar {
+                width: 15px;
+                height: 13px;
+                margin-top: 26px;
+                margin-left: 26px;
+            }
+
+            .header-nav-hide {
+                display: none;
+            }
+
+            .header-icon {
+                height: 30px;
+                width: 30px;
+                margin-top: 18px;
+                margin-right: 20px;
+            }
+
+            .header-enroll-now {
+                width: 90px;
+                height: 30px;
+                font-size: 11px;
+                margin-top: 18px;
+                margin-right: 12px;
+
+                border-top-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            } */
+
+            /* About Us */
+            .aboutus-div {
+                width: 320px;
+                min-height: 260px;
+            }
+
+            .aboutus_div_1 {
+                margin-top: 20px;
+                margin-left: 16px;
+            }
+
+
+            .aboutus_video_div {
+                margin-top: 19px;
+                margin-left: 84px;
+                border-top-left-radius: 10px;
+            }
+
+            .aboutus_video {
+                border-top-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                width: 236px;
+                height: 133px;
+            }
+
+            .aboutus_hr_div {
+                width: 40px;
+                border: 4px solid #01B9F5;
+                border-radius: 40px;
+                margin-bottom: 10px;
+                margin-top: 40px;
+            }
+
+            .aboutus-row-div {
+                min-height: 260px;
+            }
+
+            .aboutus_header {
+                position: none;
+                font-weight: 500;
+                font-size: 11px;
+                line-height: 16px;
+            }
+
+            .aboutus_sub_header {
+                margin-top: 10px;
+                font-size: 18px;
+                line-height: 30px;
+            }
+
+            .aboutus_text {
+                font-size: 11px;
+                line-height: 16px;
+            }
+
+            .aboutus-logo-1 {
+                width: 58px;
+                height: 50px;
+            }
+
+            .aboutus-reverse {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-end;
+                margin-top: 87px;
+            }
+
+            .mobile_view {
+                display: block
+            }
+
+            .desktop_view {
+                display: none;
+            }
+
+            .aboutus-logo-2 {
+                width: 58px;
+                height: 108px;
+                margin-top: 10px;
+                margin-left: 2px;
+            }
+
+            .aboutus-logo-3 {
+                display: none;
+            }
+
+            .aboutus-logo-4 {
+                width: 58px;
+                height: 66px;
+                margin-left: 2px;
+                border-bottom-right-radius: 5px;
+            }
+
+            .aboutus-logo-5 {
+                width: 58px;
+                height: 127px;
+                margin-bottom: 2px;
+                margin-left: 2px;
+            }
+
+            .aboutus_carousel_track-container {
+                min-height: 260px;
+            }
+
+            .aboutus_row_div_video {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .aboutus_carousel_nav {
+                margin-left: 30px;
+                margin-top: 258px;
+            }
+
+            .aboutus_carousel_indicator {
+                width: 4px;
+                margin: 0 1px;
+                padding: 0px;
+                height: 4px;
+            }
+
+            .aboutus_carousel_indicator.aboutus_current-slide {
+                width: 8px;
+                border-radius: 2px;
+            }
+
+            /* Why should you join us */
+            .focusareas-div {
+                width: 320px;
+            }
+
+            .join-us-div {
+                margin-top: 64px;
+            }
+
+            .join-us-wsy-text {
+                font-size: 11px;
+                line-height: 16px;
+            }
+
+            .join-us-text {
+                font-size: 20px;
+                line-height: 30px;
+            }
+
+            .join-us-hr-div {
+                width: 40px;
+                border: 4px solid #FFC400;
+            }
+
+            .join-us-main-container {
+                flex-direction: column;
+                margin-top: 42px;
+            }
+
+            .join-us-logo {
+                width: 50px;
+                height: 32.64px;
+                margin-right: 19px;
+            }
+
+            .join-us-logo-2 {
+                width: 40px;
+                height: 30px;
+                margin-right: 19px;
+            }
+
+            .join-us-sub-header {
+                font-size: 14px;
+                line-height: 21px;
+            }
+
+            .join-us-simple-text {
+                font-size: 11px;
+                line-height: 18px;
+            }
+
+            .div-with-border-line {
+                border-right: none;
+                border-bottom: 1px solid #D5D5D5;
+                padding-right: 0;
+                padding-bottom: 24px;
+                margin-bottom: 24px;
+            }
+
+            .div-without-border-line {
+                flex: 1;
+                padding-left: 0;
+            }
+
+            /* Content Creation Journey - ccj  */
+            .ccj-div {
+                margin-top: 64px;
+            }
+
+            .ccj-wsy-text {
+
+                font-size: 11px;
+                line-height: 16px;
+            }
+
+            .ccj-text {
+                font-size: 20px;
+                line-height: 30px;
+            }
+
+            .ccj-hr-div {
+                width: 40px;
+                border: 4px solid #01B9F5;
+                border-radius: 20px;
+            }
+
+            .ccj-main-container {
+                margin-top: 40px;
+                height: 268px;
+            }
+
+            .content_flip-card-1 {
+                width: 30px;
+                margin-top: 11px;
+                perspective: 500px;
+                z-index: 1;
+            }
+
+            .content_flip-card-2 {
+                width: 45px;
+                perspective: 500px;
+                margin-top: 11px;
+                z-index: 2;
+            }
+
+            .content_flip-card-3 {
+                width: 70px;
+                perspective: 500px;
+                z-index: 6;
+            }
+
+            .content_flip-card-4 {
+                width: 33px;
+                perspective: 500px;
+                margin-top: 11px;
+                z-index: 2;
+            }
+
+            .content_flip-card-5 {
+                width: 0px;
+                perspective: 500px;
+                margin-top: 11px;
+                z-index: 1;
+            }
+
+            .content_flip-card-header {
+                position: absolute;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 13px;
+                line-height: 20px;
+                text-align: center;
+                text-transform: uppercase;
+                z-index: 7;
+                bottom: 26px;
+                left: 57px;
+                color: #FFFFFF;
+            }
+
+            .content_flip-card-header-last {
+                position: absolute;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 13px;
+                line-height: 20px;
+                text-align: center;
+                text-transform: uppercase;
+                z-index: 7;
+                bottom: 26px;
+                left: 40px;
+                color: #FFFFFF;
+            }
+
+            .content_flip-card-header-horizontal {
+                position: absolute;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 11px;
+                line-height: 16px;
+                text-align: center;
+                text-transform: uppercase;
+                z-index: 7;
+                bottom: 38px;
+                left: -10px;
+                color: #FFFFFF;
+                transform: rotate(-90deg);
+            }
+
+            .content_flip-card-header-anti-horizontal {
+                position: absolute;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 11px;
+                line-height: 16px;
+                text-align: center;
+                text-transform: uppercase;
+                z-index: 7;
+                bottom: 48px;
+                left: -8px;
+                color: #FFFFFF;
+                transform: rotate(90deg);
+            }
+
+            .content_flip-card-header-anti-horizontal-2 {
+                position: absolute;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 11px;
+                line-height: 16px;
+                text-align: center;
+                text-transform: uppercase;
+                z-index: 7;
+                bottom: 30px;
+                left: 15px;
+                color: #FFFFFF;
+                transform: rotate(90deg);
+            }
+
+            .content_flip-card-link {
+                position: absolute;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 8px;
+                line-height: 12px;
+                width: 100%;
+                text-transform: capitalize;
+                z-index: 7;
+                bottom: 14px;
+                left: 38px;
+                color: #FFFFFF;
+
+            }
+
+            .content_courses_vector_icon {
+                position: absolute;
+                bottom: 18px;
+                left: 137px;
+                width: 3px;
+                height: 5px;
+                z-index: 7;
+            }
+
+            .content_flip-card-link-explore {
+                position: absolute;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 8px;
+                line-height: 12px;
+                width: 100%;
+                text-transform: capitalize;
+                z-index: 7;
+                bottom: 14px;
+                left: 0px;
+                color: #FFFFFF;
+            }
+
+            .content_flip-card_hide {
+                display: none;
+            }
+
+            .content_courses_img {
+                width: 172px;
+                height: 246px;
+                border-radius: 12px 0px;
+            }
+
+            .content_courses_img_anti {
+                width: 172px;
+                height: 246px;
+                border-radius: 0px 12px;
+            }
+
+            .content_flip-card-inner {
+                position: relative;
+                transition: transform 0.6s;
+                transform-style: preserve-3d;
+                transform: rotateY(50deg);
+                width: max-content;
+            }
+
+            .content_flip-card-inner-anti-clock {
+                position: relative;
+                transition: transform 0.6s;
+                transform-style: preserve-3d;
+                transform: rotateY(-50deg);
+                width: max-content;
+            }
+
+            .content_courses_img_front {
+                width: 172px;
+                height: 268px;
+                border-radius: 12px 0px;
+            }
+
+            /* instructors */
+            .margin-top {
+                margin-top: 64px;
+            }
+
+            .instructors-div {
+                height: 537px;
+                padding-top: 28px;
+                width: 320px;
+                margin: auto;
+            }
+
+            .instructors-header {
+                font-size: 11px;
+                line-height: 16px;
+            }
+
+            .instructors-sub-header {
+                font-size: 20px;
+                line-height: 24px;
+            }
+
+            .instructors-hr-div {
+                width: 40px;
+                border: 4px solid #FFC400;
+                border-radius: 20px;
+            }
+
+            .instructors-main-container {
+                margin: 36px 40px 36px 40px;
+                overflow: hidden;
+                display: none;
+            }
+
+            .instructors-main-container-mobile {
+                margin: 36px 40px 36px 40px;
+                overflow: hidden;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .instructors_card_div {
+                display: flex;
+                flex-direction: column;
+                margin-right: 24px;
+                margin-left: 5px;
+                background: #FFFFFF;
+                width: 248px;
+                height: 342px;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+                border-radius: 30px;
+            }
+
+            .instructors_img-1 {
+                position: absolute;
+                width: 256px;
+                height: 174px;
+                left: -1;
+            }
+
+            .instructors_img-2 {
+                position: absolute;
+                width: 256px;
+                height: 174px;
+                left: -1;
+            }
+
+            .instructors_img-3 {
+                position: absolute;
+                width: 256px;
+                height: 174px;
+                left: -1;
+            }
+
+            .instructors_col_div {
+                display: flex;
+                flex-direction: column;
+                margin-top: 174px;
+                padding: 20px;
+                width: 248px;
+            }
+
+            .instructors_card_lite_text {
+                font-size: 10px;
+                line-height: 10px;
+            }
+
+            .instructors_card_header {
+                font-size: 12px;
+                line-height: 18px;
+                margin-top: 5px;
+            }
+
+            .instructors_card_text {
+                font-size: 11px;
+                line-height: 18px;
+                margin-right: 20px;
+            }
+
+
+            .instructors_carousel_track-container {
+                min-height: 385px;
+                min-width: 1132px;
+                padding: 5px;
+                overflow: hidden;
+            }
+
+            .instructors_carousel_track {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                position: relative;
+                transition: transform 250ms ease-in;
+            }
+
+            .instructors_carousel_slide {
+                position: absolute;
+                display: flex;
+                flex-direction: row;
+                width: 1132px;
+            }
+
+            .instructors_carousel_nav {
+                position: relative;
+            }
+
+            .instructors_carousel_button_div {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                border: 0;
+                margin: 0 83px;
+                width: 30px;
+                height: 30px;
+            }
+
+            .instructors_carousel_button-1 {
+                width: 30px;
+                height: 30px;
+                border-top-left-radius: 5px;
+                border: none;
+                padding-top: 8px;
+                padding-left: 8px;
+                padding-right: 18px;
+                padding-bottom: 6px;
+                background: #D0D0D0;
+            }
+
+            .instructors_carousel_button-2 {
+                width: 30px;
+                height: 30px;
+                border-bottom-right-radius: 5px;
+                border: none;
+                padding-top: 8px;
+                padding-left: 10px;
+                padding-right: 14px;
+                padding-bottom: 6px;
+                background: #FFC400;
+                margin-left: 10px;
+            }
+
+            .instructors_vector_icon {
+                position: absolute;
+                left: 2;
+                top: 8;
+                width: 8px;
+                height: 13px;
+                transform: rotate(180deg);
+            }
+
+            .instructors_vector_icon_right {
+                position: absolute;
+                right: -45;
+                top: 8;
+                width: 8px;
+                height: 13px;
+            }
+
+            /* courses */
+            .courses-div {
+                width: 320px;
+            }
+
+            .courses-header {
+                font-size: 11px;
+                line-height: 16px;
+            }
+
+            .courses-sub-header {
+                font-size: 20px;
+                line-height: 22px;
+            }
+
+            .courses-hr-div {
+                width: 80px;
+                margin-top: 5px;
+                border: 4px solid #01B9F5;
+                border-radius: 20px;
+            }
+
+            .courses-main-container {
+                height: 575px;
+                margin-top: 40px;
+                flex-direction: column;
+            }
+
+
+            .courses_carousel_track-container {
+                min-height: 208px;
+                margin-left: 40px;
+                margin-right: 40px;
+                margin-top: 40px;
+            }
+
+
+            .courses_carousel_nav {
+                position: relative;
+                margin-top: 5px;
+                margin-left: 153px;
+            }
+
+            .courses_carousel_indicator {
+                border: 0;
+                border-radius: 50%;
+                margin: 0 2px;
+                padding: 0;
+                width: 4px;
+                height: 4px;
+            }
+
+            .courses_carousel_indicator.courses_current-slide {
+                width: 8px;
+                border-radius: 10px;
+                background: #76C9F1;
+            }
+
+            .courses_img {
+                width: 246px;
+                height: 208px;
+                border-top-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
+
+            .courses-sub-container-2 {
+                flex: 1;
+                padding-top: 32px;
+                padding-right: 20px;
+                padding-bottom: 40px;
+                padding-left: 20px;
+            }
+
+            .courses-sub-container-header {
+                font-size: 14px;
+                line-height: 21px;
+            }
+
+            .courses-sub-container-text {
+                font-size: 11px;
+                line-height: 18px;
+            }
+
+            .courses-sub-container-li-dots {
+                border: 0;
+                border-radius: 50%;
+                width: 10px;
+                height: 10px;
+                background: #D8D8D8;
+                margin-top: 14px;
+                margin-right: 18px;
+            }
+
+            .courses-sub-container-li-lite {
+                font-size: 11px;
+                line-height: 18px;
+            }
+
+            .courses-sub-container-semi-bold {
+                margin-bottom: 20px;
+                font-size: 11px;
+                line-height: 18px;
+            }
+
+            .courses-sub-container-semi-last {
+                text-align: center;
+                font-size: 11px;
+                line-height: 14px;
+            }
+
+            .courses-view-details {
+                position: absolute;
+                background: #01B9F5 !important;
+                border: none;
+                width: 140px;
+                border-top-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+
+                width: 110px;
+                height: 30px;
+                font-size: 11px;
+                margin-top: 560px;
+                margin-left: 105px;
+            }
+
+            /* download */
+            .download-div {
+                width: 320px;
+                flex-direction: column;
+            }
+
+            .download-inner-div-1 {
+                flex: 1;
+                background: #FFC400;
+                padding-left: 24px;
+                padding-right: 24px;
+                padding-top: 16px;
+                padding-bottom: 20px;
+                border-top-left-radius: 10px;
+            }
+
+            .download-inner-div-2 {
+                padding: 8px 20px;
+            }
+
+            .download-header {
+
+                font-size: 14px;
+                line-height: 21px;
+            }
+
+            .download-sub-header {
+                font-size: 11px;
+                line-height: 18px;
+            }
+
+            .download-sub-inner-div-1 {
+                display: flex;
+                flex-direction: row;
+                flex: 1;
+                justify-content: space-between;
+            }
+
+            .download-sub-inner-text {
+                flex: 1;
+                margin-top: 16px;
+                margin-right: 10px;
+                font-size: 11px;
+                line-height: 16px;
+            }
+
+            .download-sub-inner-div-3 {
+                flex: 2;
+            }
+
+            .download-android-logo {
+                width: 81px;
+                height: 24px;
+                margin-right: 8px;
+            }
+
+            .download-ios-logo {
+                width: 81px;
+                height: 24px;
+            }
+
+            .download-sub-inner-div-2 {
+                display: none;
+            }
+
+            .download-sub-inner-text-2 {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 16px;
+                text-align: center;
+                text-transform: uppercase;
+                margin: 5px 38px 6px 38px;
+                color: #000000;
+            }
+
+            .download-qrcode-logo {
+                width: 57px;
+                height: 57px;
+            }
+
+            /* faqs */
+            .faqs-div {
+                width: 320px;
+            }
+
+            .faqs-header {
+                font-size: 11px;
+                line-height: 16px;
+            }
+
+            .faqs-sub-header {
+                font-size: 20px;
+                line-height: 30px;
+            }
+
+            .faqs-hr-div {
+                width: 40px;
+                border: 4px solid #01B9F5;
+                border-radius: 20px;
+            }
+
+            .faqs-main-container {
+                margin-top: 40px;
+                margin-bottom: 60px;
+            }
+
+            .faqs-li {
+                padding-bottom: 24px;
+                padding-top: 24px;
+            }
+
+            .faqs-li-container {
+                display: flex;
+                flex: 8;
+                flex-direction: column;
+            }
+
+            .faqs-li-header {
+
+                font-size: 11px;
+                line-height: 18px;
+            }
+
+            .faqs-li-text {
+
+                font-size: 11px;
+                line-height: 18px;
+            }
+
+            .faqs-li-text-current {
+                font-size: 11px;
+                line-height: 18px;
+            }
+
+            .faqs-li-icon-div {
+                flex: 2;
+                margin-right: 25px;
+                margin-top: 4px;
+            }
+
+            .faqs-li-icon-current {
+                width: 16px;
+                height: 10px;
+            }
+
+            .faqs-li-icon {
+                width: 16px;
+                height: 10px;
+                transform: rotate(-180deg);
+            }
+
+            /* footer */
+            .footer {
+                min-width: 360px;
+            }
+
+            .footer-follow-us {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 80px;
+                background: #505050;
+            }
+
+            .footer-follow-us-text {
+                font-style: normal;
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 24px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                text-transform: uppercase;
+                color: #FFFFFF;
+            }
+
+            .footer-follow-us-img {
+                margin-right: 16px;
+            }
+
+            .footer-div-2 {
+                height: 124px;
+                background: #0D0D0D;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .footer-row-div {
+                display: flex;
+                flex-direction: row;
+                width: 300px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .footer-navlink {
+                font-style: normal;
+                font-weight: 300;
+                font-size: 11px;
+                line-height: 24px;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                border: none;
+                background: none;
+                border-right: 1px solid #646464;
+                margin-bottom: 5px;
+            }
+
+            .footer-navlink-last {
+                font-style: normal;
+                font-weight: 300;
+                font-size: 11px;
+                line-height: 24px;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                border: none;
+                background: none;
+                margin-bottom: 5px;
+            }
+
+            .footer-row-div-2 {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 300px;
+                border-top: 1px solid #646464;
+                margin-top: 20;
+                padding-top: 16;
+            }
+
+            .footer-text {
+                font-style: normal;
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 24px;
+                /* identical to box height, or 200% */
+
+                display: flex;
+                align-items: center;
+                letter-spacing: 0.06em;
+
+                color: #FFFFFF;
+
+                opacity: 0.56;
+            }
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </head>
+
 <body>
+    <div class="header" id="header">
+        <!-- <div class="header-row-div">
+            <div class="row-div">
+                <div class="header-side-hide">
+                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6242b9d3be462074af9914fa.png"
+                        class="header-side-bar">
+                </div>
+                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/profilepic/6238477ebe462074af990c3f.png"
+                    class="header-logo" />
+            </div>
+            <div class="right-container">
+                <div class="header-nav-hide">
+                    <div class="nav-bar">
+                        <button class="navlink-active" id="aboutus-action"
+                            onclick="changeStyleHeader(true, 'aboutus-action')">About us</button>
+                        <button class="navlink" id="focusareas-action"
+                            onclick="changeStyleHeader(true, 'focusareas-action')">Focus Areas</button>
+                        <button class="navlink" id="instructors-action"
+                            onclick="changeStyleHeader(true, 'instructors-action')">Instructors</button>
 
-  <section>
-    
-    <div class="swiper mySwiper container">
-      <div class="swiper-wrapper content">
-
-        <div class="swiper-slide card">
-          <div class="card-content">
-            <div class="image">
-              <img src="images/img1.jpg" alt="">
-            </div>
-
-            <div class="media-icons">
-              <i class="fab fa-facebook"></i>
-              <i class="fab fa-twitter"></i>
-              <i class="fab fa-github"></i>
-            </div>
-
-            <div class="name-profession">
-              <span class="name">Someone Name</span>
-              <span class="profession">Web Developer</span>
-            </div>
-
-            <div class="rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-
-            <div class="button">
-              <button class="aboutMe">About Me</button>
-              <button class="hireMe">Hire Me</button>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide card">
-          <div class="card-content">
-            <div class="image">
-              <img src="images/img2.jpg" alt="">
-            </div>
-
-            <div class="media-icons">
-              <i class="fab fa-facebook"></i>
-              <i class="fab fa-twitter"></i>
-              <i class="fab fa-github"></i>
-            </div>
-
-            <div class="name-profession">
-              <span class="name">Someone Name</span>
-              <span class="profession">Web Developer</span>
-            </div>
-
-            <div class="rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-
-            <div class="button">
-              <button class="aboutMe">About Me</button>
-              <button class="hireMe">Hire Me</button>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide card">
-          <div class="card-content">
-            <div class="image">
-              <img src="images/img3.jpg" alt="">
-            </div>
-
-            <div class="media-icons">
-              <i class="fab fa-facebook"></i>
-              <i class="fab fa-twitter"></i>
-              <i class="fab fa-github"></i>
-            </div>
-
-            <div class="name-profession">
-              <span class="name">Someone Name</span>
-              <span class="profession">Web Developer</span>
-            </div>
-
-            <div class="rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-
-            <div class="button">
-              <button class="aboutMe">About Me</button>
-              <button class="hireMe">Hire Me</button>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide card">
-          <div class="card-content">
-            <div class="image">
-              <img src="images/img4.jpg" alt="">
-            </div>
-
-            <div class="media-icons">
-              <i class="fab fa-facebook"></i>
-              <i class="fab fa-twitter"></i>
-              <i class="fab fa-github"></i>
-            </div>
-
-            <div class="name-profession">
-              <span class="name">Someone Name</span>
-              <span class="profession">Web Developer</span>
-            </div>
-
-            <div class="rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-
-            <div class="button">
-              <button class="aboutMe">About Me</button>
-              <button class="hireMe">Hire Me</button>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide card">
-          <div class="card-content">
-            <div class="image">
-              <img src="images/img5.jpg" alt="">
-            </div>
-
-            <div class="media-icons">
-              <i class="fab fa-facebook"></i>
-              <i class="fab fa-twitter"></i>
-              <i class="fab fa-github"></i>
-            </div>
-
-            <div class="name-profession">
-              <span class="name">Someone Name</span>
-              <span class="profession">Web Developer</span>
-            </div>
-
-            <div class="rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-
-            <div class="button">
-              <button class="aboutMe">About Me</button>
-              <button class="hireMe">Hire Me</button>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide card">
-          <div class="card-content">
-            <div class="image">
-              <img src="images/img6.jpg" alt="">
-            </div>
-
-            <div class="media-icons">
-              <i class="fab fa-facebook"></i>
-              <i class="fab fa-twitter"></i>
-              <i class="fab fa-github"></i>
-            </div>
-
-            <div class="name-profession">
-              <span class="name">Someone Name</span>
-              <span class="profession">Web Developer</span>
-            </div>
-
-            <div class="rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-
-            <div class="button">
-              <button class="aboutMe">About Me</button>
-              <button class="hireMe">Hire Me</button>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide card">
-          <div class="card-content">
-            <div class="image">
-              <img src="images/img7.jpg" alt="">
-            </div>
-
-            <div class="media-icons">
-              <i class="fab fa-facebook"></i>
-              <i class="fab fa-twitter"></i>
-              <i class="fab fa-github"></i>
-            </div>
-
-            <div class="name-profession">
-              <span class="name">Someone Name</span>
-              <span class="profession">Web Developer</span>
-            </div>
-
-            <div class="rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-
-            <div class="button">
-              <button class="aboutMe">About Me</button>
-              <button class="hireMe">Hire Me</button>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide card">
-          <div class="card-content">
-            <div class="image">
-              <img src="images/img8.jpg" alt="">
-            </div>
-
-            <div class="media-icons">
-              <i class="fab fa-facebook"></i>
-              <i class="fab fa-twitter"></i>
-              <i class="fab fa-github"></i>
-            </div>
-
-            <div class="name-profession">
-              <span class="name">Someone Name</span>
-              <span class="profession">Web Developer</span>
-            </div>
-
-            <div class="rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-
-            <div class="button">
-              <button class="aboutMe">About Me</button>
-              <button class="hireMe">Hire Me</button>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide card">
-          <div class="card-content">
-            <div class="image">
-              <img src="images/img9.jpg" alt="">
-            </div>
-
-            <div class="media-icons">
-              <i class="fab fa-facebook"></i>
-              <i class="fab fa-twitter"></i>
-              <i class="fab fa-github"></i>
-            </div>
-
-            <div class="name-profession">
-              <span class="name">Someone Name</span>
-              <span class="profession">Web Developer</span>
-            </div>
-
-            <div class="rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-
-            <div class="button">
-              <button class="aboutMe">About Me</button>
-              <button class="hireMe">Hire Me</button>
-            </div>
-          </div>
-        </div>
-
-      </div>
+                        <button class="navlink" id="courses-action"
+                            onclick="changeStyleHeader(true, 'courses-action')">Courses</button>
+                        <button class="navlink" id="faqs-action"
+                            onclick="changeStyleHeader(true, 'faqs-action')">FAQs</button>
+                    </div>
+                </div>
+                <div>
+                    <button class="header-enroll-now" id="header-enroll-now"> Enroll Now</button>
+                </div>
+                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623989ccbe462074af990c7a.png"
+                    class="header-icon" />
+            </div> -->
     </div>
+    <div class="main-container" id="main-container">
+        <div class="aboutus-div">
+            <div id="aboutus" onmouseenter="changeStyleHeader(false, 'aboutus-action')" class="aboutus_carousel">
+                <div class="aboutus_carousel_track-container">
+                    <ul class="aboutus_carousel_track">
+                        <li class="aboutus_carousel_slide aboutus_current-slide">
+                            <div class="aboutus_row_div">
+                                <div class="aboutus_div_1">
+                                    <div class="aboutus_header">WELCOME TO THE</div>
+                                    <div class="aboutus_sub_header">Good Creator Academy</div>
+                                    <div class="aboutus_hr_div"></div>
+                                    <div class="aboutus_text">The creator’s learning platform.
+                                    </div>
+                                    <div class="aboutus_text"><strong> Learn, Create, Collaborate</strong> - content
+                                        planning,
+                                        brand
+                                        endorsements, shaping
+                                        your identity and knowing your worth.</div>
+                                </div>
+                                <div class="aboutus-row-div">
+                                    <div class="aboutus-reverse">
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409abe462074af991277.jpeg"
+                                            class="aboutus-logo-1 desktop_view" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409abe462074af991277.jpeg"
+                                            class="aboutus-logo-1 mobile_view" />
+                                    </div>
+                                    <div class="aboutus-reverse">
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409a7318f9107f8b017b.jpeg"
+                                            class="aboutus-logo-3 desktop_view" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409abe462074af991275.jpeg"
+                                            class="aboutus-logo-2 desktop_view" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409a7318f9107f8b017b.jpeg"
+                                            class="aboutus-logo-3 mobile_view" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6246a68dbe462074af991a21.png"
+                                            class="aboutus-logo-2 mobile_view" />
+                                    </div>
+                                    <div class="col-div">
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409abe462074af991276.jpeg"
+                                            class="aboutus-logo-5 desktop_view" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6246a41c7318f9107f8b092a.png"
+                                            class="aboutus-logo-5 mobile_view" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409a7318f9107f8b017c.jpeg"
+                                            class="aboutus-logo-4 desktop_view" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6246a6ad7318f9107f8b092c.png"
+                                            class="aboutus-logo-4 mobile_view" />
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="aboutus_carousel_slide">
+                            <div class="aboutus_row_div_video" onmouseover="showPlayPauseButton()"
+                                onmouseleave="hidePlayPauseButton()">
+                                <div class="aboutus_div_1">
+                                    <div class="aboutus_header">Everything you need to become a</div>
+                                    <div class="aboutus_sub_header">better creator!</div>
+                                    <div class="aboutus_hr_div"></div>
+                                    <div class="aboutus_text">Here is your chance to take control of your career in
+                                        content
+                                        creation
+                                    </div>
+                                </div>
+                                <div class="aboutus_video_div">
+                                    <!-- <iframe class="aboutus_video"
+                                    src="https://d23ztkijlc4ezg.cloudfront.net/static/6241776e7318f9107f8b018b.mp4?autoplay=1&mute=1"
+                                    frameborder="0" allow="autoplay"></iframe> -->
+                                    <button class="aboutus_no_properties_hide" id="aboutus-pause-button">
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/62463cd5be462074af991a1e.png"
+                                            alt="" class="aboutus-play-pause-button">
+                                    </button>
+                                    <button class="aboutus_no_properties_hide" id="aboutus-play-button">
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/62463f4ebe462074af991a1f.png"
+                                            alt="" class="aboutus-play-pause-button">
+                                    </button>
+                                    <video class="aboutus_video" autoplay="autoplay" id="aboutus_video">
+                                        <source
+                                            src="https://d23ztkijlc4ezg.cloudfront.net/static/6245371abe462074af991853.mp4"
+                                            type="video/mp4" />
+                                    </video>
+                                </div>
+                            </div>
+                            <!-- <iframe width="0" height="0" src="https://www.youtube.com/embed/bmOKJWue4C0?autoplay=1&amp;mute=0" frameborder="0" allowfullscreen="1"></iframe>
+                        <iframe width="761px" height="428px" class="aboutus_video"
+                                src="https://www.youtube.com/embed/rUWxSEwctFU?autoplay=1&mute=1&enablejsapi=1"
+                                frameborder="0" allow="autoplay"></iframe>
+                        <iframe class="modest-vid-embed__item"
+                            src="https://player.vimeo.com/video/488076966?autoplay=1&loop=1&autopause=0&muted=1"
+                            allow="autoplay" width="640" height="360" frameborder="0" webkitallowfullscreen
+                            mozallowfullscreen allowfullscreen>
+                        </iframe> -->
+                        </li>
+                        <li class="aboutus_carousel_slide">
+                            <div class="aboutus_row_div">
+                                <div class="aboutus_div_1">
+                                    <div class="aboutus_header">The Creator Bootcamp</div>
+                                    <div class="aboutus_sub_header">Beauty Edition</div>
+                                    <div class="aboutus_hr_div"></div>
+                                    <div class="aboutus_text">2 Beauty Instructors x 2 Day Bootcamp x 3 Viral
+                                        Instagrammable
+                                        looks</div>
+                                </div>
+                                <div class="aboutus-row-div">
+                                    <div class="aboutus-reverse">
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241490a7318f9107f8b017e.png"
+                                            class="aboutus-logo-1 desktop_view" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6246ab0dbe462074af991a22.png"
+                                            class="aboutus-logo-1 mobile_view" />
+                                    </div>
+                                    <div class="aboutus-reverse">
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62414933be462074af991278.png"
+                                            class="aboutus-logo-3 desktop_view" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624149237318f9107f8b017f.png"
+                                            class="aboutus-logo-2 desktop_view" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624149237318f9107f8b017f.png"
+                                            class="aboutus-logo-3 mobile_view" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6246ab0dbe462074af991a23.png"
+                                            class="aboutus-logo-2 mobile_view" />
 
-    <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
-  </section>
+                                    </div>
+                                    <div class="col-div">
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62414944be462074af991279.png"
+                                            class="aboutus-logo-5 desktop_view" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62414958be462074af99127a.png"
+                                            class="aboutus-logo-4 desktop_view" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6246ab0d7318f9107f8b092d.png"
+                                            class="aboutus-logo-5 mobile_view" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6246ab0d7318f9107f8b092e.png"
+                                            class="aboutus-logo-4 mobile_view" />
+                                    </div>
+                                </div>
+                            </div>
 
-  <!-- Swiper JS -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+                        </li>
+                    </ul>
+                </div>
+                <div class="aboutus_carousel_nav">
+                    <button class="aboutus_carousel_indicator aboutus_current-slide"></button>
+                    <button class="aboutus_carousel_indicator"></button>
+                    <button class="aboutus_carousel_indicator"></button>
+                </div>
+            </div>
+        </div>
+        <div id="focusareas" onmouseenter="changeStyleHeader(false, 'focusareas-action')" class="focusareas-div">
+            <!-- Why should you join us - join-us -->
+            <div id="join-us" class="join-us-div">
+                <div class="col-div">
+                    <div class="join-us-wsy-text">Why Should You</div>
+                    <div class="join-us-text">Join Us</div>
+                    <div class="join-us-hr-div"></div>
+                </div>
+                <div class="join-us-main-container">
+                    <div class="row-div div-with-border-line ">
+                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623d6582be462074af990ff6.png"
+                            class="join-us-logo" />
+                        <div class="col-div">
+                            <div class="join-us-sub-header">Build a unique skill-set</div>
+                            <div class="join-us-simple-text">Attend courses co-created with famous creators and
+                                best-in-class
+                                instructors which promise to better your skills.</div>
+                        </div>
 
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      slidesPerGroup: 3,
-      loop: true,
-      loopFillGroupWithBlank: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  </script>
-
+                    </div>
+                    <div class="row-div div-without-border-line">
+                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623d65827318f9107f8aff0a.png"
+                            class="join-us-logo-2" />
+                        <div class="col-div">
+                            <div class="join-us-sub-header">learn everything, anywhere</div>
+                            <div class="join-us-simple-text">Location is no longer a barrier for your learning potential
+                                -
+                                we offer engaging live sessions and hands-on virtual workshops.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Content Creation Journey - ccj -->
+            <div id="ccj" class="ccj-div">
+                <div class="col-div">
+                    <div class="ccj-wsy-text">Start your content creation journey</div>
+                    <div class="ccj-text">Explore our courses</div>
+                    <div class="ccj-hr-div"></div>
+                </div>
+                <!-- <button class="no-button-property" id="ccj_explore_courses">
+                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-1200/banners/6246df717318f9107f8b0933.png"
+                    alt="" width="1248" height="520" class="ccj_img desktop_view">
+                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-500/static/6246d5037318f9107f8b0930.png" alt=""
+                    width="320" height="268" class="ccj_img mobile_view">
+            </button> -->
+                <div class="row-div ccj-main-container">
+                    <div class="content_flip-card-1" id="content_flip-card-1" onclick="handleFlipCardClick(1)">
+                        <div class="content_flip-card-inner" id="content_flip-card-inner-1">
+                            <!-- <div class="desktop_view">
+                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412f597318f9107f8b0179.png"
+                                    alt="Avatar" class="content_courses_img" id="content_courses_img-1" />
+                            </div> -->
+                            <!-- <div class="mobile_view"> -->
+                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-200/banners/626bc9e2be462074af9950f3.png"
+                                alt="Avatar" class="content_courses_img" id="content_courses_img-1" />
+                            <!-- </div> -->
+                            <div class="content_flip-card-header-horizontal" id="content_flip-card-header-horizontal-1">
+                                Fashion</div>
+                            <div class="content_flip-card_hide" id="content_flip-card-sub-div-1">
+                                <div class="content_flip-card-header">Fashion</div>
+                                <div class="content_flip-card-link">Courses coming soon</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_flip-card-2" id="content_flip-card-2" onclick="handleFlipCardClick(2)">
+                        <div class="content_flip-card-inner" id="content_flip-card-inner-2">
+                            <div class="desktop_view">
+                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412f597318f9107f8b0178.png"
+                                    alt="Avatar" class="content_courses_img" id="content_courses_img-2" />
+                            </div>
+                            <div class="mobile_view">
+                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-200/banners/626bc9e27318f9107f8b422c.png"
+                                    alt="Avatar" class="content_courses_img" id="content_courses_img-2" />
+                            </div>
+                            <div class="content_flip-card-header-horizontal" id="content_flip-card-header-horizontal-2">
+                                Luxury</div>
+                            <div class="content_flip-card_hide" id="content_flip-card-sub-div-2">
+                                <div class="content_flip-card-header">Luxury</div>
+                                <div class="content_flip-card-link">Courses coming soon</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_flip-card-3" id="content_flip-card-3" onclick="handleFlipCardClick(3)">
+                        <div class="content_flip-card-fronts" id="content_flip-card-inner-3">
+                            <div class="desktop_view">
+                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412f59be462074af991272.png"
+                                    alt="Avatar" class="content_courses_img_front" id="content_courses_img-3" />
+                            </div>
+                            <div class="mobile_view">
+                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-200/banners/626bc9e27318f9107f8b422d.png"
+                                    alt="Avatar" class="content_courses_img_front" id="content_courses_img-3" />
+                            </div>
+                            <div class="content_flip-card_hide" id="content_flip-card-header-horizontal-3">Beauty</div>
+                            <div id="content_flip-card-sub-div-3">
+                                <div class="content_flip-card-header">Beauty</div>
+                                <button class="no-button-property" id="ccj_explore_courses">
+                                    <div class="content_flip-card-link-explore">EXPLORE THE COURSE</div>
+                                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241a6587318f9107f8b02d3.png"
+                                        alt="Avatar" class="content_courses_vector_icon" />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_flip-card-4" id="content_flip-card-4" onclick="handleFlipCardClick(4)">
+                        <div class="content_flip-card-inner-anti-clock" id="content_flip-card-inner-4">
+                            <div class="desktop_view">
+                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412f59be462074af991274.png"
+                                    alt="Avatar" class="content_courses_img_anti" id="content_courses_img-4" />
+                            </div>
+                            <div class="mobile_view">
+                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-200/banners/626bc9e2be462074af9950f5.png"
+                                    alt="Avatar" class="content_courses_img_anti" id="content_courses_img-4" />
+                            </div>
+                            <div class="content_flip-card-header-anti-horizontal-2"
+                                id="content_flip-card-header-horizontal-4">
+                                Food</div>
+                            <div class="content_flip-card_hide" id="content_flip-card-sub-div-4">
+                                <div class="content_flip-card-header">Food</div>
+                                <div class="content_flip-card-link">Courses coming soon</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_flip-card-5" id="content_flip-card-5" onclick="handleFlipCardClick(5)">
+                        <div class="content_flip-card-inner-anti-clock" id="content_flip-card-inner-5">
+                            <div class="desktop_view">
+                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412f59be462074af991273.png"
+                                    alt="Avatar" class="content_courses_img_anti" id="content_courses_img-5" />
+                            </div>
+                            <div class="mobile_view">
+                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-200/banners/626bc9e2be462074af9950f4.png"
+                                    alt="Avatar" class="content_courses_img_anti" id="content_courses_img-5" />
+                            </div>
+                            <div class="content_flip-card-header-anti-horizontal"
+                                id="content_flip-card-header-horizontal-5">
+                                Influencer</div>
+                            <div class="content_flip-card_hide" id="content_flip-card-sub-div-5">
+                                <div class="content_flip-card-header">Influencer</div>
+                                <div class="content_flip-card-link">Courses coming soon</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="margin-top">
+            <div id="instructors" onmouseenter="changeStyleHeader(false, 'instructors-action')" class="instructors-div">
+                <div class="col-div">
+                    <div class="instructors-header">Learn from</div>
+                    <div class="instructors-sub-header">Inspiring Creators & Instructors</div>
+                    <div class="instructors-hr-div"></div>
+                </div>
+                <div class="instructors-main-container-mobile">
+                    <div class="instructors-sub-container-1">
+                        <div class="instructors-sub-container-carousel">
+                            <div class="instructors_carousel_track-container">
+                                <ul class="instructors_carousel_track">
+                                    <!-- <li class="instructors_carousel_slide instructors_current-slide">
+                                    <div class="instructors_card_div">
+                                        <div>
+                                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829dbe462074af991295.png"
+                                                class="instructors_img-1" />
+                                        </div>
+                                        <div class="instructors_col_div">
+                                            <div class="instructors_card_lite_text">
+                                                Health • Fashion
+                                            </div>
+                                            <div class="instructors_card_header">
+                                                Saurabh Shastri
+                                            </div>
+                                            <div class="instructors_card_text">
+                                                Lorem ipsum dolor sit amet, wtwi consectetur adipiscing elit. Nulla.
+                                                lacrosta vinegi la disco.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="instructors_card_div">
+                                        <div>
+                                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829dbe462074af991296.png"
+                                                class="instructors_img-2" />
+                                        </div>
+                                        <div class="instructors_col_div">
+                                            <div class="instructors_card_lite_text">
+                                                Health • Fashion
+                                            </div>
+                                            <div class="instructors_card_header">
+                                                Saurabh Shastri
+                                            </div>
+                                            <div class="instructors_card_text">
+                                                Lorem ipsum dolor sit amet, wtwi consectetur adipiscing elit. Nulla.
+                                                lacrosta vinegi la disco.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="instructors_card_div">
+                                        <div>
+                                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829d7318f9107f8b019b.jpeg"
+                                                class="instructors_img-3" />
+                                        </div>
+                                        <div class="instructors_col_div">
+                                            <div class="instructors_card_lite_text">
+                                                Health • Fashion
+                                            </div>
+                                            <div class="instructors_card_header">
+                                                Saurabh Shastri
+                                            </div>
+                                            <div class="instructors_card_text">
+                                                Lorem ipsum dolor sit amet, wtwi consectetur adipiscing elit. Nulla.
+                                                lacrosta vinegi la disco.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li> -->
+                                    <li class="instructors_carousel_slide instructors_current-slide">
+                                        <div class="instructors_card_div">
+                                            <div>
+                                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829d7318f9107f8b019a.png"
+                                                    class="instructors_img-1" />
+                                            </div>
+                                            <div class="instructors_col_div">
+                                                <div class="instructors_card_lite_text">
+                                                    Entertainment • Business
+                                                </div>
+                                                <div class="instructors_card_header">
+                                                    Malini Agarwal
+                                                </div>
+                                                <div class="instructors_card_text">
+                                                    Founder & Creative Director MissMalini Entertainment, Girl Tribe &
+                                                    Co-Founder of Good Creator Co.
+                                                    Indian's First Celebrity Blogger.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="instructors_carousel_slide">
+                                        <div class="instructors_card_div">
+                                            <div>
+                                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829d7318f9107f8b019b.jpeg"
+                                                    class="instructors_img-2" />
+                                            </div>
+                                            <div class="instructors_col_div">
+                                                <div class="instructors_card_lite_text">
+                                                    Beauty • Content
+                                                </div>
+                                                <div class="instructors_card_header">
+                                                    Tarini Peshawaria
+                                                </div>
+                                                <div class="instructors_card_text">
+                                                    Cosmopolitan India's Beauty Influencer of the Year (Editor's Choice)
+                                                    2021-2022.
+                                                    Worked with multiple brands - Braun, L'Oréal and Cetaphil, etc.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="instructors_carousel_slide">
+                                        <div class="instructors_card_div">
+                                            <div>
+                                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829d7318f9107f8b0199.png"
+                                                    class="instructors_img-3" />
+                                            </div>
+                                            <div class="instructors_col_div">
+                                                <div class="instructors_card_lite_text">
+                                                    Makeup • Hair
+                                                </div>
+                                                <div class="instructors_card_header">
+                                                    Manjari Singh
+                                                </div>
+                                                <div class="instructors_card_text">
+                                                    Award-winning celebrity makeup artist and hair stylist from The
+                                                    London
+                                                    School of Makeup.
+                                                    Worked with Gauri Khan, Yami Gautam, Huma Qureshi, Rakul Preet
+                                                    Singh,
+                                                    amongst others.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="instructors_carousel_button_div">
+                                <div class="instructors_carousel_button-1" id="instructors_carousel_button-1"
+                                    onclick="instructorsNextPreviousButton('previous')">
+                                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241a6587318f9107f8b02d3.png"
+                                        alt="Avatar" class="instructors_vector_icon" />
+                                </div>
+                                <div class="instructors_carousel_button-2" id="instructors_carousel_button-2"
+                                    onclick="instructorsNextPreviousButton('next')">
+                                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241a6587318f9107f8b02d3.png"
+                                        alt="Avatar" class="instructors_vector_icon_right" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="instructors-main-container">
+                    <div class="instructors-sub-container-1">
+                        <div class="instructors-sub-container-carousel">
+                            <div class="instructors_carousel_track-container">
+                                <ul class="instructors_carousel_track">
+                                    <!-- <li class="instructors_carousel_slide instructors_current-slide">
+                                    <div class="instructors_card_div">
+                                        <div>
+                                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829dbe462074af991295.png"
+                                                class="instructors_img-1" />
+                                        </div>
+                                        <div class="instructors_col_div">
+                                            <div class="instructors_card_lite_text">
+                                                Health • Fashion
+                                            </div>
+                                            <div class="instructors_card_header">
+                                                Saurabh Shastri
+                                            </div>
+                                            <div class="instructors_card_text">
+                                                Lorem ipsum dolor sit amet, wtwi consectetur adipiscing elit. Nulla.
+                                                lacrosta vinegi la disco.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="instructors_card_div">
+                                        <div>
+                                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829dbe462074af991296.png"
+                                                class="instructors_img-2" />
+                                        </div>
+                                        <div class="instructors_col_div">
+                                            <div class="instructors_card_lite_text">
+                                                Health • Fashion
+                                            </div>
+                                            <div class="instructors_card_header">
+                                                Saurabh Shastri
+                                            </div>
+                                            <div class="instructors_card_text">
+                                                Lorem ipsum dolor sit amet, wtwi consectetur adipiscing elit. Nulla.
+                                                lacrosta vinegi la disco.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="instructors_card_div">
+                                        <div>
+                                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829d7318f9107f8b019b.jpeg"
+                                                class="instructors_img-3" />
+                                        </div>
+                                        <div class="instructors_col_div">
+                                            <div class="instructors_card_lite_text">
+                                                Health • Fashion
+                                            </div>
+                                            <div class="instructors_card_header">
+                                                Saurabh Shastri
+                                            </div>
+                                            <div class="instructors_card_text">
+                                                Lorem ipsum dolor sit amet, wtwi consectetur adipiscing elit. Nulla.
+                                                lacrosta vinegi la disco.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li> -->
+                                    <li class="instructors_carousel_slide">
+                                        <div class="instructors_card_div">
+                                            <div>
+                                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829d7318f9107f8b019a.png"
+                                                    class="instructors_img-1" />
+                                            </div>
+                                            <div class="instructors_col_div">
+                                                <div class="instructors_card_lite_text">
+                                                    Entertainment • Business
+                                                </div>
+                                                <div class="instructors_card_header">
+                                                    Malini Agarwal
+                                                </div>
+                                                <div class="instructors_card_text">
+                                                    Founder & Creative Director MissMalini Entertainment, Girl Tribe &
+                                                    Co-Founder of Good Creator Co.
+                                                    Indian's First Celebrity Blogger.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="instructors_card_div">
+                                            <div>
+                                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829d7318f9107f8b019b.jpeg"
+                                                    class="instructors_img-2" />
+                                            </div>
+                                            <div class="instructors_col_div">
+                                                <div class="instructors_card_lite_text">
+                                                    Beauty • Content
+                                                </div>
+                                                <div class="instructors_card_header">
+                                                    Tarini Peshawaria
+                                                </div>
+                                                <div class="instructors_card_text">
+                                                    Cosmopolitan India's Beauty Influencer of the Year (Editor's Choice)
+                                                    2021-2022.
+                                                    Worked with multiple brands - Braun, L'Oréal and Cetaphil, etc.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="instructors_card_div">
+                                            <div>
+                                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241829d7318f9107f8b0199.png"
+                                                    class="instructors_img-3" />
+                                            </div>
+                                            <div class="instructors_col_div">
+                                                <div class="instructors_card_lite_text">
+                                                    Makeup • Hair
+                                                </div>
+                                                <div class="instructors_card_header">
+                                                    Manjari Singh
+                                                </div>
+                                                <div class="instructors_card_text">
+                                                    Award-winning celebrity makeup artist and hair stylist from The
+                                                    London
+                                                    School of Makeup.
+                                                    Worked with Gauri Khan, Yami Gautam, Huma Qureshi, Rakul Preet
+                                                    Singh,
+                                                    amongst others.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- <div class="instructors_carousel_button_div">
+                            <button class="instructors_carousel_button-1" id="instructors_carousel_button-1"
+                                onclick="instructorsNextPreviousButton('previous')">
+                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241a6587318f9107f8b02d3.png"
+                                    alt="Avatar" class="instructors_vector_icon" />
+                            </button>
+                            <button class="instructors_carousel_button-2" id="instructors_carousel_button-2"
+                                onclick="instructorsNextPreviousButton('next')">
+                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6241a6587318f9107f8b02d3.png"
+                                    alt="Avatar" class="instructors_vector_icon_right" />
+                            </button>
+                        </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="margin-top">
+            <div id="courses" onmouseenter="changeStyleHeader(false, 'courses-action')" class="courses-div">
+                <div class="col-div">
+                    <div class="courses-header">Join our first course!</div>
+                    <div class="courses-sub-header">The Creator Bootcamp - Beauty Edition</div>
+                    <div class="courses-hr-div"></div>
+                </div>
+                <div class="courses-main-container">
+                    <div class="courses-sub-container-1">
+                        <div class="courses-sub-container-carousel">
+                            <div class="courses_carousel_track-container">
+                                <ul class="courses_carousel_track">
+                                    <li class="courses_carousel_slide courses_current-slide">
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412d8ebe462074af99126e.png"
+                                            class="courses_img" />
+                                    </li>
+                                    <li class="courses_carousel_slide">
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/62412d8e7318f9107f8b0175.png"
+                                            class="courses_img" />
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="courses_carousel_nav">
+                                <button class="courses_carousel_indicator courses_current-slide"></button>
+                                <button class="courses_carousel_indicator"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="courses-sub-container-2">
+                        <div class="courses-sub-container-header">Creator Bootcamp - Beauty Edition</div>
+                        <div class="courses-sub-container-text">2 Beauty Instructors x 2 Day Bootcamp x 3 Viral
+                            Instagrammable looks
+                        </div>
+                        <div class="courses-sub-container-li">
+                            <div class="courses-sub-container-li-dots"></div>
+                            <div class="courses-sub-container-li-lite">Understand how to start your content creation
+                                journey
+                            </div>
+                        </div>
+                        <div class="courses-sub-container-li">
+                            <div class="courses-sub-container-li-dots"></div>
+                            <div class="courses-sub-container-li-lite">Master the ‘Draped Blush’ technique and ‘Glitter
+                                & Gloss’ makeup</div>
+                        </div>
+                        <div class="courses-sub-container-li">
+                            <div class="courses-sub-container-li-dots"></div>
+                            <div class="courses-sub-container-li-lite">Get a certification of completion from the Good
+                                Creator Academy</div>
+                        </div>
+                        <div class="courses-sub-container-semi-last">Join us on the 16th and 17th of April!</div>
+                    </div>
+                    <button class="courses-view-details" id="courses-view-details">View Details</button>
+                </div>
+            </div>
+        </div>
+        <div class="margin-top">
+            <div class="download-div">
+                <div class="download-inner-div-1">
+                    <div class="download-header">
+                        Accelerate Your Growth
+                    </div>
+                    <div class="download-sub-header">
+                        Get started on The Good Creator Co. app today
+                    </div>
+                </div>
+                <div class="download-inner-div-2">
+                    <div class="download-sub-inner-div-1">
+                        <div class="download-sub-inner-text">Download on android & iOS</div>
+                        <div class="download-sub-inner-div-3">
+                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623d8ac5be462074af991115.png"
+                                class="download-android-logo" id="download-android-logo" />
+                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623d8ac5be462074af991114.png"
+                                class="download-ios-logo" id="download-ios-logo" />
+                        </div>
+                    </div>
+                    <div class="download-sub-inner-div-2">
+                        <div class="download-sub-inner-text-2">Scan Code AND Download Now</div>
+                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6243069ebe462074af991709.png"
+                            class="download-qrcode-logo" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="margin-top">
+            <div id="faqs" onmouseenter="changeStyleHeader(false, 'faqs-action')" class="faqs-div">
+                <div class="col-div">
+                    <div class="faqs-header">We Are</div>
+                    <div class="faqs-sub-header">Here To Help</div>
+                    <div class="faqs-hr-div"></div>
+                </div>
+                <div class="faqs-main-container">
+                    <div class="faqs-li" id="faqs-1" onclick="handleOnClickShowFAQ(1)">
+                        <div class="faqs-li-container">
+                            <div class="faqs-li-header">What is the criteria to get selected for the courses?</div>
+                            <div class="faqs-li-text-current" id="faqs-li-text-1">There is no selection process for the
+                                courses;
+                                anyone who wants to become a content creator, at any stage of their journey, can apply.
+                                You would be required to register on your platform of choice (Instagram, Facebook,
+                                YouTube,
+                                etc.) so that we can include you in our contests, leaderboards, etc.</div>
+                        </div>
+                        <div class="faqs-li-icon-div">
+                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
+                                class="faqs-li-icon-current" id="faqs-li-icon-1" />
+                        </div>
+                    </div>
+                    <div class="faqs-li" id="faqs-2" onclick="handleOnClickShowFAQ(2)">
+                        <div class="faqs-li-container">
+                            <div class="faqs-li-header">Is there a particular course format?</div>
+                            <div class="faqs-li-text" id="faqs-li-text-2">Yes, all our course sessions are live and
+                                interactive
+                                in nature. Some sessions may include separate slots for AMAs to ensure all your
+                                questions
+                                get
+                                answered.</div>
+                        </div>
+                        <div class="faqs-li-icon-div">
+                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
+                                class="faqs-li-icon" id="faqs-li-icon-2" />
+                        </div>
+                    </div>
+                    <div class="faqs-li" id="faqs-3" onclick="handleOnClickShowFAQ(3)">
+                        <div class="faqs-li-container">
+                            <div class="faqs-li-header">Will I get certified?</div>
+                            <div class="faqs-li-text" id="faqs-li-text-3">Yes, you will receive a Certificate of
+                                Completion
+                                at
+                                the end of the course from the Good Creator Academy.</div>
+                        </div>
+                        <div class="faqs-li-icon-div">
+                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
+                                class="faqs-li-icon" id="faqs-li-icon-3" />
+                        </div>
+                    </div>
+                    <div class="faqs-li" id="faqs-4" onclick="handleOnClickShowFAQ(4)">
+                        <div class="faqs-li-container">
+                            <div class="faqs-li-header">Which makeup products should I carry for a session on beauty
+                                content
+                                creation?</div>
+                            <div class="faqs-li-text" id="faqs-li-text-4">Once you register, you will receive a detailed
+                                email
+                                with suggested products. </div>
+                        </div>
+                        <div class="faqs-li-icon-div">
+                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
+                                class="faqs-li-icon" id="faqs-li-icon-4" />
+                        </div>
+                    </div>
+                    <div class="faqs-li" id="faqs-5" onclick="handleOnClickShowFAQ(5)">
+                        <div class="faqs-li-container">
+                            <div class="faqs-li-header">Are the courses refundable?</div>
+                            <div class="faqs-li-text" id="faqs-li-text-5">At present, all our courses are
+                                non-refundable.
+                            </div>
+                        </div>
+                        <div class="faqs-li-icon-div">
+                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
+                                class="faqs-li-icon" id="faqs-li-icon-5" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-follow-us">
+            <div class="footer-follow-us-text">Follow us</div>
+            <div class="row-div">
+                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/62426918be462074af99144f.png" alt=""
+                    width="24px" height="24px" class="footer-follow-us-img" id="footer-follow-us-insta"
+                    onclick="linkFooter('footer-follow-us-insta')">
+                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/62426918be462074af99144e.png" alt=""
+                    width="24px" height="24px" class="footer-follow-us-img" id="footer-follow-us-fb"
+                    onclick="linkFooter('footer-follow-us-fb')">
+                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/624269187318f9107f8b0371.png" alt=""
+                    width="24px" height="24px" id="footer-follow-us-tw" onclick="linkFooter('footer-follow-us-tw')">
+            </div>
+        </div>
+        <div class="footer-div-2">
+            <div class="footer-row-div" id="footer-row-div">
+                <button class="footer-navlink" id="footer-aboutus-action"
+                    onclick="changeStyleHeader(true, 'aboutus-action')">About us</button>
+                <button type="submit" class="footer-navlink" id="footer-terms-condition-action"
+                    onclick="linkFooter('footer-terms-condition-action')">Terms of Use</button>
+                <button class="footer-navlink" id="footer-privacy-policy-action"
+                    onclick="linkFooter('footer-privacy-policy-action')">Privacy Policy</button>
+                <button class="footer-navlink" id="footer-refund-policy-action"
+                    onclick="linkFooter('footer-refund-policy-action')">Refund Policy</button>
+                <button class="footer-navlink-last" id="footer-contact-us-action"
+                    onclick="linkFooter('footer-contact-us-action')">Contact Us</button>
+            </div>
+            <div class="footer-row-div-2">
+                <div class="footer-text">GCCAcademy@2022. All rights reserved</div>
+            </div>
+        </div>
+    </div>
 </body>
+<script>
+    const fullWidth = window.screen.width;
+    // document.getElementById("main-container").style.width = 1440 ;
+    // document.getElementById("main-container").style.marginLeft = fullWidth && fullWidth > 1440 ? (fullWidth - 1440) / 2 : 96;
+    // // document.getElementById("main-container").style.marginRight = fullWidth && fullWidth > 1440 ? (fullWidth - 1440) / 2 : 96;
+    document.getElementById("header").style.width = `${fullWidth}px`;
+    // document.getElementById("footer-row-div").style.width = `${fullWidth}px`;
+
+    if (fullWidth === 360 || fullWidth < 360) {
+        document.getElementById("main-container").style.marginLeft = 20;
+        document.getElementById("main-container").style.marginRight = 20;
+    }
+    function changeStyleHeader(toScroll, id) {
+        switch (id) {
+            case "aboutus-action":
+                if (toScroll) {
+                    document.getElementById('aboutus').scrollIntoView();
+                }
+                // document.getElementById("aboutus-action").className = 'navlink-active';
+                // document.getElementById("focusareas-action").className = 'navlink';
+                // document.getElementById("instructors-action").className = 'navlink';
+                // document.getElementById("courses-action").className = 'navlink';
+                // document.getElementById("faqs-action").className = 'navlink';
+                break;
+            case "focusareas-action":
+                if (toScroll) {
+                    document.getElementById('focusareas').scrollIntoView();
+                }
+                // document.getElementById("aboutus-action").className = 'navlink';
+                // document.getElementById("focusareas-action").className = 'navlink-active';
+                // document.getElementById("instructors-action").className = 'navlink';
+                // document.getElementById("courses-action").className = 'navlink';
+                // document.getElementById("faqs-action").className = 'navlink';
+                break;
+            case "instructors-action":
+                if (toScroll) {
+                    document.getElementById('instructors').scrollIntoView();
+                }
+                // document.getElementById("aboutus-action").className = 'navlink';
+                // document.getElementById("focusareas-action").className = 'navlink';
+                // document.getElementById("instructors-action").className = 'navlink-active';
+                // document.getElementById("courses-action").className = 'navlink';
+                // document.getElementById("faqs-action").className = 'navlink';
+                break;
+            case "courses-action":
+                if (toScroll) {
+                    document.getElementById('courses').scrollIntoView();
+                }
+                // document.getElementById("aboutus-action").className = 'navlink';
+                // document.getElementById("focusareas-action").className = 'navlink';
+                // document.getElementById("instructors-action").className = 'navlink';
+                // document.getElementById("courses-action").className = 'navlink-active';
+                // document.getElementById("faqs-action").className = 'navlink';
+                break;
+            case "faqs-action":
+                if (toScroll) {
+                    document.getElementById('faqs').scrollIntoView();
+                }
+                // document.getElementById("aboutus-action").className = 'navlink';
+                // document.getElementById("focusareas-action").className = 'navlink';
+                // document.getElementById("instructors-action").className = 'navlink';
+                // document.getElementById("courses-action").className = 'navlink';
+                // document.getElementById("faqs-action").className = 'navlink-active';
+                break;
+        }
+    }
+
+    // Top carousel
+    const track = document.querySelector(".aboutus_carousel_track");
+    const slides = Array.from(track.children);
+    const dotsNav = document.querySelector(".aboutus_carousel_nav");
+    const dots = Array.from(dotsNav.children);
+
+    const slidesWidth = slides[0].getBoundingClientRect().width;
+    const aboutusPlayButton = document.getElementById("aboutus-play-button");
+    const aboutusPauseButton = document.getElementById("aboutus-pause-button");
+
+    // arrange the slides next to one another
+    const setSlidePosition = (slide, index) => {
+        slide.style.left = slidesWidth * index + "px";
+    };
+    slides.forEach(setSlidePosition);
+
+    // Move slide at 3 sec
+    const moveToSlide = (track, currentSlide, tragetSlide) => {
+        const amountToMove = tragetSlide.style.left;
+        track.style.transform = "translateX(-" + amountToMove + ")";
+        currentSlide.classList.remove("aboutus_current-slide");
+        tragetSlide.classList.add("aboutus_current-slide");
+    };
+
+    const updateDots = (currentDot, targetDot) => {
+        targetDot.classList.add("aboutus_current-slide");
+        currentDot.classList.remove("aboutus_current-slide");
+    };
+    let targetIndex = 0;
+    let setIntervalTime = 3000;
+    let aboutusVideoPlaying = 0;
+    function playAboutusVideo() {
+        document.getElementById("aboutus_video").play().then(_ => {
+            // Autoplay started!
+            aboutusVideoPlaying = 1;
+            aboutusPlayButton.className = 'aboutus_no_properties_hide';
+        }).catch(error => {
+            // Autoplay was prevented.
+            // Show a "Play" button so that user can start playback.
+            aboutusVideoPlaying = 0;
+            aboutusPlayButton.className = 'aboutus_no_properties';
+            console.log({ error });
+        });
+
+    }
+    const moveSlide = () => {
+        const currentSlide = track.querySelector(".aboutus_current-slide");
+        let nextSlide = currentSlide.nextElementSibling;
+        const currentDots = dotsNav.querySelector(".aboutus_current-slide");
+        let nextDots = currentDots.nextElementSibling;
+        targetIndex = dots.findIndex((dot) => dot === currentDots);
+        if (targetIndex === 2) {
+            nextSlide = slides[0];
+            nextDots = dots[0];
+        }
+        moveToSlide(track, currentSlide, nextSlide);
+        updateDots(currentDots, nextDots);
+        if (targetIndex === 0) {
+            // For 10 sec video
+            setIntervalTime = 10000;
+            playAboutusVideo()
+            // console.log("play");
+        } else {
+            setIntervalTime = 3000;
+        }
+        console.log({ setIntervalTime, targetIndex });
+        setTimeout(moveSlide, setIntervalTime);
+    }
+    setTimeout(moveSlide, setIntervalTime);
+    // Move slide on dot press
+    dotsNav.addEventListener("click", (e) => {
+        const targetDot = e.target.closest("button");
+        if (!targetDot) return null;
+        const currentSlide = track.querySelector(".aboutus_current-slide");
+        const currentDot = dotsNav.querySelector(".aboutus_current-slide");
+        targetIndex = dots.findIndex((dot) => dot === targetDot);
+        const tragetSlide = slides[targetIndex];
+        if (targetIndex === 0) {
+            // For 10 sec video
+            setIntervalTime = 10000;
+            playAboutusVideo()
+            // console.log("play");
+        } else {
+            setIntervalTime = 3000;
+        }
+        console.log({ setIntervalTime, targetIndex });
+        moveToSlide(track, currentSlide, tragetSlide);
+        updateDots(currentDot, targetDot);
+    });
+    // About Us Video
+    function showPlayPauseButton() {
+        if (aboutusVideoPlaying) {
+            aboutusPauseButton.className = 'aboutus_no_properties';
+        } else {
+            aboutusPlayButton.className = 'aboutus_no_properties';
+        }
+    }
+    function hidePlayPauseButton() {
+        aboutusPauseButton.className = 'aboutus_no_properties_hide';
+    }
+    aboutusPauseButton.addEventListener("click", (e) => {
+        document.getElementById("aboutus_video").pause();
+        aboutusVideoPlaying = 0;
+        aboutusPlayButton.className = 'aboutus_no_properties';
+        aboutusPauseButton.className = 'aboutus_no_properties_hide';
+
+    });
+    aboutusPlayButton.addEventListener("click", (e) => {
+        document.getElementById("aboutus_video").play().then(_ => {
+            // Autoplay started!
+            aboutusVideoPlaying = 1;
+            aboutusPauseButton.className = 'aboutus_no_properties';
+            aboutusPlayButton.className = 'aboutus_no_properties_hide';
+        }).catch(error => {
+            // Autoplay was prevented.
+            // Show a "Play" button so that user can start playback.
+            aboutusVideoPlaying = 0;
+            aboutusPlayButton.className = 'aboutus_no_properties';
+            console.log({ error });
+        });
+    });
+    // Courses carousel
+    const coursesTrack = document.querySelector(".courses_carousel_track");
+    const coursesSlides = Array.from(coursesTrack.children);
+    const coursesDotsNav = document.querySelector(".courses_carousel_nav");
+    const coursesDots = Array.from(coursesDotsNav.children);
+
+    const coursesSlidesWidth = coursesSlides[0].getBoundingClientRect().width;
+
+    // arrange the slides next to one another
+    const coursesSetSlidePosition = (slide, index) => {
+        slide.style.left = coursesSlidesWidth * index + "px";
+    };
+    coursesSlides.forEach(coursesSetSlidePosition);
+
+    // Move slide at 5 sec
+    const coursesMoveToSlide = (track, currentSlide, tragetSlide) => {
+        const coursesamountToMove = tragetSlide.style.left;
+        track.style.transform = "translateX(-" + coursesamountToMove + ")";
+        currentSlide.classList.remove("courses_current-slide");
+        tragetSlide.classList.add("courses_current-slide");
+    };
+
+    const coursesUpdateDots = (currentDot, targetDot) => {
+        targetDot.classList.add("courses_current-slide");
+        currentDot.classList.remove("courses_current-slide");
+    };
+    const coursesMoveSlide = () => {
+        const coursesCurrentSlide = coursesTrack.querySelector(".courses_current-slide");
+        let nextSlide = coursesCurrentSlide.nextElementSibling;
+        const coursesCurrentDots = coursesDotsNav.querySelector(".courses_current-slide");
+        let nextDots = coursesCurrentDots.nextElementSibling;
+        const targetIndex = coursesDots.findIndex((dot) => dot === coursesCurrentDots);
+        if (targetIndex === 1) {
+            nextSlide = coursesSlides[0];
+            nextDots = coursesDots[0];
+        }
+        coursesMoveToSlide(coursesTrack, coursesCurrentSlide, nextSlide);
+        coursesUpdateDots(coursesCurrentDots, nextDots);
+        console.log({ coursesTrack, coursesCurrentSlide });
+    }
+    setInterval(coursesMoveSlide, 5000);
+    // Move slide on dot press
+    coursesDotsNav.addEventListener("click", (e) => {
+        const coursesTargetDot = e.target.closest("button");
+        if (!coursesTargetDot) return null;
+        const coursesCurrentSlide = coursesTrack.querySelector(".courses_current-slide");
+        const coursesCurrentDot = coursesDotsNav.querySelector(".courses_current-slide");
+        let targetIndex = coursesDots.findIndex((dot) => dot === coursesTargetDot);
+        const coursesTragetSlide = coursesSlides[targetIndex];
+        coursesMoveToSlide(coursesTrack, coursesCurrentSlide, coursesTragetSlide);
+        coursesUpdateDots(coursesCurrentDot, coursesTargetDot);
+        console.log({ coursesTrack, coursesCurrentSlide });
+    });
+
+    // Instructors carousel
+    const instructorsTrack = document.querySelector(".instructors_carousel_track");
+    const instructorsSlides = Array.from(instructorsTrack.children);
+
+    const instructorsSlidesWidth = instructorsSlides[0].getBoundingClientRect().width;
+
+    // arrange the slides next to one another
+    const instructorsSetSlidePosition = (slide, index) => {
+        slide.style.left = instructorsSlidesWidth * index + "px";
+    };
+    instructorsSlides.forEach(instructorsSetSlidePosition);
+
+    // Move slide on button click
+    const instructorsMoveToSlide = (track, currentSlide, tragetSlide) => {
+        const instructorsamountToMove = tragetSlide.style.left;
+        console.log({ instructorsamountToMove, track, currentSlide, tragetSlide });
+        track.style.transform = "translateX(-" + instructorsamountToMove + ")";
+        currentSlide.classList.remove("instructors_current-slide");
+        tragetSlide.classList.add("instructors_current-slide");
+    };
+    const instructorsHideArrow = (targetIndex) => {
+        console.log({ targetIndex });
+        if (targetIndex === 0) {
+            document.getElementById('instructors_carousel_button-1').style.background = '#D0D0D0';
+            document.getElementById('instructors_carousel_button-2').style.background = '#FFC400';
+        } else if (targetIndex === instructorsSlides.length - 1) {
+            document.getElementById('instructors_carousel_button-1').style.background = '#FFC400';
+            document.getElementById('instructors_carousel_button-2').style.background = '#D0D0D0';
+        } else {
+            document.getElementById('instructors_carousel_button-1').style.background = '#FFC400';
+            document.getElementById('instructors_carousel_button-2').style.background = '#FFC400';
+        }
+    }
+    // Move slide on button press
+    function instructorsNextPreviousButton(params) {
+        const instructorsCurrentSlide = instructorsTrack.querySelector(".instructors_current-slide");
+        const instructorsNextSlide = instructorsCurrentSlide.nextElementSibling;
+        const instructorsPrevSlide = instructorsCurrentSlide.previousElementSibling;
+        const nextIndex = instructorsSlides.findIndex(slide => slide === instructorsNextSlide);
+        const prevIndex = instructorsSlides.findIndex(slide => slide === instructorsPrevSlide);
+        if (params === 'next') {
+            instructorsMoveToSlide(instructorsTrack, instructorsCurrentSlide, instructorsNextSlide);
+            instructorsHideArrow(nextIndex);
+
+        } else if (params === 'previous') {
+            instructorsMoveToSlide(instructorsTrack, instructorsCurrentSlide, instructorsPrevSlide);
+            instructorsHideArrow(prevIndex);
+        }
+    };
+
+    // FAQs
+    function handleOnClickShowFAQ(id) {
+        document.getElementById("faqs-li-text-1").className = 'faqs-li-text';
+        document.getElementById("faqs-li-text-2").className = 'faqs-li-text';
+        document.getElementById("faqs-li-text-3").className = 'faqs-li-text';
+        document.getElementById("faqs-li-text-4").className = 'faqs-li-text';
+        document.getElementById("faqs-li-text-5").className = 'faqs-li-text';
+        document.getElementById("faqs-li-icon-1").className = 'faqs-li-icon';
+        document.getElementById("faqs-li-icon-2").className = 'faqs-li-icon';
+        document.getElementById("faqs-li-icon-3").className = 'faqs-li-icon';
+        document.getElementById("faqs-li-icon-4").className = 'faqs-li-icon';
+        document.getElementById("faqs-li-icon-5").className = 'faqs-li-icon';
+        document.getElementById(`faqs-li-text-${id}`).className = 'faqs-li-text-current';
+        document.getElementById(`faqs-li-icon-${id}`).className = 'faqs-li-icon-current';
+    }
+
+    // Content Creation Journey - ccj
+    function originalRefresh() {
+        document.getElementById("content_flip-card-2").style = null;
+        document.getElementById("content_flip-card-3").style = null;
+        document.getElementById("content_flip-card-4").style = null;
+        document.getElementById("content_flip-card-header-horizontal-4").style = null;
+        document.getElementById("content_flip-card-header-horizontal-2").style = null;
+        document.getElementById("content_flip-card-header-horizontal-3").style = null;
+        document.getElementById("content_flip-card-1").className = 'content_flip-card-1';
+        document.getElementById("content_flip-card-2").className = 'content_flip-card-2';
+        document.getElementById("content_flip-card-3").className = 'content_flip-card-3';
+        document.getElementById("content_flip-card-4").className = 'content_flip-card-4';
+        document.getElementById("content_flip-card-5").className = 'content_flip-card-5';
+        document.getElementById("content_flip-card-header-horizontal-1").className = 'content_flip-card-header-horizontal';
+        document.getElementById("content_flip-card-header-horizontal-2").className = 'content_flip-card-header-horizontal';
+        document.getElementById("content_flip-card-header-horizontal-3").className = 'content_flip-card_hide';
+        document.getElementById("content_flip-card-header-horizontal-4").className = 'content_flip-card-header-anti-horizontal-2';
+        document.getElementById("content_flip-card-header-horizontal-5").className = 'content_flip-card-header-anti-horizontal';
+        document.getElementById("content_courses_img-1").className = 'content_courses_img';
+        document.getElementById("content_courses_img-2").className = 'content_courses_img';
+        document.getElementById("content_courses_img-3").className = 'content_courses_img_front';
+        document.getElementById("content_courses_img-4").className = 'content_courses_img_anti';
+        document.getElementById("content_courses_img-5").className = 'content_courses_img_anti';
+        document.getElementById("content_flip-card-sub-div-1").className = 'content_flip-card_hide';
+        document.getElementById("content_flip-card-sub-div-2").className = 'content_flip-card_hide';
+        document.getElementById("content_flip-card-sub-div-3").className = '';
+        document.getElementById("content_flip-card-sub-div-4").className = 'content_flip-card_hide';
+        document.getElementById("content_flip-card-sub-div-5").className = 'content_flip-card_hide';
+        document.getElementById("content_flip-card-inner-1").className = 'content_flip-card-inner';
+        document.getElementById("content_flip-card-inner-2").className = 'content_flip-card-inner';
+        document.getElementById("content_flip-card-inner-3").className = 'content_flip-card-fronts';
+        document.getElementById("content_flip-card-inner-4").className = 'content_flip-card-inner-anti-clock';
+        document.getElementById("content_flip-card-inner-5").className = 'content_flip-card-inner-anti-clock';
+    }
+    function handleFlipCardClick(id) {
+        switch (id) {
+            case 1:
+                originalRefresh();
+                document.getElementById("content_flip-card-1").className = 'content_flip-card-3';
+                document.getElementById("content_flip-card-2").style.zIndex = 4;
+                document.getElementById("content_flip-card-2").style.width = '225px';
+                document.getElementById("content_flip-card-3").style.width = '188px';
+                document.getElementById("content_flip-card-3").style.marginTop = ' 21px';
+                document.getElementById("content_flip-card-3").style.zIndex = 3;
+                document.getElementById("content_flip-card-header-horizontal-1").className = 'content_flip-card_hide';
+                document.getElementById("content_flip-card-header-horizontal-2").className = 'content_flip-card-header-anti-horizontal';
+                document.getElementById("content_flip-card-header-horizontal-3").className = 'content_flip-card-header-anti-horizontal';
+                document.getElementById("content_flip-card-header-horizontal-2").style.left = '310px';
+                document.getElementById("content_flip-card-header-horizontal-3").style.left = '300px';
+                document.getElementById("content_flip-card-header-horizontal-2").style.bottom = '80px';
+                document.getElementById("content_flip-card-header-horizontal-3").style.bottom = '80px';
+                document.getElementById("content_courses_img-1").className = 'content_courses_img_front';
+                document.getElementById("content_courses_img-3").className = 'content_courses_img';
+                document.getElementById("content_flip-card-sub-div-1").className = '';
+                document.getElementById("content_flip-card-sub-div-3").className = 'content_flip-card_hide';
+                document.getElementById("content_flip-card-inner-1").className = 'content_flip-card-fronts';
+                document.getElementById("content_flip-card-inner-2").className = 'content_flip-card-inner-anti-clock';
+                document.getElementById("content_flip-card-inner-3").className = 'content_flip-card-inner-anti-clock';
+                break;
+            case 2:
+                originalRefresh();
+                document.getElementById("content_flip-card-2").className = 'content_flip-card-3';
+                document.getElementById("content_flip-card-3").style.width = '230px';
+                document.getElementById("content_flip-card-3").style.marginTop = '21px';
+                document.getElementById("content_flip-card-3").style.zIndex = 3;
+                document.getElementById("content_flip-card-header-horizontal-2").className = 'content_flip-card_hide';
+                document.getElementById("content_flip-card-header-horizontal-3").className = 'content_flip-card-header-anti-horizontal';
+                document.getElementById("content_flip-card-header-horizontal-3").style.left = '300px';
+                document.getElementById("content_flip-card-header-horizontal-3").style.bottom = '80px';
+                document.getElementById("content_courses_img-2").className = 'content_courses_img_front';
+                document.getElementById("content_courses_img-3").className = 'content_courses_img';
+                document.getElementById("content_flip-card-sub-div-2").className = '';
+                document.getElementById("content_flip-card-sub-div-3").className = 'content_flip-card_hide';
+                document.getElementById("content_flip-card-inner-2").className = 'content_flip-card-fronts';
+                document.getElementById("content_flip-card-inner-3").className = 'content_flip-card-inner-anti-clock';
+                break;
+            case 3:
+                originalRefresh();
+                break;
+            case 4:
+                originalRefresh();
+                document.getElementById("content_flip-card-4").className = 'content_flip-card-3';
+                document.getElementById("content_flip-card-3").style.width = '210px';
+                document.getElementById("content_flip-card-3").style.marginTop = '21px';
+                document.getElementById("content_flip-card-3").style.zIndex = 3;
+                document.getElementById("content_flip-card-header-horizontal-4").className = 'content_flip-card_hide';
+                document.getElementById("content_flip-card-header-horizontal-3").className = 'content_flip-card-header-anti-horizontal';
+                document.getElementById("content_flip-card-header-horizontal-3").style.left = '-40px';
+                document.getElementById("content_flip-card-header-horizontal-3").style.bottom = '80px';
+                document.getElementById("content_courses_img-4").className = 'content_courses_img_front';
+                document.getElementById("content_courses_img-3").className = 'content_courses_img';
+                document.getElementById("content_flip-card-sub-div-4").className = '';
+                document.getElementById("content_flip-card-sub-div-3").className = 'content_flip-card_hide';
+                document.getElementById("content_flip-card-inner-4").className = 'content_flip-card-fronts';
+                document.getElementById("content_flip-card-inner-3").className = 'content_flip-card-inner';
+                break;
+            case 5:
+                originalRefresh();
+                document.getElementById("content_flip-card-5").className = 'content_flip-card-3';
+                document.getElementById("content_flip-card-4").style.zIndex = 4;
+                document.getElementById("content_flip-card-4").style.width = '225px';
+                document.getElementById("content_flip-card-3").style.width = '188px';
+                document.getElementById("content_flip-card-3").style.marginTop = '21px';
+                document.getElementById("content_flip-card-3").style.zIndex = 3;
+                document.getElementById("content_flip-card-header-horizontal-5").className = 'content_flip-card_hide';
+                document.getElementById("content_flip-card-header-horizontal-4").className = 'content_flip-card-header-anti-horizontal';
+                document.getElementById("content_flip-card-header-horizontal-3").className = 'content_flip-card-header-anti-horizontal';
+                document.getElementById("content_flip-card-header-horizontal-4").style.left = '-20px';
+                document.getElementById("content_flip-card-header-horizontal-3").style.left = '-40px';
+                document.getElementById("content_flip-card-header-horizontal-4").style.bottom = '50px';
+                document.getElementById("content_flip-card-header-horizontal-3").style.bottom = '80px';
+                document.getElementById("content_courses_img-5").className = 'content_courses_img_front';
+                document.getElementById("content_courses_img-3").className = 'content_courses_img';
+                document.getElementById("content_flip-card-sub-div-5").className = '';
+                document.getElementById("content_flip-card-sub-div-3").className = 'content_flip-card_hide';
+                document.getElementById("content_flip-card-inner-5").className = 'content_flip-card-fronts';
+                document.getElementById("content_flip-card-inner-4").className = 'content_flip-card-inner';
+                document.getElementById("content_flip-card-inner-3").className = 'content_flip-card-inner';
+                break;
+
+        }
+    }
+    // links
+    document.getElementById('download-android-logo').addEventListener("click", (e) => {
+        window.open('https://play.google.com/store/apps/details?id=co.winkl.app', '_blank');
+    });
+    document.getElementById('download-ios-logo').addEventListener("click", (e) => {
+        window.open('https://apps.apple.com/in/app/the-good-creator-co/id1462743952', '_blank');
+    });
+    document.getElementById('ccj_explore_courses').addEventListener("click", (e) => {
+        window.open('https://www.goodcreatoracademy.com/s/store/courses/description/The-Creator-Bootcamp-Beauty-Edition', '_self');
+    });
+    document.getElementById('courses-view-details').addEventListener("click", (e) => {
+        window.open('https://www.goodcreatoracademy.com/s/store/courses/description/The-Creator-Bootcamp-Beauty-Edition', '_self');
+    });
+    // footer
+
+    function linkFooter(params) {
+        switch (params) {
+            case 'footer-follow-us-fb':
+                window.open('https://www.facebook.com/GoodCreatorAcademy/', '_blank');
+                break;
+            case 'footer-contact-us-action':
+                window.open('https://www.goodcreatoracademy.com/contactus', '_self');
+                break;
+            case 'footer-refund-policy-action':
+                window.open('https://www.goodcreatoracademy.com/refundpolicy', '_self');
+                break;
+            case 'footer-privacy-policy-action':
+                window.open('https://www.goodcreatoracademy.com/privacypolicy', '_self');
+                break;
+            case 'footer-terms-condition-action':
+                window.open('https://www.goodcreatoracademy.com/termsofuse', '_self');
+                break;
+            case 'footer-follow-us-tw':
+                window.open('https://twitter.com/GoodCreatorACAD', '_blank');
+                break;
+            case 'footer-follow-us-insta':
+                window.open('https://www.instagram.com/goodcreatoracademy/', '_blank');
+                break;
+        }
+    }
+</script>
+
 </html>
