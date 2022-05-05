@@ -29,6 +29,11 @@
             flex-direction: column;
         }
 
+        .course-row-col-des-mob-div {
+            display: flex;
+            flex-direction: row;
+        }
+
         .row-div {
             display: flex;
             flex-direction: row;
@@ -95,7 +100,7 @@
         }
 
         .course-tagline-language {
-            margin-top: 47px !important;
+            margin-top: 47px;
             font-style: normal;
             font-weight: 500;
             font-size: 14px;
@@ -271,6 +276,7 @@
             margin-bottom: 2px;
             color: #000000;
         }
+
         .course-tagline-instructors-info {
             font-style: normal;
             font-weight: 700;
@@ -281,6 +287,7 @@
 
             color: #5E5D5D;
         }
+
         .course-tagline-instructors-text {
             font-style: normal;
             font-weight: 400;
@@ -295,7 +302,7 @@
 
         /* Description */
         .description-div {
-            margin-top: 30px;
+            margin-top: 60px;
         }
 
         .description-wsy-text {
@@ -341,6 +348,7 @@
             padding-left: 48px;
             padding-right: 48px;
             padding-top: 30px;
+            padding-bottom: 10px;
             border-top-left-radius: 20px;
         }
 
@@ -417,7 +425,7 @@
             font-weight: 600;
             font-size: 20px;
             line-height: 35px;
-            margin-top: 10px;
+            margin-top: 20px;
             color: #5E5D5D;
         }
 
@@ -463,7 +471,7 @@
 
         /* download */
         .download-div {
-            margin-top: 52px;
+            margin-top: 80px;
             display: flex;
             flex-direction: row;
         }
@@ -577,7 +585,7 @@
         /* Know you better  */
 
         .kwb-div {
-            margin-top: 30px;
+            margin-top: 60px;
             border-radius: 30px 0px;
             padding: 80px 60px;
             background: #F6FCFF;
@@ -611,6 +619,7 @@
             align-self: center;
             border: 8px solid #01B9F5;
             border-radius: 40px;
+            margin-bottom: 40px;
         }
 
         .kwb-label {
@@ -722,7 +731,7 @@
 
         /* faqs */
         .faqs-div {
-            margin-top: 30px;
+            margin-top: 60px;
         }
 
         .faqs-header {
@@ -856,6 +865,7 @@
                 background: #F6FCFF;
                 border-radius: 30px 0px;
                 margin-top: 40px;
+                padding-bottom: 30px;
             }
 
             .course-tagline-courseimg {
@@ -892,16 +902,43 @@
                 margin-right: 20px;
             }
 
+            .course-tagline-points {
+                font-style: normal;
+                font-weight: 700;
+                /* or 167% */
+                font-size: 11px;
+                line-height: 18px;
+                margin-left: 20px;
+                margin-top: 25px;
+                margin-right: 20px;
+                margin-bottom: 6px;
+                color: #5E5D5D;
+            }
+
             .course-tagline-language {
                 font-size: 9px;
                 line-height: 14px;
                 margin-left: 20px;
                 margin-right: 20px;
+                margin-top: 5px;
+                margin-bottom: 10px;
             }
 
             .course-tagline-date-div {
                 border-right: none;
-                margin-bottom: 20px;
+                margin-bottom: 0px;
+                margin-top: 20px;
+            }
+
+            .course-tagline-seats-div {
+                display: flex;
+                flex-direction: row;
+                margin-top: 20px;
+            }
+
+            .course-row-col-des-mob-div {
+                display: flex;
+                flex-direction: column;
             }
 
             .course-tagline-icon {
@@ -931,8 +968,16 @@
             .course-tagline-price-text {
                 margin-right: 10px;
                 margin-left: 25px;
-                font-size: 20px;
+                margin-top: 25px;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 12px;
                 line-height: 30px;
+                /* identical to box height, or 250% */
+
+                text-transform: capitalize;
+
+                color: #5E5D5D
             }
 
             .course-tagline-price {
@@ -948,11 +993,20 @@
             }
 
             .course-tagline-off-price {
-                font-size: 21px;
+                font-style: normal;
+                margin-left: 25px;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 30px;
+
+
+                color: #000000;
             }
 
             .course-tagline-action {
                 margin-left: 20px;
+                margin-top: 30px;
+                margin-bottom: 30px;
                 width: 90px;
                 height: 30px;
                 font-size: 11px;
@@ -981,7 +1035,7 @@
                 font-size: 14px;
                 line-height: 21px;
                 margin-left: 20px;
-                margin-top: 24px;
+                margin-top: 10px;
                 margin-bottom: 24px;
             }
 
@@ -995,21 +1049,36 @@
 
             .course-tagline-instructors-header {
                 margin-right: 20px;
+                margin-left: 20px;
                 font-size: 14px;
                 line-height: 19px;
-                margin-bottom: 18px;
+                margin-bottom: 5px;
+                margin-top: 20px;
             }
 
             .course-tagline-instructors-text {
                 margin-right: 20px;
+                margin-left: 20px;
                 font-size: 11px;
                 line-height: 18px;
-                margin-bottom: 36px;
+                margin-bottom: 0px;
+            }
+
+            .course-tagline-instructors-info {
+                font-style: normal;
+                margin-left: 20px;
+                font-weight: 700;
+                font-size: 10px;
+                line-height: 15px;
+                margin-right: 0px;
+                margin-bottom: 15px;
+
+                color: #5E5D5D;
             }
 
             /* Description */
             .description-div {
-                margin-top: 20px;
+                margin-top: 40px;
             }
 
             .description-wsy-text {
@@ -1029,7 +1098,7 @@
             }
 
             .description-course-main-container {
-                margin-top: 20px;
+                margin-top: 40px;
                 flex-direction: column;
             }
 
@@ -1041,6 +1110,7 @@
                 padding-left: 20px;
                 padding-right: 20px;
                 padding-top: 20px;
+                padding-bottom: 10px;
                 border-top-left-radius: 20px;
             }
 
@@ -1075,10 +1145,12 @@
             .description-course-title {
                 font-size: 14px;
                 line-height: 23px;
+                margin-bottom: 5px;
             }
 
             .description-course-instructor {
                 font-size: 14px;
+                margin-bottom: 5px;
                 line-height: 30px;
             }
 
@@ -1092,7 +1164,7 @@
                 font-style: normal;
                 font-weight: 600;
                 font-size: 12px;
-                margin-top: 10px;
+                margin-top: 20px;
                 line-height: 18px;
                 color: #5E5D5D;
             }
@@ -1144,7 +1216,7 @@
 
             /* download */
             .download-div {
-                margin-top: 30px;
+                margin-top: 60px;
                 width: 320px;
                 display: flex;
                 flex-direction: column;
@@ -1153,19 +1225,21 @@
             .download-inner-div-1 {
                 padding-left: 20px;
                 padding-right: 20px;
-                padding-bottom: 24px;
-                padding-top: 22px;
+                padding-bottom: 20px;
+                padding-top: 15px;
 
             }
 
             .download-inner-div-2 {
                 padding-left: 20px;
                 padding-right: 20px;
-                padding-top: 24px;
+                padding-top: 20px;
             }
 
             .download-header {
                 font-size: 14px;
+                line-height: 30px;
+
             }
 
             .download-sub-header {
@@ -1174,11 +1248,14 @@
             }
 
             .download-sub-inner-div-1 {
-                flex-direction: row;
+                align-items: left;
+                justify-content: left;
             }
 
             .download-sub-inner-text {
                 font-size: 11px;
+                text-align: left;
+                margin-bottom: 8px;
                 margin-right: 10px;
             }
 
@@ -1225,7 +1302,7 @@
             /* Know you better  */
 
             .kwb-div {
-                margin-top: 30px;
+                margin-top: 40px;
                 border-radius: 30px 0px;
                 padding: 48px 20px;
                 background: #F6FCFF;
@@ -1248,21 +1325,23 @@
                 justify-content: center;
                 align-self: center;
                 border: 4px solid #01B9F5;
+                margin-bottom: 15px;
+                margin-top: 10px;
                 border-radius: 20px;
             }
 
             .kwb-label {
                 font-size: 11px;
                 line-height: 18px;
-                margin-bottom: 7px;
-                margin-top: 10px;
+                margin-bottom: 15px;
+                margin-top: 15px;
             }
 
             .kwb-action {
                 width: 84px;
                 height: 30px;
                 margin-right: 8px;
-                margin-bottom: 12px;
+                margin-bottom: 15px;
                 font-size: 11px;
             }
 
@@ -1276,7 +1355,7 @@
                 font-size: 11px;
                 line-height: 30px;
                 /* identical to box height, or 167% */
-
+                margin-bottom: 15px;
 
                 color: #6C6C6C;
             }
@@ -1290,6 +1369,7 @@
                 font-weight: 400;
                 font-size: 11px;
                 line-height: 30px;
+                margin-bottom: 15px;
                 /* identical to box height, or 167% */
 
 
@@ -1343,7 +1423,7 @@
 
             /* faqs */
             .faqs-div {
-                margin-top: 20px;
+                margin-top: 40px;
             }
 
             .faqs-header {
@@ -1385,12 +1465,13 @@
             }
 
             .faqs-li-text {
-
+                margin-top: 8px;
                 font-size: 11px;
                 line-height: 18px;
             }
 
             .faqs-li-text-current {
+                margin-top: 8px;
                 font-size: 11px;
                 line-height: 18px;
             }
@@ -1483,7 +1564,7 @@
                 </div>
             </div>
             <div class="course-tagline-sub-header">Course Instructor</div>
-            <div class="row-div">
+            <div class="course-row-col-des-mob-div">
                 <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-200/banners/627382647318f9107f8b423d.png"
                     class="course-tagline-instructors-img desktop_view" />
                 <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-100/banners/6273814fbe462074af995105.png"
@@ -1492,7 +1573,7 @@
                     <div class="course-tagline-instructors-header">Mike Melli</div>
                     <div class="course-tagline-instructors-info">
                         Co-founder, the Good Creator Co. <br>
-                        Co-founder & CRO of MissMalini Entertainment<br>
+                        Co-founder & CRO of MissMalini Entertainment
                     </div>
                     <div class="course-tagline-instructors-text">
                         Mike started his journey as Malini Agarwal’s business manager and then handled the business side
@@ -1500,7 +1581,6 @@
                         <a href="https://www.instagram.com/missmalini/">@MissMalini</a>. At the Good Creator Co., Mike’s
                         focus is to help brand partners achieve their goals
                         in digital brand building and engagement.
-                        .
                     </div>
                 </div>
             </div>
