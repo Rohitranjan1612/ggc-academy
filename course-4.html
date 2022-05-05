@@ -39,6 +39,7 @@
             background: #F6FCFF;
             border-radius: 30px 0px;
             margin-top: 66px;
+            padding-bottom: 60px;
             padding-right: 20px;
         }
 
@@ -63,13 +64,13 @@
         }
 
         .course-tagline-header {
-            margin-top: 47px;
             margin-bottom: 7px;
             font-style: normal;
-            font-weight: 400;
+            font-weight: 800;
             font-size: 30px;
-            line-height: 35px;
+            line-height: 45px;
             letter-spacing: 0.01em;
+            text-transform: uppercase;
 
             color: #0D0D0D;
         }
@@ -94,13 +95,12 @@
         }
 
         .course-tagline-language {
+            margin-top: 47px !important;
             font-style: normal;
             font-weight: 500;
             font-size: 14px;
             line-height: 30px;
             color: #01B9F5;
-            margin-top: 5px;
-            margin-bottom: 12px;
         }
 
         .course-tagline-points {
@@ -109,7 +109,7 @@
             font-size: 18px;
             line-height: 30px;
             /* or 167% */
-            margin-top: 5px;
+            margin-top: 25px;
             margin-bottom: 12px;
             color: #5E5D5D;
         }
@@ -119,8 +119,7 @@
             flex-direction: row;
             border-right: 1px solid #D2D2D2;
             margin-right: 30px;
-            margin-top: 30px;
-            margin-bottom: 20px;
+            margin-top: 35px;
         }
 
         .course-tagline-icon {
@@ -149,20 +148,19 @@
         .course-tagline-seats-div {
             display: flex;
             flex-direction: row;
-            margin-top: 30px;
-            margin-bottom: 20px;
+            margin-top: 35px;
         }
 
+
         .course-tagline-price-text {
+            margin-top: 55px;
             font-style: normal;
-            font-family: poppins;
             font-weight: 400;
-            font-size: 30px;
-            line-height: 45px;
-            margin-right: 15px;
-            margin-left: 5px;
-            margin-top: 1px;
-            color: #01B9F5;
+            font-size: 18px;
+            line-height: 30px;
+            text-transform: capitalize;
+
+            color: #000000;
         }
 
         .course-tagline-cut-price {
@@ -196,9 +194,8 @@
         }
 
         .course-tagline-off-price {
-            margin-top: 55px;
             font-style: normal;
-            font-weight: 400;
+            font-weight: 700;
             font-size: 25px;
             line-height: 30px;
             color: #000000;
@@ -206,7 +203,7 @@
         }
 
         .course-tagline-action {
-            margin-top: 20px;
+            margin-top: 70px;
             width: 140px;
             height: 40px;
             background: #01B9F5 !important;
@@ -271,16 +268,26 @@
             display: flex;
             align-items: center;
             letter-spacing: 0.01em;
-            margin-bottom: 18px;
+            margin-bottom: 2px;
             color: #000000;
         }
+        .course-tagline-instructors-info {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 25px;
+            margin-right: 40px;
+            margin-bottom: 10px;
 
+            color: #5E5D5D;
+        }
         .course-tagline-instructors-text {
             font-style: normal;
             font-weight: 400;
             font-size: 18px;
             line-height: 30px;
             margin-right: 40px;
+            margin-bottom: 10px;
 
 
             color: #777777;
@@ -945,7 +952,6 @@
             }
 
             .course-tagline-action {
-                margin-top: 20px;
                 margin-left: 20px;
                 width: 90px;
                 height: 30px;
@@ -1428,6 +1434,9 @@
                 <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-250/banners/6273814f7318f9107f8b423b.png"
                     class="course-tagline-courseimg mobile_view" />
                 <div class="col-div">
+                    <div class="course-tagline-language">
+                        ENGLISH | HINDI
+                    </div>
                     <div class="course-tagline-header">
                         Learn how to create your brand as a social media influencer
                     </div>
@@ -1440,12 +1449,9 @@
                         key steps of creating your own social media brand. You will learn how to create your unique
                         brand, stand out on social media and get selected for prestigious brand campaigns.
                     </div>
-                    <div class="course-tagline-language">
-                        ENGLISH | HINDI
-                    </div>
                     <div class="course-tagline-points">
-                        Certification | Presentation slides | <br/>
-                        Interactive session with Q&A | Fireside chat with influencer
+                        Certification &nbsp; | &nbsp; Presentation slides &nbsp; | <br />
+                        Interactive session with Q&A &nbsp; | &nbsp; Fireside chat with influencer
                     </div>
                     <div class="course-row-col-div">
                         <div class="course-tagline-date-div">
@@ -1465,20 +1471,12 @@
                         </div> -->
                     </div>
 
-                    <div class="col-div">
-                        <div class="row-div">
-                            <div class="row-div">
-                                <div class="course-tagline-price-text">₹</div>
-                                <!-- <div class="course-tagline-cut-price"></div> -->
-                                <div class="row-div">
-                                    <div class="course-tagline-price">999</div>
-                                    <div class="course-tagline-price-only">ONLY</div>
-                                </div>
-                            </div>
-                            <!-- <div class="course-tagline-off-price">₹ 7,999/-</div> -->
-
+                    <div class="course-row-col-div">
+                        <div class="col-div">
+                            <div class="course-tagline-price-text">PRICE</div>
+                            <div class="course-tagline-off-price">₹ 999 /-</div>
                         </div>
-                        <button class="course-tagline-action buyBtn" id="course-tagline-action">Register Now!</button>
+                        <button class="course-tagline-action buyBtn" id="course-tagline-action">Let’s Start</button>
                     </div>
                     <!-- <div class="course-tagline-bonus-text">Bonus -Top 3 looks get the chance to feature on </div>
                     <div class="course-tagline-text-link" id="miss-malini-link">MissMalini's Instagram page!!</div> -->
@@ -1491,12 +1489,19 @@
                 <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-100/banners/6273814fbe462074af995105.png"
                     class="course-tagline-instructors-img mobile_view" />
                 <div class="col-div">
-                    <div class="course-tagline-instructors-header">Tanvi Ahuja</div>
-                    <div class="course-tagline-instructors-text">Part of the founding team at <a
-                            href="https://www.instagram.com/winklapp/">Winkl</a>, Tanvi has helped
-                        influencers and brands connect. Having spent her waking hours working with influencers (!!),
-                        Tanvi is the best in the industry to help understand content planning and distribution
-                        strategies.</div>
+                    <div class="course-tagline-instructors-header">Mike Melli</div>
+                    <div class="course-tagline-instructors-info">
+                        Co-founder, the Good Creator Co. <br>
+                        Co-founder & CRO of MissMalini Entertainment<br>
+                    </div>
+                    <div class="course-tagline-instructors-text">
+                        Mike started his journey as Malini Agarwal’s business manager and then handled the business side
+                        of MissMalini.com. He has played an instrumental role in building the social media brand
+                        <a href="https://www.instagram.com/missmalini/">@MissMalini</a>. At the Good Creator Co., Mike’s
+                        focus is to help brand partners achieve their goals
+                        in digital brand building and engagement.
+                        .
+                    </div>
                 </div>
             </div>
             <!-- <div class="row-div">
@@ -1529,41 +1534,71 @@
                         <div class="description-course-date">14</div>
                     </div>
                     <div class="col-div">
-                        <div class="description-course-title">HOW TO INCREASE YOUR SOCIAL MEDIA FOLLOWERS</div>
-                        <div class="description-course-instructor">Instructor: Tanvi Ahuja</div>
+                        <div class="description-course-title">Learn how to create your brand as a social media
+                            influencer</div>
+                        <div class="description-course-instructor">Instructor: Mike Melli</div>
                         <div class="description-course-duration">02 hour session | 2 PM - 4 PM</div>
                     </div>
                 </div>
                 <div class="description-course-inner-div-2">
-                    <div class="description-course-session-text">Session 1: </div>
+                    <div class="description-course-session-text">Session: </div>
+
                     <div class="description-course-sub-container-li">
                         <div class="description-course-sub-container-li-dots-div">
                             <div class="description-course-sub-container-li-dots"></div>
                         </div>
-                        <div class="description-course-sub-container-li-lite">How to increase your follower count
+                        <div class="description-course-sub-container-li-lite"> Introduction to social media brand
+                            building
                         </div>
                     </div>
                     <div class="description-course-sub-container-li">
                         <div class="description-course-sub-container-li-dots-div">
                             <div class="description-course-sub-container-li-dots"></div>
                         </div>
-                        <div class="description-course-sub-container-li-lite">How to plan your content on social media -
-                            what you should post and when</div>
+                        <div class="description-course-sub-container-li-lite"> Steps to finding your unique brand
+                        </div>
                     </div>
                     <div class="description-course-sub-container-li">
                         <div class="description-course-sub-container-li-dots-div">
                             <div class="description-course-sub-container-li-dots"></div>
                         </div>
-                        <div class="description-course-sub-container-li-lite">How to distribute your connect on various
-                            platforms</div>
+                        <div class="description-course-sub-container-li-lite"> Attracting prestigious brand deals
+                        </div>
                     </div>
-                    <div class="description-course-session-text">Session 2: </div>
                     <div class="description-course-sub-container-li">
                         <div class="description-course-sub-container-li-dots-div">
                             <div class="description-course-sub-container-li-dots"></div>
                         </div>
-                        <div class="description-course-sub-container-li-lite">Ask Me Anything (AMA) session to help
-                            answer your queries
+                        <div class="description-course-sub-container-li-lite"> Bonus section! : How to get selected for
+                            brand campaigns
+                        </div>
+                    </div>
+                    <div class="description-course-session-text">Assignment: </div>
+                    <div class="description-course-sub-container-li">
+                        <div class="description-course-sub-container-li-dots-div">
+                            <div class="description-course-sub-container-li-dots"></div>
+                        </div>
+                        <div class="description-course-sub-container-li-lite">This course consists of an assignment that
+                            is to be answered via email
+                        </div>
+                    </div>
+                    <div class="description-course-sub-container-li">
+                        <div class="description-course-sub-container-li-dots-div">
+                            <div class="description-course-sub-container-li-dots"></div>
+                        </div>
+                        <div class="description-course-sub-container-li-lite"> Select participants will receive feedback
+                            on their brand from
+                            brand experts at <a href="https://www.instagram.com/missmalini/">MissMalini</a>, <a
+                                href="https://www.instagram.com/missmalini/">ScoopWhoop</a> and <a
+                                href="https://www.instagram.com/missmalini/">POPxo</a>
+                        </div>
+                    </div>
+                    <div class="description-course-sub-container-li">
+                        <div class="description-course-sub-container-li-dots-div">
+                            <div class="description-course-sub-container-li-dots"></div>
+                        </div>
+                        <div class="description-course-sub-container-li-lite">The best assignment will win gift
+                            vouchers worth INR 1,000 from MyGlamm!
                         </div>
                     </div>
                 </div>
