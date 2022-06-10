@@ -1,0 +1,2664 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Course Details</title>
+    <style>
+        /* .header {
+            z-index: 10;
+            display: flex;
+            flex-direction: row;
+            background-color: #fff;
+            height: 90px;
+            top: 0;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08) !important;
+            border-radius: 8px 0px;
+        } */
+        .dropdown-toggle::after {
+            content: none !important;
+            display: none !important;
+        }
+
+        .main-container {
+            width: 1248px;
+            margin: 0 auto;
+        }
+
+        .col-div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .course-row-col-des-mob-div {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .row-div {
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* Course tagline */
+        .course-tagline-div {
+            background: #F6FCFF;
+            border-radius: 30px 0px;
+            margin-top: 66px;
+            padding-bottom: 60px;
+            padding-right: 20px;
+        }
+
+        .mobile_view {
+            display: none;
+        }
+
+        .desktop_view {
+            display: block;
+        }
+
+        .course-row-col-div {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .course-tagline-courseimg {
+            width: 500px;
+            height: 512px;
+            border-radius: 30px 0px;
+            margin: 60px;
+        }
+
+        .course-tagline-header {
+            margin-bottom: 7px;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 45px;
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+
+            color: #0D0D0D;
+        }
+
+        .course-tagline-text-1 {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            color: #5E5D5D;
+            margin-bottom: 20px;
+        }
+
+        .course-tagline-text-2 {
+            font-style: normal;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+
+            color: #5E5D5D;
+
+        }
+
+        .course-tagline-language {
+            margin-top: 47px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 30px;
+            color: #01B9F5;
+        }
+
+        .course-tagline-points {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 30px;
+            /* or 167% */
+            margin-top: 25px;
+            margin-bottom: 30px;
+            color: #5E5D5D;
+        }
+
+        .course-tagline-points-bonus {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            color: #5E5D5D;
+        }
+
+        .course-tagline-date-div {
+            display: flex;
+            flex-direction: row;
+            border-right: 1px solid #D2D2D2;
+            margin-right: 30px;
+            margin-top: 25px;
+        }
+
+        .course-tagline-icon {
+            margin-right: 16px;
+            width: 28px;
+            height: 28px;
+        }
+
+        .course-tagline-details-text {
+            margin-right: 30px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+
+            color: #000000;
+        }
+
+        .course-tagline-duration-div {
+            display: flex;
+            flex-direction: row;
+            border-right: 1px solid #D2D2D2;
+            margin-right: 30px;
+        }
+
+        .course-tagline-seats-div {
+            display: flex;
+            flex-direction: row;
+            margin-top: 25px;
+        }
+
+
+        .course-tagline-price-text {
+            margin-top: 35px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            text-transform: capitalize;
+
+            color: #000000;
+        }
+
+        .course-tagline-cut-price {
+            position: absolute;
+            width: 80.23px;
+            height: 1.5px !important;
+            top: 468px;
+            background-color: #000000;
+            border: none;
+            transform: rotate(-10.05deg);
+        }
+
+        .course-tagline-price {
+            font-style: normal;
+            font-family: poppins;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 45px;
+
+            color: #000000;
+        }
+
+        .course-tagline-price-only {
+            font-style: normal;
+            font-family: poppins;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 45px;
+            color: #000000;
+            margin-left: 5px;
+        }
+
+        .course-tagline-off-price {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 25px;
+            line-height: 30px;
+            color: #000000;
+            margin-right: 48px;
+        }
+
+        .course-tagline-action {
+            margin-top: 50px;
+            width: 140px;
+            height: 40px;
+            background: #01B9F5 !important;
+            border: none;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            color: white !important;
+            font-size: 16px;
+        }
+
+        a.course-tagline-action {
+            justify-content: center;
+            text-align: center;
+            padding-top: 6px;
+        }
+
+        .course-tagline-bonus-text {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 30px;
+            color: #5E5D5D;
+            margin-top: 34px;
+        }
+
+        .course-tagline-text-link {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 30px;
+            color: #01B9F5;
+        }
+
+        .course-tagline-sub-header {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 45px;
+            width: 572px;
+            margin-left: 460px;
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+            color: #0D0D0D;
+        }
+
+        .course-tagline-instructors-img {
+            margin-left: 60px;
+            margin-right: 47px;
+            margin-bottom: 44px;
+
+            width: 145px;
+            height: 160px;
+            border-radius: 20px 0px;
+        }
+
+        .course-tagline-instructors-header {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 32px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.01em;
+            margin-bottom: 2px;
+            color: #000000;
+        }
+
+        .course-tagline-instructors-info {
+            font-style: normal;
+            font-size: 14px;
+            line-height: 25px;
+            margin-right: 40px;
+            margin-bottom: 10px;
+
+            color: #000000;
+        }
+
+        .course-tagline-instructors-text {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            margin-right: 40px;
+            margin-bottom: 10px;
+            word-spacing: 4px;
+            text-align: left;
+            color: #777777;
+        }
+
+        /* instructors */
+        .margin-top {
+            margin-top: 60px;
+        }
+
+        .instructors-div {
+            background: #FEF9E8;
+            border-radius: 30px 0px;
+            padding-top: 20px;
+            width: 1248px;
+            margin: auto;
+        }
+
+        .instructors-header {
+            margin-top: 30px;
+            font-style: normal;
+            font-weight: medium;
+            font-size: 18px;
+            line-height: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #0D0D0D;
+        }
+
+        .instructors-sub-header {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 45px;
+            text-align: center;
+            text-transform: capitalize;
+            color: #0D0D0D;
+            margin: 0px 24px;
+        }
+
+        .instructors-hr-div {
+            height: 0px;
+            width: 80px;
+            margin-top: 10px;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            border: 5px solid #FFC400;
+            border-radius: 40px;
+        }
+
+        .instructors-main-container {
+            margin: 68px 68px 44px 68px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            /* overflow: hidden; */
+        }
+
+        .instructors-main-container-mobile {
+            display: none;
+        }
+
+        .instructors_card_div {
+            display: flex;
+            flex-direction: column;
+            margin-right: 24px;
+            margin-left: 5px;
+            background: #FFFFFF;
+            width: 200px;
+            height: 335px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+            border-radius: 30px;
+        }
+
+        .instructors_img-1 {
+            position: absolute;
+            width: 200px;
+            border-radius: 30px 0px;
+            left: -5;
+        }
+
+        .instructors_img-2 {
+            position: absolute;
+            width: 200px;
+            height: 252px;
+            border-radius: 30px 0px;
+            left: 372;
+        }
+
+        .instructors_img-3 {
+            position: absolute;
+            width: 200px;
+            height: 252px;
+            border-radius: 30px 0px;
+            left: 745;
+        }
+
+        .instructors_col_div {
+            display: flex;
+            flex-direction: column;
+            margin-top: 220px;
+            margin-left: 10px;
+            margin-right: 10px;
+            width: 180px;
+            padding: 10px;
+        }
+
+        .instructors_card_lite_text {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: 0.01em;
+            color: #666666;
+        }
+
+        .instructors_card_header {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 30px;
+
+            color: #0D0D0D;
+        }
+
+        .instructors_card_text {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            margin-top: 4px;
+            line-height: 26px;
+            color: #0D0D0D;
+        }
+
+        .instructors-sub-container-1 {}
+
+        .instructors-sub-container-carousel {
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .instructors_carousel_track-container {
+            min-height: 446px;
+            min-width: 1132px;
+            padding: 5px;
+            overflow: hidden;
+        }
+
+        .instructors_carousel_track {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            position: relative;
+            transition: transform 250ms ease-in;
+        }
+
+        .instructors_carousel_slide {
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            width: 1132px;
+        }
+
+        .instructors_carousel_nav {
+            position: relative;
+        }
+
+        .instructors_carousel_button_div {
+            position: absolute;
+            right: 60;
+            display: none;
+            flex-direction: row;
+            border: 0;
+            margin: 0 2px;
+            width: 12px;
+            height: 12px;
+        }
+
+        .instructors_carousel_button-1 {
+            width: 31px;
+            height: 30px;
+            border-top-left-radius: 5px;
+            border: none;
+            background: #D0D0D0;
+            padding: 8px 14px;
+        }
+
+        .instructors_carousel_button-2 {
+            width: 31px;
+            height: 30px;
+            border-bottom-right-radius: 5px;
+            border: none;
+            background: #FFC400;
+            padding: 8px 14px;
+            margin-left: 10px;
+        }
+
+        .instructors_vector_icon {
+            width: 8px;
+            height: 13px;
+            transform: rotate(180deg);
+        }
+
+        .instructors_vector_icon_right {
+            width: 8px;
+            height: 13px;
+        }
+
+        /* Description */
+        .description-div {
+            margin-top: 60px;
+        }
+
+        .aboutus_no_properties {
+            border: none;
+            background: none;
+            padding: 0px;
+            border-radius: 50%;
+            z-index: 1;
+            color: #01B9F5;
+        }
+
+        .aboutus_myglamm_no_properties {
+            border: none;
+            background: none;
+            padding: 0px;
+            border-radius: 50%;
+            z-index: 1;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            color: #01B9F5;
+        }
+
+        .description-wsy-text {
+            font-style: normal;
+            font-weight: medium;
+            font-size: 18px;
+            line-height: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #0D0D0D;
+        }
+
+        .description-text {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 45px;
+            text-align: center;
+            text-transform: capitalize;
+            color: #0D0D0D;
+        }
+
+        .description-hr-div {
+            height: 0px;
+            width: 80px;
+            margin-top: 10px;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            border: 5px solid #FFC400;
+            border-radius: 40px;
+        }
+
+        .description-course-main-container {
+            margin-top: 34px;
+            flex-direction: column;
+        }
+
+        .description-course-inner-div-1 {
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+            background: #FFC400;
+            padding-left: 48px;
+            padding-right: 48px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+            border-top-left-radius: 20px;
+        }
+
+        .description-course-inner-div-2 {
+            flex: 1;
+            background: #FEF9E8;
+            padding-top: 0px;
+            padding-bottom: 40px;
+            padding-right: 40px;
+            padding-left: 230px;
+            border-bottom-right-radius: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .description-course-date-div {
+            display: flex;
+            flex-direction: column;
+            margin-right: 120px;
+        }
+
+        .description-course-month {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 36px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #0D0D0D;
+        }
+
+        .description-course-date {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 48px;
+            line-height: 76px;
+            text-align: center;
+            text-transform: capitalize;
+
+            color: #0D0D0D;
+        }
+
+        .description-course-title {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 42px;
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+            color: #0D0D0D;
+        }
+
+        .description-course-instructor {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 42px;
+            letter-spacing: 0.01em;
+            color: #0D0D0D;
+        }
+
+        .description-course-duration {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 35px;
+            color: #0D0D0D;
+            margin-bottom: 9px;
+        }
+
+
+        .description-course-session-text {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 35px;
+            margin-top: 20px;
+            color: #5E5D5D;
+        }
+
+        .description-course-sub-container-li {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .description-course-sub-container-li-dots {
+            border: 0;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            background: #979797;
+            margin-top: 10px;
+            margin-right: 18px;
+        }
+
+        .description-course-sub-container-semi-bold {
+            margin-top: 20px;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 35px;
+            color: #5E5D5D;
+        }
+
+        .description-course-sub-container-semi-bold-2 {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 35px;
+            color: #5E5D5D;
+        }
+
+        .description-course-sub-container-li-lite {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            color: #777777;
+        }
+
+        /* download */
+        .download-div {
+            margin-top: 80px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .download-inner-div-1 {
+            flex: 1;
+            background: #FFC400;
+            padding-left: 48px;
+            padding-right: 48px;
+            padding-top: 32px;
+            padding-bottom: 40px;
+            border-top-left-radius: 10px;
+        }
+
+        .download-inner-div-2 {
+            flex: 1;
+            background: #FCD77C;
+            padding-left: 48px;
+            border-bottom-right-radius: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .download-header {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 60px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+            color: #0D0D0D;
+        }
+
+        .download-sub-header {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            color: #5B5B5B;
+        }
+
+        .download-sub-inner-div-1 {
+            display: flex;
+            flex-direction: column;
+            flex: 2;
+            justify-content: center;
+        }
+
+        .download-sub-inner-text {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            /* or 114% */
+
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+
+            color: #000000;
+        }
+
+        .download-sub-inner-div-3 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .download-android-logo {
+            width: 100px;
+            height: 30px;
+            margin-right: 12px;
+        }
+
+        .download-ios-logo {
+            width: 100px;
+            height: 30px;
+        }
+
+        .download-sub-inner-div-2 {
+            flex: 1;
+            margin: 20px;
+            background: #FFFFFF;
+            border-bottom-right-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .download-sub-inner-text-2 {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            color: #000000;
+        }
+
+        .download-qrcode-logo {
+            width: 57px;
+            height: 57px;
+        }
+
+        /* Know you better  */
+
+        .kwb-div {
+            margin-top: 60px;
+            border-radius: 30px 0px;
+            padding: 80px 60px;
+            background: #F6FCFF;
+        }
+
+        .kwb-wsy-text {
+            font-style: normal;
+            font-weight: medium;
+            font-size: 18px;
+            line-height: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #0D0D0D;
+        }
+
+        .kwb-text {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 45px;
+            text-align: center;
+            text-transform: capitalize;
+            color: #0D0D0D;
+        }
+
+        .kwb-hr-div {
+            height: 0px;
+            width: 80px;
+            margin-top: 10px;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            border: 5px solid #01B9F5;
+            border-radius: 40px;
+            margin-bottom: 40px;
+        }
+
+        .kwb-label {
+            font-style: normal;
+            margin-bottom: 24px;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 36px;
+            letter-spacing: 0.5px;
+            color: #000000;
+        }
+
+        .kwb-action {
+            width: 140px;
+            height: 40px;
+            margin-right: 20px;
+            margin-bottom: 60px;
+            background: #FFFFFF !important;
+            border: none;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            font-size: 14px;
+            border: 0.5px solid #929292;
+            box-sizing: border-box;
+        }
+
+        .kwb_input_email {
+            border: none;
+            border-bottom: 1px solid #525252;
+            background: none;
+            width: 545px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            /* identical to box height, or 167% */
+
+
+            color: #6C6C6C;
+        }
+
+        .kwb_input_phone {
+            border: none;
+            border-bottom: 1px solid #525252;
+            background: none;
+            width: 545px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            /* identical to box height, or 167% */
+
+
+            color: #6C6C6C;
+        }
+
+        .kwb-action-current {
+            width: 140px;
+            height: 40px;
+            margin-right: 20px;
+            margin-bottom: 60px;
+            background: #01B9F5 !important;
+            border: none;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            color: white;
+            font-size: 14px;
+        }
+
+        .kwb-action-submit {
+            position: absolute;
+            border: none;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            font-size: 14px;
+            box-sizing: border-box;
+
+            width: 101px;
+            height: 40px;
+            margin-top: 60px;
+            margin-left: 987px;
+            color: #A0A0A0;
+            background: #FFFFFF;
+            border: 1px solid #A0A0A0;
+        }
+
+        .kwb-action-submit-current {
+            position: absolute;
+            border: none;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            font-size: 14px;
+            box-sizing: border-box;
+
+            width: 101px;
+            height: 40px;
+            margin-top: 80px;
+            margin-left: 987px;
+            color: white;
+            background: #01B9F5;
+            border: none;
+        }
+
+        .kwb-row-div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        /* faqs */
+        .faqs-div {
+            margin-top: 60px;
+        }
+
+        .faqs-header {
+            font-style: normal;
+            font-weight: medium;
+            font-size: 18px;
+            line-height: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #0D0D0D;
+        }
+
+        .faqs-sub-header {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 45px;
+            text-align: center;
+            text-transform: capitalize;
+            color: #0D0D0D;
+        }
+
+        .faqs-hr-div {
+            height: 0px;
+            width: 80px;
+            margin-top: 10px;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            border: 5px solid #01B9F5;
+            border-radius: 40px;
+        }
+
+        .faqs-main-container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 40px;
+            margin-bottom: 120px;
+        }
+
+        .faqs-li {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-bottom: 32px;
+            padding-top: 32px;
+            border-bottom: 1.5px solid #E6E6E6;
+        }
+
+        .faqs-li-container {
+            display: flex;
+            flex: 9;
+            flex-direction: column;
+        }
+
+        .faqs-li-header {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 36px;
+            letter-spacing: 0.5px;
+            color: #000000;
+        }
+
+        .faqs-li-text {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 31px;
+            color: #333333;
+            display: none;
+        }
+
+        .faqs-li-text-current {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 31px;
+            color: #333333;
+        }
+
+        .faqs-li-icon-div {
+            flex: 0.4;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 25px;
+            margin-top: 14px;
+        }
+
+        .faqs-li-icon-current {
+            width: 16px;
+            height: 10px;
+        }
+
+        .faqs-li-icon {
+            width: 16px;
+            height: 10px;
+            transform: rotate(-180deg);
+        }
+
+        @media(max-width: 1000px) {
+            .main-container {
+                width: 320px;
+                margin: 0 auto;
+            }
+
+            .mobile_view {
+                display: block;
+            }
+
+            .desktop_view {
+                display: none;
+            }
+
+            .course-row-col-div {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .col-div {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .row-div {
+                display: flex;
+                flex-direction: row;
+            }
+
+            /* Course tagline */
+            .course-tagline-div {
+                background: #F6FCFF;
+                border-radius: 30px 0px;
+                margin-top: 40px;
+                padding-bottom: 30px;
+            }
+
+            .course-tagline-courseimg {
+                width: 246px;
+                height: 208px;
+                border-radius: 30px 0px;
+                margin: 30px;
+            }
+
+            .course-tagline-header {
+                margin-top: 0px;
+                margin-bottom: 7px;
+                margin-left: 20px;
+                margin-right: 20px;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 21px;
+                display: flex;
+                align-items: center;
+            }
+
+            .course-tagline-text-1 {
+                font-size: 11px;
+                line-height: 18px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
+            .course-tagline-text-2 {
+                font-size: 11px;
+                line-height: 18px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
+            .course-tagline-points {
+                font-style: normal;
+                font-weight: 700;
+                /* or 167% */
+                font-size: 11px;
+                line-height: 18px;
+                margin-left: 20px;
+                margin-top: 25px;
+                margin-right: 20px;
+                margin-bottom: 5px;
+                color: #5E5D5D;
+            }
+
+            .course-tagline-points-bonus {
+                font-size: 11px;
+                line-height: 18px;
+                margin-left: 20px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            .course-tagline-language {
+                font-size: 9px;
+                line-height: 14px;
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-top: 5px;
+                margin-bottom: 10px;
+            }
+
+            .course-tagline-date-div {
+                border-right: none;
+                margin-bottom: 0px;
+                margin-top: 10px;
+            }
+
+            .course-tagline-seats-div {
+                display: flex;
+                flex-direction: row;
+                margin-top: 10px;
+            }
+
+            .course-row-col-des-mob-div {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .course-tagline-icon {
+                margin-right: 16px;
+                margin-left: 20px;
+                width: 20px;
+                height: 20px;
+            }
+
+            .course-tagline-details-text {
+                margin-right: 0px;
+                font-size: 12px;
+                line-height: 18px;
+            }
+
+            .course-tagline-duration-div {
+                border-right: none;
+                margin-bottom: 20px;
+            }
+
+            .course-tagline-cut-price {
+                width: 62px;
+                top: 700px;
+                margin-left: 20px;
+            }
+
+            .course-tagline-price-text {
+                margin-right: 10px;
+                margin-left: 25px;
+                margin-top: 25px;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 30px;
+                /* identical to box height, or 250% */
+
+                text-transform: capitalize;
+
+                color: #5E5D5D
+            }
+
+            .course-tagline-price {
+                font-size: 20px;
+                line-height: 30px;
+            }
+
+            .course-tagline-price-only {
+                font-size: 20px;
+                line-height: 30px;
+                margin-left: 5px;
+                color: #000000;
+            }
+
+            .course-tagline-off-price {
+                font-style: normal;
+                margin-left: 25px;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 30px;
+
+
+                color: #000000;
+            }
+
+            .course-tagline-action {
+                margin-left: 20px;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                width: 90px;
+                height: 30px;
+                font-size: 11px;
+            }
+
+            a.course-tagline-action {
+                padding-top: 6px;
+            }
+
+            .course-tagline-bonus-text {
+                font-size: 11px;
+                line-height: 18px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
+            .course-tagline-text-link {
+                font-size: 11px;
+                line-height: 18px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
+            .course-tagline-sub-header {
+                width: 100%;
+                font-size: 14px;
+                line-height: 21px;
+                margin-left: 20px;
+                margin-top: 10px;
+                margin-bottom: 24px;
+            }
+
+            .course-tagline-instructors-img {
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-bottom: 0px;
+                width: 92px;
+                height: 100px;
+            }
+
+            .course-tagline-instructors-header {
+                margin-right: 20px;
+                margin-left: 20px;
+                font-size: 14px;
+                line-height: 19px;
+                margin-bottom: 5px;
+                margin-top: 20px;
+            }
+
+            .course-tagline-instructors-text {
+                margin-right: 20px;
+                margin-left: 20px;
+                font-size: 11px;
+                line-height: 18px;
+                margin-bottom: 0px;
+            }
+
+            .course-tagline-instructors-info {
+                font-style: normal;
+                margin-left: 20px;
+                font-size: 10px;
+                line-height: 15px;
+                margin-right: 0px;
+                margin-bottom: 15px;
+
+                color: #000000;
+            }
+
+            /* instructors */
+            .margin-top {
+                margin-top: 30px;
+            }
+
+            .instructors-div {
+                height: 527px;
+                padding-top: 18px;
+                width: 320px;
+                margin: auto;
+            }
+
+            .instructors-header {
+                font-size: 11px;
+                line-height: 16px;
+            }
+
+            .instructors-sub-header {
+                font-size: 20px;
+                line-height: 24px;
+            }
+
+            .instructors-hr-div {
+                width: 40px;
+                border: 3px solid #FFC400;
+                border-radius: 20px;
+            }
+
+            .instructors-main-container {
+                margin: 36px 40px 36px 40px;
+                overflow: hidden;
+                display: none;
+            }
+
+            .instructors-main-container-mobile {
+                margin: 26px 40px 36px 40px;
+                overflow: hidden;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .instructors_card_div {
+                display: flex;
+                flex-direction: column;
+                margin-right: 24px;
+                margin-left: 20px;
+                background: #FFFFFF;
+                width: 190px;
+                height: 300px;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+                border-radius: 20px;
+            }
+
+            .instructors_img-1 {
+                position: absolute;
+                width: 190px;
+                height: 190px;
+                left: -1;
+            }
+
+            .instructors_img-2 {
+                position: absolute;
+                width: 190px;
+                height: 190px;
+                left: -1;
+            }
+
+            .instructors_img-3 {
+                position: absolute;
+                width: 190px;
+                height: 190px;
+                left: -1;
+            }
+
+            .instructors_col_div {
+                display: flex;
+                flex-direction: column;
+                margin-top: 178px;
+                margin-left: 0px;
+                padding: 20px;
+                width: 190px;
+            }
+
+            .instructors_card_lite_text {
+                font-size: 12px;
+                line-height: 16px;
+            }
+
+            .instructors_card_header {
+                font-size: 12px;
+                line-height: 18px;
+                margin-top: 5px;
+            }
+
+            .instructors_card_text {
+                font-size: 11px;
+                line-height: 18px;
+                margin-right: 20px;
+            }
+
+
+            .instructors_carousel_track-container {
+                min-height: 355px;
+                min-width: 1132px;
+                padding: 5px;
+                overflow: hidden;
+            }
+
+            .instructors_carousel_track {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                position: relative;
+                transition: transform 250ms ease-in;
+            }
+
+            .instructors_carousel_slide {
+                position: absolute;
+                display: flex;
+                flex-direction: row;
+                width: 1132px;
+            }
+
+            .instructors_carousel_nav {
+                position: relative;
+            }
+
+            .instructors_carousel_button_div {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                border: 0;
+                margin: 0 83px;
+                width: 30px;
+                height: 30px;
+            }
+
+            .instructors_carousel_button-1 {
+                width: 30px;
+                height: 30px;
+                border-top-left-radius: 5px;
+                border: none;
+                padding-top: 8px;
+                padding-left: 8px;
+                padding-right: 18px;
+                padding-bottom: 6px;
+                background: #D0D0D0;
+            }
+
+            .instructors_carousel_button-2 {
+                width: 30px;
+                height: 30px;
+                border-bottom-right-radius: 5px;
+                border: none;
+                padding-top: 8px;
+                padding-left: 10px;
+                padding-right: 14px;
+                padding-bottom: 6px;
+                background: #FFC400;
+                margin-left: 10px;
+            }
+
+            .instructors_vector_icon {
+                position: absolute;
+                left: 2;
+                top: 8;
+                width: 8px;
+                height: 13px;
+                transform: rotate(180deg);
+            }
+
+            .instructors_vector_icon_right {
+                position: absolute;
+                right: -45;
+                top: 8;
+                width: 8px;
+                height: 13px;
+            }
+
+
+            /* Description */
+            .description-div {
+                margin-top: 40px;
+            }
+
+            .description-wsy-text {
+                font-size: 11px;
+                line-height: 16px;
+            }
+
+            .description-text {
+                font-size: 20px;
+                line-height: 30px;
+            }
+
+            .description-hr-div {
+                width: 40px;
+                border: 3px solid #FFC400;
+                border-radius: 20px;
+            }
+
+            .description-course-main-container {
+                margin-top: 40px;
+                flex-direction: column;
+            }
+
+            .description-course-inner-div-1 {
+                display: flex;
+                flex-direction: row;
+                flex: 1;
+                background: #FFC400;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 20px;
+                padding-bottom: 10px;
+                border-top-left-radius: 20px;
+            }
+
+            .description-course-inner-div-2 {
+                flex: 1;
+                background: #FEF9E8;
+                padding-top: 0px;
+                padding-bottom: 20px;
+                padding-right: 20px;
+                padding-left: 20px;
+                border-bottom-right-radius: 20px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .description-course-date-div {
+                display: flex;
+                flex-direction: column;
+                margin-right: 33px;
+            }
+
+            .description-course-month {
+                font-size: 11px;
+                line-height: 16px;
+            }
+
+            .description-course-date {
+                font-size: 20px;
+                line-height: 30px;
+            }
+
+            .description-course-title {
+                font-size: 14px;
+                line-height: 23px;
+                margin-bottom: 5px;
+            }
+
+            .description-course-instructor {
+                font-size: 14px;
+                margin-bottom: 5px;
+                line-height: 30px;
+            }
+
+            .description-course-duration {
+                font-size: 9px;
+                line-height: 14px;
+            }
+
+
+            .description-course-session-text {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 12px;
+                margin-top: 20px;
+                line-height: 18px;
+                color: #5E5D5D;
+            }
+
+            .description-course-sub-container-li {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .description-course-sub-container-li-dots {
+                border: 0;
+                border-radius: 50%;
+                height: 6px;
+                width: 6px;
+
+                background: #979797;
+                margin-top: 6px;
+                margin-right: 18px;
+            }
+
+            .description-course-sub-container-li-dots-div {
+                width: 26px;
+            }
+
+            .description-course-sub-container-semi-bold {
+                margin-top: 20px;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 18px;
+                color: #5E5D5D;
+            }
+
+            .description-course-sub-container-semi-bold-2 {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 18px;
+                color: #5E5D5D;
+            }
+
+            .description-course-sub-container-li-lite {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 11px;
+                line-height: 18px;
+                color: #777777;
+            }
+
+            /* download */
+            .download-div {
+                margin-top: 60px;
+                width: 320px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .download-inner-div-1 {
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-bottom: 20px;
+                padding-top: 15px;
+
+            }
+
+            .download-inner-div-2 {
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 20px;
+            }
+
+            .download-header {
+                font-size: 14px;
+                line-height: 30px;
+
+            }
+
+            .aboutus_myglamm_no_properties {
+                font-size: 11px;
+                line-height: 18px;
+            }
+
+            .download-sub-header {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            .download-sub-inner-div-1 {
+                align-items: left;
+                justify-content: left;
+            }
+
+            .download-sub-inner-text {
+                font-size: 11px;
+                text-align: left;
+                margin-bottom: 8px;
+                margin-right: 10px;
+            }
+
+            .download-sub-inner-div-3 {
+                display: flex;
+                flex-direction: row;
+                align-items: left;
+                justify-content: left;
+                margin-bottom: 20px;
+                margin-right: 20px;
+            }
+
+            .download-android-logo {
+                width: 81px;
+                height: 24px;
+                margin-right: 8px;
+            }
+
+            .download-ios-logo {
+                width: 81px;
+                height: 24px;
+            }
+
+            .download-sub-inner-div-2 {
+                display: none;
+            }
+
+            .download-sub-inner-text-2 {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 16px;
+                text-align: center;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+                color: #000000;
+            }
+
+            .download-qrcode-logo {
+                width: 57px;
+                height: 57px;
+            }
+
+            /* Know you better  */
+
+            .kwb-div {
+                margin-top: 40px;
+                border-radius: 30px 0px;
+                padding: 48px 20px;
+                background: #F6FCFF;
+            }
+
+            .kwb-wsy-text {
+                font-size: 11px;
+                line-height: 16px;
+            }
+
+            .kwb-text {
+                font-size: 20px;
+                line-height: 30px;
+            }
+
+            .kwb-hr-div {
+                height: 0px;
+                width: 40px;
+                align-items: center;
+                justify-content: center;
+                align-self: center;
+                border: 3px solid #01B9F5;
+                margin-bottom: 15px;
+                margin-top: 10px;
+                border-radius: 20px;
+            }
+
+            .kwb-label {
+                font-size: 11px;
+                line-height: 18px;
+                margin-bottom: 15px;
+                margin-top: 15px;
+            }
+
+            .kwb-action {
+                width: 84px;
+                height: 30px;
+                margin-right: 8px;
+                margin-bottom: 15px;
+                font-size: 11px;
+            }
+
+            .kwb_input_email {
+                border: none;
+                border-bottom: 1px solid #525252;
+                background: none;
+                width: 281px;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 11px;
+                line-height: 30px;
+                /* identical to box height, or 167% */
+                margin-bottom: 15px;
+
+                color: #6C6C6C;
+            }
+
+            .kwb_input_phone {
+                border: none;
+                border-bottom: 1px solid #525252;
+                background: none;
+                width: 281px;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 11px;
+                line-height: 30px;
+                margin-bottom: 15px;
+                /* identical to box height, or 167% */
+
+
+                color: #6C6C6C;
+            }
+
+            .kwb-action-current {
+                width: 84px;
+                height: 30px;
+                margin-right: 8px;
+                margin-bottom: 12px;
+                font-size: 11px;
+            }
+
+            .kwb-action-submit {
+                position: absolute;
+                border: none;
+                border-top-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                font-size: 14px;
+                box-sizing: border-box;
+
+                width: 84px;
+                height: 30px;
+                margin-top: 30px;
+                margin-left: 90px;
+                color: #A0A0A0;
+                background: #FFFFFF;
+                border: 1px solid #A0A0A0;
+            }
+
+            .kwb-action-submit-current {
+                position: absolute;
+                border: none;
+                border-top-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                font-size: 14px;
+                box-sizing: border-box;
+
+                width: 84px;
+                height: 30px;
+                margin-top: 30px;
+                margin-left: 90px;
+            }
+
+            .kwb-row-div {
+                display: flex;
+                flex-direction: column;
+                justify-content: none;
+            }
+
+            /* faqs */
+            .faqs-div {
+                margin-top: 40px;
+            }
+
+            .faqs-header {
+                font-size: 11px;
+                line-height: 16px;
+            }
+
+            .faqs-sub-header {
+                font-size: 20px;
+                line-height: 30px;
+            }
+
+            .faqs-hr-div {
+                width: 40px;
+                border: 3px solid #01B9F5;
+                border-radius: 20px;
+            }
+
+            .faqs-main-container {
+                margin-top: 20px;
+                margin-bottom: 60px;
+            }
+
+            .faqs-li {
+                padding-bottom: 24px;
+                padding-top: 24px;
+            }
+
+            .faqs-li-container {
+                display: flex;
+                flex: 8;
+                flex-direction: column;
+            }
+
+            .faqs-li-header {
+
+                font-size: 11px;
+                line-height: 18px;
+            }
+
+            .faqs-li-text {
+                margin-top: 8px;
+                font-size: 11px;
+                line-height: 18px;
+            }
+
+            .faqs-li-text-current {
+                margin-top: 8px;
+                font-size: 11px;
+                line-height: 18px;
+            }
+
+            .faqs-li-icon-div {
+                flex: 2;
+                margin-right: 25px;
+                margin-top: 4px;
+            }
+
+            .faqs-li-icon-current {
+                width: 16px;
+                height: 10px;
+            }
+
+            .faqs-li-icon {
+                width: 16px;
+                height: 10px;
+                transform: rotate(-180deg);
+            }
+
+        }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="bootstrap-styles">
+    <!-- Course tagline -->
+    <!-- {{TAGLINE}} -->
+    <div class="main-container" id="main-container">
+        <div class="course-tagline-div">
+            <div class="course-row-col-div">
+                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/banners/62a19bbdbe4620036332859b.png"
+                    class="course-tagline-courseimg desktop_view" />
+                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/banners/62a19bbd7318f9306e7516b1.png"
+                    class="course-tagline-courseimg mobile_view" />
+                <div class="col-div">
+                    <div class="course-tagline-language">
+                        ENGLISH | HINDI
+                    </div>
+                    <div class="course-tagline-header">
+                        Learn how to create content for social media
+                    </div>
+                    <!-- <div class="course-tagline-text-1">
+                        2 Beauty Instructors x 2 Day Bootcamp x 3 Viral Instagrammable looks
+                    </div> -->
+                    <div class="course-tagline-text-2">
+                        In our first ever content-focused course, actor, theatre artist, anchor and resident content
+                        creator at ScoopWhoop’s <button class="aboutus_no_properties"
+                            onclick="window.open('https://www.instagram.com/scoopwhoopoktested/', '_blank');">OK
+                            Tested</button>, <button class="aboutus_no_properties"
+                            onclick="window.open('https://www.instagram.com/smackchie/', '_blank');">Kanishk
+                            Priyadarshi</button> will help you learn everything
+                        you need to
+                        know about content creation across different social media platforms.
+                    </div>
+                    <div class="course-tagline-points">
+                        Certification &nbsp; | &nbsp; Presentation slides &nbsp; | &nbsp;
+                        Interactive session with Q&A &nbsp; | &nbsp;
+                        Fireside chat with OK Tested’s <button class="aboutus_no_properties"
+                            onclick="window.open('https://www.instagram.com/aakanshapushp/?hl=en', '_blank');">Aakansha
+                            Pushp
+                        </button>
+                    </div>
+                    <div class="course-tagline-points-bonus">BONUS!! Get the opportunity for a 1-1 mentorship session
+                        with Kanishk!
+                    </div>
+                    <div class="course-row-col-div">
+                        <div class="course-tagline-date-div">
+                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6244093bbe462074af99174f.png"
+                                class="course-tagline-icon" />
+                            <div class="course-tagline-details-text">18 June 2022</div>
+                        </div>
+                        <div class="course-tagline-seats-div">
+                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6244093bbe462074af99174e.png"
+                                class="course-tagline-icon" />
+                            <div class="course-tagline-details-text">02 Hours</div>
+                        </div>
+                        <!-- <div class="course-tagline-seats-div">
+                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6244093b7318f9107f8b0677.png"
+                                class="course-tagline-icon" />
+                            <div class="course-tagline-details-text">50 seats</div>
+                        </div> -->
+                    </div>
+
+                    <div class="course-row-col-div">
+                        <div class="col-div">
+                            <div class="course-tagline-price-text">PRICE</div>
+                            <div class="course-tagline-off-price">₹ 249 /-</div>
+                        </div>
+                        <button class="course-tagline-action buyBtn" id="course-tagline-action" data-id="62a1a20e0cf2b10567941b00">Register Here!</button>
+                    </div>
+                    <!-- <div class="course-tagline-bonus-text">Bonus -Top 3 looks get the chance to feature on </div>
+                    <div class="course-tagline-text-link" id="miss-malini-link">MissMalini's Instagram page!!</div> -->
+                </div>
+            </div>
+            <div class="course-tagline-sub-header">Course Instructor</div>
+            <div class="course-row-col-des-mob-div">
+                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/banners/62a19c2e7318f9306e7516b3.png"
+                    class="course-tagline-instructors-img desktop_view" />
+                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/banners/62a19c2e7318f9306e7516b3.png"
+                    class="course-tagline-instructors-img mobile_view" />
+                <div class="col-div">
+                    <div class="course-tagline-instructors-header">
+                        Kanishk Priyadarshi
+                    </div>
+                    <div class="course-tagline-instructors-info">
+                        Actor, Theatre Artist, Anchor | Content Creator, OK Tested by ScoopWhoop
+                    </div>
+                    <div class="course-tagline-instructors-text">
+                        Kanishk Priyadarshi is a graduate in Social Sciences and Humanities. He opted to pursue his
+                        passion and converted it into a career as an actor, theatre artist, anchor and now aa a content
+                        creator with ScoopWhoop’s OK Tested. Kanishk started acting during his second year of
+                        college through <button class="aboutus_no_properties"
+                            onclick="window.open('https://www.instagram.com/asmita.theatre/?hl=en', '_blank');">Asmita
+                            Theatre Group</button>, a
+                        professional theatre group in Delhi NCR; he has performed in more than 800 street plays.
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row-div">
+                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6244062c7318f9107f8b0675.png"
+                    class="course-tagline-instructors-img" />
+                <div class="col-div">
+                    <div class="course-tagline-instructors-header">Manjari Singh</div>
+                    <div class="course-tagline-instructors-text">Award-winning celebrity make-up artist and hair stylist
+                        from The London School of Make-up and Kevin Fortune Hairstyling Academy, Manjari Singh, is here
+                        to teach you foundational makeup skills and three viral instagrammable looks. She also talks
+                        about her learnings from quitting her corporate job and pursuing her love for makeup and beauty.
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <!-- instructors -->
+    <!-- Description -->
+    <!-- {{DESCRIPTION}} -->
+    <div id="description" class="description-div">
+        <div class="main-container" id="main-container">
+            <div class="col-div">
+                <div class="description-wsy-text">Course</div>
+                <div class="description-text">Details</div>
+                <div class="description-hr-div"></div>
+            </div>
+            <div class="description-course-main-container">
+                <div class="description-course-inner-div-1">
+                    <div class="description-course-date-div">
+                        <div class="description-course-month">June</div>
+                        <div class="description-course-date">18</div>
+                    </div>
+                    <div class="col-div">
+                        <div class="description-course-title">LEARN HOW TO CREATE CONTENT FOR SOCIAL MEDIA</div>
+                        <div class="description-course-instructor">Instructor: Kanishk Priyadarshi</div>
+                        <div class="description-course-duration">02 hour session | 2 PM - 4 PM</div>
+                    </div>
+                </div>
+                <div class="description-course-inner-div-2">
+                    <div class="description-course-session-text">Session Details</div>
+                    <div class="description-course-sub-container-li">
+                        <div class="description-course-sub-container-li-dots-div">
+                            <div class="description-course-sub-container-li-dots"></div>
+                        </div>
+                        <div class="description-course-sub-container-li-lite"> Ideating and creating content that works
+                        </div>
+                    </div>
+                    <div class="description-course-sub-container-li">
+                        <div class="description-course-sub-container-li-dots-div">
+                            <div class="description-course-sub-container-li-dots"></div>
+                        </div>
+                        <div class="description-course-sub-container-li-lite"> Adapting your content across different social media platforms 
+                        </div>
+                    </div>
+                    <div class="description-course-sub-container-li">
+                        <div class="description-course-sub-container-li-dots-div">
+                            <div class="description-course-sub-container-li-dots"></div>
+                        </div>
+                        <div class="description-course-sub-container-li-lite">Listening to viewer feedback and creating your own audience
+                        </div>
+                    </div>
+                    <div class="description-course-sub-container-li">
+                        <div class="description-course-sub-container-li-dots-div">
+                            <div class="description-course-sub-container-li-dots"></div>
+                        </div>
+                        <div class="description-course-sub-container-li-lite">Crafting content for brand promotions
+                        </div>
+                    </div>
+                    <!-- <div class="description-course-session-text">Session 2: Creator selection</div>
+                    <div class="description-course-sub-container-li">
+                        <div class="description-course-sub-container-li-dots-div">
+                            <div class="description-course-sub-container-li-dots"></div>
+                        </div>
+                        <div class="description-course-sub-container-li-lite"> How to get selected for brand deals - a
+                            Brand Manager’s perspective
+                        </div>
+                    </div>
+                    <div class="description-course-session-text">Session 3: Content strategy and production</div>
+                    <div class="description-course-sub-container-li">
+                        <div class="description-course-sub-container-li-dots-div">
+                            <div class="description-course-sub-container-li-dots"></div>
+                        </div>
+                        <div class="description-course-sub-container-li-lite"> How to plan and craft content
+                        </div>
+                    </div>
+                    <div class="description-course-sub-container-li">
+                        <div class="description-course-sub-container-li-dots-div">
+                            <div class="description-course-sub-container-li-dots"></div>
+                        </div>
+                        <div class="description-course-sub-container-li-lite"> Do’s and Don’ts of content production
+                        </div>
+                    </div>
+
+                    <div class="description-course-session-text">Session 4: Growth hacks</div>
+                    <div class="description-course-sub-container-li">
+                        <div class="description-course-sub-container-li-dots-div">
+                            <div class="description-course-sub-container-li-dots"></div>
+                        </div>
+                        <div class="description-course-sub-container-li-lite"> YouTube channel hygiene and optimisation
+                            best practices
+                        </div>
+                    </div>
+                    <div class="description-course-sub-container-li">
+                        <div class="description-course-sub-container-li-dots-div">
+                            <div class="description-course-sub-container-li-dots"></div>
+                        </div>
+                        <div class="description-course-sub-container-li-lite"> Keywords research to target the right
+                            user queries
+                        </div>
+                    </div>
+                    <div class="description-course-sub-container-li">
+                        <div class="description-course-sub-container-li-dots-div">
+                            <div class="description-course-sub-container-li-dots"></div>
+                        </div>
+                        <div class="description-course-sub-container-li-lite"> How to stand out using thumbnails and
+                            titles
+                        </div>
+                    </div>
+                    <div class="description-course-sub-container-li">
+                        <div class="description-course-sub-container-li-dots-div">
+                            <div class="description-course-sub-container-li-dots"></div>
+                        </div>
+                        <div class="description-course-sub-container-li-lite"> Building your fan army - Comments, Posts,
+                            Polls, LIVE and more
+                        </div>
+                    </div>
+                    <div class="description-course-sub-container-li">
+                        <div class="description-course-sub-container-li-dots-div">
+                            <div class="description-course-sub-container-li-dots"></div>
+                        </div>
+                        <div class="description-course-sub-container-li-lite"> "Please Subscribe" - Learn the subtle art
+                            of Call-to-action
+                        </div>
+                    </div>
+
+                    <div class="description-course-session-text">Session 5: Fireside chat with <button
+                            class="aboutus_no_properties"
+                            onclick="window.open('https://www.youtube.com/c/VinayKuyya', '_blank');">Vinay Kuyya
+                        </button>
+                    </div> -->
+                </div>
+            </div>
+            <!-- <div class="description-course-main-container">
+                <div class="description-course-inner-div-1">
+                    <div class="description-course-date-div">
+                        <div class="description-course-month">April</div>
+                        <div class="description-course-date">17</div>
+                    </div>
+                    <div class="col-div">
+                        <div class="description-course-title">Day 2: Makeup for Content Creation 101</div>
+                        <div class="description-course-instructor">Instructor: Manjari Singh</div>
+                        <div class="description-course-duration">04 hour session</div>
+                    </div>
+                </div>
+                <div class="description-course-inner-div-2">
+                    <div class="description-course-session-text">Session 1: </div>
+                    <div class="description-course-sub-container-li">
+                        <div class="description-course-sub-container-li-dots-div">
+                            <div class="description-course-sub-container-li-dots"></div>
+                        </div>
+                        <div class="description-course-sub-container-li-lite">How to navigate a career change and find
+                            your passion in the beauty industry - Learn from Manjari's journey from a marketing head to
+                            a celebrity MUA
+                        </div>
+                    </div>
+                    <div class="description-course-session-text">Session 2: </div>
+                    <div class="description-course-sub-container-li-lite">Learn basics of makeup, how to create your
+                        makeup kit and 3 Instagrammable looks</div>
+                    <div class="description-course-sub-container-li">
+                        <div class="description-course-sub-container-li-dots-div">
+                            <div class="description-course-sub-container-li-dots"></div>
+                        </div>
+                        <div class="description-course-sub-container-li-lite">Contour and lift with blush: Bring back
+                            the 80’s with draped blush technique to lift your cheeks and frame your face
+                        </div>
+                    </div>
+                    <div class="description-course-sub-container-li">
+                        <div class="description-course-sub-container-li-dots-div">
+                            <div class="description-course-sub-container-li-dots"></div>
+                        </div>
+                        <div class="description-course-sub-container-li-lite">Glitter and gloss : Glittery eyes and
+                            glossy lips - a combo that’s sure to make heads turn
+                        </div>
+                    </div>
+                    <div class="description-course-sub-container-li">
+                        <div class="description-course-sub-container-li-dots-div">
+                            <div class="description-course-sub-container-li-dots"></div>
+                        </div>
+                        <div class="description-course-sub-container-li-lite">Sunkissed and freckles: Bronze glow teamed
+                            with fake real freckles to take temperatures a notch higher
+                        </div>
+                    </div>
+                    <div class="col-div">
+                        <div class="description-course-sub-container-semi-bold">Bonus!!</div>
+                        <div class="description-course-sub-container-semi-bold-2">
+                            Top 3 looks to feature on MissMalini's Instagram page!
+
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <!-- Know you better -->
+    <div class="main-container" id="main-container">
+        <div class="kwb-div">
+            <div class="col-div">
+                <div class="kwb-wsy-text">Help us</div>
+                <div class="kwb-text">Know you better</div>
+                <div class="kwb-hr-div"></div>
+            </div>
+            <div class="kwb-label">What kind of course would you like to attend?</div>
+            <div>
+                <button class="kwb-action" id="kwb-action-beauty">Beauty</button>
+                <button class="kwb-action" id="kwb-action-fashion">Fashion</button>
+
+                <button class="kwb-action" id="kwb-action-luxury">Luxury</button>
+                <button class="kwb-action" id="kwb-action-food">Food</button>
+                <button class="kwb-action" id="kwb-action-influencer">Influencer</button>
+
+            </div>
+            <div class="kwb-label">Do you want us to send you updates?</div>
+            <div>
+                <button class="kwb-action" id="kwb-action-yes">Yes</button>
+                <button class="kwb-action" id="kwb-action-no">No</button>
+
+            </div>
+            <div class="kwb-row-div">
+                <div class="col-div">
+                    <div class="kwb-label">Where can we write to you?</div>
+                    <input type="email" placeholder="Enter email address" id="kwb_input_email" class="kwb_input_email"
+                        onchange="onChangeEvent('email')">
+                </div>
+                <div class="col-div">
+                    <div class="kwb-label"> Where can we reach you?</div>
+                    <input type="number" placeholder="Enter phone number" id="kwb_input_phone" class="kwb_input_phone"
+                        required maxlength="10" onchange="onChangeEvent('phone')">
+                </div>
+            </div>
+            <button class="kwb-action-submit" id="kwb-action-submit">Submit</button>
+        </div>
+    </div>
+    <div class="main-container" id="main-container">
+        <div class="download-div">
+            <div class="download-inner-div-1">
+                <div class="download-header">
+                    Accelerate Your Growth
+                </div>
+                <div class="download-sub-header">
+                    Get started on The Good Creator Co. app today
+                </div>
+            </div>
+            <div class="download-inner-div-2">
+                <div class="download-sub-inner-div-1">
+                    <div class="download-sub-inner-text">Download on android & iOS</div>
+                    <div class="download-sub-inner-div-3">
+                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623d8ac5be462074af991115.png"
+                            class="download-android-logo" id="download-android-logo" />
+                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/623d8ac5be462074af991114.png"
+                            class="download-ios-logo" id="download-ios-logo" />
+                    </div>
+                </div>
+                <div class="download-sub-inner-div-2">
+                    <div class="download-sub-inner-text-2">Scan Code AND Download Now</div>
+                    <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6243069ebe462074af991709.png"
+                        class="download-qrcode-logo" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="faqs" class="faqs-div">
+        <div class="main-container" id="main-container">
+            <div class="col-div">
+                <div class="faqs-header">We Are</div>
+                <div class="faqs-sub-header">Here To Help</div>
+                <div class="faqs-hr-div"></div>
+            </div>
+            <div class="faqs-main-container">
+                <div class="faqs-li" id="faqs-1" onclick="handleOnClickShowFAQ(1)">
+                    <div class="faqs-li-container">
+                        <div class="faqs-li-header">What is the criteria to get selected for the courses?</div>
+                        <div class="faqs-li-text-current" id="faqs-li-text-1">There is no selection process for the
+                            courses;
+                            anyone who wants to become a content creator, at any stage of their journey, can apply.
+                            You would be required to register on your platform of choice (Instagram, Facebook,
+                            YouTube,
+                            etc.) so that we can include you in our contests, leaderboards, etc.</div>
+                    </div>
+                    <div class="faqs-li-icon-div">
+                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
+                            class="faqs-li-icon-current" id="faqs-li-icon-1" />
+                    </div>
+                </div>
+                <div class="faqs-li" id="faqs-2" onclick="handleOnClickShowFAQ(2)">
+                    <div class="faqs-li-container">
+                        <div class="faqs-li-header">Is there a particular course format?</div>
+                        <div class="faqs-li-text" id="faqs-li-text-2">Yes, all our course sessions are live and
+                            interactive
+                            in nature. Some sessions may include separate slots for AMAs to ensure all your
+                            questions
+                            get
+                            answered.</div>
+                    </div>
+                    <div class="faqs-li-icon-div">
+                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
+                            class="faqs-li-icon" id="faqs-li-icon-2" />
+                    </div>
+                </div>
+                <div class="faqs-li" id="faqs-3" onclick="handleOnClickShowFAQ(3)">
+                    <div class="faqs-li-container">
+                        <div class="faqs-li-header">Will I get certified?</div>
+                        <div class="faqs-li-text" id="faqs-li-text-3">Yes, you will receive a Certificate of
+                            Completion
+                            at
+                            the end of the course from the Good Creator Academy.</div>
+                    </div>
+                    <div class="faqs-li-icon-div">
+                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
+                            class="faqs-li-icon" id="faqs-li-icon-3" />
+                    </div>
+                </div>
+                <div class="faqs-li" id="faqs-4" onclick="handleOnClickShowFAQ(4)">
+                    <div class="faqs-li-container">
+                        <div class="faqs-li-header">Which makeup products should I carry for a session on beauty
+                            content
+                            creation?</div>
+                        <div class="faqs-li-text" id="faqs-li-text-4">Once you register, you will receive a detailed
+                            email
+                            with suggested products. </div>
+                    </div>
+                    <div class="faqs-li-icon-div">
+                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
+                            class="faqs-li-icon" id="faqs-li-icon-4" />
+                    </div>
+                </div>
+                <div class="faqs-li" id="faqs-5" onclick="handleOnClickShowFAQ(5)">
+                    <div class="faqs-li-container">
+                        <div class="faqs-li-header">Are the courses refundable?</div>
+                        <div class="faqs-li-text" id="faqs-li-text-5">At present, all our courses are
+                            non-refundable.
+                        </div>
+                    </div>
+                    <div class="faqs-li-icon-div">
+                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/624126a3be462074af99126d.png"
+                            class="faqs-li-icon" id="faqs-li-icon-5" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const fullWidth = window.screen.width;
+    if (fullWidth === 360 || fullWidth < 360) {
+        document.getElementById("main-container").style.marginLeft = 20;
+        document.getElementById("main-container").style.marginRight = 20;
+    }
+    function changeStyleHeader(toScroll, id) {
+        switch (id) {
+            case "aboutus-action":
+                if (toScroll) {
+                    window.open('https://www.goodcreatoracademy.com/', '_self');
+                }
+                document.getElementById("aboutus-action").className = 'navlink-active';
+                document.getElementById("focusareas-action").className = 'navlink';
+                document.getElementById("instructors-action").className = 'navlink';
+                document.getElementById("courses-action").className = 'navlink';
+                document.getElementById("faqs-action").className = 'navlink';
+                break;
+            case "focusareas-action":
+                if (toScroll) {
+                    document.getElementById('focusareas').scrollIntoView();
+                }
+                document.getElementById("aboutus-action").className = 'navlink';
+                document.getElementById("focusareas-action").className = 'navlink-active';
+                document.getElementById("instructors-action").className = 'navlink';
+                document.getElementById("courses-action").className = 'navlink';
+                document.getElementById("faqs-action").className = 'navlink';
+                break;
+            case "instructors-action":
+                if (toScroll) {
+                    document.getElementById('instructors').scrollIntoView();
+                }
+                document.getElementById("aboutus-action").className = 'navlink';
+                document.getElementById("focusareas-action").className = 'navlink';
+                document.getElementById("instructors-action").className = 'navlink-active';
+                document.getElementById("courses-action").className = 'navlink';
+                document.getElementById("faqs-action").className = 'navlink';
+                break;
+            case "courses-action":
+                if (toScroll) {
+                    document.getElementById('courses').scrollIntoView();
+                }
+                document.getElementById("aboutus-action").className = 'navlink';
+                document.getElementById("focusareas-action").className = 'navlink';
+                document.getElementById("instructors-action").className = 'navlink';
+                document.getElementById("courses-action").className = 'navlink-active';
+                document.getElementById("faqs-action").className = 'navlink';
+                break;
+            case "faqs-action":
+                if (toScroll) {
+                    document.getElementById('faqs').scrollIntoView();
+                }
+                document.getElementById("aboutus-action").className = 'navlink';
+                document.getElementById("focusareas-action").className = 'navlink';
+                document.getElementById("instructors-action").className = 'navlink';
+                document.getElementById("courses-action").className = 'navlink';
+                document.getElementById("faqs-action").className = 'navlink-active';
+                break;
+        }
+    }
+
+    // FAQs
+    function handleOnClickShowFAQ(id) {
+        document.getElementById("faqs-li-text-1").className = 'faqs-li-text';
+        document.getElementById("faqs-li-text-2").className = 'faqs-li-text';
+        document.getElementById("faqs-li-text-3").className = 'faqs-li-text';
+        document.getElementById("faqs-li-text-4").className = 'faqs-li-text';
+        document.getElementById("faqs-li-text-5").className = 'faqs-li-text';
+        document.getElementById("faqs-li-icon-1").className = 'faqs-li-icon';
+        document.getElementById("faqs-li-icon-2").className = 'faqs-li-icon';
+        document.getElementById("faqs-li-icon-3").className = 'faqs-li-icon';
+        document.getElementById("faqs-li-icon-4").className = 'faqs-li-icon';
+        document.getElementById("faqs-li-icon-5").className = 'faqs-li-icon';
+        document.getElementById(`faqs-li-text-${id}`).className = 'faqs-li-text-current';
+        document.getElementById(`faqs-li-icon-${id}`).className = 'faqs-li-icon-current';
+    }
+
+    // links
+    document.getElementById('download-android-logo').addEventListener("click", (e) => {
+        window.open('https://play.google.com/store/apps/details?id=co.winkl.app', '_blank');
+    });
+    document.getElementById('download-ios-logo').addEventListener("click", (e) => {
+        window.open('https://apps.apple.com/in/app/the-good-creator-co/id1462743952', '_blank');
+    });
+
+    document.getElementById('miss-malini-link') && document.getElementById('miss-malini-link').addEventListener("click", (e) => {
+        window.open('https://www.instagram.com/maliniagarwal/', '_blank');
+    });
+    // Know you better
+    const kwbActionBeauty = document.getElementById('kwb-action-beauty');
+    const kwbActionFashion = document.getElementById('kwb-action-fashion');
+    const kwbActionLuxury = document.getElementById('kwb-action-luxury');
+    const kwbActionFood = document.getElementById('kwb-action-food');
+    const kwbActionInfluencer = document.getElementById('kwb-action-influencer');
+    const kwbActionYes = document.getElementById('kwb-action-yes');
+    const kwbActionNo = document.getElementById('kwb-action-no');
+    const kwbActionSubmit = document.getElementById('kwb-action-submit');
+    const payload = {
+        "email": "",
+        "name": "",
+        "namespace": "academy-v0",
+        "course": "",
+        "updates": null,
+        "phone": ""
+    };
+    let courses = [];
+    kwbActionBeauty.addEventListener("click", (e) => {
+        if (courses && courses.find((f) => f === "beauty")) {
+            kwbActionBeauty.className = 'kwb-action';
+            courses = courses.filter(e => e !== "beauty");
+            console.log({ courses });
+        } else {
+            kwbActionBeauty.className = 'kwb-action-current';
+            courses.push("beauty");
+        }
+        changeSubmitColor();
+    });
+    kwbActionFashion.addEventListener("click", (e) => {
+        if (courses && courses.find((f) => f === "fashion")) {
+            kwbActionFashion.className = 'kwb-action';
+            courses = courses.filter(e => e !== "fashion");
+            console.log({ courses });
+        } else {
+            kwbActionFashion.className = 'kwb-action-current';
+            courses.push("fashion");
+        }
+        changeSubmitColor();
+    });
+    kwbActionLuxury.addEventListener("click", (e) => {
+        if (courses && courses.find((f) => f === "luxury")) {
+            kwbActionLuxury.className = 'kwb-action';
+            courses = courses.filter(e => e !== "luxury");
+            console.log({ courses });
+        } else {
+            kwbActionLuxury.className = 'kwb-action-current';
+            courses.push("luxury");
+        }
+        changeSubmitColor();
+    });
+    kwbActionFood.addEventListener("click", (e) => {
+        if (courses && courses.find((f) => f === "food")) {
+            kwbActionFood.className = 'kwb-action';
+            courses = courses.filter(e => e !== "food");
+            console.log({ courses });
+        } else {
+            kwbActionFood.className = 'kwb-action-current';
+            courses.push("food");
+        }
+        changeSubmitColor();
+    });
+    kwbActionInfluencer.addEventListener("click", (e) => {
+        if (courses && courses.find((f) => f === "influencer")) {
+            kwbActionInfluencer.className = 'kwb-action';
+            courses = courses.filter(e => e !== "influencer");
+            console.log({ courses });
+        } else {
+            kwbActionInfluencer.className = 'kwb-action-current';
+            courses.push("influencer");
+        }
+        changeSubmitColor();
+    });
+    kwbActionYes.addEventListener("click", (e) => {
+        kwbActionYes.className = 'kwb-action-current';
+        kwbActionNo.className = 'kwb-action';
+        payload.updates = true;
+        changeSubmitColor();
+    });
+    kwbActionNo.addEventListener("click", (e) => {
+        kwbActionNo.className = 'kwb-action-current';
+        kwbActionYes.className = 'kwb-action';
+        payload.updates = false;
+        changeSubmitColor();
+    });
+    function onChangeEvent(id) {
+        payload[id] = document.getElementById(`kwb_input_${id}`).value;
+        changeSubmitColor();
+    }
+    function changeSubmitColor() {
+        const re =
+            /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        if (payload && payload.email && payload.email.match(re) && payload.phone && payload.phone.length === 10 && (payload.updates || payload.updates === false) && courses && courses.length) {
+            kwbActionSubmit.className = "kwb-action-submit-current"
+        } else {
+            kwbActionSubmit.className = "kwb-action-submit"
+
+        }
+    }
+    // On submit
+    kwbActionSubmit.addEventListener("click", (e) => {
+        if (payload && payload.email && payload.phone && payload.updates !== null) {
+            payload.course = courses.toString();
+            onSubmitKwb();
+        }
+    });
+    function onSubmitKwb() {
+        var request = new XMLHttpRequest();
+        try {
+            request.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    alert(this.responseText);
+                }
+            };
+            request.open("POST", "https://dmrbuqlwaxaetnhwusae.supabase.co/rest/v1/form_submissions", true);
+            request.setRequestHeader("Content-type", "application/json");
+            request.setRequestHeader("apikey", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRtcmJ1cWx3YXhhZXRuaHd1c2FlIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY0ODQ0NTM4MCwiZXhwIjoxOTY0MDIxMzgwfQ.bmcOX6Vvm9D8cUOsDcNYbsa0-wuVGXIIDke85kFwK74");
+            request.send(JSON.stringify(payload));
+        } catch (error) {
+        }
+    }
+    function linkFooter(params) {
+        switch (params) {
+            case 'footer-follow-us-fb':
+                window.open('https://www.facebook.com/GoodCreatorAcademy/', '_blank');
+                break;
+            case 'footer-contact-us-action':
+                window.open('https://www.goodcreatoracademy.com/contactus', '_self');
+                break;
+            case 'footer-refund-policy-action':
+                window.open('https://www.goodcreatoracademy.com/refundpolicy', '_self');
+                break;
+            case 'footer-privacy-policy-action':
+                window.open('https://www.goodcreatoracademy.com/privacypolicy', '_self');
+                break;
+            case 'footer-terms-condition-action':
+                window.open('https://www.goodcreatoracademy.com/termsofuse', '_self');
+                break;
+            case 'footer-follow-us-tw':
+                window.open('https://twitter.com/GoodCreatorACAD', '_blank');
+                break;
+            case 'footer-follow-us-insta':
+                window.open('https://www.instagram.com/goodcreatoracademy/', '_blank');
+                break;
+        }
+    }
+    // Instructors carousel
+    const instructorsTrack = document.querySelector(".instructors_carousel_track");
+    const instructorsSlides = Array.from(instructorsTrack.children); const instructorsMoveToSlide = (track, currentSlide, tragetSlide) => {
+        const instructorsamountToMove = tragetSlide.style.left;
+        track.style.transform = "translateX(-" + instructorsamountToMove + ")";
+        currentSlide.classList.remove("instructors_current-slide");
+        tragetSlide.classList.add("instructors_current-slide");
+    };
+
+    const instructorsHideArrow = (targetIndex) => {
+        if (targetIndex === 0) {
+            document.getElementById('instructors_carousel_button-1').style.background = '#D0D0D0';
+            document.getElementById('instructors_carousel_button-2').style.background = '#FFC400';
+        } else if (targetIndex === instructorsSlides.length - 1) {
+            document.getElementById('instructors_carousel_button-1').style.background = '#FFC400';
+            document.getElementById('instructors_carousel_button-2').style.background = '#D0D0D0';
+        } else {
+            document.getElementById('instructors_carousel_button-1').style.background = '#FFC400';
+            document.getElementById('instructors_carousel_button-2').style.background = '#FFC400';
+        }
+    }
+
+
+    if (instructorsTrack) {
+
+        const instructorsSlidesWidth = instructorsSlides[0].getBoundingClientRect().width;
+
+        // arrange the slides next to one another
+        const instructorsSetSlidePosition = (slide, index) => {
+            slide.style.left = instructorsSlidesWidth * index + "px";
+        };
+        instructorsSlides.forEach(instructorsSetSlidePosition);
+        // Move slide on button click
+
+    }
+    // Move slide on button press
+    function instructorsNextPreviousButton(params) {
+        const instructorsCurrentSlide = instructorsTrack.querySelector(".instructors_current-slide");
+        const instructorsNextSlide = instructorsCurrentSlide.nextElementSibling;
+        const instructorsPrevSlide = instructorsCurrentSlide.previousElementSibling;
+        const nextIndex = instructorsSlides.findIndex(slide => slide === instructorsNextSlide);
+        const prevIndex = instructorsSlides.findIndex(slide => slide === instructorsPrevSlide);
+        if (params === 'next' && instructorsNextSlide) {
+            instructorsMoveToSlide(instructorsTrack, instructorsCurrentSlide, instructorsNextSlide);
+            instructorsHideArrow(nextIndex);
+
+        } else if (params === 'previous' && instructorsPrevSlide) {
+            instructorsMoveToSlide(instructorsTrack, instructorsCurrentSlide, instructorsPrevSlide);
+            instructorsHideArrow(prevIndex);
+        }
+    };
+</script>
+
+</html>
