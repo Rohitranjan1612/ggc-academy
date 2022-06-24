@@ -93,6 +93,10 @@
             display: none !important;
         }
 
+        .hide-mobile {
+            display: block;
+        }
+
         .main-container {
             width: 1248px;
             margin: 0 auto;
@@ -140,21 +144,25 @@
             justify-content: space-between;
         }
 
-        .img-banner-div {
-            height: 630px;
-            width: 1246px;
-            overflow: hidden;
-            border-radius: 20px;
-        }
-
-        .img-banner {
-            height: 630px;
-            border-radius: 20px;
-        }
-
         .aboutus_video_div {
             margin-top: 206px;
             border-top-left-radius: 20px;
+        }
+
+        .aboutus_img_div {
+            margin-top: 206px;
+            border-top-left-radius: 20px;
+        }
+
+        .aboutus_img_banner_des {
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            width: 761px;
+            height: 428px;
+        }
+
+        .aboutus_img_banner_mob {
+            display: none;
         }
 
         .aboutus_no_properties {
@@ -175,6 +183,14 @@
             background: none;
             padding: 0px;
             z-index: 1;
+        }
+
+        .aboutus_no_properties_insta {
+            border: none;
+            background: none;
+            padding: 0px;
+            z-index: 1;
+            color: #01B9F5;
         }
 
         .aboutus_no_properties_hide {
@@ -208,7 +224,8 @@
             font-size: 27px;
             line-height: 40px;
             text-transform: uppercase;
-
+            display: flex;
+            flex-direction: row;
             color: #0D0D0D
         }
 
@@ -1417,17 +1434,8 @@
                 height: 20px;
             }
 
-            .img-banner-div {
-                width: 320px;
-                height: 260px;
-                overflow: hidden;
-                border-radius: 20px;
-            }
-
-            .img-banner {
-                width: 320px;
-                height: 260px;
-                border-radius: 20px;
+            .hide-mobile {
+                display: none;
             }
 
             /* .header {
@@ -1490,6 +1498,25 @@
                 margin-top: 19px;
                 margin-left: 84px;
                 border-top-left-radius: 10px;
+            }
+
+            .aboutus_img_div {
+                margin-top: 20px;
+                margin-left: 84px;
+                border-top-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+
+            .aboutus_img_banner_des {
+                display: none;
+            }
+
+            .aboutus_img_banner_mob {
+                border-top-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                width: 236px;
+                height: 133px;
+                display: block;
             }
 
             .aboutus_video {
@@ -2477,11 +2504,45 @@
                 <div class="aboutus_carousel_track-container">
                     <ul class="aboutus_carousel_track">
                         <li class="aboutus_carousel_slide aboutus_current-slide">
-                            <button class="aboutus_no_properties_1 img-banner-div"
-                                onclick="window.open('https://www.goodcreatoracademy.com/s/store/courses/description/Learn-how-to-create-content-for-social-media', '_self');">
-                                <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-1200/banners/62a342527318f9306e7516ba.jpeg"
-                                    alt="" class="img-banner">
-                            </button>
+                            <div class="aboutus_row_div_video">
+                                <div class="aboutus_div_1">
+                                    <div class="aboutus_header">Learn #EVERYTHINGCONTENT from <div class="hide-mobile">
+                                            &nbsp;ScoopWhoop OKTested's</div>
+                                    </div>
+                                    <div class="aboutus_sub_header">Aakansha and Satyam!</div>
+                                    <div class="aboutus_hr_div"></div>
+                                    <div class="aboutus_text">Certification | Presentation slides | <br>
+                                        Interactive session with Q&amp;A
+                                    </div>
+                                </div>
+
+                                <div class="aboutus_img_div">
+                                    <!-- <iframe class="aboutus_video"
+                                    src="https://d23ztkijlc4ezg.cloudfront.net/static/6241776e7318f9107f8b018b.mp4?autoplay=1&mute=1"
+                                    frameborder="0" allow="autoplay"></iframe> -->
+                                    <!-- <button class="aboutus_no_properties_hide" id="aboutus-pause-button">
+                                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/62463cd5be462074af991a1e.png"
+                                                alt="" class="aboutus-play-pause-button">
+                                        </button>
+                                        <button class="aboutus_no_properties_hide" id="aboutus-play-button">
+                                            <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/62463f4ebe462074af991a1f.png"
+                                                alt="" class="aboutus-play-pause-button">
+                                        </button> -->
+                                    <!-- <video class="aboutus_video" autoplay="autoplay" id="aboutus_video">
+                                            <source
+                                                src="https://d23ztkijlc4ezg.cloudfront.net/static/6245371abe462074af991853.mp4"
+                                                type="video/mp4" />
+                                        </video> -->
+
+                                    <button class="aboutus_no_properties_1"
+                                        onclick="window.open('https://www.goodcreatoracademy.com/s/store/courses/description/Learn-EVERYTHINGCONTENT-from-ScoopWhoop-OKTesteds-Aakansha-and-Satyam', '_self');">
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-800/banners/62b599617318f93f3d7bfca9.png"
+                                            alt="" class="aboutus_img_banner_des">
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/banners/62b59953be4620356373b385.png"
+                                            alt="" class="aboutus_img_banner_mob">
+                                    </button>
+                                </div>
+                            </div>
                         </li>
                         <li class="aboutus_carousel_slide">
                             <div class="aboutus_row_div_video" onmouseover="showPlayPauseButton()"
@@ -2532,38 +2593,36 @@
                                     <div class="aboutus_sub_header">Good Creator Academy</div>
                                     <div class="aboutus_hr_div"></div>
                                     <div class="aboutus_text">The creator’s learning platform.
+                                        Learn, Create, Collaborate - content planning, brand endorsements, shaping your
+                                        identity and knowing your worth.
                                     </div>
-                                    <div class="aboutus_text"><strong> Learn, Create, Collaborate</strong> - content
-                                        planning,
-                                        brand
-                                        endorsements, shaping
-                                        your identity and knowing your worth.</div>
                                 </div>
                                 <div class="aboutus-row-div">
                                     <div class="aboutus-reverse">
-                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409abe462074af991277.jpeg"
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/banners/628762ea7318f9306e75165c.png"
                                             class="aboutus-logo-1 desktop_view" />
-                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409abe462074af991277.jpeg"
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/banners/628760e67318f9306e75165a.png"
                                             class="aboutus-logo-1 mobile_view" />
                                     </div>
                                     <div class="aboutus-reverse">
-                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409a7318f9107f8b017b.jpeg"
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/banners/628762eabe46200363328542.png"
                                             class="aboutus-logo-3 desktop_view" />
-                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409abe462074af991275.jpeg"
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/banners/628762eabe46200363328544.png"
                                             class="aboutus-logo-2 desktop_view" />
-                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409a7318f9107f8b017b.jpeg"
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/banners/628760e6be46200363328541.png"
                                             class="aboutus-logo-3 mobile_view" />
-                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6246a68dbe462074af991a21.png"
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/banners/628760e67318f9306e75165b.png"
                                             class="aboutus-logo-2 mobile_view" />
+
                                     </div>
                                     <div class="col-div">
-                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409abe462074af991276.jpeg"
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/banners/628762ea7318f9306e75165d.png"
                                             class="aboutus-logo-5 desktop_view" />
-                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6246a41c7318f9107f8b092a.png"
-                                            class="aboutus-logo-5 mobile_view" />
-                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/productimages/6241409a7318f9107f8b017c.jpeg"
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/banners/628762eabe46200363328543.png"
                                             class="aboutus-logo-4 desktop_view" />
-                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/static/6246a6ad7318f9107f8b092c.png"
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/banners/628760e6be46200363328540.png"
+                                            class="aboutus-logo-5 mobile_view" />
+                                        <img src="https://d22h6s1qvdt49m.cloudfront.net/tr:w-600/banners/628760e6be4620036332853f.png"
                                             class="aboutus-logo-4 mobile_view" />
                                     </div>
                                 </div>
